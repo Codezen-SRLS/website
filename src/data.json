@@ -1,0 +1,27 @@
+{
+	"banner": {
+		"subHeading": "Blockchain Security Experts",
+		"heading": "Securing the Future of Blockchain & Web3.",
+		"text": "At Codezen, we secure your decentralized projects with expert consulting and thorough smart contract audits, ensuring your blockchain and Web3 ecosystem is protected.",
+		"buttonText": "Get Started",
+		"buttonLink": "/get-started",
+		"stats": [
+			{
+				"number": "100+",
+				"description": "Blockchain Projects"
+			},
+			{
+				"number": "200+",
+				"description": "Vulnerabilities Identified"
+			},
+			{
+				"number": "$50M+",
+				"description": "Assets Protected"
+			},
+			{
+				"number": "99.9%",
+				"description": "Customer Satisfaction"
+			}
+		]
+	}
+}

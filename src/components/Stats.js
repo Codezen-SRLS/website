@@ -1,30 +1,39 @@
-import React from "react"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Stats = () => {
-  return (
-    <div className="stats">
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-3 col-6">
-            <h2 className="stats-heading">100+</h2>
-            <p className="stats-text">Blockchain Projects</p>
-          </div>
-          <div className="col-xl-3 col-6">
-            <h2 className="stats-heading">200+</h2>
-            <p className="stats-text">Vulnerabilities Identified</p>
-          </div>
-          <div className="col-xl-3 col-6 mt-xl-0 mt-3">
-            <h2 className="stats-heading">$50M+</h2>
-            <p className="stats-text">Assets Protected</p>
-          </div>
-          <div className="col-xl-3 col-6 mt-xl-0 mt-3">
-            <h2 className="stats-heading">99.9%</h2>
-            <p className="stats-text">Customer Satisfaction</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
+	const data = useStaticQuery(graphql`
+		query {
+			allSrcJson {
+				edges {
+					node {
+						banner {
+							stats {
+								description
+								number
+							}
+						}
+					}
+				}
+			}
+		}
+	`);
 
-export default Stats
+	const newData = data.allSrcJson.edges[0].node.banner.stats;
+	return (
+		<div className="stats">
+			<div className="container">
+				<div className="row">
+					{newData?.map((data) => (
+						<div className="col-xl-3 col-6">
+							<h2 className="stats-heading">{data.number}</h2>
+							<p className="stats-text">{data.description}</p>
+						</div>
+					))}
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export default Stats;

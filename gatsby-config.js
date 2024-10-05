@@ -12,7 +12,7 @@ module.exports = {
 		title: `Codezen`,
 		description: `Codezen`,
 		author: `@musadiqkhan`,
-		siteUrl: `www.codezen.com`,
+		siteUrl: `https://www.codezen.com`,
 	},
 	plugins: [
 		`gatsby-plugin-image`,
@@ -23,6 +23,14 @@ module.exports = {
 				path: `${__dirname}/src/images`,
 			},
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `data`,
+				path: `${__dirname}/src/data.json`,
+			},
+		},
+		`gatsby-transformer-json`, // Transformer for JSON files
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
