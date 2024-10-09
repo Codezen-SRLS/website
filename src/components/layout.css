@@ -206,6 +206,42 @@ h3 {
 .pt-6 {
 	padding-top: 6rem;
 }
+.slick-dots li.slick-active button:before {
+	color: #b1f3ff !important; /* Color of active dot */
+}
+.slick-dots li button:before {
+	color: #d9f9ff !important;
+}
+.work-section {
+	border: 1px solid #888f8b;
+}
+.work-image {
+	height: 360px;
+	display: flex;
+	justify-content: start;
+	align-items: end;
+	padding: 20px;
+}
+.slick-slide {
+	padding: 0 10px !important; /* Adds 10px gap (adjust as needed) */
+}
+.work-details {
+	padding: 20px;
+}
+.tag {
+	background: #fcfcfc;
+	color: #131313;
+	font-size: 16px;
+	font-weight: normal;
+	display: inline-flex;
+	padding: 8px 12px;
+}
+.work-large {
+	display: block;
+}
+.work-mobile {
+	display: none;
+}
 @media (max-width: 1440px) {
 	.main-heading {
 		font-size: 65px;
@@ -238,6 +274,12 @@ h3 {
 	}
 }
 @media (max-width: 768px) {
+	.work-mobile {
+		display: block;
+	}
+	.work-large {
+		display: none;
+	}
 	.pt-6 {
 		padding-top: 3rem;
 	}

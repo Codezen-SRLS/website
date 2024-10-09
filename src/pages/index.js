@@ -8,6 +8,7 @@ import WhoWeAre from "../components/WhoWeAre";
 import Partners from "../components/Partners";
 import WhatWeDo from "../components/WhatWeDo";
 import HowWeWork from "../components/HowWeWork";
+import Work from "../components/Work";
 
 const IndexPage = () => (
 	<Layout>
@@ -17,6 +18,7 @@ const IndexPage = () => (
 		<Partners />
 		<WhatWeDo />
 		<HowWeWork />
+		<Work />
 	</Layout>
 );
 
