@@ -1,12 +1,41 @@
 import React, { useEffect, useRef, useState } from "react";
 import audit from "../images/SmartContractAudits.mp4";
+import { useStaticQuery, graphql } from "gatsby";
 
 const WhatWeDo = () => {
-	const videoRefs = [useRef(null), useRef(null), useRef(null)];
-	const [isInView, setIsInView] = useState([false, false, false]);
+	const data = useStaticQuery(graphql`
+		query {
+			allSrcJson {
+				edges {
+					node {
+						banner {
+							whatwedo {
+								heading
+								subHeading
+								data {
+									description
+									title
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	`);
+
+	const newData = data.allSrcJson.edges[0].node.banner.whatwedo;
+
+	const videoRefs = useRef([]);
+
+	const [isInView, setIsInView] = useState(
+		new Array(newData?.data?.length).fill(false)
+	);
 
 	useEffect(() => {
-		videoRefs.forEach((videoRef, index) => {
+		videoRefs.current = videoRefs.current.slice(0, newData?.data?.length);
+
+		videoRefs.current.forEach((videoRef, index) => {
 			const observer = new IntersectionObserver(
 				([entry]) => {
 					setIsInView((prev) => {
@@ -18,76 +47,82 @@ const WhatWeDo = () => {
 				{ threshold: 0.5 }
 			);
 
-			if (videoRef.current) {
-				observer.observe(videoRef.current);
+			if (videoRef) {
+				observer.observe(videoRef);
 			}
 
 			return () => {
-				if (videoRef.current) {
-					observer.unobserve(videoRef.current);
+				if (videoRef) {
+					observer.unobserve(videoRef);
 				}
 			};
 		});
-	}, [videoRefs]);
+	}, [newData?.data?.length]);
 
 	const handleMouseEnter = (index) => {
-		if (isInView[index] && videoRefs[index].current) {
-			videoRefs[index].current.play();
+		if (isInView[index] && videoRefs.current[index]) {
+			videoRefs.current[index].play();
+		}
+	};
+
+	const handleMouseLeave = (index) => {
+		if (videoRefs.current[index]) {
+			videoRefs.current[index].pause();
+			videoRefs.current[index].currentTime = 0; // Reset the video to start on hover out
 		}
 	};
 
 	return (
 		<>
-			<div className="container banner">
-				<div className="row align-items-center mb-5 w-100 text-center">
-					<p className="sub-text text-decoration-underline m-auto">
-						What We Do{" "}
-					</p>
-					<h1 className="sub-heading mt-3 mb-0">
-						Comprehensive Security Solutions for Blockchain & Web3{" "}
-					</h1>
-				</div>
-				<div className="row align-items-center">
-					{[0, 1, 2].map((index) => (
-						<div
-							className="col-lg-4 col-12 mt-lg-0 mt-5"
-							key={index}
-						>
+			<div className="banner">
+				<div className="container ">
+					<div className="row align-items-center mb-5 w-100 text-center">
+						<p className="sub-text text-decoration-underline m-auto">
+							{newData?.subHeading}{" "}
+						</p>
+						<h1 className="sub-heading mt-3 mb-0">{newData?.heading} </h1>
+					</div>
+					<div className="row align-items-center">
+						{newData?.data?.map((data, index) => (
 							<div
-								className="work"
-								onMouseEnter={() => handleMouseEnter(index)}
+								className="col-lg-4 col-12 mt-5"
+								key={index}
 							>
-								<div className="d-flex align-items-center">
-									<div className="square"></div>
-									<p className="text primary-color mb-0 fw-500">01/03</p>
-								</div>
-								<video
-									className="mt-4"
-									ref={videoRefs[index]}
-									width="100%"
-									muted
-									autoPlay
+								<div
+									className="work"
+									onMouseEnter={() => handleMouseEnter(index)}
+									onMouseLeave={() => handleMouseLeave(index)}
 								>
-									<source
-										src={audit}
-										type="video/mp4"
-									/>
-									Your browser does not support the video tag.
-								</video>
-								<h3 className="mt-4 text-lg-start text-center">
-									Smart Contract Audits
-								</h3>
-								<p className="text mb-0 text-lg-start text-center">
-									Ensure the security of your smart contracts with in-depth
-									audits that identify vulnerabilities and protect against
-									potential exploits.
-								</p>
+									<div className="d-flex align-items-center">
+										<div className="square"></div>
+										<p className="text primary-color mb-0 fw-500">
+											0{index + 1}/0{newData?.data?.length}
+										</p>
+									</div>
+									<video
+										className="mt-4 video"
+										ref={(el) => (videoRefs.current[index] = el)} // Ensure correct ref is set
+										width="100%"
+										muted
+									>
+										<source
+											src={audit}
+											type="video/mp4"
+										/>
+										Your browser does not support the video tag.
+									</video>
+									<h3 className="mt-4 text-lg-start text-center">
+										{data.title}
+									</h3>
+									<p className="text mb-0 text-lg-start text-center what-we-do-text">
+										{data.description}
+									</p>
+								</div>
 							</div>
-						</div>
-					))}
+						))}
+					</div>
 				</div>
 			</div>
-
 			<hr />
 		</>
 	);

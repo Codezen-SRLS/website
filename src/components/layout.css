@@ -176,6 +176,9 @@ a {
 		transform: translateX(-50%);
 	}
 }
+.what-we-do-text {
+	min-height: 100px;
+}
 
 .work {
 	border: 1px solid #888f8b;
@@ -228,6 +231,9 @@ h3 {
 .work-details {
 	padding: 20px;
 }
+.work-details h3 {
+	min-height: 100px;
+}
 .tag {
 	background: #fcfcfc;
 	color: #131313;
@@ -238,9 +244,24 @@ h3 {
 }
 .work-large {
 	display: block;
+	width: 100vw;
 }
 .work-mobile {
 	display: none;
+}
+.video {
+	background: linear-gradient(
+		0deg,
+		rgba(1, 152, 215, 0.1) 0%,
+		rgba(1, 152, 215, 0.1) 100%
+	);
+	mix-blend-mode: lighten;
+}
+.videos {
+	mix-blend-mode: plus-lighter;
+}
+.videos-banner {
+	mix-blend-mode: lighten;
 }
 @media (max-width: 1440px) {
 	.main-heading {

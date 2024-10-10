@@ -7,4 +7,4 @@
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
-exports.createPages = async ({ actions }) => {}
+exports.createPages = async ({ actions }) => {};

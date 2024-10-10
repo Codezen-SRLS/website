@@ -43,7 +43,7 @@ const Banner = () => {
 				</div>
 				<div
 					dangerouslySetInnerHTML={{
-						__html: ` <video class="w-100" autoPlay loop muted playsinline>
+						__html: ` <video class="w-100 videos-banner" autoPlay loop muted playsinline>
       <source src=${hero} type="video/mp4" />
       Your browser does not support the video tag.
 </video>`,
