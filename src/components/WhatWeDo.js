@@ -76,16 +76,16 @@ const WhatWeDo = () => {
 	}, [isInView]);
 
 	const handleMouseEnter = (index) => {
-		if (videoRefs.current[index]) {
-			videoRefs.current[index].play();
-		}
+		// if (videoRefs.current[index]) {
+		// 	videoRefs.current[index].play();
+		// }
 	};
 
 	const handleMouseLeave = (index) => {
-		if (videoRefs.current[index]) {
-			videoRefs.current[index].pause();
-			videoRefs.current[index].currentTime = 0; // Reset the video on hover out
-		}
+		// if (videoRefs.current[index]) {
+		// 	videoRefs.current[index].pause();
+		// 	videoRefs.current[index].currentTime = 0; // Reset the video on hover out
+		// }
 	};
 
 	return (
