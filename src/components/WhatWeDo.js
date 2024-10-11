@@ -15,6 +15,9 @@ const WhatWeDo = () => {
 								data {
 									description
 									title
+									video {
+										publicURL
+									}
 								}
 							}
 						}
@@ -119,7 +122,7 @@ const WhatWeDo = () => {
 										muted
 									>
 										<source
-											src={audit}
+											src={data?.video?.publicURL}
 											type="video/mp4"
 										/>
 										Your browser does not support the video tag.

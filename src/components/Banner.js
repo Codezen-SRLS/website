@@ -43,10 +43,11 @@ const Banner = () => {
 						</button>
 					</Link>
 				</div>
+
 				<div
 					dangerouslySetInnerHTML={{
-						__html: ` <video class="w-100 videos-banner mobile" autoPlay loop muted playsinline>
-      <source src=${heroMobile} type="video/mp4" />
+						__html: ` <video class="w-100 videos-banner desktop" autoPlay loop muted playsinline>
+      <source src=${hero} type="video/mp4" />
       Your browser does not support the video tag.
 </video>`,
 					}}
@@ -54,8 +55,8 @@ const Banner = () => {
 				/>
 				<div
 					dangerouslySetInnerHTML={{
-						__html: ` <video class="w-100 videos-banner desktop" autoPlay loop muted playsinline>
-      <source src=${hero} type="video/mp4" />
+						__html: ` <video class="w-100 videos-banner mobile" autoPlay loop muted playsinline>
+      <source src=${heroMobile} type="video/mp4" />
       Your browser does not support the video tag.
 </video>`,
 					}}
