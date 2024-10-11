@@ -178,7 +178,7 @@ a {
 	}
 }
 .what-we-do-text {
-	min-height: 100px;
+	min-height: 130px;
 }
 
 .work {
@@ -253,11 +253,11 @@ h3 {
 	display: none;
 }
 .video {
-	background: linear-gradient(
+	/* background: linear-gradient(
 		0deg,
 		rgba(1, 152, 215, 0.1) 0%,
 		rgba(1, 152, 215, 0.1) 100%
-	);
+	); */
 	mix-blend-mode: lighten;
 }
 .videos {

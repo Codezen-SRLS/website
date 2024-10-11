@@ -122,6 +122,7 @@ const WhatWeDo = () => {
 										className="mt-4 video"
 										ref={(el) => (videoRefs.current[index] = el)} // Ensure correct ref is set
 										width="100%"
+										height={"234px%"}
 										muted
 									>
 										<source
