@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.codezen.tech/sitemap.xml
+Host: https://www.codezen.tech
