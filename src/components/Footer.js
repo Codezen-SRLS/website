@@ -26,7 +26,10 @@ const Footer = () => {
 	const newData = data.allSrcJson.edges[0].node.banner.footer;
 	return (
 		<>
-			<div className="footer-container">
+			<div
+				id="contact"
+				className="footer-container"
+			>
 				<footer className="container">
 					<div className="row align-items-center justify-content-center footer-main">
 						<div className="col-md-4 ">
@@ -94,19 +97,16 @@ const Footer = () => {
 						</Link>
 					</li>
 					<li>
-						<Link to="#">About</Link>
+						<Link to="#whoweare">About</Link>
 					</li>
 					<li>
-						<Link to="#">Services</Link>
+						<Link to="#whatwedo">Services</Link>
 					</li>
 					<li>
-						<Link to="#">Portfolio</Link>
+						<Link to="#work">Portfolio</Link>
 					</li>
 					<li>
-						<Link to="#">Contact</Link>
-					</li>
-					<li>
-						<Link to="#">Blog</Link>
+						<Link to="#contact">Contact</Link>
 					</li>
 				</ul>
 			</div>

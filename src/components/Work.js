@@ -42,7 +42,10 @@ const Work = () => {
 		pauseOnHover: true,
 	};
 	return (
-		<div className="banner">
+		<div
+			id="work"
+			className="banner"
+		>
 			<div className="container ">
 				<div className="row align-items-center w-100 text-center">
 					<p className="sub-text text-decoration-underline m-auto">

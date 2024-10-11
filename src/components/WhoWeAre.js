@@ -26,7 +26,10 @@ const WhoWeAre = () => {
 	const newData = data.allSrcJson.edges[0].node.banner.whoweare;
 	return (
 		<>
-			<div className="container">
+			<div
+				id="whoweare"
+				className="container"
+			>
 				<div className="row align-items-center justify-content-between banner">
 					<div
 						dangerouslySetInnerHTML={{

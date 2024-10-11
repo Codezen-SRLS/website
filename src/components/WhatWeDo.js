@@ -90,7 +90,10 @@ const WhatWeDo = () => {
 
 	return (
 		<>
-			<div className="banner">
+			<div
+				id="whatwedo"
+				className="banner"
+			>
 				<div className="container ">
 					<div className="row align-items-center mb-5 w-100 text-center">
 						<p className="sub-text text-decoration-underline m-auto">

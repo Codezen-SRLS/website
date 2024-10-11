@@ -17,6 +17,7 @@ html {
 	background-color: var(--bg-color);
 	color: var(--light-white);
 	background-image: url("../images/bg.webp");
+	scroll-behavior: smooth;
 }
 a {
 	background-color: transparent;
