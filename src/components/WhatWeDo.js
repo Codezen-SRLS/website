@@ -27,7 +27,6 @@ const WhatWeDo = () => {
 	const newData = data.allSrcJson.edges[0].node.banner.whatwedo;
 
 	const videoRefs = useRef([]);
-
 	const [isInView, setIsInView] = useState(
 		new Array(newData?.data?.length).fill(false)
 	);
@@ -35,7 +34,7 @@ const WhatWeDo = () => {
 	useEffect(() => {
 		videoRefs.current = videoRefs.current.slice(0, newData?.data?.length);
 
-		videoRefs.current.forEach((videoRef, index) => {
+		const observers = videoRefs.current.map((videoRef, index) => {
 			const observer = new IntersectionObserver(
 				([entry]) => {
 					setIsInView((prev) => {
@@ -44,23 +43,37 @@ const WhatWeDo = () => {
 						return newState;
 					});
 				},
-				{ threshold: 0.5 }
+				{ threshold: 0.5 } // Adjust as needed
 			);
 
 			if (videoRef) {
 				observer.observe(videoRef);
 			}
 
-			return () => {
-				if (videoRef) {
-					observer.unobserve(videoRef);
-				}
-			};
+			return observer;
 		});
+
+		return () => {
+			observers.forEach((observer, index) => {
+				if (videoRefs.current[index]) {
+					observer.unobserve(videoRefs.current[index]);
+				}
+			});
+		};
 	}, [newData?.data?.length]);
 
+	useEffect(() => {
+		isInView.forEach((inView, index) => {
+			if (inView && videoRefs.current[index]) {
+				videoRefs.current[index].play();
+			} else if (!inView && videoRefs.current[index]) {
+				videoRefs.current[index].pause();
+			}
+		});
+	}, [isInView]);
+
 	const handleMouseEnter = (index) => {
-		if (isInView[index] && videoRefs.current[index]) {
+		if (videoRefs.current[index]) {
 			videoRefs.current[index].play();
 		}
 	};
@@ -68,7 +81,7 @@ const WhatWeDo = () => {
 	const handleMouseLeave = (index) => {
 		if (videoRefs.current[index]) {
 			videoRefs.current[index].pause();
-			videoRefs.current[index].currentTime = 0; // Reset the video to start on hover out
+			videoRefs.current[index].currentTime = 0; // Reset the video on hover out
 		}
 	};
 

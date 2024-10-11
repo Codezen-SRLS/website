@@ -230,8 +230,10 @@ h3 {
 }
 .work-details {
 	padding: 20px;
+	padding-bottom: 0px !important;
 }
-.work-details h3 {
+.work-details h3,
+.work-details p {
 	min-height: 100px;
 }
 .tag {
@@ -333,5 +335,8 @@ h3 {
 	}
 	.banner {
 		padding: 5rem 0;
+	}
+	.videos-banner {
+		width: 280px !important;
 	}
 }
