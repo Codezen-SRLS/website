@@ -1,5 +1,7 @@
 import React from "react";
 import hero from "../images/hero.mp4";
+import heroMobile from "../images/mobile-banner.mp4";
+
 import { useStaticQuery, graphql, Link } from "gatsby";
 
 const Banner = () => {
@@ -43,7 +45,16 @@ const Banner = () => {
 				</div>
 				<div
 					dangerouslySetInnerHTML={{
-						__html: ` <video class="w-100 videos-banner" autoPlay loop muted playsinline>
+						__html: ` <video class="w-100 videos-banner mobile" autoPlay loop muted playsinline>
+      <source src=${heroMobile} type="video/mp4" />
+      Your browser does not support the video tag.
+</video>`,
+					}}
+					className="col-xl-5 col-12 mt-xl-0 mt-5"
+				/>
+				<div
+					dangerouslySetInnerHTML={{
+						__html: ` <video class="w-100 videos-banner desktop" autoPlay loop muted playsinline>
       <source src=${hero} type="video/mp4" />
       Your browser does not support the video tag.
 </video>`,

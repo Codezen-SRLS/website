@@ -265,6 +265,12 @@ h3 {
 .videos-banner {
 	mix-blend-mode: lighten;
 }
+.mobile {
+	display: none;
+}
+.desktop {
+	display: block;
+}
 @media (max-width: 1440px) {
 	.main-heading {
 		font-size: 65px;
@@ -297,6 +303,12 @@ h3 {
 	}
 }
 @media (max-width: 768px) {
+	.mobile {
+		display: block;
+	}
+	.desktop {
+		display: none;
+	}
 	.work-mobile {
 		display: block;
 	}
@@ -335,8 +347,5 @@ h3 {
 	}
 	.banner {
 		padding: 5rem 0;
-	}
-	.videos-banner {
-		width: 280px !important;
 	}
 }
