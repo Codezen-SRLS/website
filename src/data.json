@@ -1,107 +1,111 @@
 {
-	"banner": {
-		"subHeading": "Blockchain Security Experts",
-		"heading": "Securing the Future of Blockchain & Web3.",
-		"text": "At Codezen, we secure your decentralized projects with expert consulting and thorough smart contract audits, ensuring your blockchain and Web3 ecosystem is protected.",
-		"buttonText": "Get Started",
-		"buttonLink": "/get-started",
-		"whoweare": {
-			"subHeading": "Who We Are",
-			"heading": "Your Trusted Partner in Blockchain Security",
-			"text": "Codezen is a cybersecurity firm specializing in blockchain and Web3 technologies. We offer security solutions tailored to the unique challenges of decentralized systems. Our mission is to safeguard the future of decentralized finance, applications, and networks through comprehensive audits and consulting services.<br/> <br/>With a team of experts in blockchain, smart contract auditing, and Web3 security, we bring a wealth of experience to help our clients navigate the evolving landscape of decentralized technologies.",
-			"buttonText": "Let's Talk",
-			"buttonLink": "/get-started"
-		},
-		"whatwedo": {
-			"subHeading": "What We Do",
-			"heading": "Comprehensive Security Solutions for Blockchain & Web3",
-			"data": [
-				{
-					"title": "Smart Contract Audits",
-					"description": "Ensure the security of your smart contracts with in-depth audits that identify vulnerabilities and protect against potential exploits.",
-					"video": "./images/SmartContractAudits.mp4"
-				},
-				{
-					"title": "Blockchain Consulting",
-					"description": "Get expert guidance on securing your blockchain infrastructure, from initial design to deployment and ongoing maintenance.",
-					"video": "./images/blockchain.mp4"
-				},
-				{
-					"title": "Disaster Recovery",
-					"description": "Ensure business continuity with a robust Disaster Recovery plan that safeguards your data and operations.",
-					"video": "./images/disaster.mp4"
-				}
-			]
-		},
-		"howwework": {
-			"subHeading": "How We Work",
-			"heading": "A Proven Approach to Securing Blockchain Projects",
-			"firstTitle": "Discovery",
-			"firstDescription": "We start by understanding your project’s requirements and unique challenges.",
-			"secondTitle": "Audit",
-			"secondDescription": "Our team conducts a thorough security audit, focusing on identifying vulnerabilities in smart contracts and blockchain architecture.",
-			"thirdTitle": "Reporting",
-			"thirdDescription": "We provide a detailed report highlighting the issues and offering solutions to mitigate risks.",
-			"fourthTitle": "Support",
-			"fourthDescription": "After delivering our report, we offer continuous support to help you implement the necessary changes and maintain security over time."
-		},
-		"work": {
-			"subHeading": "Our Work",
-			"heading": "Showcasing Our Expertise: Proven Success in Blockchain Security",
-			"data": [
-				{
-					"title": "Dymension Dymint",
-					"description": "Audited Dymint's consensus algorithm to boost blockchain security and scalability.",
-					"tag": "Blockchain Audit",
-					"image": "./images/dymension.png",
-					"link": "https://www.google.com"
-				},
-				{
-					"title": "Bifrost Finance",
-					"description": "Audited Substrate Pallet smart contracts to ensure security in the Polkadot ecosystem.",
-					"tag": "Smart Contract Audit",
-					"image": "./images/bifrost.png",
-					"link": "https://www.google.com"
-				},
-				{
-					"title": "Cosmos SDK vo.47",
-					"description": "Audited the Cosmos SDK upgrade, enhancing interchain security.",
-					"tag": "Blockchain Security",
-					"image": "./images/cosmos.png",
-					"link": "https://www.google.com"
-				},
-				{
-					"title": "DeFi Smart Contract Audit",
-					"description": "Secured a leading DeFi platform, eliminating vulnerabilities for smooth operation.",
-					"tag": "Smart Audit",
-					"image": "./images/defi.png",
-					"link": "https://www.google.com"
-				}
-			]
-		},
-		"stats": [
-			{
-				"number": "100+",
-				"description": "Blockchain Projects"
-			},
-			{
-				"number": "200+",
-				"description": "Vulnerabilities Identified"
-			},
-			{
-				"number": "$50M+",
-				"description": "Assets Protected"
-			},
-			{
-				"number": "99.9%",
-				"description": "Customer Satisfaction"
-			}
-		],
-		"footer": {
-			"facebook": "https://www.google.com",
-			"twitter": "https://www.google.com",
-			"linkedin": "https://www.google.com",
-			"insta": "https://www.google.com"
-		}
-	}
+    "banner": {
+        "subHeading": "Blockchain Security Experts",
+        "heading": "Securing the Future of Blockchain & Web3.",
+        "text": "At Codezen, we secure your decentralized projects with expert consulting and thorough smart contract audits, ensuring your blockchain and Web3 ecosystem is protected.",
+        "buttonText": "Get Started",
+        "buttonLink": "/#whatwedo",
+        "whoweare": {
+            "subHeading": "Who We Are",
+            "heading": "Your Trusted Partner in Blockchain Security",
+            "text": "Codezen is a cybersecurity firm specializing in blockchain and Web3 technologies. We offer security solutions tailored to the unique challenges of decentralized systems. Our mission is to safeguard the future of decentralized finance, applications, and networks through comprehensive audits and consulting services.<br/> <br/>With a team of experts in blockchain, smart contract auditing, and Web3 security, we bring a wealth of experience to help our clients navigate the evolving landscape of decentralized technologies.",
+            "buttonText": "Let's Talk",
+            "buttonLink": "/get-started"
+        },
+        "whatwedo": {
+            "subHeading": "What We Do",
+            "heading": "Comprehensive Security Solutions for Blockchain & Web3",
+            "data": [
+                {
+                    "title": "Smart Contract Audits",
+                    "description": "Ensure the security of your smart contracts with in-depth audits that identify vulnerabilities and protect against potential exploits.",
+                    "video": "./images/SmartContractAudits.mp4"
+                },
+                {
+                    "title": "Blockchain Consulting",
+                    "description": "Get expert guidance on securing your blockchain infrastructure, from initial design to deployment and ongoing maintenance.",
+                    "video": "./images/blockchain.mp4"
+                },
+                {
+                    "title": "Disaster Recovery",
+                    "description": "Ensure business continuity with a robust Disaster Recovery plan that safeguards your data and operations.",
+                    "video": "./images/disaster.mp4"
+                }
+            ]
+        },
+        "howwework": {
+            "subHeading": "How We Work",
+            "heading": "A Proven Approach to Securing Blockchain Projects",
+            "firstTitle": "Discovery",
+            "firstDescription": "We start by understanding your project’s requirements and unique challenges.",
+            "secondTitle": "Audit",
+            "secondDescription": "Our team conducts a thorough security audit, focusing on identifying vulnerabilities in smart contracts and blockchain architecture.",
+            "thirdTitle": "Reporting",
+            "thirdDescription": "We provide a detailed report highlighting the issues and offering solutions to mitigate risks.",
+            "fourthTitle": "Support",
+            "fourthDescription": "After delivering our report, we offer continuous support to help you implement the necessary changes and maintain security over time."
+        },
+        "work": {
+            "subHeading": "Our Work",
+            "heading": "Showcasing Our Expertise: Proven Success in Blockchain Security",
+            "data": [
+                {
+                    "title": "Dymension Dymint",
+                    "description": "Audit of the Dymension Dymint's consensus algorithm.",
+                    "tag": "Consensus Protocol Audit",
+                    "image": "./images/dymension.png",
+                    "link": "https://dymension.xyz/"
+                },
+                {
+                    "title": "Bifrost Finance",
+                    "description": "Audited Polkadot SDK Pallets of the Bifrost Finance Protocol",
+                    "tag": "Polkadot Pallet Audit",
+                    "image": "./images/bifrost.png",
+                    "link": "https://bifrost.io/"
+                },
+                {
+                    "title": "Cosmos SDK v0.47",
+                    "description": "Audited the Cosmos SDK upgrade, enhancing interchain security.",
+                    "tag": "Blockchain Security",
+                    "image": "./images/cosmos.jpg",
+                    "link": "https://cosmos.network/"
+                },
+                {
+                    "title": "Composable Finance Ethereum Light Client",
+                    "description": "Audited the Polkadot <-> Ethereum Light Client for Composable Finance.",
+                    "tag": "Light Client Audit",
+                    "image": "./images/composable.png",
+                    "link": "https://www.composable.finance/"
+                }
+            ]
+        },
+        "stats": [
+            {
+                "number": "150+",
+                "description": "Completed Audits"
+            },
+            {
+                "number": "700+",
+                "description": "Vulnerabilities Identified"
+            },
+            {
+                "number": "$8.5B+",
+                "description": "Assets Protected"
+            },
+            {
+                "number": "99.9%",
+                "description": "Disasters Recovered"
+            }
+        ],
+        "footer": {
+            "email": {
+                "to": "info@codezen.tech",
+                "subject": "Enter your request subject here",
+                "body": "Enter your detailed request here"
+            },
+            "twitter": "https://x.com/CodezenSRLS",
+            "linkedin": "https://www.linkedin.com/company/codezensrls",
+            "meeting": "https://appt.link/meet-with-codezen-srls-bvfOFgDi/web-conference"
+        }
+    }
 }
