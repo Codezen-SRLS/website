@@ -56,5 +56,14 @@ module.exports = {
                 icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
             },
         },
+        `gatsby-plugin-sitemap`,
+        {
+            resolve: `gatsby-plugin-robots-txt`,
+            options: {
+                host: `https://www.codezen.tech`,
+                sitemap: `https://www.codezen.tech/sitemap.xml`,
+                policy: [{ userAgent: `*`, allow: `/` }],
+            },
+        },
     ],
 };
