@@ -65,5 +65,6 @@ module.exports = {
         policy: [{ userAgent: `*`, allow: `/` }],
       },
     },
+    `gatsby-plugin-appointlet`,
   ],
 };

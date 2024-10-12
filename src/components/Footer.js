@@ -3,6 +3,7 @@ import "./Footer.css";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { mail } from "fluent-mailto";
+import { AppointletButton } from "gatsby-plugin-appointlet";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -71,13 +72,13 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className="col-md-6 text-center">
+            <AppointletButton tag="div" className="col-md-6 text-center">
               <StaticImage
                 src="../images/talk.png"
                 alt="logo"
                 className="talk"
               />
-            </div>
+            </AppointletButton>
           </div>
         </footer>
       </div>
