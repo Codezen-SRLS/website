@@ -252,7 +252,7 @@ h3 {
 .work-large,
 .slider-container {
   display: block;
-  width: 100vw;
+  width: 100%;
   padding: 0 10px;
 }
 .work-mobile {
