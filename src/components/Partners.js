@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from "react"
-import first from "../images/1.svg"
-import mercury from "../images/mercury.svg"
-import coinbase from "../images/coinbase.svg"
+import React, { useEffect, useRef } from "react";
+import first from "../images/1.svg";
+import mercury from "../images/mercury.svg";
+import coinbase from "../images/coinbase.svg";
 
 const Partners = () => {
-  const logos = [first, mercury, coinbase]
+  const logos = [first, mercury, coinbase];
 
   return (
     <>
@@ -55,7 +55,7 @@ const Partners = () => {
       </div>
       <hr />{" "}
     </>
-  )
-}
+  );
+};
 
-export default Partners
+export default Partners;

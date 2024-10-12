@@ -11,15 +11,15 @@ import HowWeWork from "../components/HowWeWork";
 import Work from "../components/Work";
 
 const IndexPage = () => (
-	<Layout>
-		<Banner />
-		<Stats />
-		<WhoWeAre />
-		<Partners />
-		<WhatWeDo />
-		<HowWeWork />
-		<Work />
-	</Layout>
+  <Layout>
+    <Banner />
+    <Stats />
+    <WhoWeAre />
+    <Partners />
+    <WhatWeDo />
+    <HowWeWork />
+    <Work />
+  </Layout>
 );
 
 /**
