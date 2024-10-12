@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { Link } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import toggleicon from "../images/toggle.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -10,6 +10,25 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const data = useStaticQuery(graphql`
+    query {
+      allSrcJson {
+        edges {
+          node {
+            banner {
+              header {
+                buttonLink
+                buttonText
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const newData = data.allSrcJson.edges[0].node.banner.header;
 
   return (
     <header className="container">
@@ -44,9 +63,7 @@ const Header = () => {
           </div>
           <ul>
             <li>
-              <Link to="/" activeClassName="active">
-                Home
-              </Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="#whoweare">About</Link>
@@ -61,18 +78,20 @@ const Header = () => {
               <Link to="#contact">Contact</Link>
             </li>
           </ul>
-          <button
-            className="btn"
-            style={{
-              "--btn-bg-color": "white",
-              "--text-color": "rgba(19, 19, 19, 1)",
-            }}
-          >
-            <span className="text">
-              <span className="square"></span>
-            </span>
-            let's get an audit
-          </button>
+          <Link to={newData?.buttonLink}>
+            <button
+              className="btn"
+              style={{
+                "--btn-bg-color": "white",
+                "--text-color": "rgba(19, 19, 19, 1)",
+              }}
+            >
+              <span className="text">
+                <span className="square"></span>
+              </span>
+              {newData?.buttonText}
+            </button>
+          </Link>
         </nav>
         <div className="hamburger" onClick={toggleMenu}>
           <img loading="lazy" src={toggleicon} alt="toggleicon" />

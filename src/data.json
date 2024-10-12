@@ -4,13 +4,13 @@
     "heading": "Securing the Future of Blockchain & Web3.",
     "text": "At Codezen, we secure your decentralized projects with expert consulting and thorough smart contract audits, ensuring your blockchain and Web3 ecosystem is protected.",
     "buttonText": "Get Started",
-    "buttonLink": "/#whatwedo",
+    "buttonLink": "/#whoweare",
     "whoweare": {
       "subHeading": "Who We Are",
       "heading": "Your Trusted Partner in Blockchain Security",
       "text": "Codezen is a cybersecurity firm specializing in blockchain and Web3 technologies. We offer security solutions tailored to the unique challenges of decentralized systems. Our mission is to safeguard the future of decentralized finance, applications, and networks through comprehensive audits and consulting services.<br/> <br/>With a team of experts in blockchain, smart contract auditing, and Web3 security, we bring a wealth of experience to help our clients navigate the evolving landscape of decentralized technologies.",
       "buttonText": "Let's Talk",
-      "buttonLink": "/get-started"
+      "buttonLink": "/#contact"
     },
     "whatwedo": {
       "subHeading": "What We Do",
@@ -106,6 +106,10 @@
       "twitter": "https://x.com/CodezenSRLS",
       "linkedin": "https://www.linkedin.com/company/codezensrls",
       "meeting": "https://appt.link/meet-with-codezen-srls-bvfOFgDi/web-conference"
+    },
+    "header": {
+      "buttonText": "Let's get an audit",
+      "buttonLink": "/#contact"
     }
   }
 }
