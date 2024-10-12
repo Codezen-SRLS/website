@@ -66,5 +66,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-appointlet`,
+    {
+      resolve: `gatsby-plugin-clarity`,
+      options: {
+        // Valore stringa per l'ID progetto Clarity
+        clarity_project_id: process.env.CLARITY_ID,
+      },
+    },
   ],
 };
