@@ -100,12 +100,13 @@
     "footer": {
       "email": {
         "to": "info@codezen.tech",
-        "subject": "Enter your request subject here",
-        "body": "Enter your detailed request here"
+        "subject": "Audit Request: [App/Protocol Name]",
+        "body": "To Codezen Audit Team,\n\nI am writing to request a quote for a comprehensive audit for our project. Below are the relevant details:\n\nProject Information:\n- Project Name: [App/Protocol Name]\n- Website URL: [Website URL]\n- Technology Stack: [List the technologies used (e.g., Solidity, Rust, Golang, etc.)]\n- Project Documentation: [Provide a link to or details of the documentation that may assist in the audit]\n\nScope of Audit:\n- [Provide a link to the project repository]\n\nSpecific Areas of Concern (if applicable):\n- [Outline any known issues or areas that require specific attention.]\n\nPreferred Timeline (optional):\n- [If you have a preferred deadline, please mention it here.]\n\nBest regards,\n[Your Full Name]\n[Your Job Title]\n[Your Company Name]"
       },
       "twitter": "https://x.com/CodezenSRLS",
       "linkedin": "https://www.linkedin.com/company/codezensrls",
-      "meeting": "https://appt.link/meet-with-codezen-srls-bvfOFgDi/web-conference"
+      "telegram": "https://t.me/christianvari",
+      "appointlet": "https://appt.link/meet-with-codezen-srls-bvfOFgDi/web-conference"
     },
     "header": {
       "buttonText": "Let's get an audit",

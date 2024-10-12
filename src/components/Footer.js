@@ -19,7 +19,7 @@ const Footer = () => {
                 }
                 twitter
                 linkedin
-                meeting
+                telegram
               }
             }
           }
@@ -66,8 +66,8 @@ const Footer = () => {
                 <a href={newData?.twitter} target="_blank">
                   <div>Twitter</div>
                 </a>
-                <a href={newData?.meeting} target="_blank">
-                  <div className="insta">Meeting</div>
+                <a href={newData?.telegram} target="_blank">
+                  <div className="insta">Telegram</div>
                 </a>
               </div>
             </div>
@@ -82,12 +82,12 @@ const Footer = () => {
         </footer>
       </div>
       <div className="copy-right w-100 container d-flex align-items-center justify-content-between">
-        <div className="copy-right-text">© 2024 Logo. All rights reserved</div>
+        <div className="copy-right-text">
+          © 2024 Codezen SRLS. All rights reserved
+        </div>
         <ul>
           <li>
-            <Link to="/" activeClassName="active">
-              Home
-            </Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="#whoweare">About</Link>
@@ -106,7 +106,7 @@ const Footer = () => {
       <div className="mobile-border-row"></div>
       <div className="mobile-copy-right w-100 container">
         <div className="mobile-copy-right-text">
-          © 2024 Logo. All rights reserved
+          © 2024 Codezen SRLS. All rights reserved
         </div>
       </div>
     </>
