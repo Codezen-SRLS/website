@@ -249,9 +249,11 @@ h3 {
   display: inline-flex;
   padding: 8px 12px;
 }
-.work-large {
+.work-large,
+.slider-container {
   display: block;
   width: 100vw;
+  padding: 0 10px;
 }
 .work-mobile {
   display: none;
@@ -321,7 +323,8 @@ h3 {
   .work-mobile {
     display: block;
   }
-  .work-large {
+  .work-large,
+  .slider-container {
     display: none;
   }
   .pt-6 {
