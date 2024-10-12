@@ -270,7 +270,7 @@ h3 {
   mix-blend-mode: lighten;
 }
 .videos {
-  mix-blend-mode: plus-lighter;
+  mix-blend-mode: lighten;
 }
 .videos-banner {
   mix-blend-mode: lighten;

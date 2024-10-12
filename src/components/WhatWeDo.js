@@ -75,19 +75,6 @@ const WhatWeDo = () => {
     });
   }, [isInView]);
 
-  const handleMouseEnter = (index) => {
-    // if (videoRefs.current[index]) {
-    // 	videoRefs.current[index].play();
-    // }
-  };
-
-  const handleMouseLeave = (index) => {
-    // if (videoRefs.current[index]) {
-    // 	videoRefs.current[index].pause();
-    // 	videoRefs.current[index].currentTime = 0; // Reset the video on hover out
-    // }
-  };
-
   return (
     <>
       <div id="whatwedo" className="banner">
@@ -101,11 +88,7 @@ const WhatWeDo = () => {
           <div className="row align-items-center">
             {newData?.data?.map((data, index) => (
               <div className="col-lg-4 col-12 mt-5" key={index}>
-                <div
-                  className="work"
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={() => handleMouseLeave(index)}
-                >
+                <div className="work">
                   <div className="d-flex align-items-center">
                     <div className="square"></div>
                     <p className="text primary-color mb-0 fw-500">
@@ -117,7 +100,9 @@ const WhatWeDo = () => {
                     ref={(el) => (videoRefs.current[index] = el)} // Ensure correct ref is set
                     width="100%"
                     height={"234px%"}
+                    autoPlay
                     muted
+                    playsinline
                   >
                     <source src={data?.video?.publicURL} type="video/mp4" />
                     Your browser does not support the video tag.
