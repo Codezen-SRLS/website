@@ -103,6 +103,8 @@ const WhatWeDo = () => {
                     autoPlay
                     muted
                     playsinline
+                    webkit-playsinline="true"
+                    controlsList="nodownload"
                   >
                     <source src={data?.video?.publicURL} type="video/mp4" />
                     Your browser does not support the video tag.
