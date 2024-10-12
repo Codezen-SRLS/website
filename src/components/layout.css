@@ -220,6 +220,9 @@ h3 {
 .work-section {
   border: 1px solid #888f8b;
 }
+.work-section:hover {
+  border: 1px solid var(--primar-color);
+}
 .work-image {
   height: 360px;
   display: flex;
