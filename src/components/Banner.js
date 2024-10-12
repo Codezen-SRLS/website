@@ -30,7 +30,7 @@ const Banner = () => {
       <div className="row align-items-center banner">
         <div className="col-xl-7 col-12">
           <p className="sub-text text-decoration-underline">
-            {newData?.subHeading}{" "}
+            {newData?.subHeading}
           </p>
           <h1 className="main-heading mt-3 mb-0">{newData?.heading} </h1>
           <p className="text banner-text mt-3">{newData?.text}</p>

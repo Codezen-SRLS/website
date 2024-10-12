@@ -1,14 +1,14 @@
 {
   "banner": {
-    "subHeading": "Blockchain Security Experts",
-    "heading": "Securing the Future of Blockchain & Web3.",
-    "text": "At Codezen, we secure your decentralized projects with expert consulting and thorough smart contract audits, ensuring your blockchain and Web3 ecosystem is protected.",
+    "subHeading": "Blockchain Security Expertise",
+    "heading": "Securing the Future of Blockchain & Web3",
+    "text": "At Codezen, we specialize in safeguarding decentralized systems through expert consulting and comprehensive security audits. From smart contracts to consensus algorithms, we ensure your Web3 projects are resilient and fortified against vulnerabilities.",
     "buttonText": "Get Started",
     "buttonLink": "/#whoweare",
     "whoweare": {
       "subHeading": "Who We Are",
       "heading": "Your Trusted Partner in Blockchain Security",
-      "text": "Codezen is a cybersecurity firm specializing in blockchain and Web3 technologies. We offer security solutions tailored to the unique challenges of decentralized systems. Our mission is to safeguard the future of decentralized finance, applications, and networks through comprehensive audits and consulting services.<br/> <br/>With a team of experts in blockchain, smart contract auditing, and Web3 security, we bring a wealth of experience to help our clients navigate the evolving landscape of decentralized technologies.",
+      "text": "Codezen is a cybersecurity firm specializing in blockchain and Web3 technologies. We provide tailored security solutions designed to meet the distinct challenges of decentralized systems. Our mission is to protect the future of decentralized finance, applications, and networks through thorough audits and expert consulting services.<br/> <br/>With deep expertise in blockchain, smart contract auditing, and Web3 security, Codezen offers an unparalleled understanding of decentralized technologies. Our comprehensive knowledge empowers clients to confidently navigate the rapidly changing landscape, ensuring their systems are fortified against emerging threats and vulnerabilities.",
       "buttonText": "Let's Talk",
       "buttonLink": "/#contact"
     },
@@ -18,17 +18,17 @@
       "data": [
         {
           "title": "Smart Contract Audits",
-          "description": "Ensure the security of your smart contracts with in-depth audits that identify vulnerabilities and protect against potential exploits.",
+          "description": "Enhance the security of your smart contracts with comprehensive audits that identify vulnerabilities and proactively protect against potential exploits.",
           "video": "./images/SmartContractAudits.mp4"
         },
         {
           "title": "Blockchain Consulting",
-          "description": "Get expert guidance on securing your blockchain infrastructure, from initial design to deployment and ongoing maintenance.",
+          "description": "Receive expert guidance on building and securing your blockchain infrastructure, from architectural design to deployment and long-term optimization.",
           "video": "./images/blockchain.mp4"
         },
         {
           "title": "Disaster Recovery",
-          "description": "Ensure business continuity with a robust Disaster Recovery plan that safeguards your data and operations.",
+          "description": "Guarantee business continuity with a robust Disaster Recovery plan that protects users, minimizes downtime, and ensures rapid recovery of operations.",
           "video": "./images/disaster.mp4"
         }
       ]
@@ -37,13 +37,13 @@
       "subHeading": "How We Work",
       "heading": "A Proven Approach to Securing Blockchain Projects",
       "firstTitle": "Discovery",
-      "firstDescription": "We start by understanding your project’s requirements and unique challenges.",
+      "firstDescription": "We begin by thoroughly analyzing your project’s requirements and unique challenges, laying the foundation for a customized security strategy.",
       "secondTitle": "Audit",
-      "secondDescription": "Our team conducts a thorough security audit, focusing on identifying vulnerabilities in smart contracts and blockchain architecture.",
+      "secondDescription": "We perform an exhaustive security audit, pinpointing vulnerabilities across smart contracts, blockchain architecture, and other critical components.",
       "thirdTitle": "Reporting",
-      "thirdDescription": "We provide a detailed report highlighting the issues and offering solutions to mitigate risks.",
+      "thirdDescription": "We deliver an in-depth report that not only highlights security vulnerabilities but also provides actionable solutions to mitigate risks and fortify your project.",
       "fourthTitle": "Support",
-      "fourthDescription": "After delivering our report, we offer continuous support to help you implement the necessary changes and maintain security over time."
+      "fourthDescription": "Beyond the report, we provide continuous support to guide you through the implementation of security measures and ensure your project remains protected over time."
     },
     "work": {
       "subHeading": "Our Work",
