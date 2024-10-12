@@ -164,6 +164,7 @@ a {
   width: 140px;
   height: 80px;
   object-fit: contain;
+  filter: brightness(0) invert(1); /* Makes the image appear white */
 }
 .primary-color {
   color: var(--primar-color);

@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from "react";
-import first from "../images/1.svg";
-import mercury from "../images/mercury.svg";
-import coinbase from "../images/coinbase.svg";
+import React from "react";
+import first from "../images/ethereum.svg";
+import solana from "../images/solana.svg";
+import polkadot from "../images/polkadot.svg";
+import bitcoin from "../images/bitcoin.svg";
+import cosmos from "../images/cosmos.svg";
 
 const Partners = () => {
-  const logos = [first, mercury, coinbase];
+  const logos = [first, solana, polkadot, bitcoin, cosmos];
 
   return (
     <>
@@ -19,11 +21,6 @@ const Partners = () => {
             <div key={`duplicate-${index}`} className="logo-placeholder">
               <img src={logo} alt={`Duplicate Logo ${index + 1}`} />
             </div>
-          ))}{" "}
-          {logos.map((logo, index) => (
-            <div key={`duplicate-${index}`} className="logo-placeholder">
-              <img src={logo} alt={`Duplicate Logo ${index + 1}`} />
-            </div>
           ))}
           {logos.map((logo, index) => (
             <div key={`duplicate-${index}`} className="logo-placeholder">
@@ -45,15 +42,9 @@ const Partners = () => {
               <img src={logo} alt={`Duplicate Logo ${index + 1}`} />
             </div>
           ))}
-          {logos.map((logo, index) => (
-            <div key={`duplicate-${index}`} className="logo-placeholder">
-              <img src={logo} alt={`Duplicate Logo ${index + 1}`} />
-            </div>
-          ))}
-          {/* Duplicating logos for seamless loop */}
         </div>
       </div>
-      <hr />{" "}
+      <hr />
     </>
   );
 };
