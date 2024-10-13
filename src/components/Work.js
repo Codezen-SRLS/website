@@ -85,7 +85,7 @@ const Work = () => {
                   className="work-image"
                   image={data?.node?.image.childImageSharp.gatsbyImageData}
                   alt={data?.node?.title}
-                ></GatsbyImage>
+                />
                 <div className="tag">{data?.node?.description}</div>
 
                 <div className="work-details">
