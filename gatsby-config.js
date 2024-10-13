@@ -31,6 +31,20 @@ module.exports = {
         path: `${__dirname}/src/data.json`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sharedData`,
+        path: path.join(__dirname, `src`, `sharedData`),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sharedImages`,
+        path: path.join(__dirname, `src`, `sharedData`, `images`),
+      },
+    },
     `gatsby-transformer-json`, // Transformer for JSON files
     {
       resolve: `gatsby-plugin-google-fonts`,

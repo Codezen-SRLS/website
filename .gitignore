@@ -64,3 +64,4 @@ yarn.lock
 .parcel-cache
 
 .env
+.ffmpeg-cache
