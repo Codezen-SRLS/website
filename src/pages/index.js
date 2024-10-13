@@ -20,7 +20,7 @@ const IndexPage = () => (
         left: 0,
         width: "100%",
         minHeight: "100%",
-        zIndex: 0,
+        zIndex: -1,
         objectFit: "fill",
       }}
       layout="fullWidth"
@@ -28,6 +28,7 @@ const IndexPage = () => (
       src={"../images/bg.png"}
       formats={["auto", "webp", "avif"]}
       placeholder="blurred"
+      backgroundColor="#131313"
     />
 
     <Layout>
