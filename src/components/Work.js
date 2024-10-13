@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { useMediaQuery } from "../utils";
 
 const Work = () => {
   const data = useStaticQuery(graphql`
@@ -40,15 +41,21 @@ const Work = () => {
     }
   `);
 
+  const is768 = useMediaQuery("(min-width: 768px)");
+  const is1024 = useMediaQuery("(min-width: 1440px)");
+
+  const columns = is1024 ? 3 : is768 ? 2 : 1;
+  const rows = 2;
+
   const newData = data.allAuditHistoryJson.edges;
 
   var settings = {
     dots: true,
     arrows: false,
-    slidesToShow: 3,
+    slidesToShow: columns,
     slidesToScroll: 2,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
   };
   return (
@@ -83,43 +90,12 @@ const Work = () => {
 
                 <div className="work-details">
                   <h3>{data?.node?.title}</h3>
-                  <p className="text mb-0">
-                    {" "}
-                    {data?.node?.extendedDescription}
-                  </p>
+                  <p className="text mb-0">{data?.node?.extendedDescription}</p>
                 </div>
               </div>
             </a>
           ))}
         </Slider>
-      </div>
-      <div className="work-mobile container">
-        <div className="row">
-          {newData?.map((data, i) => (
-            <a
-              href={
-                data?.node?.github ? data?.node?.github : data?.node?.website
-              }
-              target="_blank"
-              key={i}
-            >
-              <div className="col-12 mt-3">
-                <div className="work-section">
-                  <GatsbyImage
-                    className="work-image"
-                    image={data?.node?.image.childImageSharp.gatsbyImageData}
-                    alt={data?.node?.title}
-                  ></GatsbyImage>
-                  <div className="tag">{data?.node?.description}</div>
-                  <div className="work-details">
-                    <h3>{data?.node?.title}</h3>
-                    <p className="text mb-0"> {data?.node?.description}</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
       </div>
     </div>
   );

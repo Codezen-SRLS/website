@@ -75,8 +75,9 @@ const Footer = () => {
             <AppointletButton tag="div" className="col-md-6 text-center">
               <StaticImage
                 src="../images/talk.png"
-                alt="logo"
+                alt="meeting"
                 className="talk"
+                placeholder="blurred"
               />
             </AppointletButton>
           </div>

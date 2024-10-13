@@ -317,17 +317,6 @@ h3 {
   }
 }
 @media (max-width: 768px) {
-  .work-mobile {
-    display: block;
-  }
-  .work-mobile .tag {
-    margin-top: -55px;
-    top: unset;
-  }
-  .work-large,
-  .slider-container {
-    display: none;
-  }
   .pt-6 {
     padding-top: 3rem;
   }
