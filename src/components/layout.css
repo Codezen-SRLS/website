@@ -87,7 +87,9 @@ a {
 
 .banner {
   padding: 6rem 0;
+  justify-content: space-between;
 }
+
 .banner-text {
   max-width: 800px;
   white-space: pre-wrap;
@@ -275,13 +277,9 @@ h3 {
 }
 .videos-banner {
   mix-blend-mode: lighten;
-}
-.mobile {
-  display: none;
-}
-.desktop {
   display: block;
 }
+
 @media (max-width: 1440px) {
   .main-heading {
     font-size: 65px;
@@ -304,13 +302,9 @@ h3 {
   }
 }
 @media (max-width: 1024px) {
-  .mobile {
-    display: block;
-    width: 80% !important;
+  .videos-banner {
     margin: 0 auto !important;
-  }
-  .desktop {
-    display: none;
+    width: 80% !important;
   }
 }
 @media (min-width: 1720px) {

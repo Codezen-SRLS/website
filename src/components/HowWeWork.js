@@ -72,15 +72,21 @@ const HowWeWork = () => {
                 </div>
               </div>
             </div>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: ` <video class="w-100 videos" autoPlay loop muted playsinline>
-      <source src=${work} type="video/mp4" />
-      Your browser does not support the video tag.
-</video>`,
-              }}
-              className="col-lg-4 col-12 my-lg-0 my-5"
-            />
+            <div className="col-lg-4 col-12 my-lg-0 my-5">
+              <video
+                className="w-100 videos"
+                autoPlay
+                loop
+                muted
+                playsInline
+                webkit-playsinline="true"
+                controlsList="nodownload"
+                loading="lazy"
+              >
+                <source src={work} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
             <div className="col-lg-4 col-12">
               <div className="row">
                 <div className="col">
