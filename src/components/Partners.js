@@ -27,21 +27,6 @@ const Partners = () => {
               <img src={logo} alt={`Duplicate Logo ${index + 1}`} />
             </div>
           ))}
-          {logos.map((logo, index) => (
-            <div key={`duplicate-${index}`} className="logo-placeholder">
-              <img src={logo} alt={`Duplicate Logo ${index + 1}`} />
-            </div>
-          ))}
-          {logos.map((logo, index) => (
-            <div key={`duplicate-${index}`} className="logo-placeholder">
-              <img src={logo} alt={`Duplicate Logo ${index + 1}`} />
-            </div>
-          ))}
-          {logos.map((logo, index) => (
-            <div key={`duplicate-${index}`} className="logo-placeholder">
-              <img src={logo} alt={`Duplicate Logo ${index + 1}`} />
-            </div>
-          ))}
         </div>
       </div>
       <hr />

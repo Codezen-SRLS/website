@@ -220,6 +220,7 @@ h3 {
 }
 .work-section {
   border: 1px solid #888f8b;
+  cursor: pointer;
 }
 .work-section:hover {
   border: 1px solid var(--primar-color);
@@ -230,9 +231,6 @@ h3 {
   justify-content: start;
   align-items: end;
   padding: 20px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .slick-slide {
   padding: 0 10px !important; /* Adds 10px gap (adjust as needed) */
@@ -252,6 +250,9 @@ h3 {
   font-weight: normal;
   display: inline-flex;
   padding: 8px 12px;
+  position: absolute;
+  top: 305px;
+  margin-left: 15px;
 }
 .work-large,
 .slider-container {
@@ -318,6 +319,10 @@ h3 {
 @media (max-width: 768px) {
   .work-mobile {
     display: block;
+  }
+  .work-mobile .tag {
+    margin-top: -55px;
+    top: unset;
   }
   .work-large,
   .slider-container {

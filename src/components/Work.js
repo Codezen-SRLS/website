@@ -3,10 +3,28 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Work = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
+      allAuditHistoryJson(filter: { featured: { eq: true } }) {
+        edges {
+          node {
+            id
+            title
+            description
+            extendedDescription
+            website
+            github
+            image {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+              }
+            }
+          }
+        }
+      }
       allSrcJson {
         edges {
           node {
@@ -14,15 +32,6 @@ const Work = () => {
               work {
                 heading
                 subHeading
-                data {
-                  description
-                  link
-                  tag
-                  title
-                  image {
-                    publicURL
-                  }
-                }
               }
             }
           }
@@ -31,7 +40,8 @@ const Work = () => {
     }
   `);
 
-  const newData = data.allSrcJson.edges[0].node.banner.work;
+  const newData = data.allAuditHistoryJson.edges;
+
   var settings = {
     dots: true,
     arrows: false,
@@ -46,25 +56,37 @@ const Work = () => {
       <div className="container ">
         <div className="row align-items-center w-100 text-center">
           <p className="sub-text text-decoration-underline m-auto">
-            {newData?.subHeading}{" "}
+            {data?.allSrcJson.edges[0]?.node?.banner.work.subHeading}
           </p>
-          <h1 className="sub-heading mt-3 mb-5">{newData?.heading}</h1>
+          <h1 className="sub-heading mt-3 mb-5">
+            {data?.allSrcJson.edges[0]?.node?.banner.work.heading}
+          </h1>
         </div>
       </div>
       <div className="slider-container work-large">
         <Slider {...settings}>
-          {newData?.data?.map((data, i) => (
-            <a href={data?.link} target="_blank" key={i}>
+          {newData?.map((data, i) => (
+            <a
+              href={
+                data?.node?.github ? data?.node?.github : data?.node?.website
+              }
+              target="_blank"
+              key={i}
+            >
               <div className="work-section">
-                <div
+                <GatsbyImage
                   className="work-image"
-                  style={{ backgroundImage: `url(${data?.image?.publicURL})` }}
-                >
-                  <div className="tag">{data?.tag}</div>
-                </div>
+                  image={data?.node?.image.childImageSharp.gatsbyImageData}
+                  alt={data?.node?.title}
+                ></GatsbyImage>
+                <div className="tag">{data?.node?.description}</div>
+
                 <div className="work-details">
-                  <h3>{data?.title}</h3>
-                  <p className="text mb-0"> {data?.description}</p>
+                  <h3>{data?.node?.title}</h3>
+                  <p className="text mb-0">
+                    {" "}
+                    {data?.node?.extendedDescription}
+                  </p>
                 </div>
               </div>
             </a>
@@ -73,21 +95,25 @@ const Work = () => {
       </div>
       <div className="work-mobile container">
         <div className="row">
-          {newData?.data?.map((data, i) => (
-            <a href={data?.link} target="_blank" key={i}>
+          {newData?.map((data, i) => (
+            <a
+              href={
+                data?.node?.github ? data?.node?.github : data?.node?.website
+              }
+              target="_blank"
+              key={i}
+            >
               <div className="col-12 mt-3">
                 <div className="work-section">
-                  <div
+                  <GatsbyImage
                     className="work-image"
-                    style={{
-                      backgroundImage: `url(${data?.image?.publicURL})`,
-                    }}
-                  >
-                    <div className="tag">{data?.tag}</div>
-                  </div>
+                    image={data?.node?.image.childImageSharp.gatsbyImageData}
+                    alt={data?.node?.title}
+                  ></GatsbyImage>
+                  <div className="tag">{data?.node?.description}</div>
                   <div className="work-details">
-                    <h3>{data?.title}</h3>
-                    <p className="text mb-0"> {data?.description}</p>
+                    <h3>{data?.node?.title}</h3>
+                    <p className="text mb-0"> {data?.node?.description}</p>
                   </div>
                 </div>
               </div>

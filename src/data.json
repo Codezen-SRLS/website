@@ -47,37 +47,7 @@
     },
     "work": {
       "subHeading": "Our Work",
-      "heading": "Showcasing Our Expertise: Proven Success in Blockchain Security",
-      "data": [
-        {
-          "title": "Dymension Dymint",
-          "description": "Audit of the Dymension Dymint's consensus algorithm.",
-          "tag": "Consensus Protocol Audit",
-          "image": "./images/dymension.png",
-          "link": "https://dymension.xyz/"
-        },
-        {
-          "title": "Bifrost Finance",
-          "description": "Audited Polkadot SDK Pallets of the Bifrost Finance Protocol",
-          "tag": "Polkadot Pallet Audit",
-          "image": "./images/bifrost.png",
-          "link": "https://bifrost.io/"
-        },
-        {
-          "title": "Cosmos SDK v0.47",
-          "description": "Audited the Cosmos SDK upgrade, enhancing interchain security.",
-          "tag": "Blockchain Security",
-          "image": "./images/cosmos.jpg",
-          "link": "https://cosmos.network/"
-        },
-        {
-          "title": "Composable Finance Ethereum Light Client",
-          "description": "Audited the Polkadot <-> Ethereum Light Client for Composable Finance.",
-          "tag": "Light Client Audit",
-          "image": "./images/composable.png",
-          "link": "https://www.composable.finance/"
-        }
-      ]
+      "heading": "Showcasing Our Expertise: Proven Success in Blockchain Security"
     },
     "stats": [
       {
