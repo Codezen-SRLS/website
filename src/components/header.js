@@ -34,7 +34,12 @@ const Header = () => {
     <header className="container">
       <div className="header">
         <div className="logo">
-          <StaticImage src="../images/logo.png" alt="logo" className="logo" />
+          <StaticImage
+            src="../images/logo.png"
+            alt="logo"
+            className="logo"
+            placeholder="none"
+          />
         </div>
         <nav className={`nav ${menuOpen ? "open" : ""}`}>
           <div className="close-icon" onClick={toggleMenu}>

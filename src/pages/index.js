@@ -9,17 +9,37 @@ import Partners from "../components/Partners";
 import WhatWeDo from "../components/WhatWeDo";
 import HowWeWork from "../components/HowWeWork";
 import Work from "../components/Work";
+import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage = () => (
-  <Layout>
-    <Banner />
-    <Stats />
-    <WhoWeAre />
-    <Partners />
-    <WhatWeDo />
-    <HowWeWork />
-    <Work />
-  </Layout>
+  <>
+    <StaticImage
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        minHeight: "100%",
+        zIndex: 0,
+        objectFit: "fill",
+      }}
+      layout="fullWidth"
+      alt=""
+      src={"../images/bg.png"}
+      formats={["auto", "webp", "avif"]}
+      placeholder="blurred"
+    />
+
+    <Layout>
+      <Banner />
+      <Stats />
+      <WhoWeAre />
+      <Partners />
+      <WhatWeDo />
+      <HowWeWork />
+      <Work />
+    </Layout>
+  </>
 );
 
 /**
