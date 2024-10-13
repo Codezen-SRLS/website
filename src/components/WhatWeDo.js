@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import audit from "../images/SmartContractAudits.mp4";
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 const WhatWeDo = () => {
@@ -29,52 +28,6 @@ const WhatWeDo = () => {
 
   const newData = data.allSrcJson.edges[0].node.banner.whatwedo;
 
-  const videoRefs = useRef([]);
-  const [isInView, setIsInView] = useState(
-    new Array(newData?.data?.length).fill(false)
-  );
-
-  useEffect(() => {
-    videoRefs.current = videoRefs.current.slice(0, newData?.data?.length);
-
-    const observers = videoRefs.current.map((videoRef, index) => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          setIsInView((prev) => {
-            const newState = [...prev];
-            newState[index] = entry.isIntersecting;
-            return newState;
-          });
-        },
-        { threshold: 0.5 } // Adjust as needed
-      );
-
-      if (videoRef) {
-        observer.observe(videoRef);
-      }
-
-      return observer;
-    });
-
-    return () => {
-      observers.forEach((observer, index) => {
-        if (videoRefs.current[index]) {
-          observer.unobserve(videoRefs.current[index]);
-        }
-      });
-    };
-  }, [newData?.data?.length]);
-
-  useEffect(() => {
-    isInView.forEach((inView, index) => {
-      if (inView && videoRefs.current[index]) {
-        videoRefs.current[index].play();
-      } else if (!inView && videoRefs.current[index]) {
-        videoRefs.current[index].pause();
-      }
-    });
-  }, [isInView]);
-
   return (
     <>
       <div id="whatwedo" className="banner">
@@ -97,12 +50,11 @@ const WhatWeDo = () => {
                   </div>
                   <video
                     className="mt-4 video"
-                    ref={(el) => (videoRefs.current[index] = el)} // Ensure correct ref is set
                     width="100%"
                     height={"234px%"}
                     autoPlay
                     muted
-                    playsinline
+                    playsInline
                     webkit-playsinline="true"
                     controlsList="nodownload"
                   >

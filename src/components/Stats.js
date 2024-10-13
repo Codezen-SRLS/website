@@ -24,8 +24,8 @@ const Stats = () => {
     <div className="stats">
       <div className="container">
         <div className="row">
-          {newData?.map((data) => (
-            <div className="col-xl-3 col-6">
+          {newData?.map((data, i) => (
+            <div className="col-xl-3 col-6" key={i}>
               <h2 className="stats-heading">{data.number}</h2>
               <p className="stats-text">{data.description}</p>
             </div>

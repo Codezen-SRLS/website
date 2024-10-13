@@ -42,13 +42,7 @@ const WhoWeAre = () => {
               {newData?.subHeading}{" "}
             </p>
             <h3 className="sub-heading mt-3 mb-0">{newData?.heading} </h3>
-            <p className="text banner-text mt-3">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: newData?.text,
-                }}
-              />
-            </p>
+            <p className="text banner-text mt-3">{newData?.text}</p>
             <Link to={newData?.buttonLink}>
               <button className="btn mt-4" style={{ "--width": "165px" }}>
                 <span className="text">

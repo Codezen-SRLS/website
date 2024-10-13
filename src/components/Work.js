@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Work = () => {
   const data = useStaticQuery(graphql`
@@ -53,8 +53,8 @@ const Work = () => {
       </div>
       <div className="slider-container work-large">
         <Slider {...settings}>
-          {newData?.data?.map((data) => (
-            <a href={data?.link} target="_blank">
+          {newData?.data?.map((data, i) => (
+            <a href={data?.link} target="_blank" key={i}>
               <div className="work-section">
                 <div
                   className="work-image"
@@ -73,8 +73,8 @@ const Work = () => {
       </div>
       <div className="work-mobile container">
         <div className="row">
-          {newData?.data?.map((data) => (
-            <a href={data?.link} target="_blank">
+          {newData?.data?.map((data, i) => (
+            <a href={data?.link} target="_blank" key={i}>
               <div className="col-12 mt-3">
                 <div className="work-section">
                   <div
