@@ -45,7 +45,6 @@ const Work = () => {
   const is1024 = useMediaQuery("(min-width: 1440px)");
 
   const columns = is1024 ? 3 : is768 ? 2 : 1;
-  const rows = 2;
 
   const newData = data.allAuditHistoryJson.edges;
 
@@ -53,7 +52,7 @@ const Work = () => {
     dots: true,
     arrows: false,
     slidesToShow: columns,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,

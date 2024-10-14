@@ -27,7 +27,7 @@ const WhoWeAre = () => {
   return (
     <div id="whoweare" className="container">
       <div className="row align-items-center justify-content-between banner">
-        <div className="col-xl-4 col-12 ">
+        <div className="col-xl-3 col-12 whoweare-video">
           <video
             className="w-100 videos"
             autoPlay
@@ -42,6 +42,7 @@ const WhoWeAre = () => {
             Your browser does not support the video tag.
           </video>
         </div>
+
         <div className="col-xl-7 col-12 mt-xl-0 mt-5">
           <p className="sub-text text-decoration-underline">
             {newData?.subHeading}{" "}
