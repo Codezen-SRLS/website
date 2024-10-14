@@ -49,7 +49,7 @@ const Work = () => {
   const newData = data.allAuditHistoryJson.edges;
 
   var settings = {
-    dots: true,
+    dots: false,
     arrows: false,
     slidesToShow: columns,
     slidesToScroll: 1,
@@ -59,7 +59,7 @@ const Work = () => {
   };
   return (
     <div id="work" className="banner">
-      <div className="container ">
+      <div className="container">
         <div className="row align-items-center w-100 text-center">
           <p className="sub-text text-decoration-underline m-auto">
             {data?.allSrcJson.edges[0]?.node?.banner.work.subHeading}
