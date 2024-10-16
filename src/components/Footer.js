@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Footer.css";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
@@ -28,6 +28,12 @@ const Footer = () => {
       }
     }
   `);
+
+  //Hydrate fix
+  const [isHydrated, setIsHydrated] = useState();
+  useEffect(() => {
+    setIsHydrated(true);
+  });
 
   const newData = data.allSrcJson.edges[0].node.banner.footer;
   return (
@@ -72,14 +78,16 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <AppointletButton tag="div" className="col-md-6 text-center">
-              <StaticImage
-                src="../images/talk.png"
-                alt="meeting"
-                className="talk"
-                placeholder="blurred"
-              />
-            </AppointletButton>
+            {!!isHydrated && (
+              <AppointletButton tag="div" className="col-md-6 text-center">
+                <StaticImage
+                  src="../images/talk.png"
+                  alt="meeting"
+                  className="talk"
+                  placeholder="blurred"
+                />
+              </AppointletButton>
+            )}
           </div>
         </footer>
       </div>
