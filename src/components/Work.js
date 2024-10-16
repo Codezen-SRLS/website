@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -44,14 +44,18 @@ const Work = () => {
   const is768 = useMediaQuery("(min-width: 768px)");
   const is1024 = useMediaQuery("(min-width: 1440px)");
 
-  const columns = is1024 ? 3 : is768 ? 2 : 1;
+  //Hydrate fix
+  const [isHydrated, setIsHydrated] = useState();
+  useEffect(() => {
+    setIsHydrated(true);
+  }, [setIsHydrated]);
 
   const newData = data.allAuditHistoryJson.edges;
 
   var settings = {
     dots: false,
     arrows: false,
-    slidesToShow: columns,
+    slidesToShow: isHydrated ? (is1024 ? 3 : is768 ? 2 : 1) : 0,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -70,31 +74,35 @@ const Work = () => {
         </div>
       </div>
       <div className="slider-container work-large">
-        <Slider {...settings}>
-          {newData?.map((data, i) => (
-            <a
-              href={
-                data?.node?.github ? data?.node?.github : data?.node?.website
-              }
-              target="_blank"
-              key={i}
-            >
-              <div className="work-section">
-                <GatsbyImage
-                  className="work-image"
-                  image={data?.node?.image.childImageSharp.gatsbyImageData}
-                  alt={data?.node?.title}
-                />
-                <div className="tag">{data?.node?.description}</div>
+        {isHydrated && (
+          <Slider {...settings}>
+            {newData?.map((data, i) => (
+              <a
+                href={
+                  data?.node?.github ? data?.node?.github : data?.node?.website
+                }
+                target="_blank"
+                key={i}
+              >
+                <div className="work-section">
+                  <GatsbyImage
+                    className="work-image"
+                    image={data?.node?.image.childImageSharp.gatsbyImageData}
+                    alt={data?.node?.title}
+                  />
+                  <div className="tag">{data?.node?.description}</div>
 
-                <div className="work-details">
-                  <h3>{data?.node?.title}</h3>
-                  <p className="text mb-0">{data?.node?.extendedDescription}</p>
+                  <div className="work-details">
+                    <h3>{data?.node?.title}</h3>
+                    <p className="text mb-0">
+                      {data?.node?.extendedDescription}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </a>
-          ))}
-        </Slider>
+              </a>
+            ))}
+          </Slider>
+        )}
       </div>
     </div>
   );
