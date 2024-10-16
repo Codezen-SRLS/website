@@ -9,6 +9,7 @@
     "fluent-mailto": "^1.0.2",
     "gatsby": "^5.13.7",
     "gatsby-plugin-appointlet": "^1.1.3",
+    "gatsby-plugin-canonical-urls": "^5.13.1",
     "gatsby-plugin-clarity": "^1.0.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^3.13.1",

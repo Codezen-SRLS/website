@@ -16,6 +16,9 @@ module.exports = {
     author: `@musadiqkhan`,
     siteUrl: `https://www.codezen.tech`,
   },
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     `gatsby-plugin-image`,
     {
@@ -87,6 +90,12 @@ module.exports = {
       options: {
         // Valore stringa per l'ID progetto Clarity
         clarity_project_id: process.env.CLARITY_ID,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.codezen.tech`,
       },
     },
   ],
