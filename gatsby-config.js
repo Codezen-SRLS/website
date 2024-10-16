@@ -50,15 +50,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-json`, // Transformer for JSON files
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Outfit:300,400,500,600,700`, // Specify font weights you want to include
-        ],
-        display: "swap",
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

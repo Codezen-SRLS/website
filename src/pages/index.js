@@ -11,6 +11,8 @@ import HowWeWork from "../components/HowWeWork";
 import Work from "../components/Work";
 import { StaticImage } from "gatsby-plugin-image";
 
+import "@fontsource/outfit";
+
 const IndexPage = () => (
   <>
     <StaticImage
