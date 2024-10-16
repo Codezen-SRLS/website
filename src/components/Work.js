@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { useMediaQuery } from "../utils";
+import { useMediaQuery } from "react-responsive";
 
 const Work = () => {
   const data = useStaticQuery(graphql`
@@ -41,8 +41,8 @@ const Work = () => {
     }
   `);
 
-  const is768 = useMediaQuery("(min-width: 768px)");
-  const is1024 = useMediaQuery("(min-width: 1440px)");
+  const is768 = useMediaQuery({ query: "(min-width: 768px)" });
+  const is1024 = useMediaQuery({ query: "(min-width: 1440px)" });
 
   //Hydrate fix
   const [isHydrated, setIsHydrated] = useState();
