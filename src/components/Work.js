@@ -18,6 +18,7 @@ const Work = () => {
             extendedDescription
             website
             github
+            partner
             image {
               childImageSharp {
                 gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
@@ -41,8 +42,8 @@ const Work = () => {
     }
   `);
 
-  const is768 = useMediaQuery({ query: "(min-width: 768px)" });
-  const is1024 = useMediaQuery({ query: "(min-width: 1440px)" });
+  const is768 = useMediaQuery({ query: "(min-width: 740px)" });
+  const is1024 = useMediaQuery({ query: "(min-width: 1400px)" });
 
   //Hydrate fix
   const [isHydrated, setIsHydrated] = useState();
@@ -94,6 +95,9 @@ const Work = () => {
 
                   <div className="work-details">
                     <h3>{data?.node?.title}</h3>
+                    <p className="partner">
+                      {data?.node?.partner ? `X ${data?.node?.partner}` : ""}
+                    </p>
                     <p className="text mb-0">
                       {data?.node?.extendedDescription}
                     </p>
