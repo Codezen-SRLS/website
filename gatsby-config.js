@@ -16,9 +16,6 @@ module.exports = {
     author: `@musadiqkhan`,
     siteUrl: `https://www.codezen.tech`,
   },
-  flags: {
-    DEV_SSR: true,
-  },
   plugins: [
     `gatsby-plugin-image`,
     {
