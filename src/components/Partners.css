@@ -16,3 +16,8 @@
   object-fit: contain;
   filter: brightness(0) invert(1); /* Makes the image appear white */
 }
+@media (min-width: 1000px) {
+  .logo-placeholder img {
+    height: 2rem;
+  }
+}

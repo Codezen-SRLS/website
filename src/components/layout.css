@@ -242,11 +242,6 @@ h3 {
   display: none;
 }
 .video {
-  /* background: linear-gradient(
-		0deg,
-		rgba(1, 152, 215, 0.1) 0%,
-		rgba(1, 152, 215, 0.1) 100%
-	); */
   mix-blend-mode: lighten;
 }
 .videos {

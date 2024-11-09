@@ -57,7 +57,6 @@ const WhatWeDo = () => {
                     playsInline
                     webkit-playsinline="true"
                     controlsList="nodownload"
-                    loading="lazy"
                   >
                     <source src={data?.video?.publicURL} type="video/mp4" />
                     Your browser does not support the video tag.
