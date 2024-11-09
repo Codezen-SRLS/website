@@ -5,7 +5,7 @@ import polkadot from "../images/polkadot.svg";
 import bitcoin from "../images/bitcoin.svg";
 import cosmos from "../images/cosmos.svg";
 import "./Partners.css";
-import Marquee from "react-marquee-slider";
+import Slider from "react-infinite-logo-slider";
 
 const Partners = () => {
   const logos = [first, solana, polkadot, bitcoin, cosmos];
@@ -13,14 +13,22 @@ const Partners = () => {
   return (
     <>
       <div className="logo-carousel">
-        <Marquee velocity={50} scatterRandomly={false}>
+        <Slider
+          // width="250px"
+          duration={40}
+          pauseOnHover={false}
+          blurBorders={false}
+        >
           {[...logos, ...logos, ...logos].map((logo, index) => (
-            <div key={index} className="logo-placeholder">
-              <img src={logo} alt={`Logo ${index + 1}`} />
-            </div>
+            <Slider.Slide key={index}>
+              <div className="logo-placeholder">
+                <img src={logo} alt={`Logo ${index + 1}`} />
+              </div>
+            </Slider.Slide>
           ))}
-        </Marquee>
+        </Slider>
       </div>
+
       <hr />
     </>
   );
