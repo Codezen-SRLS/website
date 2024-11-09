@@ -1,0 +1,33 @@
+.logo-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.logos {
+  display: flex;
+}
+
+.logo-placeholder {
+  flex: 0 0 auto;
+}
+
+.logo-placeholder img {
+  height: 1.5rem;
+  margin: 0 0.5rem;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Makes the image appear white */
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .logo-placeholder img {
+    height: 2rem;
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo-placeholder img {
+    margin: 0 2rem;
+  }
+}

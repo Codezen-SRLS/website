@@ -148,37 +148,10 @@ a {
   line-height: 110.4%; /* 49.68px */
 }
 
-.logo-carousel {
-  width: 100%;
-  overflow: hidden;
-}
-.logos .logo-placeholder {
-  margin-right: 40px;
-}
-.logos {
-  display: flex;
-  width: max-content;
-  animation: scroll 10s linear infinite;
-}
-
-.logo-placeholder img {
-  width: 140px;
-  height: 80px;
-  object-fit: contain;
-  filter: brightness(0) invert(1); /* Makes the image appear white */
-}
 .primary-color {
   color: var(--primar-color);
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 .what-we-do-text {
   min-height: 130px;
 }
