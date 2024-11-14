@@ -26,7 +26,7 @@ const IndexPage = () => (
         objectFit: "fill",
       }}
       layout="fullWidth"
-      alt=""
+      alt="background"
       src={"../images/bg.png"}
       formats={["auto", "webp", "avif"]}
       placeholder="blurred"

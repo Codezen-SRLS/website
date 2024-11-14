@@ -45,7 +45,7 @@ const Footer = () => {
               <div className="logo">
                 <StaticImage
                   src="../images/logo.png"
-                  alt="logo"
+                  alt="Codezen Logo"
                   className="logo"
                 />
               </div>

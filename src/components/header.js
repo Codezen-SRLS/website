@@ -36,7 +36,7 @@ const Header = () => {
         <div className="logo">
           <StaticImage
             src="../images/logo.png"
-            alt="logo"
+            alt="Codezen Logo"
             className="logo"
             placeholder="none"
           />
