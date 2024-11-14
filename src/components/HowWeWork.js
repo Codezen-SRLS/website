@@ -37,7 +37,7 @@ const HowWeWork = () => {
             <p className="sub-text text-decoration-underline m-auto">
               {newData?.subHeading}
             </p>
-            <h1 className="sub-heading mt-3 mb-5">{newData?.heading}</h1>
+            <h2 className="sub-heading mt-3 mb-5">{newData?.heading}</h2>
             <div className="col-lg-4 col-12">
               <div className="row">
                 <div className="col">
@@ -108,7 +108,7 @@ const HowWeWork = () => {
                   </p>
                 </div>
               </div>
-            </div>{" "}
+            </div>
           </div>
         </div>
       </div>

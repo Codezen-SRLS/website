@@ -69,9 +69,9 @@ const Work = () => {
           <p className="sub-text text-decoration-underline m-auto">
             {data?.allSrcJson.edges[0]?.node?.banner.work.subHeading}
           </p>
-          <h1 className="sub-heading mt-3 mb-5">
+          <h2 className="sub-heading mt-3 mb-5">
             {data?.allSrcJson.edges[0]?.node?.banner.work.heading}
-          </h1>
+          </h2>
         </div>
       </div>
       <div className="slider-container work-large">

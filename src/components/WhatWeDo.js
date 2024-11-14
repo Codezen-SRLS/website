@@ -36,7 +36,7 @@ const WhatWeDo = () => {
             <p className="sub-text text-decoration-underline m-auto">
               {newData?.subHeading}{" "}
             </p>
-            <h1 className="sub-heading mt-3 mb-0">{newData?.heading} </h1>
+            <h2 className="sub-heading mt-3 mb-0">{newData?.heading} </h2>
           </div>
           <div className="row align-items-center">
             {newData?.data?.map((data, index) => (
