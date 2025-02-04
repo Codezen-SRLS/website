@@ -51,19 +51,11 @@
     },
     "stats": [
       {
-        "number": "150+",
-        "description": "Completed Audits"
-      },
-      {
-        "number": "700+",
-        "description": "Vulnerabilities Identified"
-      },
-      {
         "number": "$8.5B+",
         "description": "Assets Protected"
       },
       {
-        "number": "10+",
+        "number": "10",
         "description": "Disasters Recovered"
       }
     ],
