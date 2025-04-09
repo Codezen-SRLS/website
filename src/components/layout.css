@@ -10,7 +10,7 @@
 
 /* Light mode theme variables */
 .light-mode {
-  --bg-color: #f8f8f8;
+  --bg-color: #efefef;
   --white: rgba(0, 0, 0, 1);
   --light-white: rgba(0, 0, 0, 0.7);
   --primar-color: #008dd3;
@@ -267,9 +267,10 @@ h3 {
 .video {
   mix-blend-mode: lighten;
 }
-.videos {
-  mix-blend-mode: lighten;
+.light-mode .video {
+  mix-blend-mode: darken;
 }
+
 .videos-banner {
   mix-blend-mode: lighten;
   display: block;

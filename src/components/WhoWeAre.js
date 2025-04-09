@@ -1,6 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import hero from "../images/partner.mp4";
+import heroLight from "../images/partner-alt.mp4";
+import { useTheme } from "../context/ThemeContext";
 
 const WhoWeAre = () => {
   const data = useStaticQuery(graphql`
@@ -23,13 +25,17 @@ const WhoWeAre = () => {
     }
   `);
 
+  const { isDarkMode } = useTheme();
+  const heroVideo = isDarkMode ? hero : heroLight;
+
   const newData = data.allSrcJson.edges[0].node.banner.whoweare;
   return (
     <div id="whoweare" className="container">
       <div className="row align-items-center justify-content-between banner">
         <div className="col-xl-3 col-12 whoweare-video">
           <video
-            className="w-100 videos"
+            key={isDarkMode ? "dark" : "light"}
+            className="w-100 video"
             autoPlay
             loop
             muted
@@ -38,7 +44,7 @@ const WhoWeAre = () => {
             controlsList="nodownload"
             loading="lazy"
           >
-            <source src={hero} type="video/mp4" />
+            <source src={heroVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

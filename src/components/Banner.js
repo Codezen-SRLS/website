@@ -1,9 +1,14 @@
-import React from "react";
-import hero from "../images/hero.mp4";
+import React, { useEffect, useRef } from "react";
+import heroDark from "../images/hero.mp4";
+import heroLight from "../images/hero-alt.mp4";
+import { useTheme } from "../context/ThemeContext";
 
 import { useStaticQuery, graphql, Link } from "gatsby";
 
 const Banner = () => {
+  const { isDarkMode } = useTheme();
+  const heroVideo = isDarkMode ? heroDark : heroLight;
+
   const data = useStaticQuery(graphql`
     query {
       allSrcJson {
@@ -53,7 +58,7 @@ const Banner = () => {
             controlsList="nodownload"
             loading="lazy"
           >
-            <source src={hero} type="video/mp4" />
+            <source src={heroVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

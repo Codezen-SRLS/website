@@ -19,17 +19,26 @@
         {
           "title": "Smart Contract Audits",
           "description": "Enhance the security of your smart contracts with comprehensive audits that identify vulnerabilities and proactively protect against potential exploits.",
-          "video": "./images/SmartContractAudits.mp4"
+          "video": {
+            "dark": "./images/SmartContractAudits.mp4",
+            "light": "./images/SmartContractAudits-alt.mp4"
+          }
         },
         {
           "title": "Blockchain Consulting",
           "description": "Receive expert guidance on building and securing your blockchain infrastructure, from architectural design to deployment and long-term optimization.",
-          "video": "./images/blockchain.mp4"
+          "video": {
+            "dark": "./images/blockchain.mp4",
+            "light": "./images/blockchain-alt.mp4"
+          }
         },
         {
           "title": "Disaster Recovery",
           "description": "Guarantee business continuity with a robust Disaster Recovery plan that protects users, minimizes downtime, and ensures rapid recovery of operations.",
-          "video": "./images/disaster.mp4"
+          "video": {
+            "dark": "./images/disaster.mp4",
+            "light": "./images/disaster-alt.mp4"
+          }
         }
       ]
     },
