@@ -64,16 +64,17 @@ const Footer = () => {
                     .body(newData?.email?.body)
                     .build()}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <div>Email</div>
                 </a>
-                <a href={newData?.linkedin} target="_blank">
+                <a href={newData?.linkedin} target="_blank" rel="noreferrer">
                   <div>Linkedin</div>
                 </a>
-                <a href={newData?.twitter} target="_blank">
+                <a href={newData?.twitter} target="_blank" rel="noreferrer">
                   <div>Twitter</div>
                 </a>
-                <a href={newData?.telegram} target="_blank">
+                <a href={newData?.telegram} target="_blank" rel="noreferrer">
                   <div className="insta">Telegram</div>
                 </a>
               </div>

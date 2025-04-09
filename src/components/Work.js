@@ -83,6 +83,7 @@ const Work = () => {
                   data?.node?.github ? data?.node?.github : data?.node?.website
                 }
                 target="_blank"
+                rel="noreferrer"
                 key={i}
               >
                 <div className="work-section">
