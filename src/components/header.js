@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <header className="container">
       <div className="header">
-        <div className="logo">
+        <div className="logo" key={isDarkMode ? "dark" : "light"}>
           {isDarkMode ? (
             <StaticImage
               src="../images/logo-alt.png"
