@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import toggleicon from "../images/toggle.svg";
+import toggleiconLight from "../images/toggle-alt.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import { useTheme } from "../context/ThemeContext";
 
@@ -67,14 +68,14 @@ const Header = () => {
             >
               <path
                 d="M6.87305 17.1275L17.1275 6.87305"
-                stroke="white"
+                stroke={isDarkMode ? "white" : "black"}
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
                 d="M17.1275 17.1275L6.87305 6.87305"
-                stroke="white"
+                stroke={isDarkMode ? "white" : "black"}
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -149,7 +150,11 @@ const Header = () => {
           </Link>
         </nav>
         <div className="hamburger" onClick={toggleMenu}>
-          <img loading="lazy" src={toggleicon} alt="toggleicon" />
+          <img
+            loading="lazy"
+            src={isDarkMode ? toggleicon : toggleiconLight}
+            alt="toggleicon"
+          />
         </div>
         <div
           className={`overlay ${menuOpen ? "open" : ""}`}
