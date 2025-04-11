@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -12,11 +12,10 @@ const Footer = () => {
               footer {
                 email {
                   to
-                  subject
-                  body
                 }
                 twitter
                 linkedin
+                note
               }
             }
           }
@@ -28,9 +27,7 @@ const Footer = () => {
   const footerData = data.allSrcJson.edges[0].node.banner;
   const { email, twitter, linkedin } = footerData.footer;
 
-  const mailtoLink = `mailto:${email.to}?subject=${encodeURIComponent(
-    email.subject
-  )}&body=${encodeURIComponent(email.body)}`;
+  const mailtoLink = `mailto:${email.to}}`;
 
   return (
     <div id="contact" className="footer-container">
@@ -61,13 +58,7 @@ const Footer = () => {
           {/* Note Section */}
           <div className="col-md-4">
             <h3>Note</h3>
-            <p className="footer-note">
-              Codezen Delivers Top-Tier Blockchain And Web3 Security Solutions,
-              With A Strong Focus On Securing Decentralized Applications. They
-              Specialize In Comprehensive Smart Contract Audits, Risk
-              Assessment, And Cybersecurity Consulting To Ensure Safe, Reliable,
-              And Compliant Blockchain Ecosystems.
-            </p>
+            <p className="footer-note">{footerData.footer.note}</p>
           </div>
 
           {/* Ready For Action Section */}
