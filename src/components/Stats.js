@@ -50,8 +50,7 @@ const Stats = () => {
                   p +
                   n.node.issues.critical +
                   n.node.issues.major +
-                  n.node.issues.minor +
-                  n.node.issues.informational
+                  n.node.issues.minor
                 );
               }, 0)}
             </h2>

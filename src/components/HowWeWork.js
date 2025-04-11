@@ -1,6 +1,8 @@
 import React from "react";
-import work from "../images/work.mp4";
+import workDark from "../images/work.mp4";
+import workLight from "../images/work-alt.mp4";
 import { useStaticQuery, graphql } from "gatsby";
+import { useTheme } from "../context/ThemeContext";
 
 const HowWeWork = () => {
   const data = useStaticQuery(graphql`
@@ -27,6 +29,9 @@ const HowWeWork = () => {
       }
     }
   `);
+
+  const { isDarkMode } = useTheme();
+  const work = isDarkMode ? workDark : workLight;
 
   const newData = data.allSrcJson.edges[0].node.banner.howwework;
   return (
@@ -74,7 +79,8 @@ const HowWeWork = () => {
             </div>
             <div className="col-lg-4 col-12 my-lg-0 my-5">
               <video
-                className="w-100 videos"
+                key={isDarkMode ? "dark" : "light"}
+                className="w-100 video"
                 autoPlay
                 loop
                 muted

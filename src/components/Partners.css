@@ -11,11 +11,20 @@
   flex: 0 0 auto;
 }
 
+/* Dark mode (default) - makes logos white */
 .logo-placeholder img {
   height: 1.5rem;
   object-fit: contain;
   filter: brightness(0) invert(1); /* Makes the image appear white */
 }
+
+/* Light mode - makes logos grayscale */
+.light-mode .logo-placeholder img {
+  height: 1.5rem;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.8) opacity(0.8); /* Makes the image appear grayscale */
+}
+
 @media (min-width: 1000px) {
   .logo-placeholder img {
     height: 2rem;

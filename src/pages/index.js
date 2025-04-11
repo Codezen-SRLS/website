@@ -9,30 +9,11 @@ import Partners from "../components/Partners";
 import WhatWeDo from "../components/WhatWeDo";
 import HowWeWork from "../components/HowWeWork";
 import Work from "../components/Work";
-import { StaticImage } from "gatsby-plugin-image";
 
 import "@fontsource/outfit";
 
-const IndexPage = () => (
-  <>
-    <StaticImage
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        minHeight: "100%",
-        zIndex: -1,
-        objectFit: "fill",
-      }}
-      layout="fullWidth"
-      alt="background"
-      src={"../images/bg.png"}
-      formats={["auto", "webp", "avif"]}
-      placeholder="blurred"
-      backgroundColor="#131313"
-    />
-
+const IndexPage = () => {
+  return (
     <Layout>
       <Banner />
       <Stats />
@@ -42,8 +23,8 @@ const IndexPage = () => (
       <HowWeWork />
       <Work />
     </Layout>
-  </>
-);
+  );
+};
 
 /**
  * Head export to define metadata for the page

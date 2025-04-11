@@ -2,14 +2,14 @@
   "banner": {
     "subHeading": "Securing the Future of Blockchain & Web3",
     "heading": "Expert Web3 & Blockchain Security Solutions",
-    "text": "We specialize in safeguarding decentralized systems through expert consulting and comprehensive security audits. From smart contracts to consensus algorithms, we ensure your Web3 projects are resilient and fortified against vulnerabilities.",
-    "buttonText": "Get Started",
+    "text": "At Codezen we specialize in safeguarding decentralized systems through expert consulting and comprehensive security audits. From smart contracts to consensus algorithms, we ensure your Web3 projects are resilient and fortified against vulnerabilities.",
+    "buttonText": "Secure your project",
     "buttonLink": "/#whoweare",
     "whoweare": {
       "subHeading": "Who We Are",
       "heading": "Your Trusted Partner in Blockchain Security",
       "text": "Codezen is a cybersecurity firm specializing in blockchain and Web3 technologies. We provide tailored security solutions designed to meet the distinct challenges of decentralized systems. Our mission is to protect the future of decentralized finance, applications, and networks through thorough audits and expert consulting services.\n\nWith deep expertise in blockchain, smart contract auditing, and Web3 security, Codezen offers an unparalleled understanding of decentralized technologies. Our comprehensive knowledge empowers clients to confidently navigate the rapidly changing landscape, ensuring their systems are fortified against emerging threats and vulnerabilities.",
-      "buttonText": "Let's Talk",
+      "buttonText": "Let's get an audit",
       "buttonLink": "/#contact"
     },
     "whatwedo": {
@@ -19,17 +19,26 @@
         {
           "title": "Smart Contract Audits",
           "description": "Enhance the security of your smart contracts with comprehensive audits that identify vulnerabilities and proactively protect against potential exploits.",
-          "video": "./images/SmartContractAudits.mp4"
+          "video": {
+            "dark": "./images/SmartContractAudits.mp4",
+            "light": "./images/SmartContractAudits-alt.mp4"
+          }
         },
         {
           "title": "Blockchain Consulting",
           "description": "Receive expert guidance on building and securing your blockchain infrastructure, from architectural design to deployment and long-term optimization.",
-          "video": "./images/blockchain.mp4"
+          "video": {
+            "dark": "./images/blockchain.mp4",
+            "light": "./images/blockchain-alt.mp4"
+          }
         },
         {
           "title": "Disaster Recovery",
           "description": "Guarantee business continuity with a robust Disaster Recovery plan that protects users, minimizes downtime, and ensures rapid recovery of operations.",
-          "video": "./images/disaster.mp4"
+          "video": {
+            "dark": "./images/disaster.mp4",
+            "light": "./images/disaster-alt.mp4"
+          }
         }
       ]
     },
@@ -67,8 +76,8 @@
       },
       "twitter": "https://x.com/CodezenSRLS",
       "linkedin": "https://www.linkedin.com/company/codezensrls",
-      "telegram": "https://t.me/christianvari",
-      "appointlet": "https://appt.link/meet-with-codezen-srls-bvfOFgDi/web-conference"
+      "appointlet": "https://appt.link/meet-with-codezen-srls-bvfOFgDi/web-conference",
+      "note": "Codezen Delivers Top-Tier Blockchain And Web3 Security Solutions, With A Strong Focus On Securing Decentralized Applications. They Specialize In Comprehensive Smart Contract Audits, Risk Assessment, And Cybersecurity Consulting To Ensure Safe, Reliable, And Compliant Blockchain Ecosystems."
     },
     "header": {
       "buttonText": "Let's get an audit",

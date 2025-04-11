@@ -6,13 +6,15 @@ import bitcoin from "../images/bitcoin.svg";
 import cosmos from "../images/cosmos.svg";
 import "./Partners.css";
 import Slider from "react-infinite-logo-slider";
+import { useTheme } from "../context/ThemeContext";
 
 const Partners = () => {
   const logos = [first, solana, polkadot, bitcoin, cosmos];
+  const { isDarkMode } = useTheme();
 
   return (
     <>
-      <div className="logo-carousel">
+      <div className={`logo-carousel ${!isDarkMode ? "light-mode" : ""}`}>
         <Slider
           // width="250px"
           duration={40}

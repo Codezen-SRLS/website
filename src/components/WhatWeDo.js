@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { useTheme } from "../context/ThemeContext";
 
 const WhatWeDo = () => {
   const data = useStaticQuery(graphql`
@@ -15,7 +16,12 @@ const WhatWeDo = () => {
                   description
                   title
                   video {
-                    publicURL
+                    light {
+                      publicURL
+                    }
+                    dark {
+                      publicURL
+                    }
                   }
                 }
               }
@@ -25,6 +31,7 @@ const WhatWeDo = () => {
       }
     }
   `);
+  const { isDarkMode } = useTheme();
 
   const newData = data.allSrcJson.edges[0].node.banner.whatwedo;
 
@@ -49,9 +56,10 @@ const WhatWeDo = () => {
                     </p>
                   </div>
                   <video
+                    key={isDarkMode ? "dark" : "light"}
                     className="mt-4 video"
                     width="100%"
-                    height={"234px%"}
+                    height={"234px"}
                     autoPlay
                     muted
                     playsInline
@@ -59,7 +67,14 @@ const WhatWeDo = () => {
                     controlsList="nodownload"
                     loading="lazy"
                   >
-                    <source src={data?.video?.publicURL} type="video/mp4" />
+                    <source
+                      src={
+                        isDarkMode
+                          ? data?.video?.dark?.publicURL
+                          : data?.video?.light?.publicURL
+                      }
+                      type="video/mp4"
+                    />
                     Your browser does not support the video tag.
                   </video>
                   <h3 className="mt-4 text-lg-start text-center">
