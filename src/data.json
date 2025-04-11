@@ -2,7 +2,7 @@
   "banner": {
     "subHeading": "Securing the Future of Blockchain & Web3",
     "heading": "Expert Web3 & Blockchain Security Solutions",
-    "text": "We specialize in safeguarding decentralized systems through expert consulting and comprehensive security audits. From smart contracts to consensus algorithms, we ensure your Web3 projects are resilient and fortified against vulnerabilities.",
+    "text": "At Codezen we specialize in safeguarding decentralized systems through expert consulting and comprehensive security audits. From smart contracts to consensus algorithms, we ensure your Web3 projects are resilient and fortified against vulnerabilities.",
     "buttonText": "Get Started",
     "buttonLink": "/#whoweare",
     "whoweare": {
@@ -76,7 +76,6 @@
       },
       "twitter": "https://x.com/CodezenSRLS",
       "linkedin": "https://www.linkedin.com/company/codezensrls",
-      "telegram": "https://t.me/christianvari",
       "appointlet": "https://appt.link/meet-with-codezen-srls-bvfOFgDi/web-conference"
     },
     "header": {

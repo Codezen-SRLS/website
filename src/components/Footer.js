@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Footer.css";
-import { StaticImage } from "gatsby-plugin-image";
-import { useStaticQuery, graphql, Link } from "gatsby";
-import { mail } from "fluent-mailto";
-import { AppointletButton } from "gatsby-plugin-appointlet";
+import { Link, useStaticQuery, graphql } from "gatsby";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -20,7 +17,6 @@ const Footer = () => {
                 }
                 twitter
                 linkedin
-                telegram
               }
             }
           }
@@ -29,98 +25,76 @@ const Footer = () => {
     }
   `);
 
-  //Hydrate fix
-  const [isHydrated, setIsHydrated] = useState();
-  useEffect(() => {
-    setIsHydrated(true);
-  });
+  const footerData = data.allSrcJson.edges[0].node.banner;
+  const { email, twitter, linkedin } = footerData.footer;
 
-  const newData = data.allSrcJson.edges[0].node.banner.footer;
+  const mailtoLink = `mailto:${email.to}?subject=${encodeURIComponent(
+    email.subject
+  )}&body=${encodeURIComponent(email.body)}`;
+
   return (
-    <>
-      <div id="contact" className="footer-container">
-        <footer className="container">
-          <div className="row align-items-center justify-content-center footer-main">
-            <div className="col-md-4 ">
-              <div className="logo">
-                <StaticImage
-                  src="../images/logo.png"
-                  alt="Codezen Logo"
-                  className="logo"
-                />
-              </div>
-              <p className="footer-text">
-                Codezen provides expert blockchain and Web3 security solutions,
-                specializing in smart contract audits and cybersecurity
-                consulting.
-              </p>
-            </div>
-            <div className="col-md-2">
-              <div className="d-flex flex-column social">
-                <a
-                  href={mail
-                    .to(newData?.email?.to)
-                    .subject(newData?.email?.subject)
-                    .body(newData?.email?.body)
-                    .build()}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div>Email</div>
-                </a>
-                <a href={newData?.linkedin} target="_blank" rel="noreferrer">
-                  <div>Linkedin</div>
-                </a>
-                <a href={newData?.twitter} target="_blank" rel="noreferrer">
-                  <div>Twitter</div>
-                </a>
-                <a href={newData?.telegram} target="_blank" rel="noreferrer">
-                  <div className="insta">Telegram</div>
-                </a>
-              </div>
-            </div>
-            {!!isHydrated && (
-              <AppointletButton tag="div" className="col-md-6 text-center">
-                <StaticImage
-                  src="../images/talk.png"
-                  alt="meeting"
-                  className="talk"
-                  placeholder="blurred"
-                />
-              </AppointletButton>
-            )}
+    <div id="contact" className="footer-container">
+      <footer className="container">
+        <div className="row">
+          {/* Company Section */}
+          <div className="col-md-4">
+            <h3>Company</h3>
+            <ul className="footer-links">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="#whoweare">About Me</a>
+              </li>
+              <li>
+                <a href="#whatwedo">Services</a>
+              </li>
+              <li>
+                <a href="#work">Portfolio</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
           </div>
-        </footer>
-      </div>
-      <div className="copy-right w-100 container d-flex align-items-center justify-content-between">
-        <div className="copy-right-text">
-          © 2024 Codezen SRLS. All rights reserved
+
+          {/* Note Section */}
+          <div className="col-md-4">
+            <h3>Note</h3>
+            <p className="footer-note">
+              Codezen Delivers Top-Tier Blockchain And Web3 Security Solutions,
+              With A Strong Focus On Securing Decentralized Applications. They
+              Specialize In Comprehensive Smart Contract Audits, Risk
+              Assessment, And Cybersecurity Consulting To Ensure Safe, Reliable,
+              And Compliant Blockchain Ecosystems.
+            </p>
+          </div>
+
+          {/* Ready For Action Section */}
+          <div className="col-md-4">
+            <h3>Ready For Action</h3>
+            <a href={mailtoLink} className="footer-email">
+              {email.to}
+            </a>
+          </div>
         </div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="#whoweare">About</Link>
-          </li>
-          <li>
-            <Link to="#whatwedo">Services</Link>
-          </li>
-          <li>
-            <Link to="#work">Portfolio</Link>
-          </li>
-          <li>
-            <Link to="#contact">Contact</Link>
-          </li>
-        </ul>
-      </div>
-      <div className="mobile-border-row"></div>
-      <div className="mobile-copy-right w-100 container">
-        <div className="mobile-copy-right-text">
-          © 2024 Codezen SRLS. All rights reserved
+
+        {/* Copyright and Social Links */}
+        <div className="footer-bottom">
+          <div className="copyright">
+            <span>©</span> 2025 Codezen SRLS. All Rights Reserved.
+          </div>
+          <div className="social-links">
+            <a href={twitter} target="_blank" rel="noreferrer">
+              <img src="/images/twitter.svg" alt="Twitter" />
+            </a>
+            <a href={linkedin} target="_blank" rel="noreferrer">
+              <img src="/images/linkedin.svg" alt="LinkedIn" />
+            </a>
+          </div>
         </div>
-      </div>
-    </>
+      </footer>
+    </div>
   );
 };
 

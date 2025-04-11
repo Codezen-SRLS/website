@@ -49,6 +49,7 @@ const Banner = () => {
         </div>
         <div className="col-xl-3 col-12 mt-xl-0 mt-5">
           <video
+            key={isDarkMode ? "dark" : "light"}
             className="w-100 videos-banner"
             autoPlay
             loop

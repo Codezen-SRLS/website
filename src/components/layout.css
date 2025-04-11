@@ -276,6 +276,10 @@ h3 {
   display: block;
 }
 
+.light-mode .videos-banner {
+  mix-blend-mode: darken;
+}
+
 @media (min-width: 1440px) {
   .main-heading {
     font-size: 65px;
