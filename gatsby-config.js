@@ -16,7 +16,6 @@ module.exports = {
     author: `@christianvari`,
     siteUrl: `https://www.codezen.tech`,
     twitterUsername: `@CodezenSRLS`,
-    image: `/logo.png`,
     keywords: `Web3, Blockchain, Security, Smart Contracts, Audit, DeFi, Consulting, Crypto`,
   },
   plugins: [

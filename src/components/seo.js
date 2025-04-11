@@ -7,8 +7,9 @@
 
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import logo from "../images/logo.png";
 
-function Seo({ children, image, article, keywords, pathname }) {
+function Seo({ children, article, keywords, pathname }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -29,14 +30,19 @@ function Seo({ children, image, article, keywords, pathname }) {
   const canonical = pathname
     ? `${site.siteMetadata.siteUrl}${pathname}`
     : site.siteMetadata.siteUrl;
-  const metaImage = image ? `${site.siteMetadata.siteUrl}${image}` : null;
+  const metaImage = `${site.siteMetadata.siteUrl}/icons/icon-512x512.png`;
 
   return (
     <>
       <title>{defaultTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keywords} />
+      <meta name="image" content={metaImage} />
       <link rel="canonical" href={canonical} />
+
+      <meta itemprop="name" content="Codezen" />
+      <meta itemprop="description" content={metaDescription} />
+      <meta itemprop="image" content={metaImage} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:title" content={defaultTitle} />
