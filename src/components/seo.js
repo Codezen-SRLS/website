@@ -8,15 +8,7 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-function Seo({
-  description,
-  title,
-  children,
-  image,
-  article,
-  keywords,
-  pathname,
-}) {
+function Seo({ children, image, article, keywords, pathname }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -32,7 +24,7 @@ function Seo({
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
   const canonical = pathname
     ? `${site.siteMetadata.siteUrl}${pathname}`
@@ -41,13 +33,13 @@ function Seo({
 
   return (
     <>
-      <title>{title ? `${title} | ${defaultTitle}` : defaultTitle}</title>
+      <title>{defaultTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonical} />
 
       {/* Open Graph / Facebook */}
-      <meta property="og:title" content={title || defaultTitle} />
+      <meta property="og:title" content={defaultTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content={article ? "article" : "website"} />
       <meta property="og:url" content={canonical} />
@@ -56,7 +48,7 @@ function Seo({
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
-      <meta name="twitter:title" content={title || defaultTitle} />
+      <meta name="twitter:title" content={defaultTitle} />
       <meta name="twitter:description" content={metaDescription} />
       {metaImage && <meta name="twitter:image" content={metaImage} />}
 

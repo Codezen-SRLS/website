@@ -11,7 +11,7 @@ const path = require(`path`);
  */
 module.exports = {
   siteMetadata: {
-    title: `Codezen: Expert Web3 & Blockchain Security Solutions`,
+    title: `Codezen`,
     description: `Codezen secures Web3 with expert consulting and audits, protecting decentralized systems and smart contracts against vulnerabilities.`,
     author: `@christianvari`,
     siteUrl: `https://www.codezen.tech`,

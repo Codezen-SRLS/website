@@ -33,8 +33,6 @@ const IndexPage = () => {
  */
 export const Head = () => (
   <Seo
-    title="Home"
-    description="Codezen secures Web3 with expert consulting and audits, protecting decentralized systems and smart contracts against vulnerabilities."
     keywords="Web3, Blockchain, Security, Smart Contracts, Audit, DeFi, Consulting, Crypto"
     pathname="/"
   />
