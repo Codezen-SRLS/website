@@ -11,13 +11,13 @@ const path = require(`path`);
  */
 module.exports = {
   siteMetadata: {
-    title: `Codezen`,
+    title: `Codezen | Blockchain and Web3 Audits`,
     description: `Codezen secures Web3 with expert consulting and audits, protecting decentralized systems and smart contracts against vulnerabilities.`,
     author: `@christianvari`,
     siteUrl: `https://www.codezen.tech`,
     image: `/logo.png`,
     twitterUsername: `@CodezenSRLS`,
-    keywords: `Web3, Blockchain, Security, Smart Contracts, Audit, DeFi, Consulting, Crypto`,
+    keywords: `Web3, Blockchain, Security, Smart Contracts, Audit, DeFi, Consulting, Crypto, Codezen`,
   },
   plugins: [
     `gatsby-plugin-image`,
