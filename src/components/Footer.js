@@ -1,6 +1,8 @@
 import React from "react";
 import "./Footer.css";
 import { useStaticQuery, graphql } from "gatsby";
+import twitterIcon from "../images/twitter.svg";
+import linkedinIcon from "../images/linkedin.svg";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -77,10 +79,10 @@ const Footer = () => {
           </div>
           <div className="social-links">
             <a href={twitter} target="_blank" rel="noreferrer">
-              <img src="/images/twitter.svg" alt="Twitter" />
+              <img src={twitterIcon} alt="Twitter" />
             </a>
             <a href={linkedin} target="_blank" rel="noreferrer">
-              <img src="/images/linkedin.svg" alt="LinkedIn" />
+              <img src={linkedinIcon} alt="LinkedIn" />
             </a>
           </div>
         </div>
