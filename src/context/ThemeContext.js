@@ -3,46 +3,26 @@ import React, { createContext, useState, useEffect, useContext } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode as that's the current implementation
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
-
-    // Check for system preference on component mount
-    const prefersDarkMode =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    setIsDarkMode(prefersDarkMode);
-
-    // Add listener for theme changes
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e) => {
-      setIsDarkMode(e.matches);
-    };
-
-    // Use modern event listener or deprecated addListener depending on browser support
-    if (mediaQuery.addEventListener) {
-      mediaQuery.addEventListener("change", handleChange);
-      return () => mediaQuery.removeEventListener("change", handleChange);
-    } else {
-      // Fallback for Safari < 14
-      mediaQuery.addListener(handleChange);
-      return () => mediaQuery.removeListener(handleChange);
+    if (!isClient) {
+      setIsClient(true);
+      // Load theme preference from localStorage on initial mount
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme !== null) {
+        setIsDarkMode(savedTheme === "dark");
+      }
+      return;
     }
-  }, []);
 
-  // Add/remove dark class to body
-  useEffect(() => {
-    if (!isClient) return;
-
+    // Save theme preference and update DOM
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
     if (isDarkMode) {
-      document.body.classList.add("dark-mode");
       document.body.classList.remove("light-mode");
     } else {
       document.body.classList.add("light-mode");
-      document.body.classList.remove("dark-mode");
     }
   }, [isDarkMode, isClient]);
 

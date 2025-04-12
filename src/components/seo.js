@@ -40,9 +40,9 @@ function Seo({ children, article, keywords, pathname }) {
       <meta name="image" content={metaImage} />
       <link rel="canonical" href={canonical} />
 
-      <meta itemprop="name" content="Codezen" />
-      <meta itemprop="description" content={metaDescription} />
-      <meta itemprop="image" content={metaImage} />
+      <meta itemProp="name" content="Codezen" />
+      <meta itemProp="description" content={metaDescription} />
+      <meta itemProp="image" content={metaImage} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:title" content={defaultTitle} />
