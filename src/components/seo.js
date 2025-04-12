@@ -26,9 +26,7 @@ function Seo({ children, article, keywords, pathname }) {
 
   const metaDescription = site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
-  const canonical = pathname
-    ? `${site.siteMetadata.siteUrl}${pathname}`
-    : site.siteMetadata.siteUrl;
+
   const metaImage = `${site.siteMetadata.siteUrl}/icons/icon-512x512.png`;
 
   return (
@@ -37,13 +35,12 @@ function Seo({ children, article, keywords, pathname }) {
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keywords} />
       <meta name="image" content={metaImage} />
-      <link rel="canonical" href={canonical} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:title" content={defaultTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content={article ? "article" : "website"} />
-      <meta property="og:url" content={canonical} />
+      <meta property="og:url" content={site.siteMetadata.siteUrl} />
       {metaImage && <meta property="og:image" content={metaImage} />}
 
       {/* Twitter */}
