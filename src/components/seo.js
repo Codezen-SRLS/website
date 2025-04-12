@@ -7,7 +7,6 @@
 
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import logo from "../images/logo.png";
 
 function Seo({ children, article, keywords, pathname }) {
   const { site } = useStaticQuery(
@@ -30,13 +29,14 @@ function Seo({ children, article, keywords, pathname }) {
   const canonical = pathname
     ? `${site.siteMetadata.siteUrl}${pathname}`
     : site.siteMetadata.siteUrl;
+  const metaImage = `${site.siteMetadata.siteUrl}/icons/icon-512x512.png`;
 
   return (
     <>
       <title>{defaultTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keywords} />
-      <meta name="image" content={logo} />
+      <meta name="image" content={metaImage} />
       <link rel="canonical" href={canonical} />
 
       {/* Open Graph / Facebook */}
@@ -44,14 +44,14 @@ function Seo({ children, article, keywords, pathname }) {
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content={article ? "article" : "website"} />
       <meta property="og:url" content={canonical} />
-      <meta property="og:image" content={logo} />
+      {metaImage && <meta property="og:image" content={metaImage} />}
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={defaultTitle} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:image" content={logo} />
+      {metaImage && <meta name="twitter:image" content={metaImage} />}
 
       {/* Add structured data for Organization */}
       <script type="application/ld+json">
