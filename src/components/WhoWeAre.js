@@ -1,10 +1,12 @@
-import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import React, { useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import hero from "../images/partner.mp4";
 import heroLight from "../images/partner-alt.mp4";
 import { useTheme } from "../context/ThemeContext";
+import RequestForm from "./RequestForm";
 
 const WhoWeAre = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const data = useStaticQuery(graphql`
     query {
       allSrcJson {
@@ -13,7 +15,6 @@ const WhoWeAre = () => {
             banner {
               whoweare {
                 subHeading
-                buttonLink
                 buttonText
                 heading
                 text
@@ -29,6 +30,11 @@ const WhoWeAre = () => {
   const heroVideo = isDarkMode ? hero : heroLight;
 
   const newData = data.allSrcJson.edges[0].node.banner.whoweare;
+
+  const openForm = () => {
+    setIsFormOpen(true);
+  };
+
   return (
     <div id="whoweare" className="container">
       <div className="row align-items-center justify-content-between banner">
@@ -55,16 +61,22 @@ const WhoWeAre = () => {
           </p>
           <h3 className="sub-heading mt-3 mb-0">{newData?.heading} </h3>
           <p className="text banner-text mt-3">{newData?.text}</p>
-          <Link to={newData?.buttonLink}>
-            <button className="btn mt-4" style={{ "--width": "165px" }}>
-              <span className="text">
-                <span className="square"></span>
-              </span>
-              {newData?.buttonText}
-            </button>
-          </Link>
+          <button
+            className="btn mt-4"
+            style={{ "--width": "165px" }}
+            onClick={(e) => {
+              e.preventDefault();
+              openForm();
+            }}
+          >
+            <span className="text">
+              <span className="square"></span>
+            </span>
+            {newData?.buttonText}
+          </button>
         </div>
       </div>
+      <RequestForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </div>
   );
 };

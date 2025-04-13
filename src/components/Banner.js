@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import heroDark from "../images/hero.mp4";
 import heroLight from "../images/hero-alt.mp4";
 import { useTheme } from "../context/ThemeContext";

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 import { useStaticQuery, graphql } from "gatsby";
+import RequestForm from "./RequestForm";
 import twitterIcon from "../images/twitter.svg";
 import linkedinIcon from "../images/linkedin.svg";
 
+
 const Footer = () => {
+  const [isRequestFormOpen, setIsRequestFormOpen] = useState(false);
+
   const data = useStaticQuery(graphql`
     query {
       allSrcJson {
@@ -12,12 +16,10 @@ const Footer = () => {
           node {
             banner {
               footer {
-                email {
-                  to
-                }
                 twitter
                 linkedin
                 note
+                buttonText
                 copyright
               }
             }
@@ -28,9 +30,7 @@ const Footer = () => {
   `);
 
   const footerData = data.allSrcJson.edges[0].node.banner;
-  const { email, twitter, linkedin } = footerData.footer;
-
-  const mailtoLink = `mailto:${email.to}}`;
+  const { twitter, linkedin, buttonText } = footerData.footer;
 
   return (
     <div id="contact" className="footer-container">
@@ -52,9 +52,6 @@ const Footer = () => {
               <li>
                 <a href="#work">Portfolio</a>
               </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
             </ul>
           </div>
 
@@ -67,9 +64,23 @@ const Footer = () => {
           {/* Ready For Action Section */}
           <div className="col-md-4">
             <h3>Ready For Action</h3>
-            <a href={mailtoLink} className="footer-email">
-              {email.to}
-            </a>
+            <div className="footer-contact-buttons">
+              {/* <a href={mailtoLink} className="footer-email">
+                {email.to}
+              </a> */}
+              <button
+                className="btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsRequestFormOpen(true);
+                }}
+              >
+                <span className="text">
+                  <span className="square"></span>
+                </span>
+                {buttonText}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -88,6 +99,10 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+      <RequestForm
+        isOpen={isRequestFormOpen}
+        onClose={() => setIsRequestFormOpen(false)}
+      />
     </div>
   );
 };

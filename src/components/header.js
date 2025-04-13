@@ -5,9 +5,11 @@ import toggleicon from "../images/toggle.svg";
 import toggleiconLight from "../images/toggle-alt.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import { useTheme } from "../context/ThemeContext";
+import RequestForm from "./RequestForm";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const { isDarkMode, setIsDarkMode } = useTheme();
 
   const toggleMenu = () => {
@@ -18,6 +20,11 @@ const Header = () => {
     setIsDarkMode(!isDarkMode);
   };
 
+  const openForm = () => {
+    setIsFormOpen(true);
+    setMenuOpen(false);
+  };
+
   const data = useStaticQuery(graphql`
     query {
       allSrcJson {
@@ -25,7 +32,6 @@ const Header = () => {
           node {
             banner {
               header {
-                buttonLink
                 buttonText
               }
             }
@@ -95,9 +101,6 @@ const Header = () => {
             <li>
               <Link to="#work">Portfolio</Link>
             </li>
-            <li>
-              <Link to="#contact">Contact</Link>
-            </li>
           </ul>
           <div className="theme-toggle-wrapper">
             <label className="theme-switch" htmlFor="checkbox">
@@ -140,14 +143,19 @@ const Header = () => {
               </div>
             </label>
           </div>
-          <Link to={newData?.buttonLink}>
-            <button className="btn">
-              <span className="text">
-                <span className="square"></span>
-              </span>
-              {newData?.buttonText}
-            </button>
-          </Link>
+
+          <button
+            className="btn"
+            onClick={(e) => {
+              e.preventDefault();
+              openForm();
+            }}
+          >
+            <span className="text">
+              <span className="square"></span>
+            </span>
+            {newData?.buttonText}
+          </button>
         </nav>
         <div className="hamburger" onClick={toggleMenu}>
           <img
@@ -161,6 +169,7 @@ const Header = () => {
           onClick={toggleMenu}
         ></div>
       </div>
+      <RequestForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </header>
   );
 };
