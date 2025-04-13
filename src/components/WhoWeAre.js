@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import hero from "../images/partner.mp4";
 import heroLight from "../images/partner-alt.mp4";
 import { useTheme } from "../context/ThemeContext";
+import RequestForm from "./RequestForm";
 
 const WhoWeAre = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const data = useStaticQuery(graphql`
     query {
       allSrcJson {
@@ -29,6 +31,11 @@ const WhoWeAre = () => {
   const heroVideo = isDarkMode ? hero : heroLight;
 
   const newData = data.allSrcJson.edges[0].node.banner.whoweare;
+
+  const openForm = () => {
+    setIsFormOpen(true);
+  };
+
   return (
     <div id="whoweare" className="container">
       <div className="row align-items-center justify-content-between banner">
@@ -56,7 +63,14 @@ const WhoWeAre = () => {
           <h3 className="sub-heading mt-3 mb-0">{newData?.heading} </h3>
           <p className="text banner-text mt-3">{newData?.text}</p>
           <Link to={newData?.buttonLink}>
-            <button className="btn mt-4" style={{ "--width": "165px" }}>
+            <button
+              className="btn mt-4"
+              style={{ "--width": "165px" }}
+              onClick={(e) => {
+                e.preventDefault();
+                openForm();
+              }}
+            >
               <span className="text">
                 <span className="square"></span>
               </span>
@@ -65,6 +79,7 @@ const WhoWeAre = () => {
           </Link>
         </div>
       </div>
+      <RequestForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </div>
   );
 };

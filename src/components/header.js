@@ -5,9 +5,11 @@ import toggleicon from "../images/toggle.svg";
 import toggleiconLight from "../images/toggle-alt.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import { useTheme } from "../context/ThemeContext";
+import RequestForm from "./RequestForm";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const { isDarkMode, setIsDarkMode } = useTheme();
 
   const toggleMenu = () => {
@@ -16,6 +18,11 @@ const Header = () => {
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
+  };
+
+  const openForm = () => {
+    setIsFormOpen(true);
+    setMenuOpen(false);
   };
 
   const data = useStaticQuery(graphql`
@@ -141,7 +148,13 @@ const Header = () => {
             </label>
           </div>
           <Link to={newData?.buttonLink}>
-            <button className="btn">
+            <button
+              className="btn"
+              onClick={(e) => {
+                e.preventDefault();
+                openForm();
+              }}
+            >
               <span className="text">
                 <span className="square"></span>
               </span>
@@ -161,6 +174,7 @@ const Header = () => {
           onClick={toggleMenu}
         ></div>
       </div>
+      <RequestForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </header>
   );
 };
