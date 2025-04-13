@@ -69,13 +69,6 @@ const RequestForm = ({ isOpen, onClose }) => {
         message: formData.requestDetails,
       };
 
-      console.log(
-        process.env,
-        process.env.GATSBY_EMAILJS_SERVICE_ID,
-        process.env.GATSBY_EMAILJS_TEMPLATE_ID,
-        templateParams,
-        process.env.GATSBY_EMAILJS_PUBLIC_KEY
-      );
       await emailjs.send(
         process.env.GATSBY_EMAILJS_SERVICE_ID,
         process.env.GATSBY_EMAILJS_TEMPLATE_ID,
