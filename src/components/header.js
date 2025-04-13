@@ -32,7 +32,6 @@ const Header = () => {
           node {
             banner {
               header {
-                buttonLink
                 buttonText
               }
             }
@@ -102,9 +101,6 @@ const Header = () => {
             <li>
               <Link to="#work">Portfolio</Link>
             </li>
-            <li>
-              <Link to="#contact">Contact</Link>
-            </li>
           </ul>
           <div className="theme-toggle-wrapper">
             <label className="theme-switch" htmlFor="checkbox">
@@ -147,20 +143,19 @@ const Header = () => {
               </div>
             </label>
           </div>
-          <Link to={newData?.buttonLink}>
-            <button
-              className="btn"
-              onClick={(e) => {
-                e.preventDefault();
-                openForm();
-              }}
-            >
-              <span className="text">
-                <span className="square"></span>
-              </span>
-              {newData?.buttonText}
-            </button>
-          </Link>
+
+          <button
+            className="btn"
+            onClick={(e) => {
+              e.preventDefault();
+              openForm();
+            }}
+          >
+            <span className="text">
+              <span className="square"></span>
+            </span>
+            {newData?.buttonText}
+          </button>
         </nav>
         <div className="hamburger" onClick={toggleMenu}>
           <img

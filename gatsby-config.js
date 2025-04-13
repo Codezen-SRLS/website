@@ -75,7 +75,6 @@ module.exports = {
         policy: [{ userAgent: `*`, allow: `/` }],
       },
     },
-    `gatsby-plugin-appointlet`,
     {
       resolve: `gatsby-plugin-clarity`,
       options: {
