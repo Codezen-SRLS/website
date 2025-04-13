@@ -8,7 +8,7 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-function Seo({ children, article, keywords, pathname }) {
+function Seo({ children }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,6 +18,7 @@ function Seo({ children, article, keywords, pathname }) {
             description
             author
             siteUrl
+            keywords
           }
         }
       }
@@ -26,7 +27,7 @@ function Seo({ children, article, keywords, pathname }) {
 
   const metaDescription = site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
-
+  const keywords = site.siteMetadata?.keywords;
   const metaImage = `${site.siteMetadata.siteUrl}/icons/icon-512x512.png`;
 
   return (
@@ -39,7 +40,7 @@ function Seo({ children, article, keywords, pathname }) {
       {/* Open Graph / Facebook */}
       <meta property="og:title" content={defaultTitle} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:type" content={article ? "article" : "website"} />
+      <meta property="og:type" content="website" />
       <meta property="og:url" content={site.siteMetadata.siteUrl} />
       {metaImage && <meta property="og:image" content={metaImage} />}
 

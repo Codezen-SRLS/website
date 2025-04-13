@@ -18,6 +18,7 @@ const Footer = () => {
                 twitter
                 linkedin
                 note
+                copyright
               }
             }
           }
@@ -75,7 +76,7 @@ const Footer = () => {
         {/* Copyright and Social Links */}
         <div className="footer-bottom">
           <div className="copyright">
-            <span>©</span> 2025 Codezen SRLS. All Rights Reserved.
+            <span>© {footerData.footer.copyright}</span>
           </div>
           <div className="social-links">
             <a href={twitter} target="_blank" rel="noreferrer">

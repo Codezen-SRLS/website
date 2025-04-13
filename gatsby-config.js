@@ -16,7 +16,6 @@ module.exports = {
     author: `@christianvari`,
     siteUrl: `https://www.codezen.tech`,
     image: `/logo.png`,
-    twitterUsername: `@CodezenSRLS`,
     keywords: `Web3, Blockchain, Security, Smart Contracts, Audit, DeFi, Consulting, Crypto, Codezen`,
   },
   plugins: [
@@ -55,7 +54,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Codezen`,
+        name: `Codezen | Blockchain and Web3 Audits`,
         short_name: `Codezen`,
         start_url: `/`,
         background_color: `#ffffff`,
