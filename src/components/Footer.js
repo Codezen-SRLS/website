@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./Footer.css";
 import { useStaticQuery, graphql } from "gatsby";
 import RequestForm from "./RequestForm";
+import twitterIcon from "../images/twitter.svg";
+import linkedinIcon from "../images/linkedin.svg";
+
 
 const Footer = () => {
   const [isRequestFormOpen, setIsRequestFormOpen] = useState(false);
@@ -17,6 +20,7 @@ const Footer = () => {
                 linkedin
                 note
                 buttonText
+                copyright
               }
             }
           }
@@ -83,14 +87,14 @@ const Footer = () => {
         {/* Copyright and Social Links */}
         <div className="footer-bottom">
           <div className="copyright">
-            <span>©</span> 2025 Codezen SRLS. All Rights Reserved.
+            <span>© {footerData.footer.copyright}</span>
           </div>
           <div className="social-links">
             <a href={twitter} target="_blank" rel="noreferrer">
-              <img src="/images/twitter.svg" alt="Twitter" />
+              <img src={twitterIcon} alt="Twitter" />
             </a>
             <a href={linkedin} target="_blank" rel="noreferrer">
-              <img src="/images/linkedin.svg" alt="LinkedIn" />
+              <img src={linkedinIcon} alt="LinkedIn" />
             </a>
           </div>
         </div>

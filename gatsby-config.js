@@ -11,12 +11,12 @@ const path = require(`path`);
  */
 module.exports = {
   siteMetadata: {
-    title: `Codezen`,
+    title: `Codezen | Blockchain and Web3 Audits`,
     description: `Codezen secures Web3 with expert consulting and audits, protecting decentralized systems and smart contracts against vulnerabilities.`,
     author: `@christianvari`,
     siteUrl: `https://www.codezen.tech`,
-    twitterUsername: `@CodezenSRLS`,
-    keywords: `Web3, Blockchain, Security, Smart Contracts, Audit, DeFi, Consulting, Crypto`,
+    image: `/logo.png`,
+    keywords: `Web3, Blockchain, Security, Smart Contracts, Audit, DeFi, Consulting, Crypto, Codezen`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -54,7 +54,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Codezen`,
+        name: `Codezen | Blockchain and Web3 Audits`,
         short_name: `Codezen`,
         start_url: `/`,
         background_color: `#ffffff`,
