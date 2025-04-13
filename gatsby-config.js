@@ -15,8 +15,7 @@ module.exports = {
     description: `Codezen secures Web3 with expert consulting and audits, protecting decentralized systems and smart contracts against vulnerabilities.`,
     author: `@christianvari`,
     siteUrl: `https://www.codezen.tech`,
-    image: `/logo.png`,
-    keywords: `Web3, Blockchain, Security, Smart Contracts, Audit, DeFi, Consulting, Crypto, Codezen`,
+    keywords: `Codezen, Codezen SRLS, Audit, Security, Web3, Blockchain, CosmWasm, Cosmos, Smart Contracts, Consulting`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -56,14 +55,12 @@ module.exports = {
       options: {
         name: `Codezen | Blockchain and Web3 Audits`,
         short_name: `Codezen`,
+        description: `Codezen secures Web3 with expert consulting and audits, protecting decentralized systems and smart contracts against vulnerabilities.`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#000000`,
         theme_color: `#000000`,
         display: `standalone`,
         icon: `src/images/logo.png`,
-        icon_options: {
-          purpose: `any maskable`,
-        },
       },
     },
     `gatsby-plugin-sitemap`,
