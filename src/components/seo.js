@@ -8,7 +8,7 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-function Seo({ children }) {
+function Seo() {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -32,10 +32,10 @@ function Seo({ children }) {
 
   return (
     <>
+      <html lang="en" />
       <title>{defaultTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keywords} />
-      <meta name="image" content={metaImage} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:title" content={defaultTitle} />
@@ -67,7 +67,6 @@ function Seo({ children }) {
           ],
         })}
       </script>
-      {children}
     </>
   );
 }
