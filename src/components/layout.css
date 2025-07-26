@@ -270,6 +270,40 @@ h3 {
   mix-blend-mode: darken;
 }
 
+/* Team Section Styles */
+.team-image-container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--primar-color);
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.work:hover .team-image {
+  transform: scale(1.05);
+}
+
+.team-info {
+  text-align: center;
+}
+
+.team-clickable {
+  transition: all 0.3s ease;
+}
+
+.team-clickable:hover {
+  transform: translateY(-5px);
+  border-color: var(--primar-color) !important;
+}
+
 @media (min-width: 1440px) {
   .main-heading {
     font-size: 65px;
@@ -355,5 +389,12 @@ h3 {
   }
   .whoweare-video {
     display: none;
+  }
+
+  /* Team responsive styles */
+  .team-image-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
   }
 }

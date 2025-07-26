@@ -8,6 +8,7 @@ import WhoWeAre from "../components/WhoWeAre";
 import Partners from "../components/Partners";
 import WhatWeDo from "../components/WhatWeDo";
 import HowWeWork from "../components/HowWeWork";
+import Team from "../components/Team";
 import Work from "../components/Work";
 
 import "@fontsource/outfit";
@@ -21,6 +22,7 @@ const IndexPage = () => {
       <Partners />
       <WhatWeDo />
       <HowWeWork />
+      <Team />
       <Work />
     </Layout>
   );
