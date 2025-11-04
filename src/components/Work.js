@@ -3,8 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
 import { useMediaQuery } from "react-responsive";
+import WorkCard from "./WorkCard";
 
 const Work = () => {
   const data = useStaticQuery(graphql`
@@ -72,39 +72,21 @@ const Work = () => {
           <h2 className="sub-heading mt-3 mb-5">
             {data?.allSrcJson.edges[0]?.node?.banner.work.heading}
           </h2>
+          <div className="work-banner-actions">
+            <a className="btn" href="/portfolio" rel="noreferrer">
+              <span className="text">
+                <span className="square"></span>
+              </span>
+              View All Our Work
+            </a>
+          </div>
         </div>
       </div>
       <div className="slider-container work-large">
         {isHydrated && (
           <Slider {...settings}>
-            {newData?.map((data, i) => (
-              <a
-                href={
-                  data?.node?.github ? data?.node?.github : data?.node?.website
-                }
-                target="_blank"
-                rel="noreferrer"
-                key={i}
-              >
-                <div className="work-section">
-                  <GatsbyImage
-                    className="work-image"
-                    image={data?.node?.image.childImageSharp.gatsbyImageData}
-                    alt={data?.node?.title}
-                  />
-                  <div className="tag">{data?.node?.description}</div>
-
-                  <div className="work-details">
-                    <h3>{data?.node?.title}</h3>
-                    <p className="partner">
-                      {data?.node?.partner ? `X ${data?.node?.partner}` : ""}
-                    </p>
-                    <p className="text mb-0">
-                      {data?.node?.extendedDescription}
-                    </p>
-                  </div>
-                </div>
-              </a>
+            {newData?.map(({ node }, i) => (
+              <WorkCard key={node?.id || i} item={node} openInNewTab />
             ))}
           </Slider>
         )}

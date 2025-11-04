@@ -8,7 +8,7 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-function Seo() {
+function Seo({ title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -29,16 +29,17 @@ function Seo() {
   const defaultTitle = site.siteMetadata?.title;
   const keywords = site.siteMetadata?.keywords;
   const metaImage = `${site.siteMetadata.siteUrl}/icons/icon-512x512.png`;
+  const pageTitle = title ? title.concat(" | ", defaultTitle) : defaultTitle;
 
   return (
     <>
       <html lang="en" />
-      <title>{defaultTitle}</title>
+      <title>{pageTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keywords} />
 
       {/* Open Graph / Facebook */}
-      <meta property="og:title" content={defaultTitle} />
+      <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={site.siteMetadata.siteUrl} />
@@ -47,7 +48,7 @@ function Seo() {
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
-      <meta name="twitter:title" content={defaultTitle} />
+      <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={metaDescription} />
       {metaImage && <meta name="twitter:image" content={metaImage} />}
 

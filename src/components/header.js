@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { useStaticQuery, graphql, Link } from "gatsby";
+import { useLocation } from "@reach/router";
 import toggleicon from "../images/toggle.svg";
 import toggleiconLight from "../images/toggle-alt.svg";
 import { StaticImage } from "gatsby-plugin-image";
@@ -11,6 +12,8 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const { isDarkMode, setIsDarkMode } = useTheme();
+  const location = useLocation();
+  const isPortfolioPage = location?.pathname?.startsWith("/portfolio");
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -92,15 +95,19 @@ const Header = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
-              <Link to="#whoweare">About</Link>
-            </li>
-            <li>
-              <Link to="#whatwedo">Services</Link>
-            </li>
-            <li>
-              <Link to="#work">Portfolio</Link>
-            </li>
+            {!isPortfolioPage && (
+              <>
+                <li>
+                  <Link to="#whoweare">About</Link>
+                </li>
+                <li>
+                  <Link to="#whatwedo">Services</Link>
+                </li>
+                <li>
+                  <Link to="#work">Portfolio</Link>
+                </li>
+              </>
+            )}
           </ul>
           <div className="theme-toggle-wrapper">
             <label className="theme-switch" htmlFor="checkbox">
