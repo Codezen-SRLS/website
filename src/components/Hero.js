@@ -41,6 +41,7 @@ const Hero = ({ auditCount, vulnCount }) => {
               lineHeight: "var(--lh-relaxed)",
               maxWidth: 480,
             }}
+            className="cz-hero-body"
           >
             Smart contract audits and security consulting for EVM, Solana, and Cosmos protocols. We review Solidity, Rust, Anchor, and CosmWasm code and surface what attackers look for.
           </p>
@@ -246,6 +247,7 @@ const Hero = ({ auditCount, vulnCount }) => {
         }
         @media (max-width: 767px) {
           .cz-hero-h1 { font-size: clamp(36px, 9vw, 48px); }
+          .cz-hero-body { font-size: var(--fs-body); max-width: 100%; }
           .cz-hero-btns { flex-direction: column; }
           .cz-hero-btns .cz-btn { width: 100%; justify-content: center; }
         }
