@@ -53,8 +53,8 @@ const Stats = ({ auditCount, vulnCount, assetsProtected, criticalCount }) => (
         .cz-stats-grid { grid-template-columns: repeat(2, 1fr); }
       }
       @media (max-width: 767px) {
-        .cz-stat-value { font-size: 40px; }
-        .cz-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        .cz-stat-value { font-size: 36px; }
+        .cz-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
       }
     `}</style>
   </section>
