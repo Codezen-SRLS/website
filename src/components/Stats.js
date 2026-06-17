@@ -1,111 +1,63 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import * as React from "react";
 
-const Stats = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allAuditHistoryJson {
-        edges {
-          node {
-            id
-            tvlUsd
-            issues {
-              critical
-              major
-              minor
-              informational
-            }
-          }
-        }
-      }
-      allSrcJson {
-        edges {
-          node {
-            banner {
-              stats {
-                description
-                number
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  const totalTvlUsd = data.allAuditHistoryJson.edges.reduce(
-    (currentTotal, currentEdge) => {
-      const tvlValue =
-        typeof currentEdge.node.tvlUsd === "number"
-          ? currentEdge.node.tvlUsd
-          : 0;
-      return currentTotal + tvlValue;
-    },
-    0
-  );
-
-  const formatCurrencyAbbreviation = (amount) => {
-    if (!amount || amount <= 0) return "$0";
-    const absoluteAmount = Math.abs(amount);
-    const units = [
-      { value: 1e12, suffix: "T" },
-      { value: 1e9, suffix: "B" },
-      { value: 1e6, suffix: "M" },
-      { value: 1e3, suffix: "K" },
-    ];
-    for (const unit of units) {
-      if (absoluteAmount >= unit.value) {
-        const abbreviated = (amount / unit.value)
-          .toFixed(1)
-          .replace(/\.0$/, "");
-        return `$${abbreviated}${unit.suffix}+`;
-      }
-    }
-    return `$${Math.round(amount).toLocaleString()}`;
-  };
-
-  const formattedAssetsProtected = formatCurrencyAbbreviation(totalTvlUsd);
-
-  return (
-    <div className="stats">
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-3 col-6">
-            <h2 className="stats-heading">
-              {data.allAuditHistoryJson.edges.length}
-            </h2>
-            <p className="stats-text">Completed Audits</p>
-          </div>
-          <div className="col-xl-3 col-6">
-            <h2 className="stats-heading">
-              {data.allAuditHistoryJson.edges.reduce((p, n) => {
-                if (!n.node.issues) return p;
-                return (
-                  p +
-                  n.node.issues.critical +
-                  n.node.issues.major +
-                  n.node.issues.minor
-                );
-              }, 0)}
-            </h2>
-            <p className="stats-text">Vulnerabilities Identified</p>
-          </div>
-          {data.allSrcJson.edges[0].node.banner.stats?.map((stat, index) => {
-            const isAssetsProtected = stat.description === "Assets Protected";
-            const displayNumber = isAssetsProtected
-              ? formattedAssetsProtected
-              : stat.number;
-            return (
-              <div className="col-xl-3 col-6" key={index}>
-                <h2 className="stats-heading">{displayNumber}</h2>
-                <p className="stats-text">{stat.description}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+const StatCard = ({ value, label }) => (
+  <div
+    style={{
+      padding: "28px 24px",
+      background: "var(--glass)",
+      border: "1px solid var(--glass-line)",
+      borderTop: "1px solid rgba(4,217,255,0.38)",
+      borderRadius: "var(--radius-lg)",
+      boxShadow: "0 -6px 24px -10px rgba(4,217,255,0.28)",
+    }}
+  >
+    <div
+      className="cz-stat-value cz-iris-anim"
+      style={{
+        fontFamily: "var(--font-body)",
+        fontWeight: 700,
+        lineHeight: 1,
+        letterSpacing: "-0.02em",
+      }}
+    >
+      {value}
     </div>
-  );
-};
+    <div
+      style={{
+        marginTop: 10,
+        fontFamily: "var(--font-mono)",
+        fontSize: "var(--fs-mono-sm)",
+        letterSpacing: "0.12em",
+        textTransform: "uppercase",
+        color: "var(--text-muted)",
+        lineHeight: 1.4,
+      }}
+    >
+      {label}
+    </div>
+  </div>
+);
+
+const Stats = ({ auditCount, vulnCount, assetsProtected, criticalCount }) => (
+  <section data-reveal style={{ padding: "72px 0" }}>
+    <div className="cz-stats-grid">
+      <StatCard value={`${auditCount}+`} label="Completed audits" />
+      <StatCard value={`${vulnCount}+`} label="Vulnerabilities found" />
+      <StatCard value={assetsProtected || "$1.2B+"} label="Assets protected" />
+      <StatCard value={`${criticalCount}+`} label="Critical findings" />
+    </div>
+    <style>{`
+      .cz-stat-value { font-size: var(--fs-stat); }
+      .cz-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+      @media (max-width: 1023px) {
+        .cz-stats-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 767px) {
+        .cz-stat-value { font-size: 40px; }
+        .cz-stats-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+    `}</style>
+  </section>
+);
 
 export default Stats;

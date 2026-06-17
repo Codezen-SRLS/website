@@ -1,35 +1,55 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-
 import Header from "./header";
-import "./layout.css";
 import Footer from "./Footer";
-import { ThemeProvider } from "../context/ThemeContext";
+import RequestForm from "./RequestForm";
+import { FormProvider } from "../context/FormContext";
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+  React.useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -6% 0px" }
+    );
+    document.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
 
   return (
-    <ThemeProvider>
-      <Header siteTitle={data.site.siteMetadata?.title} />
-      {children}
-      <Footer />
-    </ThemeProvider>
+    <FormProvider>
+      <div
+        style={{
+          position: "relative",
+          minHeight: "100vh",
+          background: "var(--field-bg)",
+          overflowX: "hidden",
+        }}
+      >
+        <div
+          aria-hidden="true"
+          style={{
+            position: "fixed",
+            inset: 0,
+            pointerEvents: "none",
+            zIndex: 1,
+            opacity: 0.5,
+            mixBlendMode: "overlay",
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E\")",
+          }}
+        />
+        <Header />
+        <main style={{ position: "relative", zIndex: 2 }}>{children}</main>
+        <Footer />
+        <RequestForm />
+      </div>
+    </FormProvider>
   );
 };
 

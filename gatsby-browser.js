@@ -1,9 +1,15 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/
- */
+import "./src/styles/global.css";
+import Clarity from "@microsoft/clarity";
 
-// You can delete this file if you're not using it
+export const onClientEntry = () => {
+  const projectId = process.env.GATSBY_CLARITY_ID;
+  if (projectId) {
+    Clarity.init(projectId);
+  }
+};
 
-import "bootstrap/dist/css/bootstrap.min.css";
+export const onRouteUpdate = ({ location }) => {
+  if (typeof Clarity.setTag === "function") {
+    Clarity.setTag("page", location.pathname);
+  }
+};

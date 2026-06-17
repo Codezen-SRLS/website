@@ -1,0 +1,291 @@
+@import "./tokens.css";
+@import "@fontsource/outfit/300.css";
+@import "@fontsource/outfit/400.css";
+@import "@fontsource/outfit/500.css";
+@import "@fontsource/outfit/600.css";
+@import "@fontsource/outfit/700.css";
+
+/* ===== Reset & base ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  color: var(--text-body);
+  background: var(--field-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+
+/* ===== Keyframe animations ===== */
+@keyframes cz-scan {
+  0%   { transform: translateY(-12%); opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { transform: translateY(620%); opacity: 0; }
+}
+@keyframes cz-blink {
+  0%, 49%  { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@keyframes cz-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+@keyframes cz-iris {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes cz-flag {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(255,92,92,0.4), 0 0 22px -6px rgba(255,92,92,0.5); }
+  50%       { box-shadow: 0 0 0 1px rgba(255,92,92,0.78), 0 0 34px -4px rgba(255,92,92,0.85); }
+}
+@keyframes cz-bardraw {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes cz-reveal {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes cz-menu-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Utility classes ===== */
+.cz-iris-anim {
+  background-image: var(--iris);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: cz-iris 6s linear infinite;
+}
+
+.cz-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-mono-wide);
+  text-transform: uppercase;
+  color: var(--cz-cyan-soft);
+}
+
+.cz-section-heading {
+  margin: 12px 0 0;
+  color: var(--text-strong);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+
+.cz-navlink {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-body);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
+  padding: 4px 0;
+}
+.cz-navlink:hover { color: var(--cz-cyan-soft); }
+
+.cz-flink {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: var(--fs-small);
+  transition: color var(--dur-fast) var(--ease);
+}
+.cz-flink:hover { color: var(--text-strong); }
+
+/* ===== Button ===== */
+.cz-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--dur-fast) var(--ease);
+  white-space: nowrap;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+.cz-btn--md { font-size: 15px; padding: 10px 22px; min-height: 44px; }
+.cz-btn--lg { font-size: 16px; padding: 13px 28px; min-height: 52px; }
+
+.cz-btn--primary {
+  background: var(--cz-cyan);
+  color: var(--accent-contrast);
+  border-color: var(--cz-cyan);
+}
+.cz-btn--primary:hover {
+  background: var(--cz-cyan-bright);
+  border-color: var(--cz-cyan-bright);
+  box-shadow: 0 0 24px -4px rgba(4,217,255,0.5);
+}
+
+.cz-btn--ghost {
+  background: transparent;
+  color: var(--text-strong);
+  border-color: var(--glass-line-strong);
+}
+.cz-btn--ghost:hover {
+  border-color: var(--cz-cyan-soft);
+  color: var(--cz-cyan-soft);
+}
+
+.cz-btn--glass {
+  background: var(--glass-2);
+  color: var(--text-strong);
+  border-color: var(--glass-line);
+  backdrop-filter: blur(8px);
+}
+.cz-btn--glass:hover {
+  background: var(--glass-3);
+  border-color: var(--glass-line-strong);
+}
+
+/* ===== Layout ===== */
+.cz-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ===== Tag / Badge ===== */
+.cz-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--tag-bg);
+  border: 1px solid var(--glass-line);
+  color: var(--text-strong);
+  font-size: 13px;
+  font-weight: var(--fw-medium);
+}
+
+.cz-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  flex: none;
+}
+.cz-badge--critical { color: #ff5c5c; border-color: rgba(255,92,92,0.5); }
+.cz-badge--high     { color: #f5b945; border-color: rgba(245,185,69,0.5); }
+.cz-badge--medium   { color: var(--cz-cyan-soft); border-color: rgba(4,217,255,0.4); }
+.cz-badge--low      { color: #2fd48a; border-color: rgba(47,212,138,0.4); }
+.cz-badge--info     { color: var(--text-muted); border-color: rgba(232,238,255,0.2); }
+
+/* ===== Typography utilities ===== */
+
+/* Mono uppercase label — used for section sub-headers, metadata keys, eyebrow variants */
+.cz-mono-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Mono value — used for metadata values, counts, code-like data */
+.cz-mono-value {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--text-strong);
+}
+
+/* Accent mono label — same as mono-label but in cyan */
+.cz-mono-accent {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-accent);
+}
+
+/* Small body — captions, card descriptions, secondary prose */
+.cz-text-sm {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-relaxed);
+  color: var(--text-body);
+}
+
+/* Muted body — tertiary text, partner names, timestamps */
+.cz-text-muted {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+/* Card heading */
+.cz-card-heading {
+  margin: 0;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  color: var(--text-strong);
+}
+
+/* ===== Glass card base ===== */
+.cz-glass-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+/* ===== Scroll reveal ===== */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* ===== prefers-reduced-motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}

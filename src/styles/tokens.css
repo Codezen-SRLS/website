@@ -1,0 +1,174 @@
+/* ==========================================================================
+   Codezen — Design tokens · "Prism" system
+   Dark-first, atmospheric, frosted glass, iridescent cyan accent.
+   ========================================================================== */
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/JetBrainsMono-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/JetBrainsMono-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Felix Titling";
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  src: url("../assets/fonts/felixti.ttf") format("truetype");
+}
+
+:root {
+  /* --- Logo / brand blues --- */
+  --cz-logo-dark-blue: #312e81;
+  --cz-logo-navy: #0760ab;
+  --cz-logo-light-blue: #168ccd;
+
+  /* --- Accent --- */
+  --cz-cyan: #04d9ff;
+  --cz-cyan-bright: #2ee2ff;
+  --cz-cyan-soft: #5be4ff;
+  --cz-cyan-ink: #008dd3;
+
+  /* RGB channels for glow/alpha */
+  --rgb-cyan: 4, 217, 255;
+  --rgb-indigo: 49, 46, 129;
+  --rgb-navy: 7, 96, 171;
+  --rgb-lightblue: 22, 140, 205;
+
+  /* --- Base surfaces --- */
+  --cz-void: #07080d;
+  --cz-base: #0a0b12;
+  --cz-base-2: #0c0e17;
+  --cz-night: #11131d;
+  --cz-white: #ffffff;
+
+  /* --- Glass surfaces --- */
+  --glass: rgba(255, 255, 255, 0.04);
+  --glass-2: rgba(255, 255, 255, 0.06);
+  --glass-3: rgba(255, 255, 255, 0.09);
+  --glass-line: rgba(255, 255, 255, 0.10);
+  --glass-line-strong: rgba(255, 255, 255, 0.18);
+  --glass-blur: 12px;
+
+  /* --- Iridescent gradients --- */
+  --iris: linear-gradient(100deg, #04d9ff 0%, #2ee2ff 28%, #168ccd 68%, #cfe9ff 100%);
+  --iris-rule: linear-gradient(90deg, transparent, rgba(4,217,255,0.55), rgba(22,140,205,0.35), transparent);
+
+  /* --- Atmospheric page background --- */
+  --field-bg: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(49,46,129,0.45), transparent),
+              radial-gradient(ellipse 60% 40% at 80% 60%, rgba(7,96,171,0.18), transparent),
+              #0a0b12;
+
+  /* --- Semantic — DARK (default) --- */
+  --surface-base: var(--cz-base);
+  --surface-raised: var(--glass);
+  --surface-raised-2: var(--glass-2);
+  --surface-solid: var(--cz-night);
+  --surface-overlay: rgba(5, 6, 11, 0.66);
+
+  --text-strong: #f4f7ff;
+  --text-body: rgba(232, 238, 255, 0.74);
+  --text-muted: rgba(232, 238, 255, 0.40);
+  --text-accent: var(--cz-cyan-soft);
+
+  --border-default: var(--glass-line);
+  --border-strong: var(--glass-line-strong);
+  --border-accent: rgba(4, 217, 255, 0.55);
+
+  --accent: var(--cz-cyan);
+  --accent-contrast: #04121a;
+
+  --tag-bg: var(--glass-2);
+  --tag-text: var(--text-strong);
+
+  /* --- Status --- */
+  --status-success: #2fd48a;
+  --status-warning: #f5b945;
+  --status-danger: #ff5c5c;
+  --status-info: var(--cz-cyan);
+
+  /* --- Glows & shadows --- */
+  --glow-cyan: 0 0 0 1px rgba(4,217,255,0.18), 0 0 48px -12px rgba(4,217,255,0.35);
+  --shadow-soft: 0 8px 40px -8px rgba(0,0,0,0.5);
+  --shadow-card: 0 4px 24px -4px rgba(0,0,0,0.4);
+  --shadow-float: 0 24px 80px -16px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.08);
+
+  /* --- Typography --- */
+  --font-body: "Outfit", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-logo: "Felix Titling", "Outfit", serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --fs-display: 72px;
+  --fs-stat: 52px;
+  --fs-h1: 56px;
+  --fs-h2: 42px;
+  --fs-h3: 24px;
+  --fs-h4: 20px;
+  --fs-body-lg: 19px;
+  --fs-body: 16px;
+  --fs-small: 15px;
+  --fs-mono: 13px;
+  --fs-mono-sm: 12px;
+
+  --lh-display: 1.04;
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-body: 1.5;
+  --lh-relaxed: 1.6;
+
+  --ls-display: -0.03em;
+  --ls-tight: -0.02em;
+  --ls-normal: 0;
+  --ls-mono: 0.14em;
+  --ls-mono-wide: 0.22em;
+  --ls-logo: 0.04em;
+
+  /* --- Spacing (4px base) --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* --- Shape --- */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* --- Motion --- */
+  --dur: 0.4s;
+  --dur-fast: 0.25s;
+  --dur-slow: 0.6s;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

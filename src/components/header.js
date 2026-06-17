@@ -1,183 +1,176 @@
-import React, { useState } from "react";
-import "./Header.css";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import * as React from "react";
+import { Link } from "gatsby";
 import { useLocation } from "@reach/router";
-import toggleicon from "../images/toggle.svg";
-import toggleiconLight from "../images/toggle-alt.svg";
-import { StaticImage } from "gatsby-plugin-image";
-import { useTheme } from "../context/ThemeContext";
-import RequestForm from "./RequestForm";
+import markLogo from "../assets/logos/mark-white.svg";
+import wordmarkLogo from "../assets/logos/wordmark-white.svg";
+import { useForm } from "../context/FormContext";
+
+const NAV_LINKS = [
+  { label: "Services", href: "#services" },
+  { label: "Process", href: "#process" },
+  { label: "Reports", href: "#report" },
+  { label: "Work", href: "#work" },
+];
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isFormOpen, setIsFormOpen] = useState(false);
-  const { isDarkMode, setIsDarkMode } = useTheme();
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const { openForm } = useForm();
   const location = useLocation();
-  const isPortfolioPage = location?.pathname?.startsWith("/portfolio");
+  const isPortfolio = location?.pathname?.startsWith("/portfolio");
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const closeMenu = () => setMenuOpen(false);
+  const handleAuditClick = () => { openForm(); closeMenu(); };
 
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  const openForm = () => {
-    setIsFormOpen(true);
-    setMenuOpen(false);
-  };
-
-  const data = useStaticQuery(graphql`
-    query {
-      allSrcJson {
-        edges {
-          node {
-            banner {
-              header {
-                buttonText
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  const newData = data.allSrcJson.edges[0].node.banner.header;
+  const navHref = (href) => isPortfolio ? `/${href}` : href;
 
   return (
-    <header className="container">
-      <div className="header">
-        <div className="logo" key={isDarkMode ? "dark" : "light"}>
-          {isDarkMode ? (
-            <StaticImage
-              src="../images/logo-alt.png"
-              alt="Codezen Logo Dark"
-              className="logo-img"
-              placeholder="none"
-            />
-          ) : (
-            <StaticImage
-              src="../images/logo.png"
-              alt="Codezen Logo"
-              className="logo-img"
-              placeholder="none"
-            />
-          )}
-        </div>
-        <nav className={`nav ${menuOpen ? "open" : ""}`}>
-          <div className="close-icon" onClick={toggleMenu}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M6.87305 17.1275L17.1275 6.87305"
-                stroke={isDarkMode ? "white" : "black"}
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M17.1275 17.1275L6.87305 6.87305"
-                stroke={isDarkMode ? "white" : "black"}
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            {!isPortfolioPage && (
-              <>
-                <li>
-                  <Link to="#whoweare">About</Link>
-                </li>
-                <li>
-                  <Link to="#whatwedo">Services</Link>
-                </li>
-                <li>
-                  <Link to="#work">Portfolio</Link>
-                </li>
-              </>
-            )}
-          </ul>
-          <div className="theme-toggle-wrapper">
-            <label className="theme-switch" htmlFor="checkbox">
-              <input
-                type="checkbox"
-                id="checkbox"
-                checked={!isDarkMode}
-                onChange={toggleTheme}
-              />
-              <div className="slider round">
-                <svg
-                  className="sun-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <circle cx="12" cy="12" r="5" fill="#131313" />
-                  <path
-                    d="M12 2V4M12 20V22M2 12H4M20 12H22M5.93 5.93L7.34 7.34M18.07 5.93L16.66 7.34M5.93 18.07L7.34 16.66M18.07 18.07L16.66 16.66"
-                    stroke="#131313"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <svg
-                  className="moon-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M21.53 15.93C20.07 17.28 18.11 18 16 18C11.03 18 7 13.97 7 9C7 6.89 7.72 4.93 9.07 3.47C9.24 3.29 9.31 3.04 9.26 2.8C9.2 2.55 9.03 2.35 8.8 2.24C8.57 2.13 8.3 2.13 8.07 2.23C4.99 3.69 3 6.65 3 10C3 15.52 7.48 20 13 20C16.35 20 19.31 18.01 20.77 14.93C20.87 14.7 20.87 14.43 20.76 14.2C20.65 13.97 20.45 13.8 20.2 13.74C19.96 13.69 19.71 13.76 19.53 13.93C19.53 13.93 21.53 15.93 21.53 15.93Z"
-                    fill="white"
-                  />
-                </svg>
-              </div>
-            </label>
-          </div>
-
-          <button
-            className="btn"
-            onClick={(e) => {
-              e.preventDefault();
-              openForm();
+    <>
+      <header
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 50,
+          backdropFilter: "blur(14px)",
+          WebkitBackdropFilter: "blur(14px)",
+          background: "rgba(10,11,18,0.72)",
+          borderBottom: "1px solid var(--glass-line)",
+        }}
+      >
+        <div
+          className="cz-container"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "15px 32px",
+          }}
+        >
+          <Link
+            to="/"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 11,
+              textDecoration: "none",
             }}
           >
-            <span className="text">
-              <span className="square"></span>
-            </span>
-            {newData?.buttonText}
+            <img src={markLogo} alt="" aria-hidden="true" style={{ height: 34, width: "auto" }} />
+            <img src={wordmarkLogo} alt="Codezen" style={{ height: 20, width: "auto" }} />
+          </Link>
+
+          {/* Desktop nav */}
+          <nav
+            aria-label="Main navigation"
+            style={{ display: "flex", alignItems: "center", gap: 30 }}
+            className="cz-header-nav"
+          >
+            {NAV_LINKS.map(({ label, href }) => (
+              <a key={label} href={navHref(href)} className="cz-navlink">
+                {label}
+              </a>
+            ))}
+            <button
+              className="cz-btn cz-btn--primary cz-btn--md"
+              onClick={handleAuditClick}
+              style={{ border: "none" }}
+            >
+              Get an audit
+            </button>
+          </nav>
+
+          {/* Hamburger */}
+          <button
+            className="cz-hamburger"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(!menuOpen)}
+            style={{
+              display: "none",
+              background: "none",
+              border: "1px solid var(--glass-line)",
+              borderRadius: "var(--radius-sm)",
+              padding: "8px 10px",
+              color: "var(--text-strong)",
+              cursor: "pointer",
+            }}
+          >
+            {menuOpen ? (
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            ) : (
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            )}
           </button>
-        </nav>
-        <div className="hamburger" onClick={toggleMenu}>
-          <img
-            loading="lazy"
-            src={isDarkMode ? toggleicon : toggleiconLight}
-            alt="toggleicon"
-          />
         </div>
+      </header>
+
+      {/* Mobile menu */}
+      {menuOpen && (
         <div
-          className={`overlay ${menuOpen ? "open" : ""}`}
-          onClick={toggleMenu}
-        ></div>
-      </div>
-      <RequestForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
-    </header>
+          style={{
+            position: "fixed",
+            top: 60,
+            left: 0,
+            right: 0,
+            zIndex: 49,
+            background: "rgba(10,11,18,0.96)",
+            backdropFilter: "blur(14px)",
+            WebkitBackdropFilter: "blur(14px)",
+            borderBottom: "1px solid var(--glass-line)",
+            padding: "24px 24px 32px",
+            animation: "cz-menu-in 0.2s var(--ease) both",
+          }}
+        >
+          <nav
+            aria-label="Mobile navigation"
+            style={{ display: "flex", flexDirection: "column", gap: 6 }}
+          >
+            {NAV_LINKS.map(({ label, href }) => (
+              <a
+                key={label}
+                href={navHref(href)}
+                className="cz-navlink"
+                onClick={closeMenu}
+                style={{ padding: "12px 0", borderBottom: "1px solid var(--glass-line)" }}
+              >
+                {label}
+              </a>
+            ))}
+            <button
+              className="cz-btn cz-btn--primary cz-btn--md"
+              onClick={handleAuditClick}
+              style={{ marginTop: 16, border: "none", width: "100%", justifyContent: "center" }}
+            >
+              Get an audit
+            </button>
+          </nav>
+        </div>
+      )}
+
+      {/* Backdrop for mobile menu */}
+      {menuOpen && (
+        <div
+          aria-hidden="true"
+          onClick={closeMenu}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 48,
+            background: "rgba(0,0,0,0.4)",
+          }}
+        />
+      )}
+
+      <style>{`
+        @media (max-width: 767px) {
+          .cz-header-nav { display: none !important; }
+          .cz-hamburger { display: flex !important; }
+        }
+      `}</style>
+    </>
   );
 };
 
