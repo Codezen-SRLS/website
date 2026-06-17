@@ -2,7 +2,7 @@ import "./src/styles/global.css";
 import Clarity from "@microsoft/clarity";
 
 export const onClientEntry = () => {
-  const projectId = process.env.CLARITY_ID;
+  const projectId = process.env.GATSBY_CLARITY_ID;
   if (projectId) {
     Clarity.init(projectId);
   }
