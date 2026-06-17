@@ -81,7 +81,7 @@ Go to **Settings > Secrets and variables > Actions** and add:
 
 | Secret | Description |
 |---|---|
-| `PAT` | Personal Access Token with `repo` scope — used to check out the private `sharedData` submodule during deploy |
+| `PAT` | Personal Access Token with `repo` scope — used to check out the private `sharedData` submodule during deploy. See below for how to generate one. |
 | `CLARITY_ID` | Microsoft Clarity project ID (mapped to `GATSBY_CLARITY_ID` in the build) |
 | `GA_TRACKING_ID` | Google Analytics 4 measurement ID |
 | `GATSBY_EMAILJS_SERVICE_ID` | EmailJS service ID |
@@ -89,6 +89,18 @@ Go to **Settings > Secrets and variables > Actions** and add:
 | `GATSBY_EMAILJS_PUBLIC_KEY` | EmailJS public key |
 
 `GITHUB_TOKEN` is provided automatically by GitHub Actions and does not need to be added manually.
+
+#### Generating the PAT
+
+The `PAT` secret must belong to an account that has read access to the `sharedData` submodule repository.
+
+1. Go to **GitHub > Settings > Developer settings > Personal access tokens > Tokens (classic)**
+2. Click **Generate new token (classic)**
+3. Give it a descriptive name, e.g. `codezen-website-ci`
+4. Set an expiration (90 days is a reasonable default — add a reminder to rotate it)
+5. Under **Select scopes**, tick **`repo`** (full control of private repositories)
+6. Click **Generate token** and copy it immediately — it is only shown once
+7. In the website repository go to **Settings > Secrets and variables > Actions > New repository secret**, name it `PAT`, and paste the token
 
 ## Project structure
 
