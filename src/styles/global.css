@@ -172,6 +172,9 @@ button { cursor: pointer; font-family: inherit; }
   margin: 0 auto;
   padding: 0 32px;
 }
+@media (max-width: 767px) {
+  .cz-container { padding: 0 20px; }
+}
 
 /* ===== Tag / Badge ===== */
 .cz-tag {

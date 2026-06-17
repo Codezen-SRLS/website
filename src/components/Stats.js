@@ -2,8 +2,8 @@ import * as React from "react";
 
 const StatCard = ({ value, label }) => (
   <div
+    className="cz-stat-card"
     style={{
-      padding: "28px 24px",
       background: "var(--glass)",
       border: "1px solid var(--glass-line)",
       borderTop: "1px solid rgba(4,217,255,0.38)",
@@ -47,14 +47,16 @@ const Stats = ({ auditCount, vulnCount, assetsProtected, criticalCount }) => (
       <StatCard value={`${criticalCount}+`} label="Critical findings" />
     </div>
     <style>{`
+      .cz-stat-card { padding: 28px 24px; }
       .cz-stat-value { font-size: var(--fs-stat); }
       .cz-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
       @media (max-width: 1023px) {
         .cz-stats-grid { grid-template-columns: repeat(2, 1fr); }
       }
       @media (max-width: 767px) {
-        .cz-stat-value { font-size: 36px; }
-        .cz-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .cz-stat-card { padding: 20px 16px; }
+        .cz-stat-value { font-size: 34px; }
+        .cz-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
       }
     `}</style>
   </section>

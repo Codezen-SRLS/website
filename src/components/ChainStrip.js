@@ -40,7 +40,7 @@ const ChainStrip = () => (
       Audited across every major ecosystem
     </span>
     <div
-      style={{ display: "flex", alignItems: "center", gap: 48, flexWrap: "wrap" }}
+      style={{ display: "flex", alignItems: "center", gap: 48 }}
       className="cz-chain-logos"
     >
       {CHAINS.map(({ src, alt }) => (
