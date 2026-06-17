@@ -1,106 +1,138 @@
-import React, { useMemo, useState } from "react";
+import * as React from "react";
 import { graphql } from "gatsby";
-
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import Stats from "../components/Stats";
 import WorkCard from "../components/WorkCard";
 
 const PAGE_SIZE = 12;
 
 const PortfolioPage = ({ data }) => {
-  const headingData = data?.allSrcJson?.edges?.[0]?.node?.banner?.work;
-  const audits = useMemo(() => data?.allAuditHistoryJson?.edges ?? [], [data]);
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const audits = data?.allAuditHistoryJson?.nodes ?? [];
+  const [visibleCount, setVisibleCount] = React.useState(PAGE_SIZE);
 
-  const visibleAudits = audits.slice(0, visibleCount);
+
+  const visible = audits.slice(0, visibleCount);
   const hasMore = visibleCount < audits.length;
 
   return (
     <Layout>
-      <Seo title="Portfolio" />
-      <div className="work-grid-page">
-        <section className="work-grid-hero container text-center">
-          {headingData?.subHeading && (
-            <p className="sub-text text-decoration-underline m-auto">
-              {headingData.subHeading}
-            </p>
-          )}
-          <h1 className="main-heading mt-3 mb-4 m-auto">
-            {headingData?.heading || "Our Work"}
+      <div className="cz-container" style={{ paddingTop: 0 }}>
+        {/* Page header */}
+        <section style={{ padding: "72px 0 56px" }}>
+          <span className="cz-eyebrow">Our Work</span>
+          <h1
+            style={{
+              margin: "16px 0 0",
+              color: "var(--text-strong)",
+              fontWeight: 700,
+              lineHeight: "var(--lh-tight)",
+              letterSpacing: "var(--ls-tight)",
+            }}
+            className="cz-portfolio-h1"
+          >
+            {audits.length}+ audits across
+            <br />
+            <span className="cz-iris-anim">every major blockchain</span>
           </h1>
-          <p className="text m-auto work-grid-description">
-            Explore the complete portfolio of audits and security engagements
-            our team has delivered across ecosystems, chains, and protocols.
+          <p
+            style={{
+              margin: "20px 0 0",
+              maxWidth: 520,
+              color: "var(--text-body)",
+              fontSize: "var(--fs-body-lg)",
+              fontWeight: "var(--fw-light)",
+              lineHeight: "var(--lh-relaxed)",
+            }}
+          >
+            Smart contracts, consensus protocols, and runtime environments. A complete track record of security engagements across Solidity, Rust, Anchor, CosmWasm, and Substrate.
           </p>
         </section>
 
-        <Stats />
+        {/* Grid */}
+        <div
+          style={{
+            display: "grid",
+            gap: 22,
+            paddingBottom: 80,
+          }}
+          className="cz-portfolio-grid"
+        >
+          {visible.map((audit, i) => (
+            <WorkCard key={i} {...audit} imageData={audit.image?.childImageSharp?.gatsbyImageData} />
+          ))}
+        </div>
 
-        <section className="container work-grid-section">
-          <div className="work-grid">
-            {visibleAudits.map(({ node }, index) => (
-              <WorkCard
-                key={node?.id || index}
-                item={node}
-                className="work-card"
-                openInNewTab
-              />
-            ))}
+        {/* Load more */}
+        {hasMore && (
+          <div style={{ display: "flex", justifyContent: "center", paddingBottom: 80 }}>
+            <button
+              onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+              className="cz-btn cz-btn--ghost cz-btn--lg"
+            >
+              Load more audits
+            </button>
           </div>
-          {hasMore && (
-            <div className="work-grid-controls text-center">
-              <button
-                className="btn"
-                type="button"
-                onClick={() => setVisibleCount((prev) => prev + PAGE_SIZE)}
-              >
-                <span className="text">
-                  <span className="square"></span>
-                </span>
-                Load More
-              </button>
-            </div>
-          )}
-        </section>
+        )}
+
+        {!hasMore && audits.length > PAGE_SIZE && (
+          <p
+            style={{
+              textAlign: "center",
+              paddingBottom: 80,
+              fontFamily: "var(--font-mono)",
+              fontSize: "var(--fs-mono-sm)",
+              letterSpacing: "0.12em",
+              color: "var(--text-muted)",
+            }}
+          >
+            All {audits.length} audits shown
+          </p>
+        )}
       </div>
+
+      <style>{`
+        .cz-portfolio-h1 { font-size: clamp(40px, 5vw, var(--fs-h1)); }
+        .cz-portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+        @media (max-width: 767px) {
+          .cz-portfolio-grid { grid-template-columns: 1fr; }
+        }
+      `}</style>
     </Layout>
   );
 };
 
-export default PortfolioPage;
+export const Head = () => (
+  <Seo
+    title="Portfolio"
+    description="Browse 100+ blockchain security audits across EVM, Solana and Cosmos. Solidity, Rust, Anchor, CosmWasm and Substrate protocol reviews by Codezen."
+  />
+);
 
 export const query = graphql`
-  {
+  query PortfolioQuery {
     allAuditHistoryJson {
-      edges {
-        node {
-          id
-          title
-          description
-          extendedDescription
-          website
-          github
-          partner
-          image {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-            }
+      nodes {
+        title
+        description
+        tags
+        partner
+        github
+        website
+        featured
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 400, height: 160, placeholder: BLURRED, transformOptions: { fit: COVER })
           }
         }
-      }
-    }
-    allSrcJson {
-      edges {
-        node {
-          banner {
-            work {
-              heading
-              subHeading
-            }
-          }
+        issues {
+          critical
+          major
+          minor
+          informational
         }
       }
     }
   }
 `;
+
+export default PortfolioPage;

@@ -7,7 +7,6 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@fontsource/outfit": "^5.2.5",
-    "bootstrap": "^5.3.5",
     "fluent-mailto": "^1.0.2",
     "gatsby": "^5.14.3",
     "gatsby-plugin-canonical-urls": "^5.14.0",
@@ -22,13 +21,19 @@
     "gatsby-transformer-json": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-infinite-logo-slider": "^1.1.4",
-    "react-responsive": "^10.0.0",
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-react": "^7.29.7",
+    "@playwright/test": "^1.61.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "babel-jest": "^29.7.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "prettier": "^2.8.8"
   },
   "keywords": [
@@ -42,11 +47,12 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest",
+    "test:e2e": "playwright test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Codezen-SRLS/website"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

@@ -1,238 +1,260 @@
-import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { useTheme } from "../context/ThemeContext";
+import * as React from "react";
 import emailjs from "@emailjs/browser";
-import "./RequestForm.css";
+import { useForm as useFormCtx } from "../context/FormContext";
 
-const RequestForm = ({ isOpen, onClose }) => {
-  const { isDarkMode } = useTheme();
-  const [formData, setFormData] = useState({
-    clientName: "",
-    companyName: "",
+const INPUT_STYLE = {
+  display: "block",
+  width: "100%",
+  background: "rgba(255,255,255,0.04)",
+  border: "1px solid var(--glass-line)",
+  borderRadius: "var(--radius-sm)",
+  color: "var(--text-strong)",
+  fontFamily: "var(--font-body)",
+  fontSize: 15,
+  padding: "11px 14px",
+  outline: "none",
+  transition: "border-color var(--dur-fast) var(--ease)",
+};
+
+const LABEL_STYLE = {
+  display: "block",
+  marginBottom: 6,
+  fontFamily: "var(--font-mono)",
+  fontSize: 11,
+  letterSpacing: "0.1em",
+  textTransform: "uppercase",
+  color: "var(--text-muted)",
+};
+
+const RequestForm = () => {
+  const { isOpen, closeForm } = useFormCtx();
+  const [sent, setSent] = React.useState(false);
+  const [sending, setSending] = React.useState(false);
+  const [fields, setFields] = React.useState({
+    name: "",
     email: "",
-    phoneNumber: "",
-    requestDetails: "",
+    project: "",
+    details: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState({ type: "", message: "" });
 
-  const data = useStaticQuery(graphql`
-    query {
-      allSrcJson {
-        edges {
-          node {
-            banner {
-              requestForm {
-                title
-                clientName {
-                  label
-                  placeholder
-                }
-                companyName {
-                  label
-                  placeholder
-                }
-                email {
-                  label
-                  placeholder
-                }
-                phoneNumber {
-                  label
-                  placeholder
-                }
-                requestDetails {
-                  label
-                  placeholder
-                }
-                submitButton
-              }
-            }
-          }
-        }
-      }
+  React.useEffect(() => {
+    if (!isOpen) {
+      const t = setTimeout(() => {
+        setSent(false);
+        setFields({ name: "", email: "", project: "", details: "" });
+      }, 300);
+      return () => clearTimeout(t);
     }
-  `);
+  }, [isOpen]);
 
-  const formTexts = data.allSrcJson.edges[0].node.banner.requestForm;
+  React.useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") closeForm(); };
+    if (isOpen) window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [isOpen, closeForm]);
+
+  const set = (k) => (e) => setFields((f) => ({ ...f, [k]: e.target.value }));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({ type: "", message: "" });
-
+    setSending(true);
     try {
-      const templateParams = {
-        from_name: formData.clientName,
-        from_email: formData.email,
-        company_name: formData.companyName,
-        phone_number: formData.phoneNumber,
-        message: formData.requestDetails,
-      };
-
       await emailjs.send(
         process.env.GATSBY_EMAILJS_SERVICE_ID,
         process.env.GATSBY_EMAILJS_TEMPLATE_ID,
-        templateParams,
+        {
+          from_name: fields.name,
+          from_email: fields.email,
+          project: fields.project,
+          message: fields.details,
+        },
         process.env.GATSBY_EMAILJS_PUBLIC_KEY
       );
-
-      setSubmitStatus({
-        type: "success",
-        message: "Your request has been sent successfully!",
-      });
-
-      // Reset form
-      setFormData({
-        clientName: "",
-        companyName: "",
-        email: "",
-        phoneNumber: "",
-        requestDetails: "",
-      });
-
-      // Close form after a short delay
-      setTimeout(() => {
-        onClose();
-      }, 2000);
-    } catch (error) {
-      console.error("Error sending email:", error);
-      setSubmitStatus({
-        type: "error",
-        message: "Failed to send your request. Please try again.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    } catch (_) {}
+    setSending(false);
+    setSent(true);
   };
 
   if (!isOpen) return null;
 
+  const firstName = (fields.name || "").trim().split(/\s+/)[0];
+
   return (
-    <div className="request-form-overlay">
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="Request an audit"
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 100,
+        background: "rgba(5,6,11,0.66)",
+        backdropFilter: "blur(8px)",
+        WebkitBackdropFilter: "blur(8px)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 24,
+      }}
+    >
+      {/* Backdrop click target */}
       <div
-        className={`request-form-container ${isDarkMode ? "dark" : "light"}`}
+        aria-hidden="true"
+        onClick={closeForm}
+        style={{ position: "fixed", inset: 0, zIndex: -1 }}
+      />
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          maxWidth: 540,
+          borderRadius: "var(--radius-lg)",
+          border: "1px solid var(--glass-line-strong)",
+          background: "rgba(12,14,23,0.96)",
+          boxShadow: "var(--shadow-float)",
+          padding: 40,
+          maxHeight: "90vh",
+          overflowY: "auto",
+        }}
       >
-        <div className="request-form-header">
-          <h2>{formTexts.title}</h2>
-          <button className="close-button" onClick={onClose}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
+        <button
+          onClick={closeForm}
+          aria-label="Close"
+          style={{
+            position: "absolute",
+            top: 18,
+            right: 18,
+            width: 34,
+            height: 34,
+            borderRadius: "var(--radius-pill)",
+            border: "1px solid var(--glass-line)",
+            background: "var(--glass)",
+            color: "var(--text-body)",
+            cursor: "pointer",
+            fontSize: 20,
+            lineHeight: 1,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          ×
+        </button>
+
+        {sent ? (
+          <div style={{ textAlign: "center", padding: "24px 0" }}>
+            <div
+              style={{
+                width: 64,
+                height: 64,
+                margin: "0 auto",
+                borderRadius: "50%",
+                border: "1px solid rgba(47,212,138,0.5)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow: "0 0 28px -6px rgba(47,212,138,0.5)",
+              }}
             >
-              <path
-                d="M6.87305 17.1275L17.1275 6.87305"
-                stroke={isDarkMode ? "white" : "black"}
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M17.1275 17.1275L6.87305 6.87305"
-                stroke={isDarkMode ? "white" : "black"}
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-        {submitStatus.message && (
-          <div className={`submit-status ${submitStatus.type}`}>
-            {submitStatus.message}
+              <span style={{ color: "var(--status-success)", fontSize: 30 }}>✓</span>
+            </div>
+            <h3
+              style={{
+                margin: "24px 0 0",
+                color: "var(--text-strong)",
+                fontSize: 24,
+                fontWeight: 600,
+              }}
+            >
+              Request received
+            </h3>
+            <p style={{ margin: "12px 0 0", color: "var(--text-body)", fontSize: 15, lineHeight: 1.6 }}>
+              Thanks{firstName ? `, ${firstName}` : ""}. We will scope your audit and reply within one business day.
+            </p>
+            <div style={{ display: "flex", justifyContent: "center", marginTop: 28 }}>
+              <button onClick={closeForm} className="cz-btn cz-btn--ghost cz-btn--md">
+                Close
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <span className="cz-eyebrow">Request an Audit</span>
+            <h3
+              style={{
+                margin: "16px 0 0",
+                color: "var(--text-strong)",
+                fontSize: 26,
+                fontWeight: 600,
+                letterSpacing: "-0.01em",
+              }}
+            >
+              Let's secure your project
+            </h3>
+            <p style={{ margin: "10px 0 0", color: "var(--text-body)", fontSize: 15, lineHeight: 1.6 }}>
+              Share a few details and we'll get back within one business day.
+            </p>
+            <form
+              onSubmit={handleSubmit}
+              style={{ display: "flex", flexDirection: "column", gap: 16, marginTop: 26 }}
+            >
+              <div>
+                <label htmlFor="rf-name" style={LABEL_STYLE}>Name *</label>
+                <input
+                  id="rf-name"
+                  type="text"
+                  required
+                  placeholder="Your name"
+                  value={fields.name}
+                  onChange={set("name")}
+                  style={INPUT_STYLE}
+                />
+              </div>
+              <div>
+                <label htmlFor="rf-email" style={LABEL_STYLE}>Email *</label>
+                <input
+                  id="rf-email"
+                  type="email"
+                  required
+                  placeholder="you@project.xyz"
+                  value={fields.email}
+                  onChange={set("email")}
+                  style={INPUT_STYLE}
+                />
+              </div>
+              <div>
+                <label htmlFor="rf-project" style={LABEL_STYLE}>Project / Protocol</label>
+                <input
+                  id="rf-project"
+                  type="text"
+                  placeholder="Protocol name & chain"
+                  value={fields.project}
+                  onChange={set("project")}
+                  style={INPUT_STYLE}
+                />
+              </div>
+              <div>
+                <label htmlFor="rf-details" style={LABEL_STYLE}>Request Details</label>
+                <textarea
+                  id="rf-details"
+                  rows={4}
+                  placeholder="Codebase, scope, timeline…"
+                  value={fields.details}
+                  onChange={set("details")}
+                  style={{ ...INPUT_STYLE, resize: "vertical", lineHeight: 1.5 }}
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={sending}
+                className="cz-btn cz-btn--primary cz-btn--lg"
+                style={{ marginTop: 6, width: "100%", justifyContent: "center", border: "none" }}
+              >
+                {sending ? "Sending…" : "Submit your request"}
+              </button>
+            </form>
           </div>
         )}
-        <form onSubmit={handleSubmit}>
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="clientName">{formTexts.clientName.label}</label>
-              <input
-                type="text"
-                id="clientName"
-                name="clientName"
-                value={formData.clientName}
-                onChange={handleChange}
-                placeholder={formTexts.clientName.placeholder}
-                required
-                disabled={isSubmitting}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="companyName">{formTexts.companyName.label}</label>
-              <input
-                type="text"
-                id="companyName"
-                name="companyName"
-                value={formData.companyName}
-                onChange={handleChange}
-                placeholder={formTexts.companyName.placeholder}
-                required
-                disabled={isSubmitting}
-              />
-            </div>
-          </div>
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="email">{formTexts.email.label}</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder={formTexts.email.placeholder}
-                required
-                disabled={isSubmitting}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="phoneNumber">{formTexts.phoneNumber.label}</label>
-              <input
-                type="tel"
-                id="phoneNumber"
-                name="phoneNumber"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                placeholder={formTexts.phoneNumber.placeholder}
-                disabled={isSubmitting}
-              />
-            </div>
-          </div>
-          <div className="form-group">
-            <label htmlFor="requestDetails">
-              {formTexts.requestDetails.label}
-            </label>
-            <textarea
-              id="requestDetails"
-              name="requestDetails"
-              value={formData.requestDetails}
-              onChange={handleChange}
-              placeholder={formTexts.requestDetails.placeholder}
-              required
-              disabled={isSubmitting}
-            />
-          </div>
-          <button
-            type="submit"
-            className={`submit-button ${isSubmitting ? "submitting" : ""}`}
-            disabled={isSubmitting}
-          >
-            <span className="text">
-              <span className="square"></span>
-            </span>
-            {isSubmitting ? "Sending..." : formTexts.submitButton}
-          </button>
-        </form>
       </div>
     </div>
   );

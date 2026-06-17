@@ -15,7 +15,7 @@ module.exports = {
     description: `Codezen secures Web3 with expert consulting and audits, protecting decentralized systems and smart contracts against vulnerabilities.`,
     author: `@christianvari`,
     siteUrl: `https://www.codezen.tech`,
-    keywords: `Codezen, Codezen SRL, Audit, Security, Web3, Blockchain, CosmWasm, Cosmos, Smart Contracts, Consulting`,
+    keywords: `Codezen, Codezen SRL, smart contract audit, Solidity audit, Rust audit, Golang audit, Anchor audit, CosmWasm audit, Cosmos SDK, Substrate, EVM security, Solana security, blockchain security, Web3 security, DeFi audit`,
   },
   plugins: [
     `gatsby-plugin-image`,
