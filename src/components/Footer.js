@@ -123,7 +123,7 @@ const Footer = () => {
             gap: 16,
           }}
         >
-          <span className="cz-mono-label">
+          <span className="cz-mono-label" suppressHydrationWarning>
             © {new Date().getFullYear()} Codezen · codezen.tech
           </span>
           <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
