@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-const FounderCard = ({ name, role, description, website }) => (
+const FounderCard = ({ name, role, description, website, expertise = [] }) => (
   <div className="cz-founder-card">
     <div className="cz-founder-photo">
       <StaticImage
@@ -67,10 +67,42 @@ const FounderCard = ({ name, role, description, website }) => (
       )}
     </div>
 
+    {expertise.length > 0 && (
+      <div className="cz-founder-facts">
+        <h3 style={{ margin: 0, color: "var(--text-strong)", fontSize: "var(--fs-small)", fontWeight: 500 }}>
+          Audits by technology
+        </h3>
+        <ul style={{ listStyle: "none", margin: "18px 0 0", padding: 0, display: "flex", flexDirection: "column", gap: 14 }}>
+          {expertise.map(({ tag, count }) => (
+            <li key={tag}>
+              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "var(--fs-small)" }}>
+                <span style={{ color: "var(--text-body)" }}>{tag}</span>
+                <span className="cz-mono-value">{count}</span>
+              </div>
+              <div
+                aria-hidden="true"
+                style={{ marginTop: 6, height: 4, borderRadius: "var(--radius-pill)", background: "rgba(255,255,255,0.05)" }}
+              >
+                <div
+                  style={{
+                    width: `${(count / expertise[0].count) * 100}%`,
+                    height: "100%",
+                    borderRadius: "var(--radius-pill)",
+                    background: "var(--cz-cyan)",
+                    opacity: 0.7,
+                  }}
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
     <style>{`
       .cz-founder-card {
         display: grid;
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 300px 1fr 280px;
         gap: 0;
         align-items: stretch;
         padding: 0;
@@ -100,14 +132,23 @@ const FounderCard = ({ name, role, description, website }) => (
         padding: 48px 52px;
         border-left: 1px solid var(--glass-line);
       }
+      .cz-founder-facts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 36px;
+        border-left: 1px solid var(--glass-line);
+      }
       @media (max-width: 1023px) {
         .cz-founder-card { grid-template-columns: 240px 1fr; min-height: 320px; }
         .cz-founder-info { padding: 36px 40px; }
+        .cz-founder-facts { grid-column: 1 / -1; border-left: none; border-top: 1px solid var(--glass-line); }
       }
       @media (max-width: 767px) {
         .cz-founder-card { grid-template-columns: 1fr; min-height: 0; }
         .cz-founder-photo { height: 280px; position: relative; }
         .cz-founder-info { padding: 32px 28px; border-left: none; border-top: 1px solid var(--glass-line); }
+        .cz-founder-facts { padding: 28px; }
       }
     `}</style>
   </div>
@@ -162,19 +203,18 @@ const GenericMemberCard = ({ name, role, description, website }) => (
   </div>
 );
 
-const Team = ({ members = [] }) => {
+const Team = ({ members = [], expertise = [] }) => {
   if (!members || members.length === 0) return null;
 
   const christian = members.find((m) => m.name === "Christian Vari");
   const rest = members.filter((m) => m.name !== "Christian Vari");
 
   return (
-    <section data-reveal style={{ padding: "104px 0 0" }}>
-      <span className="cz-eyebrow">Lead Auditor</span>
+    <section data-reveal className="cz-section">
       <h2 className="cz-section-heading">The expert behind every engagement</h2>
 
       {christian && (
-        <FounderCard {...christian} />
+        <FounderCard {...christian} expertise={expertise} />
       )}
 
       {rest.length > 0 && (

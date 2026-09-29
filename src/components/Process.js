@@ -43,9 +43,8 @@ const Process = () => (
   <section
     id="process"
     data-reveal
-    style={{ padding: "104px 0 0", scrollMarginTop: 90 }}
+    className="cz-section"
   >
-    <span className="cz-eyebrow">How We Work</span>
     <h2 className="cz-section-heading">A proven approach to securing blockchain projects</h2>
 
     {/* Desktop: horizontal timeline */}

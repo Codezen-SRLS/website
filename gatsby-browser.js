@@ -1,15 +1,14 @@
 import "./src/styles/global.css";
 import Clarity from "@microsoft/clarity";
-import { hydrateRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import { getConsent, loadAnalytics, trackPageView } from "./src/lib/consent";
 
 export const onClientEntry = () => {
-  const projectId = process.env.GATSBY_CLARITY_ID;
-  if (projectId) {
-    Clarity.init(projectId);
-  }
+  if (getConsent() === "granted") loadAnalytics();
 };
 
 export const onRouteUpdate = ({ location }) => {
+  trackPageView(location);
   if (typeof window !== "undefined" && typeof window.clarity === "function") {
     Clarity.setTag("page", location.pathname);
   }
@@ -22,8 +21,16 @@ export const onRouteUpdate = ({ location }) => {
 // These are recoverable: React re-renders the affected image subtrees on the
 // client and the images load correctly. We silence them here so they don't
 // surface as uncaught errors in production.
+//
+// `gatsby develop` serves an empty shell (no server-rendered markup), so
+// hydrating there always fails; render from scratch in development instead.
 export const replaceHydrateFunction = () => {
   return (element, container) => {
+    if (process.env.NODE_ENV !== "production") {
+      const root = createRoot(container);
+      root.render(element);
+      return root;
+    }
     return hydrateRoot(container, element, {
       onRecoverableError(error) {
         const msg = error && error.message ? error.message : String(error);

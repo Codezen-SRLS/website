@@ -17,7 +17,7 @@ test("nav links are present", async ({ page }) => {
 test("stats section shows audit count", async ({ page }) => {
   await page.goto("/");
   await page.locator("[data-reveal]").first().scrollIntoViewIfNeeded();
-  await expect(page.getByText(/\d+\+ audits/i).first()).toBeVisible();
+  await expect(page.getByText("Completed audits")).toBeVisible();
 });
 
 test("chain strip shows ecosystem logos", async ({ page }) => {

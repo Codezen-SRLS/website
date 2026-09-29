@@ -29,6 +29,14 @@ img, svg { display: block; max-width: 100%; }
 a { color: inherit; }
 button { cursor: pointer; font-family: inherit; }
 
+:focus-visible {
+  outline: 2px solid var(--cz-cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.cz-btn:focus-visible { border-radius: var(--radius-pill); }
+input:focus-visible, textarea:focus-visible { outline-offset: 0; }
+
 /* ===== Keyframe animations ===== */
 @keyframes cz-scan {
   0%   { transform: translateY(-12%); opacity: 0; }
@@ -67,7 +75,7 @@ button { cursor: pointer; font-family: inherit; }
 
 /* ===== Utility classes ===== */
 .cz-iris-anim {
-  background-image: var(--iris);
+  background-image: var(--iris-loop);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -85,8 +93,15 @@ button { cursor: pointer; font-family: inherit; }
   color: var(--cz-cyan-soft);
 }
 
+/* Anchor targets: scroll-margin + padding-top leaves each heading ~32px below
+   the sticky header (~75px tall) */
+.cz-section {
+  padding-top: 104px;
+  scroll-margin-top: 0;
+}
+
 .cz-section-heading {
-  margin: 12px 0 0;
+  margin: 0;
   color: var(--text-strong);
   font-size: var(--fs-h2);
   font-weight: var(--fw-bold);
@@ -94,11 +109,27 @@ button { cursor: pointer; font-family: inherit; }
   letter-spacing: var(--ls-tight);
 }
 
+/* Page-level heading and intro used by standalone pages (portfolio, legal, 404) */
+.cz-page-heading {
+  margin: 16px 0 0;
+  color: var(--text-strong);
+  font-size: clamp(40px, 5vw, var(--fs-h1));
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+.cz-page-lead {
+  margin: 20px 0 0;
+  max-width: 520px;
+  color: var(--text-body);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-relaxed);
+}
+
 .cz-navlink {
-  font-family: var(--font-mono);
-  font-size: var(--fs-mono-sm);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-regular);
   color: var(--text-body);
   text-decoration: none;
   transition: color var(--dur-fast) var(--ease);
@@ -189,6 +220,17 @@ button { cursor: pointer; font-family: inherit; }
   font-weight: var(--fw-medium);
 }
 
+/* Small mono chip for tech tags on cards */
+.cz-chip {
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--glass-line);
+  background: rgba(255, 255, 255, 0.04);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+  color: var(--text-muted);
+}
+
 .cz-badge {
   display: inline-flex;
   align-items: center;
@@ -260,6 +302,19 @@ button { cursor: pointer; font-family: inherit; }
   color: var(--text-strong);
 }
 
+/* Visually hidden but read by screen readers and search engines */
+.cz-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ===== Glass card base ===== */
 .cz-glass-card {
   background: var(--glass);
@@ -269,16 +324,21 @@ button { cursor: pointer; font-family: inherit; }
   -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
-/* ===== Scroll reveal ===== */
-[data-reveal] {
+/* ===== Scroll reveal =====
+   Only hidden once JS has flagged <html> with .cz-js (see gatsby-ssr.js),
+   so content stays visible without JavaScript.
+   The slide is applied to the section's children, not the section itself, so
+   anchor links scroll to the section's real position. */
+.cz-js [data-reveal] {
   opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.cz-js [data-reveal] > * {
   transform: translateY(26px);
-  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+  transition: transform 0.7s cubic-bezier(0.16,1,0.3,1);
 }
-[data-reveal].revealed {
-  opacity: 1;
-  transform: none;
-}
+.cz-js [data-reveal].revealed { opacity: 1; }
+.cz-js [data-reveal].revealed > * { transform: none; }
 
 /* ===== prefers-reduced-motion ===== */
 @media (prefers-reduced-motion: reduce) {
@@ -287,8 +347,6 @@ button { cursor: pointer; font-family: inherit; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  [data-reveal] {
-    opacity: 1;
-    transform: none;
-  }
+  .cz-js [data-reveal] { opacity: 1; }
+  .cz-js [data-reveal] > * { transform: none; }
 }

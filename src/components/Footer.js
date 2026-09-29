@@ -1,10 +1,12 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
 import markLogo from "../assets/logos/mark-white.svg";
 import wordmarkLogo from "../assets/logos/wordmark-white.svg";
 import twitterIcon from "../assets/icons/twitter.svg";
 import linkedinIcon from "../assets/icons/linkedin.svg";
 import { useForm } from "../context/FormContext";
+import { openCookieSettings } from "../lib/consent";
 
 const NAV_SECTIONS = [
   {
@@ -13,7 +15,7 @@ const NAV_SECTIONS = [
       { label: "Services", href: "#services" },
       { label: "Process", href: "#process" },
       { label: "Our Work", href: "#work" },
-      { label: "Portfolio", href: "/portfolio" },
+      { label: "Portfolio", href: "/portfolio/" },
     ],
   },
   {
@@ -28,6 +30,8 @@ const NAV_SECTIONS = [
 
 const Footer = () => {
   const { openForm } = useForm();
+  const location = useLocation();
+  const isHome = (location?.pathname || "/") === "/";
 
   return (
     <footer
@@ -75,15 +79,13 @@ const Footer = () => {
 
           {NAV_SECTIONS.map(({ heading, links }) => (
             <div key={heading}>
-              <div className="cz-mono-label" style={{ marginBottom: 16, letterSpacing: "0.16em" }}>
-                {heading}
-              </div>
+              <div className="cz-footer-heading">{heading}</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
                 {links.map(({ label, href }) =>
                   href.startsWith("/") ? (
                     <Link key={label} to={href} className="cz-flink">{label}</Link>
                   ) : (
-                    <a key={label} href={href} className="cz-flink">{label}</a>
+                    <a key={label} href={isHome ? href : `/${href}`} className="cz-flink">{label}</a>
                   )
                 )}
               </div>
@@ -92,9 +94,7 @@ const Footer = () => {
 
           {/* Contact col */}
           <div>
-            <div className="cz-mono-label" style={{ marginBottom: 16, letterSpacing: "0.16em" }}>
-              Contact
-            </div>
+            <div className="cz-footer-heading">Contact</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
               <a href="mailto:info@codezen.tech" className="cz-flink">
                 info@codezen.tech
@@ -123,12 +123,19 @@ const Footer = () => {
             gap: 16,
           }}
         >
-          <span className="cz-mono-label" suppressHydrationWarning>
-            © {new Date().getFullYear()} Codezen · codezen.tech ·{" "}
-            <Link to="/privacy-policy" className="cz-flink" style={{ font: "inherit", letterSpacing: "inherit" }}>
-              Privacy Policy
-            </Link>
-          </span>
+          <div className="cz-footer-legal">
+            <span suppressHydrationWarning>© {new Date().getFullYear()} Codezen S.r.l.</span>
+            <span>VAT IT16941791002</span>
+            <Link to="/privacy-policy/" className="cz-flink">Privacy policy</Link>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="cz-flink"
+              style={{ background: "none", border: "none", padding: 0 }}
+            >
+              Cookie settings
+            </button>
+          </div>
           <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
             <a
               href="https://x.com/CodezenSRLS"
@@ -184,6 +191,20 @@ const Footer = () => {
         .cz-footer-grid {
           grid-template-columns: 1.6fr 1fr 1fr 1fr;
         }
+        .cz-footer-heading {
+          margin-bottom: 16px;
+          color: var(--text-strong);
+          font-size: var(--fs-small);
+          font-weight: var(--fw-medium);
+        }
+        .cz-footer-legal {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px 24px;
+          color: var(--text-muted);
+          font-size: 13px;
+        }
+        .cz-footer-legal .cz-flink { font-size: 13px; }
         @media (max-width: 1023px) {
           .cz-footer-grid { grid-template-columns: 1fr 1fr; }
         }

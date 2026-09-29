@@ -1,7 +1,8 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import { useForm } from "../context/FormContext";
 
-const Hero = ({ auditCount, vulnCount }) => {
+const Hero = () => {
   const { openForm } = useForm();
 
   return (
@@ -15,10 +16,9 @@ const Hero = ({ auditCount, vulnCount }) => {
       <div className="cz-hero-grid">
         {/* Left: copy */}
         <div>
-          <span className="cz-eyebrow">Securing Web3 &amp; Blockchain</span>
           <h1
             style={{
-              margin: "22px 0 0",
+              margin: 0,
               color: "var(--text-strong)",
               fontWeight: 700,
               lineHeight: 0.98,
@@ -56,32 +56,9 @@ const Hero = ({ auditCount, vulnCount }) => {
             >
               Secure your project
             </button>
-            <a href="#report" className="cz-btn cz-btn--ghost cz-btn--lg" style={{ textDecoration: "none" }}>
+            <Link to="/portfolio/" className="cz-btn cz-btn--ghost cz-btn--lg">
               View audit reports
-            </a>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              gap: 30,
-              marginTop: 42,
-              fontFamily: "var(--font-mono)",
-              fontSize: "var(--fs-mono-sm)",
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--text-muted)",
-              flexWrap: "wrap",
-            }}
-          >
-            <span>
-              <b style={{ color: "var(--cz-cyan-soft)", fontWeight: 600 }}>{auditCount}+</b> audits
-            </span>
-            <span>
-              <b style={{ color: "var(--cz-cyan-soft)", fontWeight: 600 }}>{vulnCount}+</b> vulns found
-            </span>
-            <span>
-              <b style={{ color: "var(--cz-cyan-soft)", fontWeight: 600 }}>$1.2B+</b> protected
-            </span>
+            </Link>
           </div>
         </div>
 
@@ -221,7 +198,7 @@ const Hero = ({ auditCount, vulnCount }) => {
               background: "rgba(255,92,92,0.06)",
             }}
           >
-            <span className="cz-badge cz-badge--high" style={{ color: "#ff5c5c" }}>High</span>
+            <span className="cz-badge cz-badge--high" style={{ color: "#ff5c5c" }}>Major</span>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-body)" }}>
               Missing has_one = authority: any signer can drain the vault (L03 to L04)
             </span>

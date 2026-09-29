@@ -25,11 +25,8 @@ const StatCard = ({ value, label }) => (
     <div
       style={{
         marginTop: 10,
-        fontFamily: "var(--font-mono)",
-        fontSize: "var(--fs-mono-sm)",
-        letterSpacing: "0.12em",
-        textTransform: "uppercase",
-        color: "var(--text-muted)",
+        fontSize: "var(--fs-small)",
+        color: "var(--text-body)",
         lineHeight: 1.4,
       }}
     >
@@ -43,13 +40,13 @@ const Stats = ({ auditCount, vulnCount, assetsProtected, criticalCount }) => (
     <div className="cz-stats-grid">
       <StatCard value={`${auditCount}+`} label="Completed audits" />
       <StatCard value={`${vulnCount}+`} label="Vulnerabilities found" />
-      <StatCard value={assetsProtected || "$1.2B+"} label="Assets protected" />
+      {assetsProtected && <StatCard value={assetsProtected} label="Assets protected" />}
       <StatCard value={`${criticalCount}+`} label="Critical findings" />
     </div>
     <style>{`
       .cz-stat-card { padding: 28px 24px; }
       .cz-stat-value { font-size: var(--fs-stat); }
-      .cz-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+      .cz-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
       @media (max-width: 1023px) {
         .cz-stats-grid { grid-template-columns: repeat(2, 1fr); }
       }

@@ -30,20 +30,10 @@ const PrivacyPolicyPage = () => (
   <Layout>
     <div className="cz-container" style={{ paddingTop: 0 }}>
       <section style={{ padding: "72px 0 32px" }}>
-        <span className="cz-eyebrow">Legal</span>
-        <h1
-          style={{
-            margin: "16px 0 0",
-            color: "var(--text-strong)",
-            fontWeight: 700,
-            lineHeight: "var(--lh-tight)",
-            letterSpacing: "var(--ls-tight)",
-          }}
-          className="cz-legal-h1"
-        >
+        <h1 className="cz-page-heading" style={{ marginTop: 0 }}>
           Privacy Policy
         </h1>
-        <p className="cz-mono-label" style={{ margin: "20px 0 0" }}>
+        <p style={{ margin: "20px 0 0", color: "var(--text-muted)", fontSize: "var(--fs-small)" }}>
           Last updated: {LAST_UPDATED}
         </p>
       </section>
@@ -251,7 +241,9 @@ const PrivacyPolicyPage = () => (
           </table>
         </div>
         <p>
-          You can change your choice at any time and delete cookies through your browser settings.
+          You can change your choice at any time using “Cookie settings” in the footer of every
+          page; withdrawing consent deletes these cookies. You can also delete cookies through your
+          browser settings.
           Refusing analytics cookies has no effect on your ability to use the site.
         </p>
 
@@ -378,7 +370,6 @@ const PrivacyPolicyPage = () => (
     </div>
 
     <style>{`
-      .cz-legal-h1 { font-size: clamp(40px, 5vw, var(--fs-h1)); }
       .cz-legal p, .cz-legal li {
         color: var(--text-body);
         font-size: var(--fs-body);
@@ -426,10 +417,11 @@ const PrivacyPolicyPage = () => (
   </Layout>
 );
 
-export const Head = () => (
+export const Head = ({ location }) => (
   <Seo
+    pathname={location.pathname}
     title="Privacy Policy"
-    description="How Codezen collects, uses and protects personal data on its website and LinkedIn application, in compliance with the EU General Data Protection Regulation (GDPR)."
+    description="How Codezen collects, uses and protects personal data on its website and LinkedIn application, in line with the EU GDPR."
   />
 );
 

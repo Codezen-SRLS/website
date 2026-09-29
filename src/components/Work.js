@@ -15,13 +15,6 @@ const Work = ({ audits = [] }) => {
     track.scrollBy({ left: dir * cardWidth * 2, behavior: "smooth" });
   };
 
-  const scrollToIndex = (i) => {
-    const track = trackRef.current;
-    const card = track?.querySelector(".cz-work-item");
-    const cardWidth = (card?.offsetWidth ?? 280) + 22;
-    track?.scrollTo({ left: i * cardWidth, behavior: "smooth" });
-  };
-
   React.useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
@@ -40,17 +33,14 @@ const Work = ({ audits = [] }) => {
     <section
       id="work"
       data-reveal
-      style={{ padding: "104px 0 0", scrollMarginTop: 90 }}
+      className="cz-section"
     >
       <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 16, marginBottom: 36 }}>
-        <div>
-          <span className="cz-eyebrow">Our Work</span>
-          <h2 className="cz-section-heading" style={{ marginBottom: 0 }}>Proven success in blockchain security</h2>
-        </div>
+        <h2 className="cz-section-heading">Proven success in blockchain security</h2>
         <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
           <button
             onClick={() => scroll(-1)}
-            aria-label="Previous"
+            aria-label="Previous audits"
             className="cz-carousel-arrow"
           >
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -59,7 +49,7 @@ const Work = ({ audits = [] }) => {
           </button>
           <button
             onClick={() => scroll(1)}
-            aria-label="Next"
+            aria-label="Next audits"
             className="cz-carousel-arrow"
           >
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -67,11 +57,11 @@ const Work = ({ audits = [] }) => {
             </svg>
           </button>
           <Link
-            to="/portfolio"
+            to="/portfolio/"
             className="cz-btn cz-btn--ghost cz-btn--md"
             style={{ textDecoration: "none" }}
           >
-            View all {audits.length}+ →
+            View all {audits.length} audits
           </Link>
         </div>
       </div>
@@ -82,22 +72,15 @@ const Work = ({ audits = [] }) => {
       >
         {featured.map((audit, i) => (
           <div key={i} className="cz-work-item">
-            <WorkCard {...audit} imageData={audit.image?.childImageSharp?.gatsbyImageData} />
+            <WorkCard {...audit} slug={audit.pagePath} imageData={audit.image?.childImageSharp?.gatsbyImageData} />
           </div>
         ))}
       </div>
 
-      {/* Mobile scroll dots */}
-      <div className="cz-carousel-dots" aria-hidden="true">
-        {featured.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => scrollToIndex(i)}
-            className={`cz-carousel-dot${i === activeIndex ? " active" : ""}`}
-            aria-label={`Card ${i + 1}`}
-          />
-        ))}
-      </div>
+      {/* Mobile position counter */}
+      <p className="cz-carousel-count" aria-live="polite">
+        {Math.min(activeIndex + 1, featured.length)} / {featured.length}
+      </p>
 
       <style>{`
         .cz-work-track {
@@ -107,10 +90,7 @@ const Work = ({ audits = [] }) => {
           scroll-snap-type: x mandatory;
           -webkit-overflow-scrolling: touch;
           scrollbar-width: none;
-          padding-bottom: 4px;
-          margin: 0 -8px;
-          padding-left: 8px;
-          padding-right: 8px;
+          padding: 4px 0;
         }
         .cz-work-track::-webkit-scrollbar { display: none; }
         .cz-work-item {
@@ -138,33 +118,18 @@ const Work = ({ audits = [] }) => {
         @media (max-width: 1023px) {
           .cz-work-item { flex: 0 0 calc((100% - 22px) / 2); }
         }
-        .cz-carousel-dots {
+        .cz-carousel-count {
           display: none;
-          justify-content: center;
-          align-items: center;
-          gap: 7px;
-          margin-top: 20px;
-        }
-        .cz-carousel-dot {
-          width: 6px;
-          height: 6px;
-          border-radius: var(--radius-pill);
-          background: var(--glass-line-strong);
-          border: none;
-          padding: 0;
-          cursor: pointer;
-          transition: background var(--dur-fast) var(--ease), width var(--dur-fast) var(--ease);
-          flex-shrink: 0;
-        }
-        .cz-carousel-dot.active {
-          width: 20px;
-          background: var(--cz-cyan);
-          box-shadow: 0 0 8px rgba(4,217,255,0.5);
+          margin: 16px 0 0;
+          text-align: center;
+          font-family: var(--font-mono);
+          font-size: var(--fs-mono-sm);
+          color: var(--text-muted);
         }
         @media (max-width: 767px) {
           .cz-work-item { flex: 0 0 85vw; }
           .cz-carousel-arrow { display: none; }
-          .cz-carousel-dots { display: flex; }
+          .cz-carousel-count { display: block; }
         }
       `}</style>
     </section>

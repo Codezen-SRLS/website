@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-const Seo = ({ title, description }) => {
+const Seo = ({ title, description, pathname = "/", noindex = false, image, imageAlt, type = "website" }) => {
   const { site } = useStaticQuery(graphql`
     query SeoQuery {
       site {
@@ -19,9 +19,12 @@ const Seo = ({ title, description }) => {
   const siteTitle = site.siteMetadata?.title;
   const metaDescription = description || site.siteMetadata.description;
   const metaKeywords = site.siteMetadata?.keywords;
-  const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
-  const metaImage = `${site.siteMetadata.siteUrl}/icons/icon-512x512.png`;
+  // Short brand suffix on subpages keeps titles under ~60 chars in search results
+  const pageTitle = title ? `${title} | Codezen` : siteTitle;
+  const logoUrl = `${site.siteMetadata.siteUrl}/icons/icon-512x512.png`;
+  const metaImage = image || logoUrl;
   const siteUrl = site.siteMetadata.siteUrl;
+  const pageUrl = `${siteUrl}${pathname}`;
 
   return (
     <>
@@ -29,13 +32,15 @@ const Seo = ({ title, description }) => {
       <title>{pageTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={metaKeywords} />
+      {noindex && <meta name="robots" content="noindex" />}
 
       {/* Open Graph */}
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={siteUrl} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={pageUrl} />
       <meta property="og:image" content={metaImage} />
+      {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
       <meta property="og:site_name" content={siteTitle} />
 
       {/* Twitter */}
@@ -52,7 +57,7 @@ const Seo = ({ title, description }) => {
           "@type": "Organization",
           name: "Codezen",
           url: siteUrl,
-          logo: metaImage,
+          logo: logoUrl,
           description: "Expert smart contract audits for Solidity, Rust, Anchor, CosmWasm and Cosmos SDK. Blockchain security consulting for EVM, Solana and Cosmos protocols.",
           email: "info@codezen.tech",
           knowsAbout: [

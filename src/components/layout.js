@@ -2,6 +2,7 @@ import * as React from "react";
 import Header from "./header";
 import Footer from "./Footer";
 import RequestForm from "./RequestForm";
+import CookieBanner from "./CookieBanner";
 import { FormProvider } from "../context/FormContext";
 
 const Layout = ({ children }) => {
@@ -28,7 +29,9 @@ const Layout = ({ children }) => {
           position: "relative",
           minHeight: "100vh",
           background: "var(--field-bg)",
-          overflowX: "hidden",
+          // "clip" rather than "hidden": hidden makes this div a scroll
+          // container, which breaks the sticky header
+          overflowX: "clip",
         }}
       >
         <div
@@ -48,6 +51,7 @@ const Layout = ({ children }) => {
         <main style={{ position: "relative", zIndex: 2 }}>{children}</main>
         <Footer />
         <RequestForm />
+        <CookieBanner />
       </div>
     </FormProvider>
   );

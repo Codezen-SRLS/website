@@ -31,6 +31,9 @@ const RequestForm = () => {
   const { isOpen, closeForm } = useFormCtx();
   const [sent, setSent] = React.useState(false);
   const [sending, setSending] = React.useState(false);
+  const [error, setError] = React.useState(false);
+  const dialogRef = React.useRef(null);
+  const returnFocusRef = React.useRef(null);
   const [fields, setFields] = React.useState({
     name: "",
     email: "",
@@ -42,6 +45,7 @@ const RequestForm = () => {
     if (!isOpen) {
       const t = setTimeout(() => {
         setSent(false);
+        setError(false);
         setFields({ name: "", email: "", project: "", details: "" });
       }, 300);
       return () => clearTimeout(t);
@@ -49,9 +53,36 @@ const RequestForm = () => {
   }, [isOpen]);
 
   React.useEffect(() => {
-    const onKey = (e) => { if (e.key === "Escape") closeForm(); };
-    if (isOpen) window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    if (!isOpen) return undefined;
+    returnFocusRef.current = document.activeElement;
+    const dialog = dialogRef.current;
+    (dialog?.querySelector("input") || dialog?.querySelector("button"))?.focus();
+
+    const onKey = (e) => {
+      if (e.key === "Escape") {
+        closeForm();
+        return;
+      }
+      if (e.key !== "Tab" || !dialogRef.current) return;
+      const focusable = dialogRef.current.querySelectorAll(
+        "a[href], button:not([disabled]), input, textarea"
+      );
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      returnFocusRef.current?.focus?.();
+    };
   }, [isOpen, closeForm]);
 
   const set = (k) => (e) => setFields((f) => ({ ...f, [k]: e.target.value }));
@@ -59,6 +90,7 @@ const RequestForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
+    setError(false);
     try {
       await emailjs.send(
         process.env.GATSBY_EMAILJS_SERVICE_ID,
@@ -71,9 +103,11 @@ const RequestForm = () => {
         },
         process.env.GATSBY_EMAILJS_PUBLIC_KEY
       );
-    } catch (_) {}
+      setSent(true);
+    } catch (_) {
+      setError(true);
+    }
     setSending(false);
-    setSent(true);
   };
 
   if (!isOpen) return null;
@@ -105,6 +139,7 @@ const RequestForm = () => {
         style={{ position: "fixed", inset: 0, zIndex: -1 }}
       />
       <div
+        ref={dialogRef}
         style={{
           position: "relative",
           width: "100%",
@@ -180,10 +215,10 @@ const RequestForm = () => {
           </div>
         ) : (
           <div>
-            <span className="cz-eyebrow">Request an Audit</span>
             <h3
               style={{
-                margin: "16px 0 0",
+                margin: 0,
+                paddingRight: 40,
                 color: "var(--text-strong)",
                 fontSize: 26,
                 fontWeight: 600,
@@ -196,6 +231,7 @@ const RequestForm = () => {
               Share a few details and we'll get back within one business day.
             </p>
             <form
+              data-clarity-mask="True"
               onSubmit={handleSubmit}
               style={{ display: "flex", flexDirection: "column", gap: 16, marginTop: 26 }}
             >
@@ -245,6 +281,27 @@ const RequestForm = () => {
                   style={{ ...INPUT_STYLE, resize: "vertical", lineHeight: 1.5 }}
                 />
               </div>
+              {error && (
+                <p
+                  role="alert"
+                  style={{
+                    margin: 0,
+                    padding: "12px 14px",
+                    borderRadius: "var(--radius-sm)",
+                    border: "1px solid rgba(255,92,92,0.4)",
+                    background: "rgba(255,92,92,0.08)",
+                    color: "#ffd2d2",
+                    fontSize: 14,
+                    lineHeight: 1.5,
+                  }}
+                >
+                  Your request wasn't sent. Try again, or email us at{" "}
+                  <a href="mailto:info@codezen.tech" style={{ color: "var(--cz-cyan-soft)" }}>
+                    info@codezen.tech
+                  </a>
+                  .
+                </p>
+              )}
               <button
                 type="submit"
                 disabled={sending}
@@ -256,7 +313,7 @@ const RequestForm = () => {
               <p style={{ margin: 0, color: "var(--text-muted)", fontSize: 13, lineHeight: 1.5 }}>
                 We use your details only to reply to your request. See our{" "}
                 <Link
-                  to="/privacy-policy"
+                  to="/privacy-policy/"
                   onClick={closeForm}
                   style={{ color: "var(--cz-cyan-soft)", textDecoration: "none" }}
                 >

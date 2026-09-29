@@ -5,24 +5,18 @@ import recoveryIcon from "../assets/icons/disaster-recovery.svg";
 
 const SERVICES = [
   {
-    index: "01",
-    label: "Smart contracts",
     icon: auditIcon,
     title: "Smart Contract Audits",
     description:
       "Line-by-line review of Solidity, Rust, Anchor, CosmWasm, and Golang code. We identify vulnerabilities and harden your protocol before mainnet.",
   },
   {
-    index: "02",
-    label: "Architecture",
     icon: consultingIcon,
     title: "Blockchain Consulting",
     description:
       "Expert guidance on EVM, Solana, and Cosmos SDK architectures. From protocol design to deployment and ongoing security hardening.",
   },
   {
-    index: "03",
-    label: "Continuity",
     icon: recoveryIcon,
     title: "Disaster Recovery",
     description:
@@ -30,7 +24,7 @@ const SERVICES = [
   },
 ];
 
-const ServiceCard = ({ index, label, icon, title, description }) => (
+const ServiceCard = ({ icon, title, description }) => (
   <div
     style={{
       padding: "28px 24px 32px",
@@ -48,29 +42,19 @@ const ServiceCard = ({ index, label, icon, title, description }) => (
   >
     <div
       style={{
+        width: 48,
+        height: 48,
+        marginBottom: 24,
+        borderRadius: "var(--radius-md)",
+        background: "rgba(4,217,255,0.07)",
+        border: "1px solid rgba(4,217,255,0.2)",
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
-        marginBottom: 24,
+        justifyContent: "center",
       }}
     >
-      <div
-        style={{
-          width: 48,
-          height: 48,
-          borderRadius: "var(--radius-md)",
-          background: "rgba(4,217,255,0.07)",
-          border: "1px solid rgba(4,217,255,0.2)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <img src={icon} alt="" aria-hidden="true" style={{ width: 26, height: 26 }} />
-      </div>
-      <span className="cz-mono-label" style={{ letterSpacing: "0.18em" }}>{index}</span>
+          <img src={icon} alt="" aria-hidden="true" style={{ width: 26, height: 26 }} />
     </div>
-    <div className="cz-mono-accent" style={{ marginBottom: 10 }}>{label}</div>
     <h3 className="cz-card-heading" style={{ lineHeight: "var(--lh-snug)" }}>{title}</h3>
     <p className="cz-text-sm" style={{ marginTop: 12 }}>{description}</p>
   </div>
@@ -80,15 +64,15 @@ const Services = () => (
   <section
     id="services"
     data-reveal
-    style={{ padding: "24px 0 0", scrollMarginTop: 90 }}
+    className="cz-section"
+    style={{ paddingTop: 24, scrollMarginTop: 80 }}
   >
-    <span className="cz-eyebrow">What We Do</span>
     <h2 className="cz-section-heading">
       Comprehensive security for decentralized systems
     </h2>
     <div className="cz-services-grid">
       {SERVICES.map((s) => (
-        <ServiceCard key={s.index} {...s} />
+        <ServiceCard key={s.title} {...s} />
       ))}
     </div>
     <style>{`

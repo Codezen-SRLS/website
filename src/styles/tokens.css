@@ -24,13 +24,6 @@
   font-display: swap;
   src: url("../assets/fonts/JetBrainsMono-SemiBold.woff2") format("woff2");
 }
-@font-face {
-  font-family: "Felix Titling";
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-  src: url("../assets/fonts/felixti.ttf") format("truetype");
-}
 
 :root {
   /* --- Logo / brand blues --- */
@@ -67,6 +60,8 @@
 
   /* --- Iridescent gradients --- */
   --iris: linear-gradient(100deg, #04d9ff 0%, #2ee2ff 28%, #168ccd 68%, #cfe9ff 100%);
+  /* Same colours mirrored so the animated text gradient tiles without a seam */
+  --iris-loop: linear-gradient(100deg, #04d9ff 0%, #2ee2ff 14%, #168ccd 34%, #cfe9ff 50%, #168ccd 66%, #2ee2ff 86%, #04d9ff 100%);
   --iris-rule: linear-gradient(90deg, transparent, rgba(4,217,255,0.55), rgba(22,140,205,0.35), transparent);
 
   /* --- Atmospheric page background --- */
@@ -83,7 +78,7 @@
 
   --text-strong: #f4f7ff;
   --text-body: rgba(232, 238, 255, 0.74);
-  --text-muted: rgba(232, 238, 255, 0.40);
+  --text-muted: rgba(232, 238, 255, 0.58);
   --text-accent: var(--cz-cyan-soft);
 
   --border-default: var(--glass-line);

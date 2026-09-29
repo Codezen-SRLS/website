@@ -16,12 +16,12 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const { openForm } = useForm();
   const location = useLocation();
-  const isPortfolio = location?.pathname?.startsWith("/portfolio");
+  const isHome = (location?.pathname || "/") === "/";
 
   const closeMenu = () => setMenuOpen(false);
   const handleAuditClick = () => { openForm(); closeMenu(); };
 
-  const navHref = (href) => isPortfolio ? `/${href}` : href;
+  const navHref = (href) => (isHome ? href : `/${href}`);
 
   return (
     <>

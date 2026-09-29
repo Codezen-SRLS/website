@@ -1,11 +1,11 @@
 import * as React from "react";
 import { useForm } from "../context/FormContext";
 
+// Severity names follow the audit data: critical, major, minor, informational
 const BAR_COLORS = {
   Critical: "#ff5c5c",
-  High: "#f5b945",
-  Medium: "var(--cz-cyan)",
-  Low: "#2fd48a",
+  Major: "#f5b945",
+  Minor: "var(--cz-cyan)",
   Info: "rgba(232,238,255,0.45)",
 };
 
@@ -13,9 +13,8 @@ const SeverityBar = ({ label, count, total, color, delay }) => {
   const pct = total > 0 ? Math.round((count / total) * 100) : 0;
   const textColors = {
     Critical: "#ff7a7a",
-    High: "#f5b945",
-    Medium: "var(--cz-cyan-soft)",
-    Low: "#2fd48a",
+    Major: "#f5b945",
+    Minor: "var(--cz-cyan-soft)",
     Info: "var(--text-muted)",
   };
   return (
@@ -90,9 +89,8 @@ const FeaturedReport = ({ audit }) => {
     <section
       id="report"
       data-reveal
-      style={{ padding: "104px 0 0", scrollMarginTop: 90 }}
+      className="cz-section"
     >
-      <span className="cz-eyebrow">What We Deliver</span>
       <h2 className="cz-section-heading">The depth behind every engagement</h2>
 
       <div
@@ -200,32 +198,27 @@ const FeaturedReport = ({ audit }) => {
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               <SeverityBar label="Critical" count={issues.critical || 0} total={total} color={BAR_COLORS.Critical} delay={0} />
-              <SeverityBar label="High" count={issues.major || 0} total={total} color={BAR_COLORS.High} delay={0.1} />
-              <SeverityBar label="Medium" count={issues.minor || 0} total={total} color={BAR_COLORS.Medium} delay={0.2} />
-              <SeverityBar label="Low" count={0} total={total} color={BAR_COLORS.Low} delay={0.3} />
-              <SeverityBar label="Info" count={issues.informational || 0} total={total} color={BAR_COLORS.Info} delay={0.4} />
+              <SeverityBar label="Major" count={issues.major || 0} total={total} color={BAR_COLORS.Major} delay={0.1} />
+              <SeverityBar label="Minor" count={issues.minor || 0} total={total} color={BAR_COLORS.Minor} delay={0.2} />
+              <SeverityBar label="Info" count={issues.informational || 0} total={total} color={BAR_COLORS.Info} delay={0.3} />
             </div>
 
             {/* Sample findings */}
             {issues.critical > 0 && (
               <div style={{ marginTop: 24, borderTop: "1px solid var(--glass-line)", paddingTop: 20, display: "flex", flexDirection: "column", gap: 12 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
-                  <span className="cz-badge cz-badge--critical">Critical</span>
-                  <span className="cz-text-sm" style={{ flex: 1, minWidth: 0 }}>
+                <div className="cz-finding">
+                  <span className="cz-badge cz-badge--critical cz-finding-badge">Critical</span>
+                  <span className="cz-text-sm cz-finding-text">
                     Missing signer check in <code style={{ fontFamily: "var(--font-mono)", fontSize: "0.9em", color: "var(--cz-cyan-soft)" }}>#[account]</code> constraint allows privilege escalation
                   </span>
-                  <span className="cz-mono-label" style={{ color: "var(--status-success)", flexShrink: 0 }}>
-                    Resolved
-                  </span>
+                  <span className="cz-mono-label cz-finding-status">Resolved</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
-                  <span className="cz-badge cz-badge--high">High</span>
-                  <span className="cz-text-sm" style={{ flex: 1, minWidth: 0 }}>
+                <div className="cz-finding">
+                  <span className="cz-badge cz-badge--high cz-finding-badge">Major</span>
+                  <span className="cz-text-sm cz-finding-text">
                     Integer overflow in token vault via unchecked <code style={{ fontFamily: "var(--font-mono)", fontSize: "0.9em", color: "var(--cz-cyan-soft)" }}>u64</code> multiplication
                   </span>
-                  <span className="cz-mono-label" style={{ color: "var(--status-success)", flexShrink: 0 }}>
-                    Resolved
-                  </span>
+                  <span className="cz-mono-label cz-finding-status">Resolved</span>
                 </div>
               </div>
             )}
@@ -245,8 +238,8 @@ const FeaturedReport = ({ audit }) => {
             background: "rgba(255,255,255,0.02)",
           }}
         >
-          <span className="cz-mono-label">
-            Every engagement ships scope, methodology, PoCs &amp; remediation
+          <span className="cz-text-muted">
+            Every report includes scope, methodology, proofs of concept and remediation advice.
           </span>
           <button
             onClick={openForm}
@@ -260,9 +253,23 @@ const FeaturedReport = ({ audit }) => {
       <style>{`
         .cz-report-cols { display: grid; grid-template-columns: 0.9fr 1.1fr; }
         .cz-report-left { border-right: 1px solid var(--glass-line); }
+        .cz-finding {
+          display: grid;
+          grid-template-columns: auto 1fr auto;
+          grid-template-areas: "badge text status";
+          align-items: center;
+          gap: 8px 12px;
+        }
+        .cz-finding-badge { grid-area: badge; justify-self: start; }
+        .cz-finding-text { grid-area: text; min-width: 0; }
+        .cz-finding-status { grid-area: status; color: var(--status-success); }
         @media (max-width: 767px) {
           .cz-report-cols { grid-template-columns: 1fr; }
           .cz-report-left { border-right: none; border-bottom: 1px solid var(--glass-line); }
+          .cz-finding {
+            grid-template-columns: 1fr auto;
+            grid-template-areas: "badge status" "text text";
+          }
         }
       `}</style>
     </section>

@@ -62,3 +62,27 @@ test("shows success state after submit", async () => {
     expect(screen.getByText(/request received/i)).toBeInTheDocument();
   });
 });
+
+test("shows an error and keeps the form when sending fails", async () => {
+  const emailjs = require("@emailjs/browser");
+  emailjs.send.mockImplementationOnce(() => Promise.reject(new Error("network")));
+  render(<TestWrapper />);
+  fireEvent.click(screen.getByText("Open"));
+
+  fireEvent.change(screen.getByLabelText(/name/i), { target: { value: "Alice" } });
+  fireEvent.change(screen.getByLabelText(/email/i), { target: { value: "alice@example.com" } });
+
+  await act(async () => {
+    fireEvent.click(screen.getByText(/submit your request/i));
+  });
+
+  expect(screen.getByRole("alert")).toHaveTextContent(/wasn't sent/i);
+  expect(screen.queryByText(/request received/i)).not.toBeInTheDocument();
+  expect(screen.getByLabelText(/name/i)).toHaveValue("Alice");
+});
+
+test("moves focus to the first field when opened", () => {
+  render(<TestWrapper />);
+  fireEvent.click(screen.getByText("Open"));
+  expect(screen.getByLabelText(/name/i)).toHaveFocus();
+});

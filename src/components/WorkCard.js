@@ -1,5 +1,6 @@
 import * as React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
+import BannerImage from "./BannerImage";
 
 const CHAIN_COLORS = {
   ethereum: "rgba(98,126,234,0.15)",
@@ -18,16 +19,25 @@ const getChainKey = (tags = []) => {
   return "ethereum";
 };
 
-const WorkCard = ({ title, description, tags, partner, github, website, imageData }) => {
+const WorkCard = ({ title, description, tags, partner, github, website, imageData, slug }) => {
   const chainKey = getChainKey(tags);
   const bg = CHAIN_COLORS[chainKey] || CHAIN_COLORS.ethereum;
-  const href = github || website || "#";
+  // Prefer the audit's own page (indexable, links to the report); fall back to the
+  // external report or website. Cards with neither render as plain blocks.
+  const href = github || website;
+  let Wrapper = "div";
+  let linkProps = {};
+  if (slug) {
+    Wrapper = Link;
+    linkProps = { to: slug };
+  } else if (href) {
+    Wrapper = "a";
+    linkProps = { href, target: "_blank", rel: "noopener noreferrer" };
+  }
 
   return (
-    <a
-      href={href}
-      target={href !== "#" ? "_blank" : undefined}
-      rel={href !== "#" ? "noopener noreferrer" : undefined}
+    <Wrapper
+      {...linkProps}
       style={{ textDecoration: "none", display: "block", height: "100%" }}
       className="cz-work-card"
     >
@@ -46,7 +56,7 @@ const WorkCard = ({ title, description, tags, partner, github, website, imageDat
         {/* Card image area */}
         <div
           style={{
-            height: 160,
+            aspectRatio: "16 / 9",
             background: `radial-gradient(circle at 50% 45%, rgba(4,217,255,0.14), transparent 62%), radial-gradient(120% 120% at 80% 100%, rgba(49,46,129,0.4), transparent 60%), ${bg}`,
             display: "flex",
             alignItems: "center",
@@ -56,12 +66,7 @@ const WorkCard = ({ title, description, tags, partner, github, website, imageDat
           }}
         >
           {imageData ? (
-            <GatsbyImage
-              image={imageData}
-              alt={title || ""}
-              style={{ width: "100%", height: "100%", position: "absolute", inset: 0 }}
-              imgStyle={{ objectFit: "cover", opacity: 0.7 }}
-            />
+            <BannerImage image={imageData} alt={title || ""} opacity={0.85} />
           ) : (
             <span
               style={{
@@ -82,7 +87,7 @@ const WorkCard = ({ title, description, tags, partner, github, website, imageDat
           <div style={{ marginBottom: 12, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
             <span className="cz-tag">{description}</span>
             {partner && (
-              <span className="cz-mono-label">{partner}</span>
+              <span className="cz-text-muted">with {partner}</span>
             )}
           </div>
           <h3 className="cz-card-heading" style={{ flex: 1, fontSize: 20 }}>
@@ -93,14 +98,7 @@ const WorkCard = ({ title, description, tags, partner, github, website, imageDat
               {tags.slice(0, 3).map((tag) => (
                 <span
                   key={tag}
-                  className="cz-mono-label"
-                  style={{
-                    background: "rgba(255,255,255,0.04)",
-                    borderRadius: "var(--radius-pill)",
-                    padding: "3px 9px",
-                    border: "1px solid var(--glass-line)",
-                    letterSpacing: "0.08em",
-                  }}
+                  className="cz-chip"
                 >
                   {tag}
                 </span>
@@ -116,7 +114,7 @@ const WorkCard = ({ title, description, tags, partner, github, website, imageDat
           box-shadow: var(--glow-cyan);
         }
       `}</style>
-    </a>
+    </Wrapper>
   );
 };
 

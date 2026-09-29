@@ -26,8 +26,10 @@ test("renders client as confidential", () => {
 test("renders severity labels", () => {
   render(<FeaturedReport audit={MOCK_AUDIT} />, { wrapper });
   expect(screen.getAllByText("Critical").length).toBeGreaterThan(0);
-  expect(screen.getAllByText("High").length).toBeGreaterThan(0);
-  expect(screen.getAllByText("Medium").length).toBeGreaterThan(0);
+  expect(screen.getAllByText("Major").length).toBeGreaterThan(0);
+  expect(screen.getAllByText("Minor").length).toBeGreaterThan(0);
+  expect(screen.getByText("Info")).toBeInTheDocument();
+  expect(screen.queryByText("Low")).not.toBeInTheDocument();
 });
 
 test("renders total finding count", () => {

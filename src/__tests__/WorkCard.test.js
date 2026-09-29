@@ -18,10 +18,10 @@ test("renders title and description", () => {
 
 test("renders partner name", () => {
   render(<WorkCard {...MOCK_AUDIT} />);
-  expect(screen.getByText("Oak Security")).toBeInTheDocument();
+  expect(screen.getByText("with Oak Security")).toBeInTheDocument();
 });
 
-test("links to github report when available", () => {
+test("links to the external report when there is no audit page", () => {
   render(<WorkCard {...MOCK_AUDIT} />);
   const link = screen.getByRole("link");
   expect(link).toHaveAttribute("href", "https://github.com/example/report.pdf");
@@ -32,4 +32,14 @@ test("renders first 3 tags", () => {
   expect(screen.getByText("Solana")).toBeInTheDocument();
   expect(screen.getByText("Rust")).toBeInTheDocument();
   expect(screen.getByText("Audit")).toBeInTheDocument();
+});
+
+test("renders a plain block instead of a dead link when there is no URL", () => {
+  const { container } = render(<WorkCard {...MOCK_AUDIT} github={null} website={null} />);
+  expect(container.querySelector("a")).toBeNull();
+});
+
+test("links to its own audit page when a slug is given", () => {
+  render(<WorkCard {...MOCK_AUDIT} slug="/audits/test-protocol/" />);
+  expect(screen.getByRole("link")).toHaveAttribute("href", "/audits/test-protocol/");
 });

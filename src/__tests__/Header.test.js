@@ -33,3 +33,14 @@ test("hamburger toggles mobile menu", () => {
   fireEvent.click(hamburger);
   expect(screen.getByLabelText(/close menu/i)).toBeInTheDocument();
 });
+
+test("section links point back to the home page on other pages", () => {
+  const router = require("@reach/router");
+  router.__setPathname("/privacy-policy/");
+  try {
+    render(<Header />, { wrapper });
+    expect(screen.getByText("Services").closest("a")).toHaveAttribute("href", "/#services");
+  } finally {
+    router.__setPathname("/");
+  }
+});

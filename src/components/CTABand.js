@@ -22,9 +22,6 @@ const CTABand = () => {
         }}
         className="cz-cta-inner"
       >
-        <span className="cz-eyebrow" style={{ display: "block", marginBottom: 18 }}>
-          Ready When You Are
-        </span>
         <h2
           style={{
             margin: "0 auto",

@@ -11,7 +11,6 @@ const PortfolioPage = ({ data }) => {
   const [visibleCount, setVisibleCount] = React.useState(PAGE_SIZE);
 
 
-  const visible = audits.slice(0, visibleCount);
   const hasMore = visibleCount < audits.length;
 
   return (
@@ -19,36 +18,18 @@ const PortfolioPage = ({ data }) => {
       <div className="cz-container" style={{ paddingTop: 0 }}>
         {/* Page header */}
         <section style={{ padding: "72px 0 56px" }}>
-          <span className="cz-eyebrow">Our Work</span>
-          <h1
-            style={{
-              margin: "16px 0 0",
-              color: "var(--text-strong)",
-              fontWeight: 700,
-              lineHeight: "var(--lh-tight)",
-              letterSpacing: "var(--ls-tight)",
-            }}
-            className="cz-portfolio-h1"
-          >
+          <h1 className="cz-page-heading" style={{ marginTop: 0 }}>
             {audits.length}+ audits across
             <br />
             <span className="cz-iris-anim">every major blockchain</span>
           </h1>
-          <p
-            style={{
-              margin: "20px 0 0",
-              maxWidth: 520,
-              color: "var(--text-body)",
-              fontSize: "var(--fs-body-lg)",
-              fontWeight: "var(--fw-light)",
-              lineHeight: "var(--lh-relaxed)",
-            }}
-          >
+          <p className="cz-page-lead">
             Smart contracts, consensus protocols, and runtime environments. A complete track record of security engagements across Solidity, Rust, Anchor, CosmWasm, and Substrate.
           </p>
         </section>
 
         {/* Grid */}
+        <h2 className="cz-sr-only">All audits</h2>
         <div
           style={{
             display: "grid",
@@ -57,8 +38,16 @@ const PortfolioPage = ({ data }) => {
           }}
           className="cz-portfolio-grid"
         >
-          {visible.map((audit, i) => (
-            <WorkCard key={i} {...audit} imageData={audit.image?.childImageSharp?.gatsbyImageData} />
+          {/* Every audit is in the HTML so search engines can follow each link;
+              cards past the current page are hidden until "Load more". */}
+          {audits.map((audit, i) => (
+            <div key={audit.pagePath} hidden={i >= visibleCount}>
+              <WorkCard
+                {...audit}
+                slug={audit.pagePath}
+                imageData={audit.image?.childImageSharp?.gatsbyImageData}
+              />
+            </div>
           ))}
         </div>
 
@@ -91,7 +80,6 @@ const PortfolioPage = ({ data }) => {
       </div>
 
       <style>{`
-        .cz-portfolio-h1 { font-size: clamp(40px, 5vw, var(--fs-h1)); }
         .cz-portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
         @media (max-width: 767px) {
           .cz-portfolio-grid { grid-template-columns: 1fr; }
@@ -101,10 +89,11 @@ const PortfolioPage = ({ data }) => {
   );
 };
 
-export const Head = () => (
+export const Head = ({ location }) => (
   <Seo
-    title="Portfolio"
-    description="Browse 100+ blockchain security audits across EVM, Solana and Cosmos. Solidity, Rust, Anchor, CosmWasm and Substrate protocol reviews by Codezen."
+    pathname={location.pathname}
+    title="Smart Contract & Blockchain Audit Portfolio"
+    description="Browse 120+ public security audits by Codezen: Stellar, Cosmos SDK, CosmWasm, Solana, EVM and Substrate protocols, with findings and full reports."
   />
 );
 
@@ -119,9 +108,10 @@ export const query = graphql`
         github
         website
         featured
+        pagePath
         image {
           childImageSharp {
-            gatsbyImageData(width: 400, height: 160, placeholder: BLURRED, transformOptions: { fit: COVER })
+            gatsbyImageData(width: 640, placeholder: BLURRED)
           }
         }
         issues {
