@@ -66,11 +66,27 @@ const seo = Astro.props;
             }),
           { threshold: 0.1, rootMargin: "0px 0px -6% 0px" }
         );
+        // A section opened by URL (/#process) is where the browser is about to scroll: never shift it
+        const hashTarget = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        const linkedSection = hashTarget ? hashTarget.closest("[data-reveal]") : null;
         document.querySelectorAll("[data-reveal]").forEach((el) => {
-          if (el.getBoundingClientRect().top < window.innerHeight) return;
+          if (el === linkedSection || el.getBoundingClientRect().top < window.innerHeight) return;
           el.classList.add("reveal-pending");
           io.observe(el);
         });
+
+        // An in-page link shows its target at once, so the section doesn't slide
+        // under the reader while the browser scrolls to it
+        document.addEventListener("click", (e) => {
+          const link = (e.target as Element).closest<HTMLAnchorElement>('a[href*="#"]');
+          if (!link || link.pathname !== location.pathname) return;
+          const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+          const section = target?.closest("[data-reveal]");
+          if (!section?.classList.contains("reveal-pending")) return;
+          section.classList.remove("reveal-pending");
+          section.classList.add("revealed", "reveal-instant");
+          io.unobserve(section);
+        }, { capture: true });
       }
     </script>
 

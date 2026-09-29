@@ -141,3 +141,32 @@ test("content stays visible when the site script fails to load", async ({ page }
     await expect(page.locator("section", { has: heading })).toHaveCSS("opacity", "1");
   }
 });
+
+// Anchors land on the section's eyebrow, not on its top padding, and nothing slides
+// afterwards (the scroll-reveal shift used to move the target by 18px)
+const eyebrowTop = (page: import("@playwright/test").Page, id: string) =>
+  page.evaluate((id) => Math.round(document.querySelector(`#${id} .cz-eyebrow`)!.getBoundingClientRect().top), id);
+
+test("header links land consistently on each section", async ({ page }) => {
+  await page.goto("/");
+  for (const [id, name] of [["services", "Services"], ["process", "Process"], ["report", "Reports"], ["work", "Work"]]) {
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+    if (isMobile(page)) {
+      await page.getByRole("button", { name: "Open menu" }).click();
+      await page.getByRole("dialog", { name: "Menu" }).getByRole("link", { name: new RegExp(name) }).click();
+    } else {
+      await page.getByRole("navigation", { name: "Main" }).getByRole("link", { name }).click();
+    }
+    await expect.poll(() => eyebrowTop(page, id), { timeout: 5000 }).toBe(32);
+    await page.waitForTimeout(900);
+    expect(await eyebrowTop(page, id), `${id} moved after landing`).toBe(32);
+  }
+});
+
+test("links from other pages land on the section too", async ({ page }) => {
+  await page.goto("/portfolio/");
+  await page.goto("/#process");
+  await expect.poll(() => eyebrowTop(page, "process"), { timeout: 5000 }).toBe(32);
+  await page.waitForTimeout(900);
+  expect(await eyebrowTop(page, "process")).toBe(32);
+});
