@@ -1,0 +1,107 @@
+---
+import SectionHeading from "../ui/SectionHeading.astro";
+import { PROCESS } from "../../lib/seo";
+---
+
+<section id="process" class="section container" aria-labelledby="process-title" data-reveal>
+  <SectionHeading eyebrow="How We Work" heading="A proven approach to securing blockchain projects" id="process-title" />
+  <ol class="steps">
+    {
+      PROCESS.map((p, i) => (
+        <li class="step">
+          <span class="step__dot" aria-hidden="true" />
+          <p class="step__n mono">
+            {String(i + 1).padStart(2, "0")} / {p.step.toUpperCase()}
+          </p>
+          <h3>{p.step}</h3>
+          <p class="step__d">{p.description}</p>
+        </li>
+      ))
+    }
+  </ol>
+</section>
+
+<style>
+  .steps {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin: 52px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .steps::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5px;
+    height: 1px;
+    background: var(--iris-rule);
+  }
+  .step {
+    position: relative;
+    padding-top: 34px;
+  }
+  .step__dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--cz-cyan);
+    box-shadow: 0 0 12px rgba(var(--rgb-cyan), 0.8);
+  }
+  .step__n {
+    margin: 0;
+    font-size: 12px;
+    color: var(--text-accent);
+  }
+  .step h3 {
+    margin: 10px 0 0;
+    color: var(--text-strong);
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .step__d {
+    margin: 10px 0 0;
+    color: var(--text-body);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
+
+  @media (max-width: 1023px) {
+    .steps {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 32px;
+    }
+  }
+  /* Phones: a vertical timeline down the left edge */
+  @media (max-width: 639px) {
+    .steps {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding-left: 30px;
+    }
+    .steps::before {
+      left: 5px;
+      right: auto;
+      top: 6px;
+      bottom: 6px;
+      width: 1px;
+      height: auto;
+      background: linear-gradient(180deg, rgba(var(--rgb-cyan), 0.55), rgba(var(--rgb-lightblue), 0.2));
+    }
+    .step {
+      padding-top: 0;
+    }
+    .step__dot {
+      left: -30px;
+      top: 3px;
+    }
+  }
+</style>

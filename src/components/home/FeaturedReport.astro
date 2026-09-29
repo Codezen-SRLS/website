@@ -1,0 +1,246 @@
+---
+// A fictional sample engagement (from the Codezen Home Redesign v2 design) that shows
+// prospects what a Codezen report contains. Deliberately not real client data.
+import SectionHeading from "../ui/SectionHeading.astro";
+import SeverityBars from "../ui/SeverityBars.astro";
+import Button from "../ui/Button.astro";
+import Badge from "../ui/Badge.astro";
+import { totalFindings } from "../../lib/audits";
+
+const issues = { critical: 2, major: 4, minor: 7, informational: 6 };
+const total = totalFindings(issues);
+const meta = [
+  { k: "Scope", v: "Solana Program, Rust, Anchor" },
+  { k: "Ecosystem", v: "Solana" },
+  { k: "Client", v: "Confidential", muted: true },
+  { k: "Total findings", v: `${total} issues` },
+  { k: "Resolution", v: "100% fixed", success: true },
+];
+const findings = [
+  {
+    sev: "Critical",
+    tone: "critical",
+    text: "Missing signer check in <code>#[account]</code> constraint allows privilege escalation",
+  },
+  { sev: "Major", tone: "major", text: "Integer overflow in token vault via unchecked <code>u64</code> multiplication" },
+];
+---
+
+<section id="report" class="section container" aria-labelledby="report-title" data-reveal>
+  <SectionHeading eyebrow="Sample Report" heading="The depth behind every engagement" id="report-title" />
+  <article class="report glass-panel" aria-labelledby="report-name">
+    <header class="report__head">
+      <div>
+        <p class="mono report__kicker">Rust / Solana · Security Audit</p>
+        <h3 id="report-name">Smart Contract Security Review</h3>
+      </div>
+      <Badge tone="success" dot>Delivered</Badge>
+    </header>
+    <div class="report__body">
+      <div class="report__col">
+        <h4 class="mono report__label">Engagement</h4>
+        <dl class="report__meta">
+          {
+            meta.map((m) => (
+              <div>
+                <dt>{m.k}</dt>
+                <dd class:list={[m.muted && "is-muted", m.success && "is-success"]}>{m.v}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+      <div class="report__col">
+        <h4 class="mono report__label">Findings by severity · {total} total</h4>
+        <SeverityBars issues={issues} />
+        <ul class="report__findings">
+          {
+            findings.map((f) => (
+              <li>
+                <span class={`report__sev report__sev--${f.tone}`}>{f.sev}</span>
+                <span set:html={f.text} />
+                <span class="report__fixed">Resolved</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <footer class="report__foot">
+      <p>
+        An illustrative example. Every report includes scope, methodology, proofs of concept and remediation advice.
+      </p>
+      <div class="report__actions">
+        <Button href="/portfolio/" variant="ghost" size="md">Browse real reports</Button>
+        <Button variant="glass" size="md" request>Get an audit like this</Button>
+      </div>
+    </footer>
+  </article>
+</section>
+
+<style>
+  .report {
+    margin-top: 44px;
+    overflow: hidden;
+  }
+  .report__head,
+  .report__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px 30px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .report__head {
+    border-bottom: 1px solid var(--glass-line);
+  }
+  .report__foot {
+    border-top: 1px solid var(--glass-line);
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .report__kicker {
+    margin: 0;
+    color: var(--text-accent);
+  }
+  .report h3 {
+    margin: 8px 0 0;
+    color: var(--text-strong);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .report__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .report__col {
+    padding: 30px;
+  }
+  .report__col + .report__col {
+    border-left: 1px solid var(--glass-line);
+  }
+  .report__label {
+    margin: 0 0 18px;
+    font-weight: 400;
+    color: var(--text-muted);
+  }
+  .report__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+    font-size: 15px;
+  }
+  .report__meta div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .report__meta div:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .report__meta dt {
+    color: var(--text-muted);
+  }
+  .report__meta dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    text-align: right;
+    color: var(--text-strong);
+  }
+  .report__meta dd.is-muted {
+    color: var(--text-muted);
+  }
+  .report__meta dd.is-success {
+    color: var(--status-success);
+  }
+  .report__findings {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px 0 0;
+    padding: 20px 0 0;
+    list-style: none;
+    border-top: 1px solid var(--glass-line);
+    font-size: 14px;
+  }
+  .report__findings li {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 12px;
+    align-items: center;
+  }
+  .report__sev {
+    /* Same width for every severity so the finding text lines up */
+    min-width: 82px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 999px;
+    padding: 2px 9px;
+  }
+  .report__sev--critical {
+    color: #ff7a7a;
+    border-color: #ff5c5c;
+  }
+  .report__sev--major {
+    color: #f5b945;
+    border-color: #f5b945;
+  }
+  .report__fixed {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--status-success);
+  }
+  .report__foot p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+  .report__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  @media (max-width: 799px) {
+    .report__body {
+      grid-template-columns: 1fr;
+    }
+    .report__col + .report__col {
+      border-left: 0;
+      border-top: 1px solid var(--glass-line);
+    }
+    .report__head,
+    .report__foot,
+    .report__col {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .report__actions,
+    .report__actions :global(.cz-btn) {
+      width: 100%;
+    }
+  }
+  /* Phones: status moves under the finding so the text keeps its width */
+  @media (max-width: 479px) {
+    .report__findings li {
+      grid-template-columns: auto 1fr;
+    }
+    .report__fixed {
+      grid-column: 2;
+    }
+  }
+</style>

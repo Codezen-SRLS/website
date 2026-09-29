@@ -1,0 +1,416 @@
+---
+import { Image } from "astro:assets";
+import Base from "../../layouts/Base.astro";
+import AuditCard from "../../components/AuditCard.astro";
+import SeverityBars from "../../components/ui/SeverityBars.astro";
+import Button from "../../components/ui/Button.astro";
+import Eyebrow from "../../components/ui/Eyebrow.astro";
+import Badge from "../../components/ui/Badge.astro";
+import { audits, auditSummary, formatDate, getRelated, techTags, totalFindings, type Audit } from "../../lib/audits";
+import { ecosystemsOf } from "../../lib/stats";
+import { abs, breadcrumbs } from "../../lib/seo";
+
+export function getStaticPaths() {
+  return audits.map((audit) => ({ params: { slug: audit.slug }, props: { audit } }));
+}
+
+interface Props {
+  audit: Audit;
+}
+const { audit } = Astro.props;
+const related = getRelated(audit);
+const tech = techTags(audit);
+const total = totalFindings(audit.issues);
+const ecosystems = ecosystemsOf(audit);
+
+// Google truncates titles past ~60 chars; " | Codezen" adds 10
+const title =
+  [`${audit.title} Security Audit`, `${audit.title} Audit`, audit.title].find((t) => t.length + 10 <= 60) ||
+  audit.title;
+const description = `${audit.title} security audit by Codezen (${audit.description})${
+  audit.partner ? ` with ${audit.partner}` : ""
+}${total > 0 ? `: ${total} findings reported` : ""}. ${audit.extendedDescription || ""}`
+  .trim()
+  .slice(0, 160);
+const ogImage = `/og/audits/${audit.slug}.png`;
+
+const jsonLd = [
+  {
+    "@type": "Report",
+    "@id": `${abs(audit.path)}#report`,
+    name: `${audit.title} Security Audit`,
+    headline: `${audit.title} Security Audit`,
+    description,
+    url: abs(audit.path),
+    inLanguage: "en",
+    about: { "@type": "SoftwareApplication", name: audit.title, ...(audit.website ? { url: audit.website } : {}) },
+    keywords: (audit.tags || []).join(", "),
+    author: { "@id": "https://www.codezen.tech/#organization" },
+    publisher: { "@id": "https://www.codezen.tech/#organization" },
+    ...(audit.partner ? { contributor: { "@type": "Organization", name: audit.partner } } : {}),
+    ...(audit.reportDate ? { datePublished: audit.reportDate } : {}),
+    image: abs(ogImage),
+    ...(audit.github
+      ? { associatedMedia: { "@type": "MediaObject", contentUrl: audit.github, encodingFormat: "application/pdf" } }
+      : {}),
+  },
+  breadcrumbs([
+    { name: "Home", path: "/" },
+    { name: "Portfolio", path: "/portfolio/" },
+    { name: audit.title, path: audit.path },
+  ]),
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  image={ogImage}
+  imageAlt={`${audit.title} security audit by Codezen`}
+  type="article"
+  jsonLd={jsonLd}
+  markdown={`/audits/${audit.slug}.md`}
+  publishedTime={audit.reportDate || undefined}
+>
+  <div class="container">
+    <nav class="crumbs mono" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li aria-current="page">{audit.title}</li>
+      </ol>
+    </nav>
+
+    <article class="audit">
+      <header class="audit__head">
+        <div>
+          <Eyebrow>{audit.description}</Eyebrow>
+          <h1 class="page-heading audit__title">{audit.title} security audit</h1>
+          {audit.extendedDescription && <p class="page-lead">{audit.extendedDescription}</p>}
+          <div class="audit__ctas">
+            {
+              audit.github && (
+                <Button href={audit.github} target="_blank" rel="noopener">
+                  Read the full report
+                </Button>
+              )
+            }
+            {
+              audit.website && (
+                <Button href={audit.website} variant="ghost" target="_blank" rel="noopener">
+                  Visit {audit.title}
+                </Button>
+              )
+            }
+          </div>
+        </div>
+        {
+          audit.logo && (
+            <div class="audit__image">
+              <Image
+                src={audit.logo}
+                alt={`${audit.title} logo`}
+                widths={[400, 640, 960]}
+                sizes="(max-width: 1023px) 100vw, 520px"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </div>
+          )
+        }
+      </header>
+
+      <div class="audit__body">
+        <section aria-labelledby="about-title">
+          <h2 id="about-title">About this audit</h2>
+          <p>{auditSummary(audit)}</p>
+          {
+            total > 0 && (
+              <>
+                <h2>Findings by severity</h2>
+                <div class="audit__sev">
+                  <SeverityBars issues={audit.issues!} />
+                </div>
+              </>
+            )
+          }
+          {
+            tech.length > 0 && (
+              <ul class="audit__tags" aria-label="Technologies">
+                {tech.map((t) => (
+                  <li>
+                    <Badge href={`/portfolio/?q=${encodeURIComponent(t)}`}>{t}</Badge>
+                  </li>
+                ))}
+              </ul>
+            )
+          }
+        </section>
+
+        <aside aria-label="Audit facts">
+          <dl class="audit__facts glass-panel">
+            <div>
+              <dt>Audit type</dt>
+              <dd>{audit.description}</dd>
+            </div>
+            {
+              tech.length > 0 && (
+                <div>
+                  <dt>Technologies</dt>
+                  <dd>{tech.join(", ")}</dd>
+                </div>
+              )
+            }
+            {
+              ecosystems.length > 0 && (
+                <div>
+                  <dt>Ecosystem</dt>
+                  <dd>{ecosystems.join(", ")}</dd>
+                </div>
+              )
+            }
+            {
+              audit.partner && (
+                <div>
+                  <dt>Delivered with</dt>
+                  <dd>{audit.partner}</dd>
+                </div>
+              )
+            }
+            {
+              audit.reportDate && (
+                <div>
+                  <dt>Report date</dt>
+                  <dd>
+                    <time datetime={audit.reportDate}>{formatDate(audit.reportDate)}</time>
+                  </dd>
+                </div>
+              )
+            }
+            {
+              total > 0 && (
+                <div>
+                  <dt>Findings</dt>
+                  <dd>{total}</dd>
+                </div>
+              )
+            }
+          </dl>
+        </aside>
+      </div>
+
+      <section class="audit__cta" aria-labelledby="cta-title">
+        <div>
+          <h2 id="cta-title">Need an audit for your protocol?</h2>
+          <p>Tell us about your project and we'll scope an audit within one business day.</p>
+        </div>
+        <Button request>Request an audit</Button>
+      </section>
+
+      {
+        related.length > 0 && (
+          <section class="audit__related" aria-labelledby="related-title">
+            <h2 id="related-title">Related audits</h2>
+            <ul>
+              {related.map((r) => (
+                <li>
+                  <AuditCard audit={r} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+    </article>
+  </div>
+</Base>
+
+<style>
+  .crumbs {
+    padding-top: 32px;
+    color: var(--text-muted);
+  }
+  .crumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .crumbs li + li::before {
+    content: "/";
+    margin-right: 8px;
+  }
+  .crumbs a {
+    color: var(--text-body);
+    padding: 8px 0;
+  }
+  .crumbs [aria-current] {
+    color: var(--text-strong);
+  }
+  .audit {
+    padding-bottom: 40px;
+  }
+  .audit__head {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding: 40px 0 56px;
+  }
+  .audit__title {
+    margin-top: 18px;
+  }
+  .audit__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+  }
+  .audit__image {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--glass-line);
+    box-shadow: var(--shadow-card);
+  }
+  .audit__image :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .audit__body {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 48px;
+    padding-top: 48px;
+    border-top: 1px solid var(--glass-line);
+  }
+  .audit__body h2,
+  .audit__cta h2,
+  .audit__related h2 {
+    margin: 40px 0 0;
+    color: var(--text-strong);
+    font-size: var(--fs-h4);
+    font-weight: 600;
+  }
+  .audit__body h2:first-child {
+    margin-top: 0;
+  }
+  .audit__body p {
+    margin: 14px 0 0;
+    max-width: 640px;
+    font-size: var(--fs-body);
+    line-height: var(--lh-relaxed);
+  }
+  .audit__sev {
+    margin-top: 20px;
+    max-width: 560px;
+  }
+  .audit__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 32px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .audit__tags :global(a) {
+    min-height: 32px;
+  }
+  .audit__tags :global(a:hover) {
+    color: var(--cz-cyan-soft);
+    border-color: var(--border-accent);
+  }
+  .audit__facts {
+    margin: 0;
+    padding: 12px 28px;
+  }
+  .audit__facts div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: var(--fs-small);
+  }
+  .audit__facts div:last-child {
+    border-bottom: 0;
+  }
+  .audit__facts dt {
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+  .audit__facts dd {
+    margin: 0;
+    color: var(--text-strong);
+    text-align: right;
+  }
+  .audit__cta {
+    margin-top: 64px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-line);
+    background:
+      radial-gradient(120% 140% at 0% 0%, rgba(var(--rgb-cyan), 0.12), transparent 60%),
+      radial-gradient(120% 160% at 100% 120%, rgba(var(--rgb-indigo), 0.45), transparent 60%),
+      var(--glass);
+  }
+  .audit__cta h2 {
+    margin: 0;
+    font-size: 26px;
+  }
+  .audit__cta p {
+    margin: 8px 0 0;
+  }
+  .audit__related {
+    padding-top: 80px;
+  }
+  .audit__related ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (max-width: 1023px) {
+    .audit__head,
+    .audit__body {
+      grid-template-columns: 1fr;
+    }
+    .audit__head {
+      gap: 32px;
+    }
+    .audit__related ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 639px) {
+    .audit__head {
+      padding-top: 24px;
+    }
+    .audit__ctas :global(.cz-btn--primary) {
+      flex: 1 1 100%;
+    }
+    .audit__related ul {
+      grid-template-columns: 1fr;
+    }
+    .audit__cta {
+      padding: 28px 20px;
+    }
+    .audit__cta :global(.cz-btn) {
+      width: 100%;
+    }
+    .audit__facts {
+      padding: 8px 20px;
+    }
+  }
+</style>

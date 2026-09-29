@@ -1,0 +1,72 @@
+---
+import SectionHeading from "../ui/SectionHeading.astro";
+import Button from "../ui/Button.astro";
+import AuditCard from "../AuditCard.astro";
+import type { Audit } from "../../lib/audits";
+
+interface Props {
+  featured: Audit[];
+  total: number;
+}
+const { featured, total } = Astro.props;
+---
+
+<section id="work" class="section container" aria-labelledby="work-title" data-reveal>
+  <div class="work__head">
+    <SectionHeading eyebrow="Our Work" heading="Proven success in blockchain security" id="work-title" />
+    <Button href="/portfolio/" variant="ghost" size="md">View all {total} audits</Button>
+  </div>
+  <ul class="work__grid" aria-label="Featured audits">
+    {
+      featured.map((a) => (
+        <li>
+          <AuditCard audit={a} />
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  .work__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+  }
+  .work__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 44px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (max-width: 1023px) {
+    .work__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  /* Phones: swipeable row, with the next card peeking in */
+  @media (max-width: 639px) {
+    .work__grid {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      margin-left: calc(var(--container-pad) * -1);
+      margin-right: calc(var(--container-pad) * -1);
+      padding: 4px var(--container-pad) 8px;
+      scroll-padding: 0 var(--container-pad);
+    }
+    .work__grid::-webkit-scrollbar {
+      display: none;
+    }
+    .work__grid li {
+      flex: 0 0 82%;
+      scroll-snap-align: start;
+    }
+  }
+</style>

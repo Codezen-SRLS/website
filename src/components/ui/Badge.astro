@@ -1,0 +1,16 @@
+---
+// Mono status / tag pill; renders a link when href is set
+interface Props {
+  tone?: "neutral" | "info" | "success";
+  dot?: boolean;
+  href?: string;
+  class?: string;
+}
+const { tone = "neutral", dot = false, href, class: className } = Astro.props;
+const Tag = href ? "a" : "span";
+---
+
+<Tag href={href} class:list={["cz-badge", tone !== "neutral" && `cz-badge--${tone}`, className]}>
+  {dot && <span class="cz-badge__dot" aria-hidden="true" />}
+  <slot />
+</Tag>

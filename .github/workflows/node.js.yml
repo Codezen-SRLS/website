@@ -1,5 +1,6 @@
-# Tests run on every push and PR.
-# Deploy runs only when a commit lands on main (after a PR merge), and only if tests pass.
+# Unit tests run on every push and PR.
+# Deploy runs only when a commit lands on main (after a PR merge): it builds the site,
+# runs the end-to-end suite against it, then publishes a fresh production build.
 
 name: Node.js CI
 
@@ -9,6 +10,7 @@ on:
   pull_request:
     branches: [ main ]
 
+# Secret names are unchanged from the Gatsby site; astro.config.ts exposes these prefixes
 env:
   GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
   GATSBY_CLARITY_ID: ${{ secrets.CLARITY_ID }}
@@ -23,10 +25,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - run: npm test -- --ci
+      - run: npm test
 
   deploy:
     needs: test
@@ -39,12 +41,16 @@ jobs:
           token: ${{ secrets.PAT }}
       - uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      # Builds with dummy analytics/EmailJS IDs (see playwright.config.ts) and intercepts third parties
+      - run: npm run test:e2e
+      # Rebuild with the real IDs for publishing
       - run: npm run build
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./dist
           cname: www.codezen.tech

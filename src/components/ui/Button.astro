@@ -1,0 +1,62 @@
+---
+// Prism button. Renders a link when `href` is set, otherwise a button.
+// `request` makes it open the audit request dialog (see RequestDialog.astro).
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends Omit<HTMLAttributes<"a">, "class"> {
+  href?: string;
+  variant?: "primary" | "glass" | "ghost";
+  size?: "md" | "lg";
+  arrow?: boolean;
+  request?: boolean;
+  block?: boolean;
+  type?: "button" | "submit";
+  class?: string;
+}
+
+const {
+  href,
+  variant = "primary",
+  size = "lg",
+  arrow = true,
+  request = false,
+  block = false,
+  type = "button",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const classes = [
+  "cz-btn",
+  `cz-btn--${size}`,
+  variant === "primary" && "cz-btn--primary",
+  variant === "ghost" && "cz-btn--ghost",
+  block && "cz-btn--block",
+  className,
+];
+const Tag = href ? "a" : "button";
+---
+
+<Tag
+  class:list={classes}
+  href={href}
+  type={href ? undefined : type}
+  data-open-request={request ? "" : undefined}
+  aria-haspopup={request ? "dialog" : undefined}
+  {...rest}
+>
+  <span class="cz-btn__label"><slot /></span>
+  {
+    arrow && (
+      <svg class="cz-btn__arw" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path
+          d="M2.5 8h10M9 4.5 12.5 8 9 11.5"
+          stroke="currentColor"
+          stroke-width="1.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    )
+  }
+</Tag>

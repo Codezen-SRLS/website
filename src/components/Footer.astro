@@ -1,0 +1,188 @@
+---
+import Logo from "./Logo.astro";
+import { CONTACT_EMAIL, LEGAL, SERVICES, SOCIAL } from "../lib/seo";
+import Twitter from "../assets/icons/twitter.svg";
+import Linkedin from "../assets/icons/linkedin.svg";
+
+const onHome = Astro.url.pathname === "/";
+const at = (hash: string) => (onHome ? hash : `/${hash}`);
+const year = new Date().getFullYear();
+---
+
+<footer class="footer container">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <Logo />
+      <p>
+        Smart contract security audits and consulting for EVM, Solana, and Cosmos. We review Solidity, Rust, Anchor,
+        CosmWasm, and Substrate protocols.
+      </p>
+      <p>
+        An <a href={SOCIAL.parent} target="_blank" rel="noopener">{LEGAL.parent}</a> company
+      </p>
+    </div>
+    <nav aria-labelledby="f-company">
+      <h2 id="f-company">Company</h2>
+      <ul>
+        <li><a href={at("#services")}>Services</a></li>
+        <li><a href={at("#process")}>Process</a></li>
+        <li><a href={at("#team")}>Team</a></li>
+        <li><a href="/portfolio/">Audit portfolio</a></li>
+      </ul>
+    </nav>
+    <nav aria-labelledby="f-services">
+      <h2 id="f-services">Services</h2>
+      <ul>
+        {SERVICES.map((s) => <li><a href={at(`#${s.id}`)}>{s.title}</a></li>)}
+      </ul>
+    </nav>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></li>
+        <li><button type="button" class="footer__link" data-open-request aria-haspopup="dialog">Request an audit</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__legal">
+    <div class="footer__meta">
+      <span>© {year} {LEGAL.name}</span>
+      <span>VAT {LEGAL.vat}</span>
+      <a href="/privacy-policy/">Privacy policy</a>
+      <button type="button" class="footer__link" data-cookie-settings>Cookie settings</button>
+      <a href="/llms.txt">llms.txt</a>
+    </div>
+    <div class="footer__social">
+      <a href={SOCIAL.x} target="_blank" rel="noopener me" aria-label="Codezen on X (Twitter)"><Twitter aria-hidden="true" /></a>
+      <a href={SOCIAL.linkedin} target="_blank" rel="noopener me" aria-label="Codezen on LinkedIn"><Linkedin aria-hidden="true" /></a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    margin-top: 72px;
+    padding-top: 56px;
+    padding-bottom: calc(28px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--glass-line);
+  }
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 32px;
+  }
+  .footer__brand p {
+    margin: 18px 0 0;
+    max-width: 320px;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .footer__brand p + p {
+    margin-top: 12px;
+  }
+  .footer__brand p a {
+    color: var(--cz-cyan-soft);
+  }
+  .footer h2 {
+    margin: 0 0 16px;
+    color: var(--text-strong);
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+  }
+  .footer ul a,
+  .footer ul .footer__link {
+    display: inline-block;
+    padding: 6px 0;
+    color: var(--text-body);
+  }
+  .footer__link {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--text-body);
+    cursor: pointer;
+    text-align: left;
+    transition: color var(--dur-fast) var(--ease);
+  }
+  .footer__link:hover,
+  .footer ul a:hover {
+    color: var(--cz-cyan-bright);
+  }
+  .footer__legal {
+    margin-top: 44px;
+    padding-top: 22px;
+    border-top: 1px solid var(--glass-line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 24px;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .footer__meta a,
+  .footer__meta .footer__link {
+    color: var(--text-body);
+    font-size: 13px;
+    padding: 6px 0;
+  }
+  .footer__social {
+    display: flex;
+    gap: 10px;
+  }
+  .footer__social a {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--glass-line);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color var(--dur-fast) var(--ease);
+  }
+  .footer__social a:hover {
+    border-color: var(--border-accent);
+  }
+  .footer__social :global(svg) {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+  }
+
+  @media (max-width: 899px) {
+    .footer__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .footer__brand {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (max-width: 559px) {
+    .footer__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 399px) {
+    .footer__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

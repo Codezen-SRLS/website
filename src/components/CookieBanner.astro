@@ -1,0 +1,72 @@
+---
+// Analytics consent. Behaviour lives in src/lib/consent.ts (same storage key and
+// rules as the Gatsby site); this is the Prism-styled banner around it.
+---
+
+<section id="cookie-banner" class="cookie" aria-label="Cookie consent" hidden>
+  <p>
+    We'd like to use analytics cookies (Google Analytics and Microsoft Clarity) to understand how the site is used.
+    They're only set if you accept. You can change your choice at any time from the footer. <a href="/privacy-policy/"
+      >Privacy policy</a
+    >
+  </p>
+  <div class="cookie__actions">
+    <button type="button" class="cz-btn cz-btn--md" data-consent="reject">Reject</button>
+    <button type="button" class="cz-btn cz-btn--md" data-consent="accept">Accept</button>
+  </div>
+</section>
+
+
+<style>
+  .cookie {
+    position: fixed;
+    /* Centred with margins, not a transform: the entry animation owns transform */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: calc(20px + env(safe-area-inset-bottom));
+    z-index: 90;
+    width: min(760px, calc(100% - 32px));
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-line-strong);
+    background: rgba(12, 14, 23, 0.96);
+    box-shadow: var(--shadow-float);
+    animation: czPop 0.4s var(--ease) both;
+  }
+  .cookie[hidden] {
+    display: none;
+  }
+  .cookie p {
+    margin: 0;
+    color: var(--text-body);
+    font-size: var(--fs-small);
+    line-height: 1.6;
+  }
+  .cookie a {
+    color: var(--cz-cyan-soft);
+  }
+  .cookie__actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 767px) {
+    .cookie {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 16px;
+      bottom: calc(12px + env(safe-area-inset-bottom));
+      padding: 18px;
+    }
+    .cookie p {
+      font-size: 14px;
+    }
+    .cookie__actions .cz-btn {
+      flex: 1;
+    }
+  }
+</style>

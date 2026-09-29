@@ -1,0 +1,203 @@
+---
+import Logo from "./Logo.astro";
+import Button from "./ui/Button.astro";
+
+// Section links resolve to the home page from every other page
+const onHome = Astro.url.pathname === "/";
+const at = (hash: string) => (onHome ? hash : `/${hash}`);
+
+const NAV = [
+  { label: "Services", href: at("#services") },
+  { label: "Process", href: at("#process") },
+  { label: "Reports", href: at("#report") },
+  { label: "Work", href: at("#work") },
+];
+const current = Astro.url.pathname;
+---
+
+<header class="header container">
+  <Logo />
+  <nav class="header__nav" aria-label="Main">
+    <ul class="header__links mono">
+      {NAV.map((n) => (
+        <li>
+          <a href={n.href}>{n.label}</a>
+        </li>
+      ))}
+      <li>
+        <a href="/portfolio/" aria-current={current.startsWith("/portfolio") ? "page" : undefined}>Portfolio</a>
+      </li>
+    </ul>
+    <Button size="md" request>Get an audit</Button>
+  </nav>
+
+  <button class="header__burger" type="button" aria-label="Open menu" aria-haspopup="dialog" aria-controls="mobile-menu" data-menu-open>
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <path d="M3 7h16M3 15h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+    </svg>
+  </button>
+
+  <dialog id="mobile-menu" class="menu" aria-label="Menu">
+    <div class="menu__top">
+      <Logo />
+      <button class="menu__close" type="button" aria-label="Close menu" data-menu-close>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <ul class="menu__links">
+        {NAV.map((n, i) => (
+          <li>
+            <a href={n.href} data-menu-close>
+              <span class="mono">{String(i + 1).padStart(2, "0")}</span>
+              {n.label}
+            </a>
+          </li>
+        ))}
+        <li>
+          <a href="/portfolio/" data-menu-close>
+            <span class="mono">05</span>
+            Portfolio
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="menu__cta">
+      <Button request block data-menu-close>Get an audit</Button>
+      <a class="menu__mail" href="mailto:info@codezen.tech">info@codezen.tech</a>
+    </div>
+  </dialog>
+</header>
+
+
+<style>
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .header__nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .header__links {
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+  }
+  .header__links a {
+    color: var(--text-body);
+    padding: 12px 0;
+  }
+  .header__links a:hover,
+  .header__links a[aria-current="page"] {
+    color: var(--cz-cyan-bright);
+  }
+  .header__burger {
+    display: none;
+    width: 46px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-line);
+    background: var(--glass);
+    color: var(--text-strong);
+    cursor: pointer;
+  }
+
+  @media (max-width: 899px) {
+    .header__nav {
+      display: none;
+    }
+    .header__burger {
+      display: inline-flex;
+    }
+  }
+
+  .menu {
+    width: 100%;
+    max-width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    margin: 0;
+    padding: 20px var(--container-pad) calc(24px + env(safe-area-inset-bottom));
+    border: 0;
+    background:
+      radial-gradient(600px 400px at 90% 0%, rgba(var(--rgb-cyan), 0.12), transparent 60%),
+      radial-gradient(700px 500px at 0% 100%, rgba(var(--rgb-indigo), 0.45), transparent 60%),
+      var(--cz-base);
+    color: var(--text-body);
+    flex-direction: column;
+  }
+  .menu[open] {
+    display: flex;
+    animation: czRise 0.3s var(--ease) both;
+  }
+  .menu::backdrop {
+    background: var(--surface-overlay);
+  }
+  .menu__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu__close {
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-line);
+    background: var(--glass);
+    color: var(--text-strong);
+    cursor: pointer;
+  }
+  .menu__links {
+    margin: 40px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .menu__links a {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--glass-line);
+    color: var(--text-strong);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .menu__links .mono {
+    color: var(--text-accent);
+  }
+  .menu__cta {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .menu__mail {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--cz-cyan-soft);
+    padding: 8px;
+  }
+  :global(html.scroll-lock) {
+    overflow: hidden;
+  }
+</style>

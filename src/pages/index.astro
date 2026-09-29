@@ -1,0 +1,44 @@
+---
+import Base from "../layouts/Base.astro";
+import Hero from "../components/home/Hero.astro";
+import StatsBand from "../components/home/StatsBand.astro";
+import Services from "../components/home/Services.astro";
+import Process from "../components/home/Process.astro";
+import FeaturedReport from "../components/home/FeaturedReport.astro";
+import Work from "../components/home/Work.astro";
+import Team from "../components/home/Team.astro";
+import CTABand from "../components/home/CTABand.astro";
+import { audits } from "../lib/audits";
+import { computeExpertise, computeStats } from "../lib/stats";
+import { SITE_DESCRIPTION, person, website } from "../lib/seo";
+import site from "../data.json";
+
+const stats = computeStats(audits);
+const featured = audits.filter((a) => a.featured).slice(0, 6);
+const members = site.banner.team.members;
+
+const statItems = [
+  { value: `${stats.auditCount}+`, label: "Completed audits" },
+  { value: `${stats.vulnCount}+`, label: "Vulnerabilities found" },
+  stats.assetsProtected
+    ? { value: stats.assetsProtected, label: "Assets protected" }
+    : { value: `${stats.criticalCount}`, label: "Critical issues caught" },
+  { value: `${stats.ecosystemCount}`, label: "Ecosystems covered" },
+];
+
+const jsonLd = [
+  website(),
+  ...members.map((m) => person(m)),
+];
+---
+
+<Base description={SITE_DESCRIPTION} jsonLd={jsonLd}>
+  <Hero />
+  <StatsBand stats={statItems} />
+  <Services />
+  <Process />
+  <FeaturedReport />
+  <Work featured={featured} total={audits.length} />
+  <Team members={members} expertise={computeExpertise(audits)} />
+  <CTABand sampleReport="#report" />
+</Base>

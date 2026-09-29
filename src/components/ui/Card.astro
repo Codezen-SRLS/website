@@ -1,0 +1,15 @@
+---
+// Frosted-glass surface; warms to cyan on hover when interactive
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"div"> {
+  as?: "div" | "article" | "section" | "li";
+  interactive?: boolean;
+  lift?: boolean;
+}
+const { as: Tag = "div", interactive = false, lift = false, class: className, ...rest } = Astro.props;
+---
+
+<Tag class:list={["cz-card", interactive && "cz-card--interactive", lift && "cz-card--lift", className]} {...rest}>
+  <slot />
+</Tag>
