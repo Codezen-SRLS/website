@@ -1,0 +1,75 @@
+---
+import Eyebrow from "../ui/Eyebrow.astro";
+import Button from "../ui/Button.astro";
+
+interface Props {
+  sampleReport?: string;
+}
+const { sampleReport } = Astro.props;
+---
+
+<section class="section container cta-wrap" aria-labelledby="cta-title" data-reveal>
+  <div class="cta">
+    <Eyebrow>Start an engagement</Eyebrow>
+    <h2 id="cta-title">Ready to secure <span class="iris-text">your protocol</span>?</h2>
+    <p>Tell us about your project and our team will scope an audit tailored to your stack and timeline.</p>
+    <div class="cta__actions">
+      <Button request>Request audit</Button>
+      {sampleReport && <Button href={sampleReport} variant="ghost">Read a sample report</Button>}
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-wrap {
+    padding-bottom: 24px;
+  }
+  .cta {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-line);
+    padding: 72px 32px;
+    background:
+      radial-gradient(120% 140% at 50% 0%, rgba(var(--rgb-cyan), 0.16), transparent 60%),
+      radial-gradient(120% 160% at 50% 120%, rgba(var(--rgb-indigo), 0.5), transparent 60%),
+      var(--glass);
+  }
+  .cta h2 {
+    margin: 20px auto 0;
+    max-width: 640px;
+    color: var(--text-strong);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+  .cta p {
+    margin: 18px auto 0;
+    max-width: 520px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  .cta__actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+  }
+  @media (max-width: 639px) {
+    .cta {
+      padding: 48px 20px;
+    }
+    .cta__actions,
+    .cta__actions :global(.cz-btn--primary) {
+      width: 100%;
+    }
+  }
+</style>

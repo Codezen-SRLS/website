@@ -1,0 +1,73 @@
+---
+// The glass prism with the Codezen mark at the centre of the hero "refraction".
+// Tilt is driven by --tx/--ty (-1..1), set from pointer position in Refraction.astro.
+import mark from "../../assets/logos/mark-white.svg";
+---
+
+<div class="prism">
+  <div class="prism__halo"></div>
+  <div class="prism__tilt">
+    <div class="prism__glass">
+      <div class="prism__spin"></div>
+      <div class="prism__shine"></div>
+    </div>
+    <img class="prism__mark" src={mark.src} alt="" width="58" height="34" />
+  </div>
+</div>
+
+<style>
+  .prism {
+    position: relative;
+    aspect-ratio: 1;
+    perspective: 800px;
+  }
+  .prism__halo {
+    position: absolute;
+    inset: -40%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(var(--rgb-cyan), 0.28), rgba(var(--rgb-indigo), 0.25) 45%, transparent 70%);
+    filter: blur(10px);
+    animation: czBreath 4s ease-in-out infinite;
+  }
+  .prism__tilt {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transform: rotateY(calc(var(--tx, 0) * 16deg)) rotateX(calc(var(--ty, 0) * -16deg));
+  }
+  .prism__glass {
+    position: absolute;
+    inset: 12%;
+    transform: rotate(45deg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--glass-line-strong);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03) 45%, rgba(var(--rgb-cyan), 0.12));
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow:
+      0 0 60px -10px rgba(var(--rgb-cyan), 0.6),
+      inset 0 0 30px rgba(255, 255, 255, 0.06);
+  }
+  .prism__spin {
+    position: absolute;
+    inset: -50%;
+    background: conic-gradient(from 0deg, transparent, rgba(var(--rgb-cyan), 0.35), transparent 30%, rgba(var(--rgb-lightblue), 0.3), transparent 60%);
+    animation: czSpin 10s linear infinite;
+  }
+  .prism__shine {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(calc(135deg + var(--tx, 0) * 30deg), rgba(255, 255, 255, 0.22), transparent 40%);
+  }
+  .prism__mark {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 42%;
+    height: auto;
+    transform: translate(-50%, -50%) translateZ(30px);
+    filter: drop-shadow(0 0 18px rgba(var(--rgb-cyan), 0.7));
+  }
+</style>

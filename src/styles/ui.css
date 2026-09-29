@@ -1,0 +1,286 @@
+/* Prism primitives: Button, Eyebrow, Card, Badge, Stat, SectionHeading.
+   Ported from the Codezen Design System components (_ds_bundle.js). */
+
+/* --- Button: soft rounded glass with a gliding arrow --- */
+.cz-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--text-strong);
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+  transition:
+    border-color var(--dur) var(--ease),
+    background-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease),
+    transform var(--dur-fast) var(--ease),
+    opacity var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+.cz-btn--md {
+  height: 46px;
+  padding: 0 22px;
+  font-size: 15px;
+}
+.cz-btn--lg {
+  height: 54px;
+  padding: 0 28px;
+  font-size: 16px;
+}
+.cz-btn__arw {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  opacity: 0;
+  margin-left: -16px;
+  transform: translateX(-4px);
+  transition:
+    opacity var(--dur) var(--ease),
+    transform var(--dur) var(--ease),
+    margin var(--dur) var(--ease);
+}
+.cz-btn:not(:disabled):hover {
+  color: var(--text-strong);
+  border-color: var(--border-accent);
+  background: var(--glass-2);
+  transform: translateY(-1px);
+}
+.cz-btn:not(:disabled):hover .cz-btn__arw {
+  opacity: 1;
+  margin-left: 0;
+  transform: translateX(0);
+}
+.cz-btn:not(:disabled):active {
+  transform: translateY(0);
+}
+.cz-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--rgb-cyan), 0.35);
+}
+.cz-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.cz-btn--primary {
+  background: linear-gradient(135deg, rgba(var(--rgb-cyan), 0.26), rgba(var(--rgb-lightblue), 0.12));
+  border-color: var(--border-accent);
+  color: #eafcff;
+  box-shadow: var(--glow-cyan);
+}
+.cz-btn--primary:not(:disabled):hover {
+  color: #eafcff;
+  box-shadow: var(--glow-cyan-strong);
+  background: linear-gradient(135deg, rgba(var(--rgb-cyan), 0.34), rgba(var(--rgb-lightblue), 0.16));
+}
+.cz-btn--ghost {
+  background: transparent;
+  border-color: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-shadow: none;
+}
+.cz-btn--ghost:not(:disabled):hover {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-accent);
+  transform: none;
+}
+.cz-btn--ghost .cz-btn__arw {
+  opacity: 1;
+  margin-left: 0;
+  transform: translateX(0);
+}
+.cz-btn--ghost:not(:disabled):hover .cz-btn__arw {
+  transform: translateX(3px);
+}
+.cz-btn--block {
+  width: 100%;
+}
+/* Touch screens have no hover: show the arrow so buttons still read as actions */
+@media (hover: none) {
+  .cz-btn__arw {
+    opacity: 1;
+    margin-left: 0;
+    transform: none;
+  }
+}
+
+/* --- Eyebrow: pulsing cyan dot + mono kicker --- */
+.cz-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: var(--fs-mono);
+  letter-spacing: var(--ls-mono-wide);
+  text-transform: uppercase;
+  color: var(--text-accent);
+}
+.cz-eyebrow__dot {
+  width: 7px;
+  height: 7px;
+  flex: none;
+  background: var(--cz-cyan);
+  box-shadow: var(--glow-dot) rgba(var(--rgb-cyan), 0.9);
+  animation: czPulse 2.4s var(--ease) infinite;
+}
+
+/* --- Section heading: eyebrow + value statement --- */
+.cz-section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.cz-section-heading h2 {
+  margin: 0;
+  max-width: 900px;
+  color: var(--text-strong);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  text-wrap: balance;
+}
+.cz-section-heading--center {
+  align-items: center;
+  text-align: center;
+}
+
+/* --- Card: frosted glass, warms to cyan on hover when interactive --- */
+.cz-card {
+  position: relative;
+  padding: 26px;
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  border-radius: var(--radius-lg);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+  transition:
+    border-color var(--dur) var(--ease),
+    transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+.cz-card--interactive:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-card);
+}
+.cz-card--lift:hover {
+  transform: translateY(-6px);
+}
+
+/* --- Badge / chip --- */
+.cz-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 11px;
+  border-radius: var(--radius-pill);
+  color: var(--text-body);
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+}
+.cz-badge--info {
+  color: var(--cz-cyan-soft);
+  border-color: rgba(4, 217, 255, 0.4);
+  background: rgba(4, 217, 255, 0.08);
+}
+.cz-badge--success {
+  color: var(--status-success);
+  border-color: rgba(47, 212, 138, 0.4);
+  background: rgba(47, 212, 138, 0.06);
+}
+.cz-badge__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* --- Stat: iridescent metric + mono caption --- */
+.cz-stat {
+  display: flex;
+  /* <dt> label comes first in the markup; the value sits on top visually */
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0;
+}
+.cz-stat__value {
+  margin: 0;
+  font-size: var(--fs-stat);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: var(--ls-tight);
+  font-variant-numeric: tabular-nums;
+  background-image: var(--iris);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.cz-stat__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+  letter-spacing: var(--ls-mono);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* --- Severity bars (featured report, audit pages) --- */
+.cz-sev {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cz-sev__row {
+  display: grid;
+  grid-template-columns: 74px 1fr 32px;
+  align-items: center;
+  gap: 14px;
+}
+.cz-sev__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.cz-sev__track {
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+.cz-sev__bar {
+  height: 100%;
+  border-radius: var(--radius-pill);
+}
+.cz-sev__count {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-strong);
+}

@@ -1,0 +1,59 @@
+---
+// "What We Do" card: mono index, glowing icon medallion, title, description
+import Card from "./Card.astro";
+
+interface Props {
+  id?: string;
+  index: number;
+  label: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+const { id, index, label, icon, title, description } = Astro.props;
+---
+
+<Card as="article" id={id} interactive lift class="service">
+  <p class="service__index mono">{String(index).padStart(2, "0")} / {label}</p>
+  <div class="service__icon">
+    <img src={icon} alt="" width="34" height="34" loading="lazy" />
+  </div>
+  <h3>{title}</h3>
+  <p class="service__desc">{description}</p>
+</Card>
+
+<style>
+  .service {
+    scroll-margin-top: 24px;
+  }
+  .service__index {
+    margin: 0;
+    color: var(--text-accent);
+  }
+  .service__icon {
+    margin: 20px 0 22px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--glass-line);
+    background: radial-gradient(80% 80% at 50% 35%, rgba(var(--rgb-cyan), 0.14), transparent 70%), var(--glass-2);
+    box-shadow: 0 0 28px -8px rgba(var(--rgb-cyan), 0.45) inset;
+  }
+  h3 {
+    margin: 0;
+    color: var(--text-strong);
+    font-size: var(--fs-h3);
+    font-weight: 600;
+    line-height: var(--lh-tight);
+  }
+  .service__desc {
+    margin: 12px 0 0;
+    color: var(--text-body);
+    font-size: var(--fs-small);
+    font-weight: 300;
+    line-height: var(--lh-body);
+  }
+</style>

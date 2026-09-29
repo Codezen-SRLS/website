@@ -1,128 +1,36 @@
-# Codezen Website
+# codezen.tech
 
-Marketing site for [Codezen](https://www.codezen.tech) — smart contract security audits and blockchain consulting. Built with Gatsby 5, styled with the Prism design system (dark-first, frosted glass, iridescent cyan accent). Deployed to GitHub Pages via CI.
+Website of Codezen, smart contract and blockchain security audits. Built with [Astro](https://astro.build) as a fully static site (no client framework) using the Codezen "Prism" design system, and deployed to GitHub Pages.
 
-## Stack
+## Develop
 
-- **Framework** — Gatsby 5 (static site generation, GraphQL data layer)
-- **Styling** — Custom CSS design system (`src/styles/tokens.css` + `src/styles/global.css`), no Bootstrap
-- **Data** — `audit-history.json` sourced from a git submodule via `gatsby-transformer-json`
-- **Analytics** — Microsoft Clarity (`@microsoft/clarity`), Google Analytics 4
-- **Contact form** — EmailJS
-- **Tests** — Jest + React Testing Library (unit), Playwright (E2E scaffolding)
-- **Deploy** — GitHub Pages via `peaceiris/actions-gh-pages`
-
-## Local setup
-
-### 1. Clone with submodules
-
-```bash
-git clone --recurse-submodules git@github.com:Codezen-SRLS/website.git
-cd website
-```
-
-If you already cloned without submodules:
-
-```bash
-git submodule update --init --recursive
-```
-
-### 2. Install dependencies
-
-```bash
+```sh
+git submodule update --init   # audit data: src/sharedData (Codezen-SRLS/audit-history)
 npm install
+npm run dev                   # http://localhost:4321
 ```
 
-### 3. Configure environment variables
+Requires Node 22 (`.nvmrc`). Copy `.example.env` to `.env` for analytics and the request form; the variable names match the CI secrets.
 
-Copy the example file and fill in the values:
+## Structure
 
-```bash
-cp .example.env .env
+- `src/pages/`: home, portfolio, privacy policy, 404, `audits/[slug]` (one page per audit), plus agent/SEO endpoints: `robots.txt`, `llms.txt`, `llms-full.txt`, `audits.json`, `audits/<slug>.md`, `og/**.png`
+- `src/lib/`: audit data and URLs (`audits.ts`, `auditPaths.ts`), stats computed from the audit history (`stats.ts`), portfolio search, analytics consent, schema.org builders (`seo.ts`), OG image rendering
+- `src/components/`: layout pieces; `home/` holds the home page sections, `ui/` the design-system primitives (Button, Card, Badge, Eyebrow, SectionHeading, ServiceCard, Stat, SeverityBars)
+- `src/scripts/`: page-wide client behaviour (menu, cookie banner, request form), bundled into one script by `src/layouts/Base.astro`
+- `src/styles/tokens.css`: design tokens from the Codezen Design System (claude.ai/design)
+
+Audit URLs are resolved exactly as on the previous Gatsby site: an explicit `slug` in `audit-history.json`, else the slugified title, with the report date appended on collisions. `e2e/fixtures/v1-urls.txt` lists every URL of the old site; the e2e suite fails if any stops resolving.
+
+## Test
+
+```sh
+npm test           # unit tests (Vitest)
+npm run test:e2e   # Playwright: builds with dummy IDs, desktop + iPhone + Pixel + iPad
 ```
 
-| Variable | Description | Where to get it |
-|---|---|---|
-| `GATSBY_CLARITY_ID` | Microsoft Clarity project ID | [Clarity dashboard](https://clarity.microsoft.com) > Settings > Overview |
-| `GA_TRACKING_ID` | Google Analytics 4 measurement ID (`G-XXXXXXX`) | GA4 > Admin > Data Streams |
-| `GATSBY_EMAILJS_SERVICE_ID` | EmailJS service ID | [EmailJS dashboard](https://dashboard.emailjs.com) > Email Services |
-| `GATSBY_EMAILJS_TEMPLATE_ID` | EmailJS template ID | EmailJS dashboard > Email Templates |
-| `GATSBY_EMAILJS_PUBLIC_KEY` | EmailJS public key | EmailJS dashboard > Account > General |
+The e2e suite intercepts Google Analytics, Clarity and EmailJS, and asserts consent behaviour and the exact EmailJS template parameters.
 
-### 4. Run the dev server
+## Deploy
 
-```bash
-npm run develop
-```
-
-Site available at `http://localhost:8000`.
-
-## Commands
-
-| Command | Description |
-|---|---|
-| `npm run develop` | Start local dev server with hot reload |
-| `npm run build` | Production build to `./public` |
-| `npm run serve` | Serve the production build locally |
-| `npm run clean` | Clear Gatsby cache and `./public` |
-| `npm test` | Run Jest unit tests |
-| `npm run test:e2e` | Run Playwright E2E tests |
-
-## CI / CD
-
-The GitHub Actions workflow (`.github/workflows/node.js.yml`) has two jobs:
-
-- **`test`** — runs on every push and every pull request. Checks out source only (no submodules needed — tests use mocks), installs deps, and runs `npm test --ci`.
-- **`deploy`** — runs only after a merge to `main`, and only if `test` passes. Checks out the repo including submodules, builds the Gatsby site, and publishes `./public` to GitHub Pages with the custom domain `www.codezen.tech`.
-
-### Required GitHub secrets
-
-Go to **Settings > Secrets and variables > Actions** and add:
-
-| Secret | Description |
-|---|---|
-| `PAT` | Personal Access Token with `repo` scope — used to check out the private `sharedData` submodule during deploy. See below for how to generate one. |
-| `CLARITY_ID` | Microsoft Clarity project ID (mapped to `GATSBY_CLARITY_ID` in the build) |
-| `GA_TRACKING_ID` | Google Analytics 4 measurement ID |
-| `GATSBY_EMAILJS_SERVICE_ID` | EmailJS service ID |
-| `GATSBY_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
-| `GATSBY_EMAILJS_PUBLIC_KEY` | EmailJS public key |
-
-`GITHUB_TOKEN` is provided automatically by GitHub Actions and does not need to be added manually.
-
-#### Generating the PAT
-
-The `PAT` secret must belong to an account that has read access to the `sharedData` submodule repository.
-
-1. Go to **GitHub > Settings > Developer settings > Personal access tokens > Tokens (classic)**
-2. Click **Generate new token (classic)**
-3. Give it a descriptive name, e.g. `codezen-website-ci`
-4. Set an expiration (90 days is a reasonable default — add a reminder to rotate it)
-5. Under **Select scopes**, tick **`repo`** (full control of private repositories)
-6. Click **Generate token** and copy it immediately — it is only shown once
-7. In the website repository go to **Settings > Secrets and variables > Actions > New repository secret**, name it `PAT`, and paste the token
-
-## Project structure
-
-```
-src/
-  assets/          # Brand SVGs (logos, icons, chain marks), fonts
-  components/      # React components (Hero, Services, Work, Team, ...)
-  context/         # FormContext — controls the contact modal
-  images/          # Static images (founder photo, logo)
-  pages/           # index.js, portfolio.js
-  styles/          # tokens.css (design tokens), global.css (utilities, base)
-  __tests__/       # Jest unit tests
-  __mocks__/       # Mocks for Gatsby, gatsby-plugin-image, EmailJS
-e2e/               # Playwright E2E tests
-```
-
-## Submodule (audit data)
-
-Audit history and project images live in a separate private repository linked as a git submodule at `src/sharedData`. Gatsby sources JSON and images from there at build time. To update to the latest data:
-
-```bash
-git submodule update --remote
-git add src/sharedData
-git commit -m "chore: update sharedData"
-```
+Pushing to `main` runs unit tests, then builds, runs the e2e suite and publishes `dist/` to GitHub Pages (`www.codezen.tech`).

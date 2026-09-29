@@ -1,0 +1,33 @@
+---
+import { SEVERITIES, totalFindings } from "../../lib/audits";
+import type { Issues } from "../../lib/auditPaths";
+
+interface Props {
+  issues: Issues;
+}
+const { issues } = Astro.props;
+const total = totalFindings(issues);
+---
+
+<ul class="cz-sev">
+  {
+    SEVERITIES.map((s) => {
+      const count = issues[s.key] || 0;
+      const pct = total ? Math.round((count / total) * 100) : 0;
+      return (
+        <li class="cz-sev__row">
+          <span class="cz-sev__label" style={`color:${s.text}`}>
+            {s.label}
+          </span>
+          <span class="cz-sev__track" aria-hidden="true">
+            <span class="cz-sev__bar" style={`display:block;width:${pct}%;background:${s.color}`} />
+          </span>
+          <span class="cz-sev__count">
+            {count}
+            <span class="sr-only"> {s.key} findings</span>
+          </span>
+        </li>
+      );
+    })
+  }
+</ul>

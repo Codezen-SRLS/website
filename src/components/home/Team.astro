@@ -1,0 +1,206 @@
+---
+import { Image } from "astro:assets";
+import SectionHeading from "../ui/SectionHeading.astro";
+import christian from "../../images/christianvari.jpeg";
+
+interface Member {
+  name: string;
+  role: string;
+  description: string;
+  website?: string;
+}
+interface Props {
+  members: Member[];
+  expertise: { tag: string; count: number }[];
+}
+const { members, expertise } = Astro.props;
+const photos: Record<string, ImageMetadata> = { "Christian Vari": christian };
+const max = Math.max(...expertise.map((e) => e.count), 1);
+---
+
+<section id="team" class="section container" aria-labelledby="team-title" data-reveal>
+  <SectionHeading
+    eyebrow="Elite Security Team"
+    heading={members.length > 1 ? "The experts behind every engagement" : "The expert behind every engagement"}
+    id="team-title"
+  />
+  {
+    members.map((m, i) => (
+      <article class="team glass-panel" aria-labelledby={`member-${i}`}>
+        <div class="team__photo">
+          {photos[m.name] && (
+            <Image
+              src={photos[m.name]}
+              alt={`${m.name}, ${m.role} at Codezen`}
+              widths={[360, 540, 720]}
+              sizes="(max-width: 899px) 100vw, 400px"
+              loading="lazy"
+            />
+          )}
+        </div>
+        <div class="team__bio">
+          <p class="mono team__role">{m.role}</p>
+          <h3 id={`member-${i}`}>{m.name}</h3>
+          <p class="team__desc">{m.description}</p>
+          {m.website && (
+            <a class="team__link" href={m.website} target="_blank" rel="noopener">
+              {m.website.replace(/^https?:\/\//, "")} →
+            </a>
+          )}
+        </div>
+        {i === 0 && (
+          <div class="team__exp">
+            <h4>Audits by technology</h4>
+            <ul>
+              {expertise.map((e) => (
+                <li>
+                  <div class="team__exp-row">
+                    <span>{e.tag}</span>
+                    <span class="team__exp-n">{e.count}</span>
+                  </div>
+                  <div class="team__exp-track" aria-hidden="true">
+                    <div style={`width:${Math.round((e.count / max) * 100)}%`} />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </article>
+    ))
+  }
+</section>
+
+<style>
+  .team {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) 1.3fr 1fr;
+    overflow: hidden;
+  }
+  .team__photo {
+    position: relative;
+    min-height: 340px;
+  }
+  .team__photo :global(img) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 15%;
+  }
+  .team__photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, transparent 55%, rgba(10, 11, 18, 0.55)),
+      linear-gradient(135deg, rgba(var(--rgb-cyan), 0.1), transparent 40%);
+  }
+  .team__bio,
+  .team__exp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 44px;
+    border-left: 1px solid var(--glass-line);
+  }
+  .team__exp {
+    padding: 40px 36px;
+  }
+  .team__role {
+    margin: 0 0 14px;
+    color: var(--text-accent);
+  }
+  .team h3 {
+    margin: 0;
+    color: var(--text-strong);
+    font-size: clamp(28px, 3.2vw, 40px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .team__desc {
+    margin: 18px 0 0;
+    max-width: 480px;
+    color: var(--text-body);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75;
+    text-wrap: pretty;
+  }
+  .team__link {
+    align-self: flex-start;
+    margin-top: 22px;
+    padding: 6px 0;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--cz-cyan-soft);
+  }
+  .team h4 {
+    margin: 0;
+    color: var(--text-strong);
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .team__exp ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .team__exp-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+  .team__exp-n {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-strong);
+  }
+  .team__exp-track {
+    margin-top: 6px;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .team__exp-track div {
+    height: 100%;
+    border-radius: 999px;
+    background: var(--cz-cyan);
+    opacity: 0.7;
+  }
+
+  @media (max-width: 1099px) {
+    .team {
+      grid-template-columns: 1fr 1.4fr;
+    }
+    .team__exp {
+      grid-column: 1 / -1;
+      border-left: 0;
+      border-top: 1px solid var(--glass-line);
+    }
+  }
+  @media (max-width: 699px) {
+    .team {
+      grid-template-columns: 1fr;
+    }
+    .team__photo {
+      min-height: 0;
+      aspect-ratio: 4 / 3;
+    }
+    .team__bio {
+      border-left: 0;
+      border-top: 1px solid var(--glass-line);
+      padding: 28px 20px;
+    }
+    .team__exp {
+      padding: 28px 20px;
+    }
+  }
+</style>

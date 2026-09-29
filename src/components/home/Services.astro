@@ -1,0 +1,41 @@
+---
+import SectionHeading from "../ui/SectionHeading.astro";
+import ServiceCard from "../ui/ServiceCard.astro";
+import { SERVICES } from "../../lib/seo";
+import audits from "../../assets/icons/smart-contract-audits.svg";
+import consulting from "../../assets/icons/blockchain-consulting.svg";
+import recovery from "../../assets/icons/disaster-recovery.svg";
+
+const ICONS: Record<string, string> = {
+  "smart-contract-audits": audits.src,
+  "blockchain-consulting": consulting.src,
+  "disaster-recovery": recovery.src,
+};
+---
+
+<section id="services" class="section container" aria-labelledby="services-title" data-reveal>
+  <SectionHeading eyebrow="What We Do" heading="Comprehensive security for decentralized systems" id="services-title" />
+  <div class="services">
+    {
+      SERVICES.map((s, i) => (
+        <ServiceCard
+          id={s.id}
+          index={i + 1}
+          label={s.label}
+          icon={ICONS[s.id]}
+          title={s.title}
+          description={s.description}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 22px;
+    margin-top: 44px;
+  }
+</style>

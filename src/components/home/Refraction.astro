@@ -1,0 +1,504 @@
+---
+// Hero visual: code flows into the Codezen prism and leaves as resolved findings.
+// A static rendering of the design's RefractView (Codezen Home Redesign v2):
+// SVG + SMIL/CSS animation, no framework. Below 640px a stacked layout replaces the
+// 3:1 canvas, whose text would be too small to read on a phone.
+import Prism from "./Prism.astro";
+
+const INPUTS = [
+  { y: 80, t: "function withdraw(uint256 amt) external {" },
+  { y: 140, t: '(bool ok,) = msg.sender.call{value: amt}("");' },
+  { y: 200, t: "price = oracle.latestAnswer();" },
+  { y: 260, t: "balances[msg.sender] -= amt;" },
+  { y: 320, t: "function setOwner(address o) public {" },
+];
+const OUTPUTS = [
+  { y: 64, c: "#ff5c5c", sev: "HIGH", t: "Reentrancy", s: "Fixed" },
+  { y: 152, c: "#f5b945", sev: "MED", t: "Oracle manipulation", s: "Mitigated" },
+  { y: 248, c: "#04d9ff", sev: "LOW", t: "Missing events", s: "Fixed" },
+  { y: 336, c: "#2fd48a", sev: "PASS", t: "Access control", s: "Verified" },
+];
+const W = 1200;
+const H = 400;
+const inPath = (y: number) => `M0 ${y} H300 C420 ${y} 480 200 562 200`;
+const outPath = (y: number) => `M638 200 C720 200 790 ${y} 900 ${y} H955`;
+const range = (n: number) => Array.from({ length: n }, (_, i) => i);
+
+// Portrait version for phones: the same refraction turned 90°. Code converges from
+// the top into the prism, which disperses it into a spectrum bus down the left edge;
+// each coloured line turns into its finding row. x is in viewBox units (0–360,
+// stretched to the width), y in CSS pixels (the stage height is fixed).
+const N = {
+  h: 526,
+  codeX: [70, 180, 290],
+  inY: 80,
+  prismY: 206,
+  rails: [10, 18, 26, 34],
+  rowTop: 296,
+  rowH: 50,
+  rowGap: 10,
+  rowX: 50,
+};
+const rowY = (i: number) => N.rowTop + i * (N.rowH + N.rowGap);
+const rowMid = (i: number) => rowY(i) + N.rowH / 2;
+const nIn = (x: number) => `M${x} ${N.inY} C${x} 150 180 140 180 ${N.prismY}`;
+const nOut = (i: number) => {
+  const r = N.rails[i];
+  const y = rowMid(i);
+  return `M180 ${N.prismY} C180 262 ${r} 246 ${r} 286 V${y - 12} Q${r} ${y} ${r + 12} ${y} H${N.rowX}`;
+};
+
+const label =
+  "Illustration: lines of smart contract code flow into the Codezen audit and come out as resolved findings: reentrancy fixed, oracle manipulation mitigated, missing events fixed, access control verified.";
+---
+
+<div class="rf" role="img" aria-label={label} data-refraction>
+  <!-- Desktop / tablet: the 3:1 refraction canvas -->
+  <div class="rf-wide">
+    <svg class="rf-svg" viewBox={`0 0 ${W} ${H}`} aria-hidden="true">
+      <defs>
+        <filter id="czGlow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="6"></feGaussianBlur></filter>
+        <filter id="czGlowS" x="-200%" y="-200%" width="500%" height="500%">
+          <feGaussianBlur stdDeviation="2.5" result="b"></feGaussianBlur>
+          <feMerge><feMergeNode in="b"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+        </filter>
+        <linearGradient id="czIn" x1="0" x2="1">
+          <stop offset="0" stop-color="#fff" stop-opacity="0"></stop>
+          <stop offset="1" stop-color="#fff" stop-opacity=".35"></stop>
+        </linearGradient>
+      </defs>
+      {
+        INPUTS.map((r, i) => {
+          const dur = 3.2 + i * 0.35;
+          return (
+            <g>
+              <path d={inPath(r.y)} fill="none" stroke="url(#czIn)" stroke-width="1" />
+              {range(3).map((j) => (
+                <circle r="1.6" fill="rgba(244,247,255,.8)" class="rf-dot">
+                  <animateMotion path={inPath(r.y)} dur={`${dur}s`} begin={`${-((dur * j) / 3).toFixed(2)}s`} repeatCount="indefinite" />
+                </circle>
+              ))}
+            </g>
+          );
+        })
+      }
+      {
+        OUTPUTS.map((o, i) => (
+          <g>
+            <path
+              d={outPath(o.y)}
+              fill="none"
+              stroke={o.c}
+              stroke-width="6"
+              opacity=".35"
+              filter="url(#czGlow)"
+              pathLength="1"
+              stroke-dasharray="1"
+              class="rf-glow"
+              style={`animation-delay:${0.6 + i * 0.15}s, ${2 + i * 0.3}s;animation-duration:1.2s, ${3 + i * 0.4}s`}
+            />
+            <path
+              d={outPath(o.y)}
+              fill="none"
+              stroke={o.c}
+              stroke-width="1.4"
+              pathLength="1"
+              stroke-dasharray="1"
+              class="rf-line"
+              style={`animation-delay:${0.6 + i * 0.15}s`}
+            />
+            <circle cx="955" cy={o.y} r="3.5" fill={o.c} filter="url(#czGlowS)" class="rf-end" style={`animation-delay:${1.6 + i * 0.15}s`} />
+            {range(2).map((j) => (
+              <circle r="2.4" fill={o.c} filter="url(#czGlowS)" class="rf-dot">
+                <animateMotion path={outPath(o.y)} dur="2.4s" begin={`${-1.2 * j}s`} repeatCount="indefinite" />
+              </circle>
+            ))}
+          </g>
+        ))
+      }
+    </svg>
+
+    {
+      INPUTS.map((r, i) => (
+        <div class="rf-row" style={`top:${((r.y - 20) / H) * 100}%`}>
+          <div class="rf-row__flow" style={`animation-duration:${14 + i * 3}s`}>
+            {range(4).map(() => (
+              <span>{r.t}</span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+
+    <div class="rf-prism"><Prism /></div>
+
+    {
+      OUTPUTS.map((o, i) => (
+        <div class="rf-chip" style={`top:${(o.y / H) * 100}%`}>
+          <div class="rf-chip__box" style={`animation-delay:${1.7 + i * 0.15}s`}>
+            <div class="rf-chip__head">
+              <span class="rf-chip__sev" style={`color:${o.c};border-color:${o.c}`}>
+                {o.sev}
+              </span>
+              <span class="rf-chip__status">{o.s}</span>
+            </div>
+            <span class="rf-chip__title">{o.t}</span>
+          </div>
+        </div>
+      ))
+    }
+
+    <span class="rf-cap" style="left:0">Your code</span>
+    <span class="rf-cap" style="left:50%;transform:translateX(-50%)">Codezen audit</span>
+    <span class="rf-cap" style="left:81.5%">Resolved findings</span>
+  </div>
+
+  <!-- Phones: the refraction turned 90° (code → prism → spectrum → findings) -->
+  <div class="rf-narrow">
+    <span class="rf-ncap">Your code</span>
+    <div class="rf-stage" style={`height:${N.h}px`}>
+      <svg class="rf-svg rf-nsvg" viewBox={`0 0 360 ${N.h}`} preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <filter id="czGlowN" x="-50%" y="-20%" width="200%" height="140%"><feGaussianBlur stdDeviation="4"></feGaussianBlur></filter>
+          <filter id="czGlowSN" x="-200%" y="-200%" width="500%" height="500%">
+            <feGaussianBlur stdDeviation="2" result="b"></feGaussianBlur>
+            <feMerge><feMergeNode in="b"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+          </filter>
+          <linearGradient id="czInN" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".05"></stop>
+            <stop offset="1" stop-color="#5be4ff" stop-opacity=".6"></stop>
+          </linearGradient>
+        </defs>
+        {
+          N.codeX.map((x, i) => (
+            <g>
+              <path d={nIn(x)} fill="none" stroke="url(#czInN)" stroke-width="1" vector-effect="non-scaling-stroke" />
+              {range(2).map((j) => (
+                <circle r="1.6" fill="rgba(244,247,255,.85)">
+                  <animateMotion path={nIn(x)} dur={`${2.2 + i * 0.3}s`} begin={`${-(1.1 + i * 0.15) * j}s`} repeatCount="indefinite" />
+                </circle>
+              ))}
+            </g>
+          ))
+        }
+        {
+          OUTPUTS.map((o, i) => (
+            <g>
+              <path
+                d={nOut(i)}
+                fill="none"
+                stroke={o.c}
+                stroke-width="5"
+                opacity=".3"
+                filter="url(#czGlowN)"
+                pathLength="1"
+                stroke-dasharray="1"
+                vector-effect="non-scaling-stroke"
+                class="rf-glow"
+                style={`animation-delay:${0.5 + i * 0.2}s, ${2 + i * 0.3}s;animation-duration:1.1s, ${3 + i * 0.4}s`}
+              />
+              <path
+                d={nOut(i)}
+                fill="none"
+                stroke={o.c}
+                stroke-width="1.3"
+                pathLength="1"
+                stroke-dasharray="1"
+                vector-effect="non-scaling-stroke"
+                class="rf-line"
+                style={`animation-delay:${0.5 + i * 0.2}s;animation-duration:1.1s`}
+              />
+              <circle r="2.2" fill={o.c} filter="url(#czGlowSN)">
+                <animateMotion path={nOut(i)} dur={`${2.8 + i * 0.25}s`} begin={`${-0.7 * i}s`} repeatCount="indefinite" />
+              </circle>
+            </g>
+          ))
+        }
+      </svg>
+
+      {
+        INPUTS.slice(0, 3).map((r, i) => (
+          <div class="rf-nrow" style={`top:${i * 30}px`}>
+            <div class="rf-row__flow" style={`animation-duration:${14 + i * 3}s`}>
+              {range(4).map(() => (
+                <span>{r.t}</span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+
+      <div class="rf-nprism" style={`top:${N.prismY - 56}px`}><Prism /></div>
+      <span class="rf-ncap rf-ncap--audit" style={`top:${N.prismY - 7}px`}>Codezen<br />audit</span>
+      <span class="rf-ncap rf-ncap--out" style={`top:${N.rowTop - 24}px;left:${(N.rowX / 360) * 100}%`}>Resolved findings</span>
+
+      {
+        OUTPUTS.map((o, i) => (
+          <div
+            class="rf-nfind"
+            style={`top:${rowY(i)}px;height:${N.rowH}px;left:${(N.rowX / 360) * 100}%;--c:${o.c};animation-delay:${1.3 + i * 0.2}s`}
+          >
+            <span class="rf-nfind__sev">{o.sev}</span>
+            <span class="rf-nfind__title">{o.t}</span>
+            <span class="rf-nfind__status">{o.s}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<script>
+  const root = document.querySelector<HTMLElement>("[data-refraction]");
+  if (root) {
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+    const svgs = root.querySelectorAll<SVGSVGElement>(".rf-svg");
+    // CSS can't stop SMIL; pause it for reduced motion
+    const syncMotion = () => svgs.forEach((svg) => (reduce.matches ? svg.pauseAnimations() : svg.unpauseAnimations()));
+    syncMotion();
+    reduce.addEventListener("change", syncMotion);
+
+    // Prism tilt follows the pointer, on devices that can hover
+    if (matchMedia("(hover: hover)").matches) {
+      const wide = root.querySelector<HTMLElement>(".rf-wide")!;
+      wide.addEventListener("pointermove", (e) => {
+        const r = wide.getBoundingClientRect();
+        wide.style.setProperty("--tx", (((e.clientX - r.left) / r.width - 0.5) * 2).toFixed(3));
+        wide.style.setProperty("--ty", (((e.clientY - r.top) / r.height - 0.5) * 2).toFixed(3));
+      });
+      wide.addEventListener("pointerleave", () => {
+        wide.style.setProperty("--tx", "0");
+        wide.style.setProperty("--ty", "0");
+      });
+    }
+  }
+</script>
+
+<style>
+  .rf {
+    width: 100%;
+  }
+  .rf-wide {
+    position: relative;
+    width: 100%;
+    max-width: min(100%, max(560px, calc((100vh - 300px) * 3)));
+    margin: 0 auto 24px;
+    aspect-ratio: 1200 / 400;
+    container-type: inline-size;
+  }
+  .rf-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+  .rf-glow {
+    animation-name: czDraw, czBreath;
+    animation-timing-function: ease, ease-in-out;
+    animation-fill-mode: both, none;
+    animation-iteration-count: 1, infinite;
+  }
+  .rf-line {
+    animation: czDraw 1.2s ease both;
+  }
+  .rf-end {
+    animation: czRise 0.4s ease both;
+  }
+  .rf-row {
+    position: absolute;
+    left: 0;
+    width: 27%;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 72%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 18%, #000 72%, transparent);
+  }
+  .rf-row__flow {
+    display: inline-flex;
+    gap: 3em;
+    font-family: var(--font-mono);
+    font-size: max(9px, 0.92cqw);
+    color: rgba(232, 238, 255, 0.42);
+    animation: czFlow 14s linear infinite;
+  }
+  .rf-prism {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 17%;
+    transform: translate(-50%, -50%);
+  }
+  .rf-chip {
+    position: absolute;
+    left: 81.5%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  .rf-chip__box {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0.8em 1em;
+    border-radius: 12px;
+    background: rgba(7, 8, 13, 0.55);
+    border: 1px solid var(--glass-line);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    font-family: var(--font-mono);
+    font-size: max(9px, 0.9cqw);
+    letter-spacing: 0.06em;
+    animation: czPop 0.5s ease both;
+  }
+  .rf-chip__head {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+  }
+  .rf-chip__sev {
+    border: 1px solid;
+    border-radius: 999px;
+    padding: 0.1em 0.7em;
+    font-size: 0.85em;
+    letter-spacing: 0.14em;
+  }
+  .rf-chip__status {
+    color: var(--status-success);
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.14em;
+  }
+  .rf-chip__title {
+    color: var(--text-strong);
+    white-space: nowrap;
+  }
+  .rf-cap {
+    position: absolute;
+    top: 100%;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .rf-narrow {
+    display: none;
+  }
+
+  @media (max-width: 639px) {
+    .rf-wide {
+      display: none;
+    }
+    .rf-narrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .rf-ncap {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .rf-stage {
+      position: relative;
+      width: 100%;
+      /* The x axis stretches with the width; cap it so dots stay round */
+      max-width: 420px;
+      margin-top: 12px;
+    }
+    .rf-nsvg {
+      overflow: visible;
+    }
+    .rf-nrow {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      white-space: nowrap;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent);
+    }
+    .rf-nrow .rf-row__flow {
+      font-size: 11px;
+    }
+    .rf-nprism {
+      position: absolute;
+      left: 50%;
+      width: 112px;
+      transform: translateX(-50%);
+    }
+    .rf-ncap--audit {
+      position: absolute;
+      left: calc(50% + 72px);
+      line-height: 1.5;
+    }
+    .rf-ncap--out {
+      position: absolute;
+    }
+    .rf-nfind {
+      position: absolute;
+      right: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 14px 0 12px;
+      border-radius: 12px;
+      border: 1px solid var(--glass-line);
+      border-left-color: var(--c);
+      background: linear-gradient(90deg, color-mix(in srgb, var(--c) 10%, transparent), transparent 55%), rgba(7, 8, 13, 0.55);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      animation: czPop 0.5s ease both;
+    }
+    .rf-nfind__sev {
+      flex: none;
+      padding: 2px 8px;
+      border: 1px solid var(--c);
+      border-radius: 999px;
+      color: var(--c);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+    }
+    .rf-nfind__title {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--text-strong);
+      font-size: 14px;
+    }
+    .rf-nfind__status {
+      flex: none;
+      color: var(--status-success);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  }
+  @media (max-width: 399px) {
+    .rf-nfind {
+      gap: 8px;
+      padding: 0 10px;
+    }
+    .rf-nfind__title {
+      font-size: 13.5px;
+    }
+  }
+  /* Very narrow phones: the status word would squeeze the finding out */
+  @media (max-width: 359px) {
+    .rf-nfind__status {
+      display: none;
+    }
+  }
+</style>

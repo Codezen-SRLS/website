@@ -1,0 +1,35 @@
+---
+import Base from "../layouts/Base.astro";
+import Button from "../components/ui/Button.astro";
+import Eyebrow from "../components/ui/Eyebrow.astro";
+---
+
+<Base title="Page not found" description="The page you were looking for doesn't exist." noindex>
+  <section class="container nf">
+    <Eyebrow>Error 404</Eyebrow>
+    <h1 class="page-heading">This page slipped <span class="iris-text">past the audit</span>.</h1>
+    <p class="page-lead">The page you were looking for doesn't exist or has moved.</p>
+    <div class="nf__ctas">
+      <Button href="/">Back to home</Button>
+      <Button href="/portfolio/" variant="ghost">Browse audit reports</Button>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    min-height: 50vh;
+  }
+  .nf .page-heading {
+    margin-top: 18px;
+    max-width: 800px;
+  }
+  .nf__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+  }
+</style>

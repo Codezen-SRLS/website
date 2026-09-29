@@ -1,0 +1,96 @@
+---
+import "../styles/global.css";
+import "../styles/ui.css";
+import Seo, { type SeoProps } from "../components/Seo.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CookieBanner from "../components/CookieBanner.astro";
+import RequestDialog from "../components/RequestDialog.astro";
+
+type Props = SeoProps;
+const seo = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="preload" href="/fonts/outfit-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/outfit-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <Seo {...seo} />
+    <meta name="theme-color" content="#0a0b12" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="author" content="Codezen" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="grain" aria-hidden="true"></div>
+    <Header />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <RequestDialog />
+    <CookieBanner />
+
+    <script>
+      // One bundle for every page-wide behaviour, so the page makes a single script request
+      import "../scripts/header";
+      import "../scripts/cookie-banner";
+      import "../scripts/request-dialog";
+      import { getConsent, loadAnalytics, openCookieSettings, trackPageView } from "../lib/consent";
+
+      // Each page load is one page view (the Gatsby site did this on every route change)
+      if (getConsent() === "granted") {
+        Promise.resolve(loadAnalytics()).then(() => trackPageView(window.location));
+      }
+
+      document.querySelectorAll("[data-cookie-settings]").forEach((el) => el.addEventListener("click", openCookieSettings));
+
+      // Scroll reveal: hide only what is still below the fold, then fade it in on approach
+      if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const io = new IntersectionObserver(
+          (entries) =>
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("revealed");
+              entry.target.classList.remove("reveal-pending");
+              io.unobserve(entry.target);
+            }),
+          { threshold: 0.1, rootMargin: "0px 0px -6% 0px" }
+        );
+        document.querySelectorAll("[data-reveal]").forEach((el) => {
+          if (el.getBoundingClientRect().top < window.innerHeight) return;
+          el.classList.add("reveal-pending");
+          io.observe(el);
+        });
+      }
+    </script>
+
+    <style>
+      .grain {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.5;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+      }
+      main {
+        position: relative;
+        z-index: 2;
+      }
+      main:focus {
+        outline: none;
+      }
+    </style>
+  </body>
+</html>

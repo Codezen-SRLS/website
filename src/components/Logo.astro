@@ -1,0 +1,27 @@
+---
+// Mark + wordmark lockup. Plain <img> so the SVGs are cached across pages.
+import mark from "../assets/logos/mark-white.svg";
+import wordmark from "../assets/logos/wordmark-white.svg";
+---
+
+<a href="/" class="logo" aria-label="Codezen home">
+  <img src={mark.src} alt="" width="58" height="34" class="logo__mark" />
+  <img src={wordmark.src} alt="" width="113" height="20" class="logo__word" />
+</a>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 44px;
+  }
+  .logo__mark {
+    height: 34px;
+    width: auto;
+  }
+  .logo__word {
+    height: 20px;
+    width: auto;
+  }
+</style>

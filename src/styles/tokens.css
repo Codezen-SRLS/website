@@ -1,32 +1,11 @@
 /* ==========================================================================
-   Codezen — Design tokens · "Prism" system
-   Dark-first, atmospheric, frosted glass, iridescent cyan accent.
+   Codezen "Prism" design tokens, from the Codezen Design System
+   (claude.ai/design, tokens/colors.css, typography.css, spacing.css).
+   Keep in sync with the design system rather than editing values here.
    ========================================================================== */
 
-@font-face {
-  font-family: "JetBrains Mono";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../assets/fonts/JetBrainsMono-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "JetBrains Mono";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("../assets/fonts/JetBrainsMono-Medium.woff2") format("woff2");
-}
-@font-face {
-  font-family: "JetBrains Mono";
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  src: url("../assets/fonts/JetBrainsMono-SemiBold.woff2") format("woff2");
-}
-
 :root {
-  /* --- Logo / brand blues --- */
+  /* --- Logo / brand blues (also drive atmosphere & the iridescent range) --- */
   --cz-logo-dark-blue: #312e81;
   --cz-logo-navy: #0760ab;
   --cz-logo-light-blue: #168ccd;
@@ -37,13 +16,12 @@
   --cz-cyan-soft: #5be4ff;
   --cz-cyan-ink: #008dd3;
 
-  /* RGB channels for glow/alpha */
   --rgb-cyan: 4, 217, 255;
   --rgb-indigo: 49, 46, 129;
   --rgb-navy: 7, 96, 171;
   --rgb-lightblue: 22, 140, 205;
 
-  /* --- Base surfaces --- */
+  /* --- Base atmosphere --- */
   --cz-void: #07080d;
   --cz-base: #0a0b12;
   --cz-base-2: #0c0e17;
@@ -54,22 +32,14 @@
   --glass: rgba(255, 255, 255, 0.04);
   --glass-2: rgba(255, 255, 255, 0.06);
   --glass-3: rgba(255, 255, 255, 0.09);
-  --glass-line: rgba(255, 255, 255, 0.10);
+  --glass-line: rgba(255, 255, 255, 0.1);
   --glass-line-strong: rgba(255, 255, 255, 0.18);
   --glass-blur: 12px;
 
-  /* --- Iridescent gradients --- */
   --iris: linear-gradient(100deg, #04d9ff 0%, #2ee2ff 28%, #168ccd 68%, #cfe9ff 100%);
-  /* Same colours mirrored so the animated text gradient tiles without a seam */
-  --iris-loop: linear-gradient(100deg, #04d9ff 0%, #2ee2ff 14%, #168ccd 34%, #cfe9ff 50%, #168ccd 66%, #2ee2ff 86%, #04d9ff 100%);
-  --iris-rule: linear-gradient(90deg, transparent, rgba(4,217,255,0.55), rgba(22,140,205,0.35), transparent);
+  --iris-rule: linear-gradient(90deg, transparent, rgba(var(--rgb-cyan), 0.55), rgba(var(--rgb-lightblue), 0.35), transparent);
 
-  /* --- Atmospheric page background --- */
-  --field-bg: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(49,46,129,0.45), transparent),
-              radial-gradient(ellipse 60% 40% at 80% 60%, rgba(7,96,171,0.18), transparent),
-              #0a0b12;
-
-  /* --- Semantic — DARK (default) --- */
+  /* --- Semantic (dark theme) --- */
   --surface-base: var(--cz-base);
   --surface-raised: var(--glass);
   --surface-raised-2: var(--glass-2);
@@ -77,36 +47,25 @@
   --surface-overlay: rgba(5, 6, 11, 0.66);
 
   --text-strong: #f4f7ff;
-  --text-body: rgba(232, 238, 255, 0.74);
-  --text-muted: rgba(232, 238, 255, 0.58);
+  --text-body: rgba(232, 238, 255, 0.66);
+  --text-muted: rgba(232, 238, 255, 0.4);
   --text-accent: var(--cz-cyan-soft);
 
   --border-default: var(--glass-line);
   --border-strong: var(--glass-line-strong);
-  --border-accent: rgba(4, 217, 255, 0.55);
+  --border-accent: rgba(var(--rgb-cyan), 0.55);
 
   --accent: var(--cz-cyan);
   --accent-contrast: #04121a;
 
-  --tag-bg: var(--glass-2);
-  --tag-text: var(--text-strong);
-
-  /* --- Status --- */
   --status-success: #2fd48a;
   --status-warning: #f5b945;
   --status-danger: #ff5c5c;
   --status-info: var(--cz-cyan);
 
-  /* --- Glows & shadows --- */
-  --glow-cyan: 0 0 0 1px rgba(4,217,255,0.18), 0 0 48px -12px rgba(4,217,255,0.35);
-  --shadow-soft: 0 8px 40px -8px rgba(0,0,0,0.5);
-  --shadow-card: 0 4px 24px -4px rgba(0,0,0,0.4);
-  --shadow-float: 0 24px 80px -16px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.08);
-
   /* --- Typography --- */
   --font-body: "Outfit", Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
-  --font-logo: "Felix Titling", "Outfit", serif;
 
   --fw-light: 300;
   --fw-regular: 400;
@@ -117,14 +76,14 @@
   --fs-display: 72px;
   --fs-stat: 52px;
   --fs-h1: 56px;
-  --fs-h2: 42px;
+  --fs-h2: 40px;
   --fs-h3: 24px;
   --fs-h4: 20px;
   --fs-body-lg: 19px;
   --fs-body: 16px;
   --fs-small: 15px;
-  --fs-mono: 13px;
-  --fs-mono-sm: 12px;
+  --fs-mono: 12px;
+  --fs-mono-sm: 11px;
 
   --lh-display: 1.04;
   --lh-tight: 1.1;
@@ -134,36 +93,46 @@
 
   --ls-display: -0.03em;
   --ls-tight: -0.02em;
-  --ls-normal: 0;
   --ls-mono: 0.14em;
   --ls-mono-wide: 0.22em;
-  --ls-logo: 0.04em;
 
-  /* --- Spacing (4px base) --- */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 20px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --space-10: 40px;
-  --space-12: 48px;
-  --space-14: 56px;
-  --space-16: 64px;
-  --space-18: 72px;
-  --space-20: 80px;
-  --space-24: 96px;
+  /* --- Spacing, shape, glow, motion --- */
+  --section-y: 112px;
+  --container-max: 1240px;
+  --container-pad: 32px;
 
-  /* --- Shape --- */
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-pill: 999px;
 
-  /* --- Motion --- */
-  --dur: 0.4s;
-  --dur-fast: 0.25s;
-  --dur-slow: 0.6s;
+  --shadow-soft: 0 18px 50px -24px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 30px 70px -34px rgba(var(--rgb-cyan), 0.45);
+  --shadow-float: 0 40px 100px -40px rgba(0, 0, 0, 0.75);
+  --glow-cyan: 0 14px 50px -18px rgba(var(--rgb-cyan), 0.55);
+  --glow-cyan-strong: 0 18px 64px -16px rgba(var(--rgb-cyan), 0.7);
+  --glow-dot: 0 0 12px;
+
+  --field-bg:
+    radial-gradient(900px 600px at 78% -8%, rgba(var(--rgb-cyan), 0.1), transparent 60%),
+    radial-gradient(1000px 700px at 8% 12%, rgba(var(--rgb-indigo), 0.38), transparent 58%),
+    radial-gradient(1100px 900px at 100% 100%, rgba(var(--rgb-navy), 0.18), transparent 60%),
+    linear-gradient(180deg, var(--cz-base), var(--cz-base-2));
+
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.25s;
+  --dur: 0.4s;
+  --dur-slow: 0.6s;
+}
+
+/* Scale type and rhythm down on small screens (the design's desktop values above) */
+@media (max-width: 767px) {
+  :root {
+    --section-y: 80px;
+    --container-pad: 20px;
+    --fs-stat: 40px;
+    --fs-h2: 30px;
+    --fs-h3: 22px;
+  }
 }
