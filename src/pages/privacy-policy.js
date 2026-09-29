@@ -1,0 +1,436 @@
+import * as React from "react";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+
+const LAST_UPDATED = "29 September 2026";
+
+// Data controller details required by Art. 13(1)(a) GDPR.
+const CONTROLLER = {
+  name: "Codezen S.r.l.",
+  address: "Via Traiana 10, 00037 Segni (RM), Italy",
+  vat: "IT16941791002",
+  email: "info@codezen.tech",
+};
+
+const H2 = ({ children }) => (
+  <h2
+    style={{
+      margin: "48px 0 0",
+      color: "var(--text-strong)",
+      fontSize: "var(--fs-h4)",
+      fontWeight: 600,
+      lineHeight: "var(--lh-tight)",
+    }}
+  >
+    {children}
+  </h2>
+);
+
+const PrivacyPolicyPage = () => (
+  <Layout>
+    <div className="cz-container" style={{ paddingTop: 0 }}>
+      <section style={{ padding: "72px 0 32px" }}>
+        <span className="cz-eyebrow">Legal</span>
+        <h1
+          style={{
+            margin: "16px 0 0",
+            color: "var(--text-strong)",
+            fontWeight: 700,
+            lineHeight: "var(--lh-tight)",
+            letterSpacing: "var(--ls-tight)",
+          }}
+          className="cz-legal-h1"
+        >
+          Privacy Policy
+        </h1>
+        <p className="cz-mono-label" style={{ margin: "20px 0 0" }}>
+          Last updated: {LAST_UPDATED}
+        </p>
+      </section>
+
+      <article className="cz-legal" style={{ maxWidth: 760, paddingBottom: 80 }}>
+        <p>
+          This Privacy Policy explains how we collect and use personal data when you visit{" "}
+          <a href="https://www.codezen.tech">codezen.tech</a>, contact us, or interact with our
+          LinkedIn page through our LinkedIn application (see section 2.4). It is provided in
+          accordance with Articles 13 and 14 of Regulation (EU) 2016/679 (the “GDPR”), the Italian
+          Personal Data Protection Code (Legislative Decree 196/2003, as amended) and the ePrivacy
+          Directive 2002/58/EC.
+        </p>
+
+        <H2>1. Data controller</H2>
+        <p>The controller of your personal data is:</p>
+        <p>
+          <strong>{CONTROLLER.name}</strong>
+          <br />
+          {CONTROLLER.address}
+          <br />
+          VAT: {CONTROLLER.vat}
+          <br />
+          Email: <a href={`mailto:${CONTROLLER.email}`}>{CONTROLLER.email}</a>
+        </p>
+        <p>
+          We have not appointed a Data Protection Officer, as we are not required to do so under
+          Article 37 GDPR. For any privacy-related request, write to the email address above.
+        </p>
+
+        <H2>2. Personal data we process, purposes and legal bases</H2>
+
+        <h3>2.1 Audit requests and email correspondence</h3>
+        <p>
+          When you fill in the “Request an audit” form or email us, we process your name, email
+          address, project or protocol name and any information you include in your message.
+        </p>
+        <ul>
+          <li>
+            <strong>Purpose:</strong> responding to your enquiry, scoping an engagement and
+            preparing a quote.
+          </li>
+          <li>
+            <strong>Legal basis:</strong> steps taken at your request prior to entering into a
+            contract (Art. 6(1)(b) GDPR) and, for general enquiries, our legitimate interest in
+            answering the messages we receive (Art. 6(1)(f) GDPR).
+          </li>
+        </ul>
+        <p>
+          Name and email are required to reply to you. Please do not include sensitive personal
+          data or confidential secrets such as private keys in the form.
+        </p>
+
+        <h3>2.2 Technical data (server logs)</h3>
+        <p>
+          When you load the site, our hosting provider automatically processes technical data such
+          as your IP address, browser type, requested URL, referrer and timestamp.
+        </p>
+        <ul>
+          <li>
+            <strong>Purpose:</strong> delivering the website and keeping it secure and available.
+          </li>
+          <li>
+            <strong>Legal basis:</strong> our legitimate interest in operating a secure website
+            (Art. 6(1)(f) GDPR).
+          </li>
+        </ul>
+
+        <h3>2.3 Analytics</h3>
+        <p>
+          With your consent, we use Google Analytics 4 and Microsoft Clarity to understand how
+          visitors use the site: pages viewed, time on page, clicks, scrolling, approximate
+          location, device and browser information. Microsoft Clarity may also record anonymised
+          session replays and heatmaps; text entered in form fields is masked.
+        </p>
+        <ul>
+          <li>
+            <strong>Purpose:</strong> measuring traffic and improving the content and usability of
+            the site.
+          </li>
+          <li>
+            <strong>Legal basis:</strong> your consent (Art. 6(1)(a) GDPR and Art. 122 of the
+            Italian Privacy Code). You can withdraw consent at any time, without affecting the
+            lawfulness of processing carried out before withdrawal.
+          </li>
+        </ul>
+
+        <h3>2.4 LinkedIn application</h3>
+        <p>
+          We operate an internal application that connects to the LinkedIn API to manage the
+          Codezen company page. Only authorised Codezen staff sign in to it with their LinkedIn
+          accounts. The application is used to:
+        </p>
+        <ul>
+          <li>publish posts on the Codezen LinkedIn page;</li>
+          <li>read aggregated analytics for our page and posts (followers, impressions, engagement);</li>
+          <li>read comments, reactions and mentions relating to our page and posts, so we can respond to them.</li>
+        </ul>
+        <p>Through the application we process:</p>
+        <ul>
+          <li>
+            <strong>Codezen staff:</strong> the LinkedIn member ID, name and access token needed
+            to authenticate and act on behalf of the company page;
+          </li>
+          <li>
+            <strong>LinkedIn members who interact with our page:</strong> the public profile
+            information LinkedIn returns with a comment, reaction or mention (such as name,
+            headline, profile picture and member ID) and the content of the comment or post. Page
+            analytics are received from LinkedIn in aggregated form and do not identify individual
+            members.
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <strong>Purpose:</strong> managing our company page, measuring the performance of our
+            content and responding to people who engage with it.
+          </li>
+          <li>
+            <strong>Legal basis:</strong> our legitimate interest in managing our professional
+            presence on LinkedIn and communicating with our audience (Art. 6(1)(f) GDPR).
+          </li>
+          <li>
+            <strong>Source:</strong> this data is obtained from LinkedIn Ireland Unlimited Company
+            via the LinkedIn API (Art. 14 GDPR). It is limited to what you have made visible on our
+            page and to what LinkedIn's API permissions allow.
+          </li>
+          <li>
+            <strong>Storage:</strong> the application does not store LinkedIn data or access
+            tokens. Data is retrieved from LinkedIn when needed, displayed to authorised staff and
+            discarded when the request ends.
+          </li>
+        </ul>
+        <p>
+          We use LinkedIn data only for the purposes above and in line with the{" "}
+          <a
+            href="https://legal.linkedin.com/api-terms-of-use"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn API Terms of Use
+          </a>
+          . We do not sell it, share it with third parties, combine it with other data, use it for
+          advertising or profiling, or use it to train machine-learning models. Staff can revoke the
+          application's access at any time in their LinkedIn settings under{" "}
+          <em>Data privacy › Permitted services</em>. The processing of your data by LinkedIn itself
+          is governed by the{" "}
+          <a
+            href="https://www.linkedin.com/legal/privacy-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn Privacy Policy
+          </a>
+          .
+        </p>
+
+        <h3>2.5 Legal obligations and legal claims</h3>
+        <p>
+          If we enter into a contract with you, we process the data needed for invoicing,
+          accounting and tax purposes (Art. 6(1)(c) GDPR), and we may process data where necessary
+          to establish, exercise or defend legal claims (Art. 6(1)(f) GDPR).
+        </p>
+
+        <H2>3. Cookies and similar technologies</H2>
+        <p>
+          Our site does not set any first-party cookies needed for it to work. The analytics tools
+          described above set the following cookies only after you have given consent:
+        </p>
+        <div style={{ overflowX: "auto" }}>
+          <table>
+            <thead>
+              <tr>
+                <th>Cookie</th>
+                <th>Provider</th>
+                <th>Purpose</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>_ga</code></td>
+                <td>Google</td>
+                <td>Distinguishes unique visitors</td>
+                <td>2 years</td>
+              </tr>
+              <tr>
+                <td><code>_ga_&lt;ID&gt;</code></td>
+                <td>Google</td>
+                <td>Maintains session state</td>
+                <td>2 years</td>
+              </tr>
+              <tr>
+                <td><code>_clck</code></td>
+                <td>Microsoft</td>
+                <td>Stores the Clarity user ID and preferences</td>
+                <td>1 year</td>
+              </tr>
+              <tr>
+                <td><code>_clsk</code></td>
+                <td>Microsoft</td>
+                <td>Groups page views into a single session</td>
+                <td>1 day</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          You can change your choice at any time and delete cookies through your browser settings.
+          Refusing analytics cookies has no effect on your ability to use the site.
+        </p>
+
+        <H2>4. Recipients and processors</H2>
+        <p>
+          We do not sell your personal data. We share it only with service providers that process
+          it on our behalf under a data processing agreement (Art. 28 GDPR):
+        </p>
+        <ul>
+          <li>
+            <strong>GitHub, Inc.</strong> (USA): website hosting via GitHub Pages.
+          </li>
+          <li>
+            <strong>EmailJS</strong>: delivery of contact form submissions to our inbox.
+          </li>
+          <li>
+            <strong>Google Ireland Ltd. / Google LLC</strong>: Google Analytics.
+          </li>
+          <li>
+            <strong>Microsoft Ireland Operations Ltd. / Microsoft Corporation</strong>: Microsoft
+            Clarity.
+          </li>
+          <li>Our email and productivity software providers, accountants and legal advisers.</li>
+        </ul>
+        <p>
+          LinkedIn Ireland Unlimited Company is not our processor: it is an independent controller
+          and the source of the data described in section 2.4. We do not share LinkedIn data with
+          any of the recipients above.
+        </p>
+        <p>
+          We may also disclose data to public authorities where required by law.
+        </p>
+
+        <H2>5. Transfers outside the European Economic Area</H2>
+        <p>
+          Some of the providers above are based in, or may access data from, the United States.
+          Where this happens, transfers rely on the European Commission's adequacy decision for the
+          EU-U.S. Data Privacy Framework, for recipients certified under it, or on Standard
+          Contractual Clauses approved by the European Commission (Art. 46 GDPR). You can request a
+          copy of the relevant safeguards by writing to us.
+        </p>
+
+        <H2>6. How long we keep your data</H2>
+        <ul>
+          <li>
+            <strong>Enquiries that do not lead to an engagement:</strong> up to 24 months after our
+            last exchange, then deleted.
+          </li>
+          <li>
+            <strong>Client data and invoices:</strong> for the duration of the contract and then
+            for 10 years, as required by Italian accounting and tax law (Art. 2220 of the Italian
+            Civil Code).
+          </li>
+          <li>
+            <strong>Analytics data:</strong> up to 14 months in Google Analytics; Microsoft
+            Clarity keeps session recordings for 30 days and aggregated data for up to 13 months.
+          </li>
+          <li>
+            <strong>LinkedIn data:</strong> not stored by us; it is held only in memory for the
+            duration of the request in which it is retrieved.
+          </li>
+          <li>
+            <strong>Server logs:</strong> according to the hosting provider's retention policy,
+            normally no longer than 90 days.
+          </li>
+        </ul>
+
+        <H2>7. Your rights</H2>
+        <p>Under the GDPR you have the right to:</p>
+        <ul>
+          <li>access your personal data and receive a copy of it (Art. 15);</li>
+          <li>have inaccurate data rectified (Art. 16);</li>
+          <li>have your data erased (Art. 17);</li>
+          <li>restrict processing (Art. 18);</li>
+          <li>receive your data in a portable format (Art. 20);</li>
+          <li>
+            object at any time to processing based on our legitimate interests (Art. 21);
+          </li>
+          <li>withdraw your consent at any time (Art. 7(3)).</li>
+        </ul>
+        <p>
+          To exercise these rights, email{" "}
+          <a href={`mailto:${CONTROLLER.email}`}>{CONTROLLER.email}</a>. We will reply within one
+          month, which may be extended by two further months for complex requests. We may ask you
+          to verify your identity.
+        </p>
+        <p>
+          You also have the right to lodge a complaint with a supervisory authority, in particular
+          in the EU member state where you live or work or where the alleged infringement took
+          place. In Italy this is the{" "}
+          <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">
+            Garante per la protezione dei dati personali
+          </a>
+          .
+        </p>
+
+        <H2>8. Automated decision-making</H2>
+        <p>
+          We do not use your personal data for decisions based solely on automated processing,
+          including profiling, that produce legal effects concerning you or similarly
+          significantly affect you (Art. 22 GDPR).
+        </p>
+
+        <H2>9. Security</H2>
+        <p>
+          We use appropriate technical and organisational measures to protect personal data
+          against unauthorised access, loss or alteration, including encrypted connections (HTTPS)
+          and restricted access to our mailboxes and systems.
+        </p>
+
+        <H2>10. Children</H2>
+        <p>
+          Our services are aimed at businesses. We do not knowingly collect personal data from
+          anyone under 16 years of age.
+        </p>
+
+        <H2>11. Changes to this policy</H2>
+        <p>
+          We may update this Privacy Policy from time to time. The latest version is always
+          available on this page, with the date of the last update shown at the top. If a change is
+          significant, we will notify you by other means where appropriate.
+        </p>
+      </article>
+    </div>
+
+    <style>{`
+      .cz-legal-h1 { font-size: clamp(40px, 5vw, var(--fs-h1)); }
+      .cz-legal p, .cz-legal li {
+        color: var(--text-body);
+        font-size: var(--fs-body);
+        line-height: var(--lh-relaxed);
+      }
+      .cz-legal p { margin: 16px 0 0; }
+      .cz-legal ul { margin: 12px 0 0; padding-left: 22px; }
+      .cz-legal li { margin: 6px 0 0; }
+      .cz-legal h3 {
+        margin: 28px 0 0;
+        color: var(--text-strong);
+        font-size: var(--fs-body-lg);
+        font-weight: 600;
+      }
+      .cz-legal strong { color: var(--text-strong); font-weight: 600; }
+      .cz-legal a { color: var(--cz-cyan-soft); text-decoration: none; }
+      .cz-legal a:hover { text-decoration: underline; }
+      .cz-legal code {
+        font-family: var(--font-mono);
+        font-size: 0.9em;
+        color: var(--cz-cyan-soft);
+      }
+      .cz-legal table {
+        width: 100%;
+        margin-top: 16px;
+        border-collapse: collapse;
+        font-size: var(--fs-small);
+      }
+      .cz-legal th, .cz-legal td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--glass-line);
+        text-align: left;
+        color: var(--text-body);
+        vertical-align: top;
+      }
+      .cz-legal th {
+        color: var(--text-muted);
+        font-family: var(--font-mono);
+        font-size: var(--fs-mono-sm);
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+    `}</style>
+  </Layout>
+);
+
+export const Head = () => (
+  <Seo
+    title="Privacy Policy"
+    description="How Codezen collects, uses and protects personal data on its website and LinkedIn application, in compliance with the EU General Data Protection Regulation (GDPR)."
+  />
+);
+
+export default PrivacyPolicyPage;

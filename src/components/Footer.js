@@ -124,7 +124,10 @@ const Footer = () => {
           }}
         >
           <span className="cz-mono-label" suppressHydrationWarning>
-            © {new Date().getFullYear()} Codezen · codezen.tech
+            © {new Date().getFullYear()} Codezen · codezen.tech ·{" "}
+            <Link to="/privacy-policy" className="cz-flink" style={{ font: "inherit", letterSpacing: "inherit" }}>
+              Privacy Policy
+            </Link>
           </span>
           <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
             <a

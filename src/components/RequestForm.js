@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import emailjs from "@emailjs/browser";
 import { useForm as useFormCtx } from "../context/FormContext";
 
@@ -252,6 +253,17 @@ const RequestForm = () => {
               >
                 {sending ? "Sending…" : "Submit your request"}
               </button>
+              <p style={{ margin: 0, color: "var(--text-muted)", fontSize: 13, lineHeight: 1.5 }}>
+                We use your details only to reply to your request. See our{" "}
+                <Link
+                  to="/privacy-policy"
+                  onClick={closeForm}
+                  style={{ color: "var(--cz-cyan-soft)", textDecoration: "none" }}
+                >
+                  Privacy Policy
+                </Link>
+                .
+              </p>
             </form>
           </div>
         )}
