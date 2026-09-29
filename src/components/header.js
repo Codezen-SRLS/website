@@ -18,7 +18,27 @@ const Header = () => {
   const location = useLocation();
   const isHome = (location?.pathname || "/") === "/";
 
+  const headerRef = React.useRef(null);
+  const [headerHeight, setHeaderHeight] = React.useState(69);
+
   const closeMenu = () => setMenuOpen(false);
+
+  // While the mobile menu is open: sit it right under the header, lock page
+  // scroll behind it, and close it with Escape
+  React.useEffect(() => {
+    if (!menuOpen) return undefined;
+    if (headerRef.current) setHeaderHeight(headerRef.current.getBoundingClientRect().bottom);
+    const onKey = (e) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [menuOpen]);
   const handleAuditClick = () => { openForm(); closeMenu(); };
 
   const navHref = (href) => (isHome ? href : `/${href}`);
@@ -26,6 +46,7 @@ const Header = () => {
   return (
     <>
       <header
+        ref={headerRef}
         style={{
           position: "sticky",
           top: 0,
@@ -112,7 +133,7 @@ const Header = () => {
         <div
           style={{
             position: "fixed",
-            top: 60,
+            top: headerHeight,
             left: 0,
             right: 0,
             zIndex: 49,

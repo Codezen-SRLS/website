@@ -80,7 +80,7 @@ const Footer = () => {
           {NAV_SECTIONS.map(({ heading, links }) => (
             <div key={heading}>
               <div className="cz-footer-heading">{heading}</div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                 {links.map(({ label, href }) =>
                   href.startsWith("/") ? (
                     <Link key={label} to={href} className="cz-flink">{label}</Link>
@@ -95,7 +95,7 @@ const Footer = () => {
           {/* Contact col */}
           <div>
             <div className="cz-footer-heading">Contact</div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               <a href="mailto:info@codezen.tech" className="cz-flink">
                 info@codezen.tech
               </a>
@@ -200,6 +200,7 @@ const Footer = () => {
         .cz-footer-legal {
           display: flex;
           flex-wrap: wrap;
+          align-items: center;
           gap: 8px 24px;
           color: var(--text-muted);
           font-size: 13px;

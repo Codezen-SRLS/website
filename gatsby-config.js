@@ -60,7 +60,7 @@ module.exports = {
         background_color: `#000000`,
         theme_color: `#000000`,
         display: `standalone`,
-        icon: `src/images/logo.png`,
+        icon: `src/images/icon.png`,
       },
     },
     `gatsby-plugin-sitemap`,

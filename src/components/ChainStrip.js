@@ -49,16 +49,18 @@ const ChainStrip = () => (
         opacity: 0.72;
         flex-shrink: 0;
       }
-      @media (max-width: 767px) {
+      /* Below desktop the caption and logos no longer fit on one line:
+         stack them and let the logos flow into as many columns as fit */
+      @media (max-width: 1199px) {
         .cz-chain-strip { flex-direction: column; align-items: flex-start; gap: 18px; }
         .cz-chain-logos {
           display: grid;
-          grid-template-columns: repeat(3, auto);
-          justify-content: space-between;
-          gap: 22px 16px;
+          grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+          align-items: center;
+          gap: 22px 24px;
           width: 100%;
         }
-        .cz-chain-logo { height: 20px; }
+        .cz-chain-logo { height: 22px; max-width: 100%; }
       }
     `}</style>
   </section>

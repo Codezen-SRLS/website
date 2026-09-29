@@ -138,6 +138,10 @@ input:focus-visible, textarea:focus-visible { outline-offset: 0; }
 .cz-navlink:hover { color: var(--cz-cyan-soft); }
 
 .cz-flink {
+  /* 24px minimum tap target (WCAG 2.5.8) */
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
   color: var(--text-muted);
   text-decoration: none;
   font-size: var(--fs-small);

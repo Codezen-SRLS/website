@@ -115,7 +115,10 @@ const Hero = () => {
           </div>
 
           {/* Code panel */}
-          <div style={{ position: "relative", padding: "20px 18px", fontFamily: "var(--font-mono)", fontSize: 12.5, lineHeight: 2.0 }}>
+          <div
+            className="cz-hero-code"
+            style={{ position: "relative", padding: "20px 18px", fontFamily: "var(--font-mono)", fontSize: 12.5, lineHeight: 2.0 }}
+          >
             {/* Scan beam */}
             <div
               aria-hidden="true"
@@ -227,6 +230,10 @@ const Hero = () => {
           .cz-hero-body { font-size: var(--fs-body); max-width: 100%; }
           .cz-hero-btns { flex-direction: column; }
           .cz-hero-btns .cz-btn { width: 100%; justify-content: center; }
+        }
+        /* Keep code lines intact on narrow phones instead of wrapping mid-statement */
+        @media (max-width: 400px) {
+          .cz-hero-code { font-size: 10.5px !important; white-space: nowrap; }
         }
       `}</style>
     </section>
