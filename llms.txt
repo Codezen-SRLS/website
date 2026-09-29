@@ -1,0 +1,152 @@
+# Codezen
+
+> Codezen (Codezen S.r.l., Italy) is a blockchain and Web3 security firm. It performs smart contract security audits and blockchain security consulting for EVM, Solana, Cosmos, Polkadot/Substrate and other ecosystems, reviewing Solidity, Rust, Anchor, CosmWasm, Cosmos SDK (Go), Substrate and Move code.
+
+Track record: 122 published audits, 1693 vulnerabilities reported (204 critical), $2.9B+ in assets protected, across 8 ecosystems.
+
+To request an audit, email info@codezen.tech with the project name, repository/scope, technology stack and preferred timeline, or use the "Request an audit" form on https://www.codezen.tech/. Codezen replies within one business day.
+
+## Services
+
+- Smart Contract Audits: Enhance the security of your smart contracts with comprehensive audits that identify vulnerabilities and proactively protect against potential exploits.
+- Blockchain Consulting: Receive expert guidance on building and securing your blockchain infrastructure, from architectural design to deployment and long-term optimization.
+- Disaster Recovery: Guarantee business continuity with a robust Disaster Recovery plan that protects users, minimizes downtime, and ensures rapid recovery of operations.
+
+## Main pages
+
+- [Home](https://www.codezen.tech/): services, process, featured report, team
+- [Audit portfolio](https://www.codezen.tech/portfolio/): every public audit, searchable
+- [Privacy policy](https://www.codezen.tech/privacy-policy/)
+
+## Data
+
+- [All audits as JSON](https://www.codezen.tech/audits.json): title, technologies, partner, date, findings by severity, report PDF
+- [Full text for LLMs](https://www.codezen.tech/llms-full.txt): services and every audit in one file
+
+## Featured audits
+
+- [Stellar Core security audit](https://www.codezen.tech/audits/stellar-core.md): Blockchain node audit, with Oak Security
+- [Story Protocol L1 security audit](https://www.codezen.tech/audits/story-protocol-l1.md): Cosmos SDK Audit, with Trust Security
+- [Tellor security audit](https://www.codezen.tech/audits/tellor.md): Cosmos SDK Audit, with Torii Security
+- [Mythical Games security audit](https://www.codezen.tech/audits/mythical-games.md): Polkadot SDK Pallet Audit, with Oak Security
+- [Dymension Dymint security audit](https://www.codezen.tech/audits/dymension-dymint.md): Consensus Algorithm Audit, with Oak Security
+- [Bifrost Finance security audit](https://www.codezen.tech/audits/bifrost-finance.md): Polkadot SDK Pallet Audit, with Oak Security
+- [Composable Finance Ethereum Light Client security audit](https://www.codezen.tech/audits/composable-finance-ethereum-light-client.md): WASM Light Client Audit
+- [Cosmos SDK v0.47 security audit](https://www.codezen.tech/audits/cosmos-sdk-v0-47.md): Cosmos SDK Audit, with Oak Security
+- [Snowfork Snowbridge security audit](https://www.codezen.tech/audits/snowfork-snowbridge.md): Bridge Audit, with Oak Security
+- [Composable Centauri security audit](https://www.codezen.tech/audits/composable-centauri.md): Cosmos SDK Audit
+- [Polkadot GrandPa IBC Light Client security audit](https://www.codezen.tech/audits/polkadot-grandpa-ibc-light-client.md): WASM Light Client Audit, with Oak Security
+- [DAODAO's Polytone security audit](https://www.codezen.tech/audits/daodao-s-polytone.md): CosmWasm Contract Audit, with Oak Security
+- [Cosmos Interchain Security security audit](https://www.codezen.tech/audits/cosmos-interchain-security.md): Cosmos SDK Chain Audit, with Oak Security
+- [Noble security audit](https://www.codezen.tech/audits/noble.md): Cosmos SDK Chain Audit, with Oak Security
+- [Filecoin FEVM security audit](https://www.codezen.tech/audits/filecoin-fevm.md): EVM Implementation Audit, with Oak Security
+- [Nym Mixnet and Vesting Contracts security audit](https://www.codezen.tech/audits/nym-mixnet-and-vesting-contracts.md): CosmWasm Contract Audit, with Oak Security
+- [Neutron security audit](https://www.codezen.tech/audits/neutron.md): Cosmos SDK Chain Audit, with Oak Security
+- [CosmWasm Wasmd Module security audit](https://www.codezen.tech/audits/cosmwasm-wasmd-module.md): Cosmos SDK Module Audit, with Oak Security
+
+## Optional
+
+- [Acurast Chain security audit](https://www.codezen.tech/audits/acurast-chain.md): Substrate chain audit
+- [VNX Protocol security audit](https://www.codezen.tech/audits/vnx-protocol.md): Solana program audit
+- [Meteora DAMM v2 security audit](https://www.codezen.tech/audits/meteora-damm-v2.md): Solana program audit
+- [Talus Network IAO security audit](https://www.codezen.tech/audits/talus-network-iao.md): Move contract audit
+- [Plasma Consensus security audit](https://www.codezen.tech/audits/plasma-consensus.md): Chain consensus audit
+- [Magicblock ephemeral VRF security audit](https://www.codezen.tech/audits/magicblock-ephemeral-vrf.md): Solana program audit
+- [Silo MEV for SEI chain security audit](https://www.codezen.tech/audits/silo-mev-for-sei-chain.md): Cosmos SDK Audit
+- [Injective EVM precompile security audit](https://www.codezen.tech/audits/injective-evm-precompile.md): Cosmos SDK Audit
+- [Swap.io CLMM security audit](https://www.codezen.tech/audits/swap-io-clmm.md): Move contract audit
+- [Talus Network security audit](https://www.codezen.tech/audits/talus-network.md): Move contract audit
+- [Story Protocol Guardians security audit](https://www.codezen.tech/audits/story-protocol-guardians.md): Geth module audit
+- [Gno.land chain security audit](https://www.codezen.tech/audits/gno-land-chain.md): Cosmos SDK chain audit
+- [Drop Protocol Liquidity Provider security audit](https://www.codezen.tech/audits/drop-protocol-liquidity-provider.md): Move smart contracts audit
+- [Impossible Cloud Network Token security audit](https://www.codezen.tech/audits/impossible-cloud-network-token.md): Solidity smart contracts audit
+- [Drop Protocol Updates 2 security audit](https://www.codezen.tech/audits/drop-protocol-updates-2.md): CosmWasm smart contracts audit
+- [Fuel Sequencer Updates 5 security audit](https://www.codezen.tech/audits/fuel-sequencer-updates-5.md): Cosmos SDK chain Audit
+- [Mythical Games Collator security audit](https://www.codezen.tech/audits/mythical-games-collator.md): Polkadot SDK Pallet Audit
+- [Fuel Sequencer Updates 4 security audit](https://www.codezen.tech/audits/fuel-sequencer-updates-4.md): Cosmos SDK chain Audit
+- [Nibiru Chain security audit](https://www.codezen.tech/audits/nibiru-chain.md): Cosmos SDK chain Audit
+- [Snowfork Snowbridge Updates 3 security audit](https://www.codezen.tech/audits/snowfork-snowbridge-updates-3.md): Substrate bridge pallet audit
+- [Dymension Phase 2 security audit](https://www.codezen.tech/audits/dymension-phase-2.md): Cosmos SDK chain Audit
+- [Dora Factory's Vota migration security audit](https://www.codezen.tech/audits/dora-factory-s-vota-migration.md): Cosmos SDK Audit
+- [Fuel Sequencer Watchtower security audit](https://www.codezen.tech/audits/fuel-sequencer-watchtower.md): Off chain monitor audit
+- [Fuel Sequencer Updates 2 security audit](https://www.codezen.tech/audits/fuel-sequencer-updates-2.md): Cosmos SDK chain Audit
+- [Drop Protocol Updates security audit](https://www.codezen.tech/audits/drop-protocol-updates.md): CosmWasm smart contracts audit
+- [Fuel Sequencer Updates security audit](https://www.codezen.tech/audits/fuel-sequencer-updates.md): Cosmos SDK chain Audit
+- [Out Protocol security audit](https://www.codezen.tech/audits/out-protocol.md): Solana program audit
+- [Persistence pSTAKE BTC Yield security audit](https://www.codezen.tech/audits/persistence-pstake-btc-yield.md): Cosmos SDK Audit
+- [Volta Protocol security audit](https://www.codezen.tech/audits/volta-protocol.md): CosmWasm Contract Audit
+- [Snowfork Snowbridge Updates 2 security audit](https://www.codezen.tech/audits/snowfork-snowbridge-updates-2.md): Substrate Bridge Pallet Audit
+- [Dymension Phase 1 security audit](https://www.codezen.tech/audits/dymension-phase-1.md): Cosmos SDK chain Audit
+- [Router Voyager Solana Integration security audit](https://www.codezen.tech/audits/router-voyager-solana-integration.md): Off-chain Components Audit
+- [Fuel Sequencer and Sidecar security audit](https://www.codezen.tech/audits/fuel-sequencer-and-sidecar.md): Cosmos SDK chain Audit
+- [Drop Protocol Architechtural Changes Extension security audit](https://www.codezen.tech/audits/drop-protocol-architechtural-changes-extension.md): CosmWasm Contract Audit
+- [Slide SDK security audit](https://www.codezen.tech/audits/slide-sdk.md): Cosmos SDK integration in Avalache consensus Audit
+- [Dora Factory's Vota chain security audit](https://www.codezen.tech/audits/dora-factory-s-vota-chain.md): Cosmos SDK Audit
+- [Astroport's Asteroid Bridge security audit](https://www.codezen.tech/audits/astroport-s-asteroid-bridge.md): CosmWasm Contract Audit
+- [Persistence pSTAKE Native stkXPRT security audit](https://www.codezen.tech/audits/persistence-pstake-native-stkxprt.md): Cosmos SDK Audit
+- [Drop Protocol Extension security audit](https://www.codezen.tech/audits/drop-protocol-extension.md): CosmWasm Contract Audit
+- [Composable ibctransfermiddleware security audit](https://www.codezen.tech/audits/composable-ibctransfermiddleware.md): Cosmos SDK Module Audit
+- [Snowfork Snowbridge Updates 1 security audit](https://www.codezen.tech/audits/snowfork-snowbridge-updates-1.md): Bridge Audit
+- [Drop Protocol security audit](https://www.codezen.tech/audits/drop-protocol.md): CosmWasm Contract Audit
+- [Dymension Virtual Frontier security audit](https://www.codezen.tech/audits/dymension-virtual-frontier.md): Cosmos SDK Module Audit
+- [Composable Finance Solidity IBC Implementation security audit](https://www.codezen.tech/audits/composable-finance-solidity-ibc-implementation.md): Solidity Library Audit
+- [Composable Finance Solana Light Client security audit](https://www.codezen.tech/audits/composable-finance-solana-light-client.md): WASM Light Client Audit
+- [Persistence Cosmos Liquid Staking Updates security audit](https://www.codezen.tech/audits/persistence-cosmos-liquid-staking-updates.md): Cosmos SDK Audit
+- [Persistence Dexter Updates security audit](https://www.codezen.tech/audits/persistence-dexter-updates.md): CosmWasm Contract Audit
+- [Router Voyager Forwarder Extension security audit](https://www.codezen.tech/audits/router-voyager-forwarder-extension.md): Relayer And Orchestrator Audit
+- [Timewave Covenants security audit](https://www.codezen.tech/audits/timewave-covenants.md): CosmWasm Contract Audit
+- [Yieldmos Outposts Osmosis security audit](https://www.codezen.tech/audits/yieldmos-outposts-osmosis.md): CosmWasm Contract Audit
+- [Persistence Dexter security audit](https://www.codezen.tech/audits/persistence-dexter.md): CosmWasm Contract Audit
+- [Astoport Transmuter Pool security audit](https://www.codezen.tech/audits/astoport-transmuter-pool.md): CosmWasm Contract Audit
+- [Persistence IBC Liquid Staking module security audit](https://www.codezen.tech/audits/persistence-ibc-liquid-staking-module.md): Cosmos SDK Module Audit
+- [Zodiac Protocol Extension security audit](https://www.codezen.tech/audits/zodiac-protocol-extension.md): CosmWasm Contract Audit
+- [Persistence Cosmos LSM security audit](https://www.codezen.tech/audits/persistence-cosmos-lsm.md): Cosmos SDK Module Audit
+- [Neptune Protocol Update security audit](https://www.codezen.tech/audits/neptune-protocol-update.md): CosmWasm Contract Audit
+- [Snowfork Snowbridge Extension security audit](https://www.codezen.tech/audits/snowfork-snowbridge-extension.md): Bridge Audit
+- [Vectis security audit](https://www.codezen.tech/audits/vectis.md): CosmWasm Contract Audit
+- [Timewave Computer Valence Services security audit](https://www.codezen.tech/audits/timewave-computer-valence-services.md): CosmWasm Contract Audit
+- [Noble TokenFactory and FiatTokenFactory modules security audit](https://www.codezen.tech/audits/noble-tokenfactory-and-fiattokenfactory-modules.md): Cosmos SDK Module Audit
+- [Router Voyager DexSpan security audit](https://www.codezen.tech/audits/router-voyager-dexspan.md): Solidity Contract Audit
+- [Router Voyager Forwarder security audit](https://www.codezen.tech/audits/router-voyager-forwarder.md): Off-chain Components Audit
+- [XCVM Cosmwasm Contracts security audit](https://www.codezen.tech/audits/xcvm-cosmwasm-contracts.md): CosmWasm Contract Audit
+- [Noble Circle's CCTP security audit](https://www.codezen.tech/audits/noble-circle-s-cctp.md): Cosmos SDK Module Audit
+- [Prism Osmosis LP Staking security audit](https://www.codezen.tech/audits/prism-osmosis-lp-staking.md): CosmWasm Contract Audit
+- [Lido Neutron Satellite security audit](https://www.codezen.tech/audits/lido-neutron-satellite.md): CosmWasm Contract Audit
+- [Mars Red Bank Updates security audit](https://www.codezen.tech/audits/mars-red-bank-updates.md): CosmWasm Contract Audit
+- [SSZ RS Library security audit](https://www.codezen.tech/audits/ssz-rs-library.md): Rust Library Audit
+- [Fairblock FairyRing security audit](https://www.codezen.tech/audits/fairblock-fairyring.md): Cosmos SDK Audit
+- [Zodiac Protocol security audit](https://www.codezen.tech/audits/zodiac-protocol.md): CosmWasm Contract Audit
+- [Noble Tariff module security audit](https://www.codezen.tech/audits/noble-tariff-module.md): Cosmos SDK Audit
+- [Evmos Solidity Precompiles security audit](https://www.codezen.tech/audits/evmos-solidity-precompiles.md): EVM Solidity Precompiles Audit
+- [Membrane Finance security audit](https://www.codezen.tech/audits/membrane-finance.md): CosmWasm Contract Audit
+- [Astoport Maker and Vesting Contracts security audit](https://www.codezen.tech/audits/astoport-maker-and-vesting-contracts.md): CosmWasm Contract Audit
+- [IBCX Interchain Index Token security audit](https://www.codezen.tech/audits/ibcx-interchain-index-token.md): CosmWasm Contract Audit
+- [Astoport Concentrated Liquidity Pair security audit](https://www.codezen.tech/audits/astoport-concentrated-liquidity-pair.md): CosmWasm Contract Audit
+- [Neptune Protocol security audit](https://www.codezen.tech/audits/neptune-protocol.md): CosmWasm Contract Audit
+- [Fuzion Plasma OTC security audit](https://www.codezen.tech/audits/fuzion-plasma-otc.md): CosmWasm Contract Audit
+- [Mars Protocol Rover Updates security audit](https://www.codezen.tech/audits/mars-protocol-rover-updates.md): CosmWasm Contract Audit
+- [Filecoin FEVM Solidity Library security audit](https://www.codezen.tech/audits/filecoin-fevm-solidity-library.md): Solidity Library Audit
+- [Autonomy Network Osmosis security audit](https://www.codezen.tech/audits/autonomy-network-osmosis.md): CosmWasm Contract Audit
+- [Mars Protocol Rover security audit](https://www.codezen.tech/audits/mars-protocol-rover.md): CosmWasm Contract Audit
+- [Persistence Cosmos Liquid Staking security audit](https://www.codezen.tech/audits/persistence-cosmos-liquid-staking.md): Cosmos SDK Audit
+- [Nolus Money Market security audit](https://www.codezen.tech/audits/nolus-money-market.md): CosmWasm Contract Audit
+- [Nolus Core security audit](https://www.codezen.tech/audits/nolus-core.md): Cosmos SDK Audit
+- [Comdex Lend and Liquidation modules security audit](https://www.codezen.tech/audits/comdex-lend-and-liquidation-modules.md): Cosmos SDK Audit
+- [Injective wasmx module and CosmWasm bindings security audit](https://www.codezen.tech/audits/injective-wasmx-module-and-cosmwasm-bindings.md): Cosmos SDK Audit
+- [Mars Protocol Outposts security audit](https://www.codezen.tech/audits/mars-protocol-outposts.md): CosmWasm Contract Audit
+- [Mars Protocol Periphery security audit](https://www.codezen.tech/audits/mars-protocol-periphery.md): CosmWasm Contract Audit
+- [Comdex Vesting & Locking Contracts security audit](https://www.codezen.tech/audits/comdex-vesting-locking-contracts.md): CosmWasm Contract Audit
+- [Prism Auto Compounding Staking security audit](https://www.codezen.tech/audits/prism-auto-compounding-staking.md): CosmWasm Contract Audit
+- [Elesto Mint Module security audit](https://www.codezen.tech/audits/elesto-mint-module.md): Cosmos SDK Module Audit
+- [Margined Protocol Perpetuals security audit](https://www.codezen.tech/audits/margined-protocol-perpetuals.md): CosmWasm Contract Audit
+- [Comdex Chain & Comdex Governance Contract security audit](https://www.codezen.tech/audits/comdex-chain-comdex-governance-contract.md): Cosmos SDK and CosmWasm Contract Audit
+- [Stargaze Marketplace security audit](https://www.codezen.tech/audits/stargaze-marketplace.md): CosmWasm Contract Audit
+- [Risk Harbor Ozone v2 security audit](https://www.codezen.tech/audits/risk-harbor-ozone-v2.md): CosmWasm Contract Audit
+- [Aperture Finance 2 security audit](https://www.codezen.tech/audits/aperture-finance-2.md): CosmWasm Contract Audit
+- [Levana Perpetual Swap security audit](https://www.codezen.tech/audits/levana-perpetual-swap.md): CosmWasm Contract Audit
+- [C2X Com2Us security audit](https://www.codezen.tech/audits/c2x-com2us.md): CosmWasm Contract Audit
+- [Kinetic Money security audit](https://www.codezen.tech/audits/kinetic-money.md): CosmWasm Contract Audit
+- [IBM / HCL AI Data Advisor for Workload Automation security audit](https://www.codezen.tech/audits/ibm-hcl-ai-data-advisor-for-workload-automation.md): AI module for IBM / HCL Workload Automation
+- [HCL Clara 2 security audit](https://www.codezen.tech/audits/hcl-clara-2.md): Automation Chatbot for IBM / HCL Workload Automation
+- [HCL Clara security audit](https://www.codezen.tech/audits/hcl-clara.md): Automation Chatbot for IBM / HCL Workload Automation
+- [HCL T-VREX security audit](https://www.codezen.tech/audits/hcl-t-vrex.md): A VR experience for HCL Workload Automation

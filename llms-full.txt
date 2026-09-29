@@ -1,0 +1,2942 @@
+# Codezen: smart contract and blockchain security audits
+
+Website: https://www.codezen.tech/
+Contact: info@codezen.tech
+
+Codezen is a cybersecurity firm specializing in blockchain and Web3 technologies. It has published 122 security audits and reported 1693 vulnerabilities (204 critical) across 8 ecosystems.
+
+## Services
+
+### Smart Contract Audits
+
+Enhance the security of your smart contracts with comprehensive audits that identify vulnerabilities and proactively protect against potential exploits.
+
+### Blockchain Consulting
+
+Receive expert guidance on building and securing your blockchain infrastructure, from architectural design to deployment and long-term optimization.
+
+### Disaster Recovery
+
+Guarantee business continuity with a robust Disaster Recovery plan that protects users, minimizes downtime, and ensures rapid recovery of operations.
+
+## How Codezen works
+
+1. Discovery: We analyze your project's requirements and unique challenges, laying the foundation for a customized security strategy.
+2. Audit: We perform an exhaustive security audit, pinpointing vulnerabilities across contracts, architecture, and critical components.
+3. Reporting: We deliver an in-depth report with actionable solutions to mitigate risks and fortify your project.
+4. Support: We provide continuous support through implementation and keep your project protected over time.
+
+## Audits
+
+### Stellar Core security audit
+
+Audit of the Stellar Core.
+
+Codezen audited Stellar Core together with Oak Security. Technologies in scope: C++, C, Soroban, Rust and Stellar. We reported 81 findings: 2 critical, 1 major, 35 minor and 43 informational.
+
+- Audit type: Blockchain node audit
+- Technologies: C++, C, Soroban, Rust, Stellar
+- Ecosystem: Stellar
+- Delivered with: Oak Security
+- Report date: 17 October 2025
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/8a29e1d31c20fdc68bc732b1db73c4660d3fa507/Stellar/2025-10-17%20Audit%20Report%20-%20Stellar%20Core%20Protocol%2023%20Changes%20v1.0.pdf
+- Project website: https://stellar.org
+- Page: https://www.codezen.tech/audits/stellar-core/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 2 |
+| Major | 1 |
+| Minor | 35 |
+| Info | 43 |
+| Total | 81 |
+
+
+---
+
+### Acurast Chain security audit
+
+Audit of the Acurast Chain.
+
+Codezen audited Acurast Chain together with Monethic. Technologies in scope: Substrate, Rust and Consensus. We reported 26 findings: 6 critical, 9 major, 9 minor and 2 informational.
+
+- Audit type: Substrate chain audit
+- Technologies: Substrate, Rust, Consensus
+- Ecosystem: Polkadot
+- Delivered with: Monethic
+- Full report (PDF): https://github.com/Acurast/acurast-docs/blob/main/static/audits/20251023_Monoethic_Substrate.pdf
+- Project website: https://acurast.com
+- Page: https://www.codezen.tech/audits/acurast-chain/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 6 |
+| Major | 9 |
+| Minor | 9 |
+| Info | 2 |
+| Total | 26 |
+
+
+---
+
+### VNX Protocol security audit
+
+Audit of the VNX Protocol Solana program.
+
+Codezen audited VNX Protocol together with Zenith Security. Technologies in scope: Solana, Rust and Smart Contract.
+
+- Audit type: Solana program audit
+- Technologies: Solana, Rust, Smart Contract
+- Ecosystem: Solana
+- Delivered with: Zenith Security
+- Project website: https://vnx.li
+- Page: https://www.codezen.tech/audits/vnx-protocol/
+
+
+---
+
+### Meteora DAMM v2 security audit
+
+Audit of the Meteora DAMM v2 Solana program.
+
+Codezen audited Meteora DAMM v2 together with Zenith Security. Technologies in scope: Solana, Rust and Smart Contract.
+
+- Audit type: Solana program audit
+- Technologies: Solana, Rust, Smart Contract
+- Ecosystem: Solana
+- Delivered with: Zenith Security
+- Project website: https://www.meteora.ag
+- Page: https://www.codezen.tech/audits/meteora-damm-v2/
+
+
+---
+
+### Talus Network IAO security audit
+
+Audit of the Talus Network IAO Move contract.
+
+Codezen audited Talus Network IAO together with Zenith Security. Technologies in scope: Move, Sui and Smart Contract. We reported 37 findings: 10 critical, 13 major, 10 minor and 4 informational.
+
+- Audit type: Move contract audit
+- Technologies: Move, Sui, Smart Contract
+- Ecosystem: Sui
+- Delivered with: Zenith Security
+- Full report (PDF): https://github.com/zenith-security/reports/blob/1bf7cdd4c37bea4ae2beecda430e4bddd4110312/reports/Talus%20IAO%20-%20Zenith%20Audit%20Report.pdf
+- Project website: https://talus.network
+- Page: https://www.codezen.tech/audits/talus-network-iao/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 10 |
+| Major | 13 |
+| Minor | 10 |
+| Info | 4 |
+| Total | 37 |
+
+
+---
+
+### Plasma Consensus security audit
+
+Audit of the Plasma Consensus.
+
+Codezen audited Plasma Consensus together with Zenith Security. Technologies in scope: Rust, Plasma and Consensus.
+
+- Audit type: Chain consensus audit
+- Technologies: Rust, Plasma, Consensus
+- Delivered with: Zenith Security
+- Project website: https://www.plasma.to
+- Page: https://www.codezen.tech/audits/plasma-consensus/
+
+
+---
+
+### Magicblock ephemeral VRF security audit
+
+Audit of the Magicblock ephemeral VRF.
+
+Codezen audited Magicblock ephemeral VRF together with Zenith Security. Technologies in scope: Solana, Rust and Magicblock. We reported 18 findings: 4 major, 4 minor and 10 informational.
+
+- Audit type: Solana program audit
+- Technologies: Solana, Rust, Magicblock
+- Ecosystem: Solana
+- Delivered with: Zenith Security
+- Full report (PDF): https://github.com/zenith-security/reports/blob/1bf7cdd4c37bea4ae2beecda430e4bddd4110312/reports/MagicBlock%20-%20Zenith%20Audit%20Report.pdf
+- Project website: https://www.magicblock.xyz
+- Page: https://www.codezen.tech/audits/magicblock-ephemeral-vrf/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 4 |
+| Minor | 4 |
+| Info | 10 |
+| Total | 18 |
+
+
+---
+
+### Silo MEV for SEI chain security audit
+
+Audit of the Silo MEV bot for SEI chain.
+
+Codezen audited Silo MEV for SEI chain together with Zenith Security. Technologies in scope: Golang, MEV, SEI and Cosmos SDK.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, MEV, SEI, Cosmos SDK
+- Ecosystem: Cosmos
+- Delivered with: Zenith Security
+- Project website: https://silo.finance
+- Page: https://www.codezen.tech/audits/silo-mev-for-sei-chain/
+
+
+---
+
+### Injective EVM precompile security audit
+
+Audit of the Injective EVM precompile.
+
+Codezen audited Injective EVM precompile together with Zenith Security. Technologies in scope: Golang, Cosmos SDK, Injective and Solidity.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK, Injective, Solidity
+- Ecosystem: Ethereum, Cosmos
+- Delivered with: Zenith Security
+- Project website: https://injective.com
+- Page: https://www.codezen.tech/audits/injective-evm-precompile/
+
+
+---
+
+### Swap.io CLMM security audit
+
+Audit of the Swap.io CLMM Solana program.
+
+Codezen audited Swap.io CLMM together with Zenith Security. Technologies in scope: Solana, Rust and CLMM. We reported 5 findings: 2 major, 1 minor and 2 informational.
+
+- Audit type: Move contract audit
+- Technologies: Solana, Rust, CLMM
+- Ecosystem: Solana
+- Delivered with: Zenith Security
+- Full report (PDF): https://github.com/zenith-security/reports/blob/1bf7cdd4c37bea4ae2beecda430e4bddd4110312/reports/Swap.io%20-%20Zenith%20Audit%20Report.pdf
+- Project website: https://swap.io
+- Page: https://www.codezen.tech/audits/swap-io-clmm/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 2 |
+| Minor | 1 |
+| Info | 2 |
+| Total | 5 |
+
+
+---
+
+### Talus Network security audit
+
+Audit of the Talus Network Move contract.
+
+Codezen audited Talus Network together with Zenith Security. Technologies in scope: Move, Sui and Smart Contract. We reported 7 findings: 1 major, 3 minor and 3 informational.
+
+- Audit type: Move contract audit
+- Technologies: Move, Sui, Smart Contract
+- Ecosystem: Sui
+- Delivered with: Zenith Security
+- Full report (PDF): https://github.com/zenith-security/reports/blob/1bf7cdd4c37bea4ae2beecda430e4bddd4110312/reports/Talus%20-%20Zenith%20Audit%20Report.pdf
+- Project website: https://talus.network
+- Page: https://www.codezen.tech/audits/talus-network/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 1 |
+| Minor | 3 |
+| Info | 3 |
+| Total | 7 |
+
+
+---
+
+### Story Protocol Guardians security audit
+
+Audit of the Story Protocol Guardians.
+
+Codezen audited Story Protocol Guardians together with Trust Security. Technologies in scope: Golang and Ethereum.
+
+- Audit type: Geth module audit
+- Technologies: Golang, Ethereum
+- Ecosystem: Ethereum
+- Delivered with: Trust Security
+- Project website: https://persistence.one/
+- Page: https://www.codezen.tech/audits/story-protocol-guardians/
+
+
+---
+
+### Story Protocol L1 security audit
+
+Audit of the Story Protocol L1.
+
+Codezen audited Story Protocol L1 together with Trust Security. Technologies in scope: Cosmos SDK, Golang, Ethereum and Solidity.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Cosmos SDK, Golang, Ethereum, Solidity
+- Ecosystem: Ethereum, Cosmos
+- Delivered with: Trust Security
+- Full report (PDF): https://drive.google.com/drive/folders/1epXs98mkZHgbhr_HBquifjmNB0exXRlM
+- Project website: https://persistence.one/
+- Page: https://www.codezen.tech/audits/story-protocol-l1/
+
+
+---
+
+### Tellor security audit
+
+Audit of the Tellor.
+
+Codezen audited Tellor together with Torii Security. Technologies in scope: Cosmos SDK and Golang. We reported 63 findings: 21 critical, 16 major, 24 minor and 2 informational.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Cosmos SDK, Golang
+- Ecosystem: Cosmos
+- Delivered with: Torii Security
+- Full report (PDF): https://github.com/Torii-Security/audits/blob/04f29ea4cfbf393cc826308010ff16469bdd79a0/cosmos/torii-tellor-report-02-2025.pdf
+- Project website: https://tellor.io/
+- Page: https://www.codezen.tech/audits/tellor/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 21 |
+| Major | 16 |
+| Minor | 24 |
+| Info | 2 |
+| Total | 63 |
+
+
+---
+
+### Gno.land chain security audit
+
+Audit of the Gno.land chain.
+
+Codezen audited Gno.land chain together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus.
+
+- Audit type: Cosmos SDK chain audit
+- Technologies: Golang, Cosmos SDK, Consensus
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Project website: https://gno.land
+- Page: https://www.codezen.tech/audits/gno-land-chain/
+
+
+---
+
+### Drop Protocol Liquidity Provider security audit
+
+Audit of the Drop Protocol Liquidity Provider.
+
+Codezen audited Drop Protocol Liquidity Provider together with Oak Security. Technologies in scope: Move and Sui. We reported 9 findings: 3 critical, 2 minor and 4 informational.
+
+- Audit type: Move smart contracts audit
+- Technologies: Move, Sui
+- Ecosystem: Sui
+- Delivered with: Oak Security
+- Report date: 17 April 2025
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/8a29e1d31c20fdc68bc732b1db73c4660d3fa507/Drop/2025-04-17%20Audit%20Report%20-%20Drop%20Initia%20Liquidity%20Provider%20v1.0.pdf
+- Project website: https://www.drop.money
+- Page: https://www.codezen.tech/audits/drop-protocol-liquidity-provider/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 3 |
+| Major | 0 |
+| Minor | 2 |
+| Info | 4 |
+| Total | 9 |
+
+
+---
+
+### Impossible Cloud Network Token security audit
+
+Audit of the Impossible Cloud Network Token.
+
+Codezen audited Impossible Cloud Network Token together with Oak Security. Technologies in scope: Solidity. We reported 9 findings: 4 minor and 5 informational.
+
+- Audit type: Solidity smart contracts audit
+- Technologies: Solidity
+- Ecosystem: Ethereum
+- Delivered with: Oak Security
+- Report date: 11 March 2025
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/8a29e1d31c20fdc68bc732b1db73c4660d3fa507/ICN/2025-03-11%20Audit%20Report%20-%20ICN%20Token.pdf
+- Project website: https://www.impossible.cloud
+- Page: https://www.codezen.tech/audits/impossible-cloud-network-token/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 4 |
+| Info | 5 |
+| Total | 9 |
+
+
+---
+
+### Drop Protocol Updates 2 security audit
+
+Audit of the Drop Protocol Updates 2.
+
+Codezen audited Drop Protocol Updates 2 together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 22 findings: 1 major, 12 minor and 9 informational.
+
+- Audit type: CosmWasm smart contracts audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 21 December 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/8a29e1d31c20fdc68bc732b1db73c4660d3fa507/Drop/2024-12-21%20Audit%20Report%20-%20Drop%20Updates%202%20v1.0.pdf
+- Project website: https://www.drop.money
+- Page: https://www.codezen.tech/audits/drop-protocol-updates-2/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 1 |
+| Minor | 12 |
+| Info | 9 |
+| Total | 22 |
+
+
+---
+
+### Fuel Sequencer Updates 5 security audit
+
+Audit of the Fuel Sequencer and Sidecar.
+
+Codezen audited Fuel Sequencer Updates 5 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
+
+- Audit type: Cosmos SDK chain Audit
+- Technologies: Golang, Cosmos SDK, Ethereum, Consensus
+- Ecosystem: Ethereum, Cosmos
+- Delivered with: Oak Security
+- Project website: https://fuel.network
+- Page: https://www.codezen.tech/audits/fuel-sequencer-updates-5/
+
+
+---
+
+### Mythical Games Collator security audit
+
+Audit of the Mythical Games' collator.
+
+Codezen audited Mythical Games Collator together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot.
+
+- Audit type: Polkadot SDK Pallet Audit
+- Technologies: Rust, Substrate, Polkadot
+- Ecosystem: Polkadot
+- Delivered with: Oak Security
+- Project website: https://mythicalgames.com
+- Page: https://www.codezen.tech/audits/mythical-games-collator/
+
+
+---
+
+### Fuel Sequencer Updates 4 security audit
+
+Audit of the Fuel Sequencer and Sidecar.
+
+Codezen audited Fuel Sequencer Updates 4 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
+
+- Audit type: Cosmos SDK chain Audit
+- Technologies: Golang, Cosmos SDK, Ethereum, Consensus
+- Ecosystem: Ethereum, Cosmos
+- Delivered with: Oak Security
+- Project website: https://fuel.network
+- Page: https://www.codezen.tech/audits/fuel-sequencer-updates-4/
+
+
+---
+
+### Nibiru Chain security audit
+
+Audit of the Nibiru Chain.
+
+Codezen audited Nibiru Chain together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus.
+
+- Audit type: Cosmos SDK chain Audit
+- Technologies: Golang, Cosmos SDK, Consensus
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Project website: https://nibiru.fi/
+- Page: https://www.codezen.tech/audits/nibiru-chain/
+
+
+---
+
+### Snowfork Snowbridge Updates 3 security audit
+
+Audit of the Snowfork Snowbridge Update's substrate bridge pallet.
+
+Codezen audited Snowfork Snowbridge Updates 3 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 8 findings: 1 major, 2 minor and 5 informational.
+
+- Audit type: Substrate bridge pallet audit
+- Technologies: Rust, Solidity, Substrate, Polkadot, Ethereum, Bridge
+- Ecosystem: Ethereum, Polkadot
+- Delivered with: Oak Security
+- Report date: 7 January 2025
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/8a29e1d31c20fdc68bc732b1db73c4660d3fa507/Snowbridge/2025-01-07%20Audit%20Report%20-%20Snowbridge%20Updates%203%20v1.0.pdf
+- Project website: https://docs.snowbridge.network/
+- Page: https://www.codezen.tech/audits/snowfork-snowbridge-updates-3/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 1 |
+| Minor | 2 |
+| Info | 5 |
+| Total | 8 |
+
+
+---
+
+### Dymension Phase 2 security audit
+
+Audit of the Dymension Dymint's consensus algorithm.
+
+Codezen audited Dymension Phase 2 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus.
+
+- Audit type: Cosmos SDK chain Audit
+- Technologies: Golang, Cosmos SDK, Rollup, Consensus
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Project website: https://dymension.xyz/
+- Page: https://www.codezen.tech/audits/dymension-phase-2/
+
+
+---
+
+### Dora Factory's Vota migration security audit
+
+Audit of the Dora Factory's Vota migration.
+
+Codezen audited Dora Factory's Vota migration together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 10 findings: 1 major, 3 minor and 6 informational.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 23 September 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/6094ad74b33fe30ab52544b50b1e45dc31b20a49/DoraFactory/2024-09-23%20Audit%20Report%20-%20Dora%20Vota%20Migration%20Contract%20v1.0.pdf
+- Project website: https://dorafactory.org
+- Page: https://www.codezen.tech/audits/dora-factory-s-vota-migration/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 1 |
+| Minor | 3 |
+| Info | 6 |
+| Total | 10 |
+
+
+---
+
+### Fuel Sequencer Watchtower security audit
+
+Audit of the Fuel Sequencer Watchtower.
+
+Codezen audited Fuel Sequencer Watchtower together with Oak Security. Technologies in scope: Golang and Off chain.
+
+- Audit type: Off chain monitor audit
+- Technologies: Golang, Off chain
+- Delivered with: Oak Security
+- Project website: https://fuel.network
+- Page: https://www.codezen.tech/audits/fuel-sequencer-watchtower/
+
+
+---
+
+### Fuel Sequencer Updates 2 security audit
+
+Audit of the Fuel Sequencer and Sidecar.
+
+Codezen audited Fuel Sequencer Updates 2 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
+
+- Audit type: Cosmos SDK chain Audit
+- Technologies: Golang, Cosmos SDK, Ethereum, Consensus
+- Ecosystem: Ethereum, Cosmos
+- Delivered with: Oak Security
+- Project website: https://fuel.network
+- Page: https://www.codezen.tech/audits/fuel-sequencer-updates-2/
+
+
+---
+
+### Drop Protocol Updates security audit
+
+Audit of the Drop Protocol Updates.
+
+Codezen audited Drop Protocol Updates together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 8 findings: 6 minor and 2 informational.
+
+- Audit type: CosmWasm smart contracts audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 12 August 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/8a29e1d31c20fdc68bc732b1db73c4660d3fa507/Drop/2024-08-12%20Audit%20Report%20-%20Drop%20Contracts%20Updates%20v1.0.pdf
+- Project website: https://www.drop.money
+- Page: https://www.codezen.tech/audits/drop-protocol-updates/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 6 |
+| Info | 2 |
+| Total | 8 |
+
+
+---
+
+### Fuel Sequencer Updates security audit
+
+Audit of the Fuel Sequencer and Sidecar.
+
+Codezen audited Fuel Sequencer Updates together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
+
+- Audit type: Cosmos SDK chain Audit
+- Technologies: Golang, Cosmos SDK, Ethereum, Consensus
+- Ecosystem: Ethereum, Cosmos
+- Delivered with: Oak Security
+- Project website: https://fuel.network
+- Page: https://www.codezen.tech/audits/fuel-sequencer-updates/
+
+
+---
+
+### Out Protocol security audit
+
+Audit of the Out Protocol Solana program.
+
+Codezen audited Out Protocol together with Oak Security. Technologies in scope: Solana, Rust and Anchor. We reported 17 findings: 5 critical, 5 major, 5 minor and 2 informational.
+
+- Audit type: Solana program audit
+- Technologies: Solana, Rust, Anchor
+- Ecosystem: Solana
+- Delivered with: Oak Security
+- Report date: 24 September 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Out/2024-09-24%20Audit%20Report%20-%20Out%20GCC.pdf
+- Project website: https://out.app
+- Page: https://www.codezen.tech/audits/out-protocol/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 5 |
+| Major | 5 |
+| Minor | 5 |
+| Info | 2 |
+| Total | 17 |
+
+
+---
+
+### Persistence pSTAKE BTC Yield security audit
+
+Audit of the Persistence pSTAKE BTC Yield feature.
+
+Codezen audited Persistence pSTAKE BTC Yield together with Oak Security. Technologies in scope: Bitcoin, Solidity, Ethereum and Persistence.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Bitcoin, Solidity, Ethereum, Persistence
+- Ecosystem: Ethereum, Bitcoin
+- Delivered with: Oak Security
+- Project website: https://persistence.one/
+- Page: https://www.codezen.tech/audits/persistence-pstake-btc-yield/
+
+
+---
+
+### Volta Protocol security audit
+
+Audit of the Volta Protocol CosmWasm smart contracts.
+
+Codezen audited Volta Protocol together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 13 findings: 3 major, 3 minor and 7 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 18 September 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Volta/2024-09-18%20Audit%20Report%20-%20Volta%20CosmWasm%20v1.0.pdf
+- Project website: https://www.voltacircuit.com
+- Page: https://www.codezen.tech/audits/volta-protocol/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 3 |
+| Minor | 3 |
+| Info | 7 |
+| Total | 13 |
+
+
+---
+
+### Snowfork Snowbridge Updates 2 security audit
+
+Audit of the Snowfork Snowbridge Update's substrate bridge pallet.
+
+Codezen audited Snowfork Snowbridge Updates 2 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 3 findings: 3 informational.
+
+- Audit type: Substrate Bridge Pallet Audit
+- Technologies: Rust, Solidity, Substrate, Polkadot, Ethereum, Bridge
+- Ecosystem: Ethereum, Polkadot
+- Delivered with: Oak Security
+- Report date: 10 August 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Snowbridge/2024-08-10%20Audit%20Report%20-%20Snowbridge%20Updates%202%20v1.0.pdf
+- Project website: https://docs.snowbridge.network/
+- Page: https://www.codezen.tech/audits/snowfork-snowbridge-updates-2/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 0 |
+| Info | 3 |
+| Total | 3 |
+
+
+---
+
+### Dymension Phase 1 security audit
+
+Audit of the Dymension Dymint's consensus algorithm.
+
+Codezen audited Dymension Phase 1 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus.
+
+- Audit type: Cosmos SDK chain Audit
+- Technologies: Golang, Cosmos SDK, Rollup, Consensus
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Project website: https://dymension.xyz/
+- Page: https://www.codezen.tech/audits/dymension-phase-1/
+
+
+---
+
+### Router Voyager Solana Integration security audit
+
+Audit of the Router Voyager Solana Integration audit.
+
+Codezen audited Router Voyager Solana Integration together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Solana, Rust and Off chain.
+
+- Audit type: Off-chain Components Audit
+- Technologies: Golang, Cosmos SDK, Solana, Rust, Off chain
+- Ecosystem: Cosmos, Solana
+- Delivered with: Oak Security
+- Project website: https://www.routerprotocol.com/
+- Page: https://www.codezen.tech/audits/router-voyager-solana-integration/
+
+
+---
+
+### Fuel Sequencer and Sidecar security audit
+
+Audit of the Fuel Sequencer and Sidecar.
+
+Codezen audited Fuel Sequencer and Sidecar together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
+
+- Audit type: Cosmos SDK chain Audit
+- Technologies: Golang, Cosmos SDK, Ethereum, Consensus
+- Ecosystem: Ethereum, Cosmos
+- Delivered with: Oak Security
+- Project website: https://fuel.network
+- Page: https://www.codezen.tech/audits/fuel-sequencer-and-sidecar/
+
+
+---
+
+### Drop Protocol Architechtural Changes Extension security audit
+
+Audit of the Drop Protocol Architechtural Changes Extension.
+
+Codezen audited Drop Protocol Architechtural Changes Extension together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 22 findings: 1 major, 12 minor and 9 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 21 December 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/6094ad74b33fe30ab52544b50b1e45dc31b20a49/Drop/2024-12-21%20Audit%20Report%20-%20Drop%20Updates%202%20v1.0.pdf
+- Project website: https://www.drop.money
+- Page: https://www.codezen.tech/audits/drop-protocol-architechtural-changes-extension/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 1 |
+| Minor | 12 |
+| Info | 9 |
+| Total | 22 |
+
+
+---
+
+### Slide SDK security audit
+
+Audit of the Slide SDK's Cosmos SDK integration in Avalache consensus.
+
+Codezen audited Slide SDK together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Avalanche and Consensus. We reported 7 findings: 1 critical, 4 major, 1 minor and 1 informational.
+
+- Audit type: Cosmos SDK integration in Avalache consensus Audit
+- Technologies: Golang, Cosmos SDK, Avalanche, Consensus
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 13 June 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/c91568374a5057d7d622b636c9c25724b6a56e5c/DoraFactory/2024-06-13%20Audit%20Report%20-%20Dora%20Vota%20v1.0.pdf
+- Project website: https://www.landslide.network
+- Page: https://www.codezen.tech/audits/slide-sdk/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 4 |
+| Minor | 1 |
+| Info | 1 |
+| Total | 7 |
+
+
+---
+
+### Dora Factory's Vota chain security audit
+
+Audit of the Dora Factory's Vota chain.
+
+Codezen audited Dora Factory's Vota chain together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 7 findings: 1 critical, 4 major, 1 minor and 1 informational.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 13 June 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/c91568374a5057d7d622b636c9c25724b6a56e5c/DoraFactory/2024-06-13%20Audit%20Report%20-%20Dora%20Vota%20v1.0.pdf
+- Project website: https://dorafactory.org
+- Page: https://www.codezen.tech/audits/dora-factory-s-vota-chain/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 4 |
+| Minor | 1 |
+| Info | 1 |
+| Total | 7 |
+
+
+---
+
+### Astroport's Asteroid Bridge security audit
+
+Audit of the Astroport's Asteroid Bridge audit.
+
+Codezen audited Astroport's Asteroid Bridge together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 13 findings: 8 minor and 5 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 17 June 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/c91568374a5057d7d622b636c9c25724b6a56e5c/Asteroid%20Bridge/2024-06-17%20Audit%20Report%20-%20Asteroid%20Bridge%20v1.0.pdf
+- Project website: https://www.astroport.fi/
+- Page: https://www.codezen.tech/audits/astroport-s-asteroid-bridge/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 8 |
+| Info | 5 |
+| Total | 13 |
+
+
+---
+
+### Persistence pSTAKE Native stkXPRT security audit
+
+Audit of the Persistence pSTAKE Native stkXPRT feature.
+
+Codezen audited Persistence pSTAKE Native stkXPRT together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK, Persistence, Cosmos Hub
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Project website: https://persistence.one/
+- Page: https://www.codezen.tech/audits/persistence-pstake-native-stkxprt/
+
+
+---
+
+### Drop Protocol Extension security audit
+
+Audit of the Drop Protocol CosmWasm smart contracts.
+
+Codezen audited Drop Protocol Extension together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 8 findings: 1 critical, 1 major, 4 minor and 2 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 12 August 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Drop/2024-08-12%20Audit%20Report%20-%20Drop%20Contracts%20Extension%20v1.0.pdf
+- Project website: https://www.drop.money
+- Page: https://www.codezen.tech/audits/drop-protocol-extension/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 1 |
+| Minor | 4 |
+| Info | 2 |
+| Total | 8 |
+
+
+---
+
+### Composable ibctransfermiddleware security audit
+
+Audit of the Composable ibctransfermiddleware.
+
+Codezen audited Composable ibctransfermiddleware. Technologies in scope: Golang and Cosmos SDK.
+
+- Audit type: Cosmos SDK Module Audit
+- Technologies: Golang, Cosmos SDK
+- Ecosystem: Cosmos
+- Project website: https://www.composable.finance/
+- Page: https://www.codezen.tech/audits/composable-ibctransfermiddleware/
+
+
+---
+
+### Mythical Games security audit
+
+Audit of the Mythical Games' substrate pallet.
+
+Codezen audited Mythical Games together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot.
+
+- Audit type: Polkadot SDK Pallet Audit
+- Technologies: Rust, Substrate, Polkadot
+- Ecosystem: Polkadot
+- Delivered with: Oak Security
+- Project website: https://mythicalgames.com
+- Page: https://www.codezen.tech/audits/mythical-games/
+
+
+---
+
+### Snowfork Snowbridge Updates 1 security audit
+
+Audit of the Snowfork Snowbridge Extension's bridge audit.
+
+Codezen audited Snowfork Snowbridge Updates 1 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 4 findings: 2 minor and 2 informational.
+
+- Audit type: Bridge Audit
+- Technologies: Rust, Solidity, Substrate, Polkadot, Ethereum, Bridge
+- Ecosystem: Ethereum, Polkadot
+- Delivered with: Oak Security
+- Report date: 16 August 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Snowbridge/2024-08-16%20Audit%20Report%20-%20Snowbridge%20Updates%20v1.0.pdf
+- Project website: https://docs.snowbridge.network/
+- Page: https://www.codezen.tech/audits/snowfork-snowbridge-updates-1/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 2 |
+| Info | 2 |
+| Total | 4 |
+
+
+---
+
+### Drop Protocol security audit
+
+Audit of the Drop Protocol CosmWasm smart contracts.
+
+Codezen audited Drop Protocol together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 63 findings: 6 critical, 20 major, 28 minor and 9 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 19 August 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/6094ad74b33fe30ab52544b50b1e45dc31b20a49/Drop/2024-08-19%20Audit%20Report%20-%20Drop%20Contracts%20v1.1.pdf
+- Project website: https://www.drop.money
+- Page: https://www.codezen.tech/audits/drop-protocol/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 6 |
+| Major | 20 |
+| Minor | 28 |
+| Info | 9 |
+| Total | 63 |
+
+
+---
+
+### Dymension Virtual Frontier security audit
+
+Audit of the Dymension Dymint's consensus algorithm.
+
+Codezen audited Dymension Virtual Frontier together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus. We reported 4 findings: 4 minor.
+
+- Audit type: Cosmos SDK Module Audit
+- Technologies: Golang, Cosmos SDK, Rollup, Consensus
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 30 April 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Dymension/2024-04-30%20Audit%20Report%20-%20Dymension%20Point%201D%20Stream%202_%20Virtual%20Frontier%20Contract%20v1.1.pdf
+- Project website: https://dymension.xyz/
+- Page: https://www.codezen.tech/audits/dymension-virtual-frontier/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 4 |
+| Info | 0 |
+| Total | 4 |
+
+
+---
+
+### Dymension Dymint security audit
+
+Audit of the Dymension Dymint's consensus algorithm.
+
+Codezen audited Dymension Dymint together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus. We reported 19 findings: 1 critical, 7 major, 8 minor and 3 informational.
+
+- Audit type: Consensus Algorithm Audit
+- Technologies: Golang, Cosmos SDK, Rollup, Consensus
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 9 July 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/1569d1644cf4b51e0f2bfbdecbff5b39c131bac3/Dymension/2024-07-09%20Audit%20Report%20-%20Dymension%20Point%201D%20Stream%203_%20Dymint%20v1.1.pdf
+- Project website: https://dymension.xyz/
+- Page: https://www.codezen.tech/audits/dymension-dymint/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 7 |
+| Minor | 8 |
+| Info | 3 |
+| Total | 19 |
+
+
+---
+
+### Composable Finance Solidity IBC Implementation security audit
+
+Audit of the Composable Finance Solidity IBC Implementation's library audit.
+
+Codezen audited Composable Finance Solidity IBC Implementation. Technologies in scope: Solidity and IBC.
+
+- Audit type: Solidity Library Audit
+- Technologies: Solidity, IBC
+- Ecosystem: Ethereum, Cosmos
+- Project website: https://www.composable.finance/
+- Page: https://www.codezen.tech/audits/composable-finance-solidity-ibc-implementation/
+
+
+---
+
+### Composable Finance Solana Light Client security audit
+
+Audit of the Composable Finance Solana Light Client's light client audit.
+
+Codezen audited Composable Finance Solana Light Client. Technologies in scope: Rust, IBC, Solana, CosmWasm and Anchor.
+
+- Audit type: WASM Light Client Audit
+- Technologies: Rust, IBC, Solana, CosmWasm, Anchor
+- Ecosystem: Cosmos, Solana
+- Project website: https://www.composable.finance/
+- Page: https://www.codezen.tech/audits/composable-finance-solana-light-client/
+
+
+---
+
+### Persistence Cosmos Liquid Staking Updates security audit
+
+Audit of the Persistence Cosmos Liquid Staking Updates's cosmos sdk audit.
+
+Codezen audited Persistence Cosmos Liquid Staking Updates together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK, Persistence, Cosmos Hub
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Project website: https://persistence.one/
+- Page: https://www.codezen.tech/audits/persistence-cosmos-liquid-staking-updates/
+
+
+---
+
+### Persistence Dexter Updates security audit
+
+Audit of the Persistence Dexter Updates's cosmwasm smart contracts audit.
+
+Codezen audited Persistence Dexter Updates together with Oak Security. Technologies in scope: Rust and CosmWasm.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Project website: https://persistence.one/
+- Page: https://www.codezen.tech/audits/persistence-dexter-updates/
+
+
+---
+
+### Router Voyager Forwarder Extension security audit
+
+Audit of the Router Voyager Forwarder Extension's off chain relayer and orchestrator audit.
+
+Codezen audited Router Voyager Forwarder Extension together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Off chain. We reported 69 findings: 19 critical, 20 major, 14 minor and 16 informational.
+
+- Audit type: Relayer And Orchestrator Audit
+- Technologies: Golang, Cosmos SDK, Ethereum, Off chain
+- Ecosystem: Ethereum, Cosmos
+- Delivered with: Oak Security
+- Report date: 30 April 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Router/2024-04-30%20Audit%20Report%20-%20Router%20Voyager%20Forwarder%20and%20CW%20Gateway%20v1.2.pdf
+- Project website: https://www.routerprotocol.com/
+- Page: https://www.codezen.tech/audits/router-voyager-forwarder-extension/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 19 |
+| Major | 20 |
+| Minor | 14 |
+| Info | 16 |
+| Total | 69 |
+
+
+---
+
+### Timewave Covenants security audit
+
+Audit of the Timewave Covenants's cosmwasm smart contracts audit.
+
+Codezen audited Timewave Covenants together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 46 findings: 1 critical, 12 major, 16 minor and 17 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 2 May 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Timewave/2024-05-02%20Audit%20Report%20-%20Timewave%20Covenants%20v1.0.pdf
+- Project website: https://timewave.computer/
+- Page: https://www.codezen.tech/audits/timewave-covenants/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 12 |
+| Minor | 16 |
+| Info | 17 |
+| Total | 46 |
+
+
+---
+
+### Yieldmos Outposts Osmosis security audit
+
+Audit of the Yieldmos Outposts Osmosis's cosmwasm smart contracts audit.
+
+Codezen audited Yieldmos Outposts Osmosis together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 13 findings: 3 critical, 4 major, 2 minor and 4 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm, Osmosis
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 17 May 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Yieldmos/2024-05-17%20Audit%20Report%20-%20Yieldmos%20Outposts%20Osmosis%20v1.0.pdf
+- Project website: http://www.yieldmos.com/
+- Page: https://www.codezen.tech/audits/yieldmos-outposts-osmosis/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 3 |
+| Major | 4 |
+| Minor | 2 |
+| Info | 4 |
+| Total | 13 |
+
+
+---
+
+### Bifrost Finance security audit
+
+Audit of the Bifrost Finance's substrate pallet.
+
+Codezen audited Bifrost Finance together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot. We reported 19 findings: 1 major, 9 minor and 9 informational.
+
+- Audit type: Polkadot SDK Pallet Audit
+- Technologies: Rust, Substrate, Polkadot
+- Ecosystem: Polkadot
+- Delivered with: Oak Security
+- Report date: 11 March 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/1569d1644cf4b51e0f2bfbdecbff5b39c131bac3/Bifrost/2024-03-11%20Audit%20Report%20-%20Bifrost%20Finance%20Leveraged%20Staking%20v1.0.pdf
+- Project website: https://bifrost.io/
+- Page: https://www.codezen.tech/audits/bifrost-finance/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 1 |
+| Minor | 9 |
+| Info | 9 |
+| Total | 19 |
+
+
+---
+
+### Persistence Dexter security audit
+
+Audit of the Persistence Dexter's cosmwasm smart contracts audit.
+
+Codezen audited Persistence Dexter together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 64 findings: 7 critical, 8 major, 23 minor and 26 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 15 March 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Dexter/2023-03-15%20Audit%20Report%20-%20Dexter%20v1.0.pdf
+- Project website: https://persistence.one/
+- Page: https://www.codezen.tech/audits/persistence-dexter/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 7 |
+| Major | 8 |
+| Minor | 23 |
+| Info | 26 |
+| Total | 64 |
+
+
+---
+
+### Astoport Transmuter Pool security audit
+
+Audit of the Astoport Transmuter Pool's cosmwasm smart contracts audit.
+
+Codezen audited Astoport Transmuter Pool together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 7 findings: 1 critical, 1 minor and 5 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 30 January 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Astroport/2024-01-30%20Audit%20Report%20-%20Astroport%20Transmuter%20Pool%20v1.0.pdf
+- Project website: https://astroport.fi
+- Page: https://www.codezen.tech/audits/astoport-transmuter-pool/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 0 |
+| Minor | 1 |
+| Info | 5 |
+| Total | 7 |
+
+
+---
+
+### Persistence IBC Liquid Staking module security audit
+
+Audit of the Persistence IBC Liquid Staking module's cosmos sdk audit.
+
+Codezen audited Persistence IBC Liquid Staking module together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
+
+- Audit type: Cosmos SDK Module Audit
+- Technologies: Golang, Cosmos SDK, Persistence, Cosmos Hub
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Project website: https://persistence.one/
+- Page: https://www.codezen.tech/audits/persistence-ibc-liquid-staking-module/
+
+
+---
+
+### Zodiac Protocol Extension security audit
+
+Audit of the Zodiac Protocol Extension's cosmwasm smart contracts audit.
+
+Codezen audited Zodiac Protocol Extension together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 5 findings: 2 minor and 3 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm, Osmosis
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 22 March 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Zodiac%20Protocol/2024-03-22%20Audit%20Report%20-%20Zodiac%20Protocol%20Core%20Extension%20v1.0.pdf
+- Project website: https://www.zodiacprotocol.xyz/
+- Page: https://www.codezen.tech/audits/zodiac-protocol-extension/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 2 |
+| Info | 3 |
+| Total | 5 |
+
+
+---
+
+### Persistence Cosmos LSM security audit
+
+Audit of the Persistence Cosmos LSM Functionality's cosmos sdk audit.
+
+Codezen audited Persistence Cosmos LSM together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
+
+- Audit type: Cosmos SDK Module Audit
+- Technologies: Golang, Cosmos SDK, Persistence, Cosmos Hub
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Project website: https://persistence.one/
+- Page: https://www.codezen.tech/audits/persistence-cosmos-lsm/
+
+
+---
+
+### Neptune Protocol Update security audit
+
+Audit of the Neptune Protocol Update's cosmwasm smart contracts audit.
+
+Codezen audited Neptune Protocol Update together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 11 findings: 1 major, 4 minor and 6 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 9 January 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/401097d6971a9a4328c306f8a3e0d5107e677ebc/Neptune/2024-01-09%20Audit%20Report%20-%20Neptune%20Updates%20v1.0.pdf
+- Project website: https://nept.finance/
+- Page: https://www.codezen.tech/audits/neptune-protocol-update/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 1 |
+| Minor | 4 |
+| Info | 6 |
+| Total | 11 |
+
+
+---
+
+### Snowfork Snowbridge Extension security audit
+
+Audit of the Snowfork Snowbridge Extension's bridge audit.
+
+Codezen audited Snowfork Snowbridge Extension together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 12 findings: 1 critical, 2 major, 6 minor and 3 informational.
+
+- Audit type: Bridge Audit
+- Technologies: Rust, Solidity, Substrate, Polkadot, Ethereum, Bridge
+- Ecosystem: Ethereum, Polkadot
+- Delivered with: Oak Security
+- Report date: 12 February 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Snowbridge/2024-02-12%20Audit%20Report%20-%20Snowbridge%20Extension%20v1.1.pdf
+- Project website: https://docs.snowbridge.network/
+- Page: https://www.codezen.tech/audits/snowfork-snowbridge-extension/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 2 |
+| Minor | 6 |
+| Info | 3 |
+| Total | 12 |
+
+
+---
+
+### Vectis security audit
+
+Audit of the Vectis's cosmwasm smart contracts audit.
+
+Codezen audited Vectis together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 21 findings: 4 major, 12 minor and 5 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 14 March 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Vectis/2024-03-14%20Audit%20Report%20-%20Vectis%20v1.0.pdf
+- Project website: https://vectis.space/
+- Page: https://www.codezen.tech/audits/vectis/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 4 |
+| Minor | 12 |
+| Info | 5 |
+| Total | 21 |
+
+
+---
+
+### Timewave Computer Valence Services security audit
+
+Audit of the Timewave Computer Valence Services's cosmwasm smart contracts audit.
+
+Codezen audited Timewave Computer Valence Services together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 31 findings: 5 major, 12 minor and 14 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 10 April 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Timewave/2024-04-10%20Audit%20Report%20-%20Timewave%20Computer%20Valence%20Services%20v1.0.pdf
+- Project website: https://timewave.computer/
+- Page: https://www.codezen.tech/audits/timewave-computer-valence-services/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 5 |
+| Minor | 12 |
+| Info | 14 |
+| Total | 31 |
+
+
+---
+
+### Noble TokenFactory and FiatTokenFactory modules security audit
+
+Audit of the Noble TokenFactory and FiatTokenFactory modules's cosmos sdk audit.
+
+Codezen audited Noble TokenFactory and FiatTokenFactory modules together with Oak Security. Technologies in scope: Golang, Noble and Cosmos SDK. We reported 2 findings: 2 informational.
+
+- Audit type: Cosmos SDK Module Audit
+- Technologies: Golang, Noble, Cosmos SDK
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 17 January 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/1d926696b4c128c8205e6b0d4f5cf5b6b20dfa35/Noble/2024-01-17%20Audit%20Report%20-%20Noble%20tokenfactory%20Changes%20and%20fiattokenfactory%20v1.0.pdf
+- Project website: https://nobleassets.xyz/
+- Page: https://www.codezen.tech/audits/noble-tokenfactory-and-fiattokenfactory-modules/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 0 |
+| Info | 2 |
+| Total | 2 |
+
+
+---
+
+### Composable Finance Ethereum Light Client security audit
+
+Audit of the Composable Finance Ethereum Light Client's light client audit.
+
+Codezen audited Composable Finance Ethereum Light Client. Technologies in scope: Golang, IBC, Cosmos SDK and Ethereum.
+
+- Audit type: WASM Light Client Audit
+- Technologies: Golang, IBC, Cosmos SDK, Ethereum
+- Ecosystem: Ethereum, Cosmos
+- Project website: https://www.composable.finance/
+- Page: https://www.codezen.tech/audits/composable-finance-ethereum-light-client/
+
+
+---
+
+### Router Voyager DexSpan security audit
+
+Audit of the Router Voyager DexSpan's solidity smart contracts audit.
+
+Codezen audited Router Voyager DexSpan together with Oak Security. Technologies in scope: Solidity and Ethereum. We reported 31 findings: 1 critical, 5 major, 10 minor and 15 informational.
+
+- Audit type: Solidity Contract Audit
+- Technologies: Solidity, Ethereum
+- Ecosystem: Ethereum
+- Delivered with: Oak Security
+- Report date: 10 May 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Router/2024-05-10%20Audit%20Report%20-%20Router%20DexSpan%20v1.0.pdf
+- Project website: https://www.routerprotocol.com/
+- Page: https://www.codezen.tech/audits/router-voyager-dexspan/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 5 |
+| Minor | 10 |
+| Info | 15 |
+| Total | 31 |
+
+
+---
+
+### Router Voyager Forwarder security audit
+
+Audit of the Router Voyager Forwarder's off chain relayer and orchestrator audit.
+
+Codezen audited Router Voyager Forwarder together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Off chain. We reported 49 findings: 6 critical, 11 major, 15 minor and 17 informational.
+
+- Audit type: Off-chain Components Audit
+- Technologies: Golang, Cosmos SDK, Ethereum, Off chain
+- Ecosystem: Ethereum, Cosmos
+- Delivered with: Oak Security
+- Report date: 29 April 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Router/2024-04-29%20Audit%20Report%20-%20Router%20Voyager%20Forwarder%20v1.0.pdf
+- Project website: https://www.routerprotocol.com/
+- Page: https://www.codezen.tech/audits/router-voyager-forwarder/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 6 |
+| Major | 11 |
+| Minor | 15 |
+| Info | 17 |
+| Total | 49 |
+
+
+---
+
+### Cosmos SDK v0.47 security audit
+
+Audit of the Cosmos SDK v0.47's cosmos sdk audit.
+
+Codezen audited Cosmos SDK v0.47 together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 37 findings: 3 critical, 8 major, 13 minor and 13 informational.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 23 January 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/1569d1644cf4b51e0f2bfbdecbff5b39c131bac3/Cosmos%20SDK/2024-01-23%20Audit%20Report%20-%20Cosmos%20SDK%20v1.0.pdf
+- Project website: https://cosmos.network/
+- Page: https://www.codezen.tech/audits/cosmos-sdk-v0-47/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 3 |
+| Major | 8 |
+| Minor | 13 |
+| Info | 13 |
+| Total | 37 |
+
+
+---
+
+### XCVM Cosmwasm Contracts security audit
+
+Audit of the XCVM Cosmwasm Contracts's cosmwasm smart contracts peer review.
+
+Codezen audited XCVM Cosmwasm Contracts. Technologies in scope: Rust, Peer Review, Osmosis and CosmWasm.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Peer Review, Osmosis, CosmWasm
+- Ecosystem: Cosmos
+- Project website: https://www.composable.finance/
+- Page: https://www.codezen.tech/audits/xcvm-cosmwasm-contracts/
+
+
+---
+
+### Noble Circle's CCTP security audit
+
+Audit of the Noble Circle's CCTP's cosmos sdk audit.
+
+Codezen audited Noble Circle's CCTP together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Solidity, Circle and USDC. We reported 2 findings: 2 informational.
+
+- Audit type: Cosmos SDK Module Audit
+- Technologies: Golang, Cosmos SDK, Solidity, Circle, USDC
+- Ecosystem: Ethereum, Cosmos
+- Delivered with: Oak Security
+- Report date: 17 January 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/1569d1644cf4b51e0f2bfbdecbff5b39c131bac3/Noble/2024-01-17%20Audit%20Report%20-%20Noble%20tokenfactory%20Changes%20and%20fiattokenfactory%20v1.0.pdf
+- Project website: https://nobleassets.xyz/
+- Page: https://www.codezen.tech/audits/noble-circle-s-cctp/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 0 |
+| Info | 2 |
+| Total | 2 |
+
+
+---
+
+### Prism Osmosis LP Staking security audit
+
+Audit of the Prism Osmosis LP Staking's cosmwasm smart contracts audit.
+
+Codezen audited Prism Osmosis LP Staking. Technologies in scope: Rust, Osmosis, Prism and CosmWasm.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Osmosis, Prism, CosmWasm
+- Ecosystem: Cosmos
+- Project website: https://prismprotocol.app/
+- Page: https://www.codezen.tech/audits/prism-osmosis-lp-staking/
+
+
+---
+
+### Lido Neutron Satellite security audit
+
+Audit of the Lido Neutron Satellite's cosmwasm smart contracts audit.
+
+Codezen audited Lido Neutron Satellite together with Oak Security. Technologies in scope: Rust, Neutron, Solidity and CosmWasm. We reported 7 findings: 2 minor and 5 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Neutron, Solidity, CosmWasm
+- Ecosystem: Ethereum, Cosmos
+- Delivered with: Oak Security
+- Report date: 29 July 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/d2fe412c9e1ff3b80c7701f0388e33465f23d5de/Hadron%20Labs/2023-07-29%20Audit%20Report%20-%20Hadron%20Labs%20Lido%20Satellite%20v1.0.pdf
+- Project website: https://marsprotocol.io/
+- Page: https://www.codezen.tech/audits/lido-neutron-satellite/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 2 |
+| Info | 5 |
+| Total | 7 |
+
+
+---
+
+### Snowfork Snowbridge security audit
+
+Audit of the Snowfork Snowbridge's Ethereum <-> Polkadot bridge audit.
+
+Codezen audited Snowfork Snowbridge together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 33 findings: 3 critical, 8 major, 9 minor and 13 informational.
+
+- Audit type: Bridge Audit
+- Technologies: Rust, Solidity, Substrate, Polkadot, Ethereum, Bridge
+- Ecosystem: Ethereum, Polkadot
+- Delivered with: Oak Security
+- Report date: 24 May 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/1569d1644cf4b51e0f2bfbdecbff5b39c131bac3/Snowbridge/2024-05-24%20Audit%20Report%20-%20Snowbridge%20v1.1.pdf
+- Project website: https://docs.snowbridge.network/
+- Page: https://www.codezen.tech/audits/snowfork-snowbridge/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 3 |
+| Major | 8 |
+| Minor | 9 |
+| Info | 13 |
+| Total | 33 |
+
+
+---
+
+### Mars Red Bank Updates security audit
+
+Audit of the Mars Red Bank Updates's cosmwasm smart contracts audit.
+
+Codezen audited Mars Red Bank Updates together with Oak Security. Technologies in scope: Rust, Neutron, Mars and CosmWasm. We reported 14 findings: 3 critical, 4 major, 5 minor and 2 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Neutron, Mars, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 1 August 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/026296d99287705c883fd5fa91368913a8643347/Mars/2023-08-01%20Audit%20Report%20-%20Mars%20Red%20Bank%20Updates%20v1.0.pdf
+- Project website: https://marsprotocol.io/
+- Page: https://www.codezen.tech/audits/mars-red-bank-updates/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 3 |
+| Major | 4 |
+| Minor | 5 |
+| Info | 2 |
+| Total | 14 |
+
+
+---
+
+### SSZ RS Library security audit
+
+Audit of the SSZ RS Library's rust library audit.
+
+Codezen audited SSZ RS Library together with Oak Security. Technologies in scope: Rust and Ethereum. We reported 11 findings: 4 minor and 7 informational.
+
+- Audit type: Rust Library Audit
+- Technologies: Rust, Ethereum
+- Ecosystem: Ethereum
+- Delivered with: Oak Security
+- Report date: 28 September 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/8eddeeeb7a766e10a8e4303a3a0a8e86a7a5f08c/ssz-rs/2023-09-28%20Audit%20Report%20-%20ssz-rs%20v1.0.pdf
+- Project website: https://github.com/ralexstokes/ssz-rs
+- Page: https://www.codezen.tech/audits/ssz-rs-library/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 4 |
+| Info | 7 |
+| Total | 11 |
+
+
+---
+
+### Composable Centauri security audit
+
+Audit of the Composable Centauri's cosmos sdk peer review.
+
+Codezen audited Composable Centauri. Technologies in scope: Golang, Cosmos SDK and Polkadot.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK, Polkadot
+- Ecosystem: Cosmos, Polkadot
+- Full report (PDF): https://github.com/Codezen-SRLS/reports/blob/main/Banksy%20Chain%20-%20Audit%20Report%20v1.0.pdf
+- Project website: https://www.composable.finance/
+- Page: https://www.codezen.tech/audits/composable-centauri/
+
+
+---
+
+### Fairblock FairyRing security audit
+
+Audit of the Fairblock FairyRing's cosmos sdk audit.
+
+Codezen audited Fairblock FairyRing together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Cryptography. We reported 26 findings: 12 critical, 7 minor and 7 informational.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK, Cryptography
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 2 October 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/70571c511e961cf6194b5c39757735a6549a9f4f/Fairblock/2023-10-02%20Audit%20Report%20-%20FairBlock%20fairyring%20v1.0.pdf
+- Project website: https://fairblock.network/
+- Page: https://www.codezen.tech/audits/fairblock-fairyring/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 12 |
+| Major | 0 |
+| Minor | 7 |
+| Info | 7 |
+| Total | 26 |
+
+
+---
+
+### Polkadot GrandPa IBC Light Client security audit
+
+Audit of the Polkadot GrandPa IBC Light Client's light client audit.
+
+Codezen audited Polkadot GrandPa IBC Light Client together with Oak Security. Technologies in scope: Rust, Golang, Tendermint, IBC, Cosmos and Polkadot.
+
+- Audit type: WASM Light Client Audit
+- Technologies: Rust, Golang, Tendermint, IBC, Cosmos, Polkadot
+- Ecosystem: Cosmos, Polkadot
+- Delivered with: Oak Security
+- Project website: https://www.composable.finance/
+- Page: https://www.codezen.tech/audits/polkadot-grandpa-ibc-light-client/
+
+
+---
+
+### Zodiac Protocol security audit
+
+Audit of the Zodiac Protocol's cosmwasm smart contracts audit.
+
+Codezen audited Zodiac Protocol together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 30 findings: 3 critical, 8 major, 11 minor and 8 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm, Osmosis
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 2 January 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Zodiac%20Protocol/2024-01-02%20Audit%20Report%20-%20Zodiac%20Protocol%20Core%20v1.0.pdf
+- Project website: https://www.zodiacprotocol.xyz/
+- Page: https://www.codezen.tech/audits/zodiac-protocol/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 3 |
+| Major | 8 |
+| Minor | 11 |
+| Info | 8 |
+| Total | 30 |
+
+
+---
+
+### Noble Tariff module security audit
+
+Audit of the Noble Tariff module's cosmos sdk audit.
+
+Codezen audited Noble Tariff module together with Oak Security. Technologies in scope: Golang, Noble, Cosmos SDK and Interchain Security. We reported 10 findings: 2 critical, 1 minor and 7 informational.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Noble, Cosmos SDK, Interchain Security
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 8 July 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/55e5895d4fd1295e087c59da35269fd59f95c657/Noble/2023-07-08%20Audit%20Report%20-%20Noble%20Tariff%20Module%20v1.0.pdf
+- Project website: https://nobleassets.xyz/
+- Page: https://www.codezen.tech/audits/noble-tariff-module/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 2 |
+| Major | 0 |
+| Minor | 1 |
+| Info | 7 |
+| Total | 10 |
+
+
+---
+
+### Evmos Solidity Precompiles security audit
+
+Audit of the Evmos Solidity Precompiles's evm solidity precompiles audit.
+
+Codezen audited Evmos Solidity Precompiles together with Oak Security. Technologies in scope: Evmos, Rust, Golang, EVM, Solidity and Ethereum. We reported 14 findings: 1 critical, 9 minor and 4 informational.
+
+- Audit type: EVM Solidity Precompiles Audit
+- Technologies: Evmos, Rust, Golang, EVM, Solidity, Ethereum
+- Ecosystem: Ethereum
+- Delivered with: Oak Security
+- Report date: 8 July 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/b929b839728f4f0e324bd92e8241ac1bda88cd02/Evmos/2023-07-08%20Audit%20Report%20-%20Evmos%20EVM%20Extensions%20v1.0.pdf
+- Project website: https://evmos.org
+- Page: https://www.codezen.tech/audits/evmos-solidity-precompiles/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 0 |
+| Minor | 9 |
+| Info | 4 |
+| Total | 14 |
+
+
+---
+
+### DAODAO's Polytone security audit
+
+Audit of the Polytone's cosmwasm smart contracts audit.
+
+Codezen audited DAODAO's Polytone together with Oak Security. Technologies in scope: Rust, CosmWasm, IBC and DA0 DA0. We reported 14 findings: 2 major, 4 minor and 8 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm, IBC, DA0 DA0
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 5 June 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/ad3e35844fa223853f9b3aa67e1088906ccb9372/Polytone/2023-06-05%20Audit%20Report%20-%20Polytone%20v1.0.pdf
+- Project website: https://daodao.zone
+- Page: https://www.codezen.tech/audits/daodao-s-polytone/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 2 |
+| Minor | 4 |
+| Info | 8 |
+| Total | 14 |
+
+
+---
+
+### Cosmos Interchain Security security audit
+
+Audit of the Cosmos Interchain Security's cosmos sdk audit.
+
+Codezen audited Cosmos Interchain Security together with Oak Security. Technologies in scope: Golang, Cosmos Hub, Cosmos SDK, Interchain Security and IBC. We reported 16 findings: 2 critical, 2 major, 7 minor and 5 informational.
+
+- Audit type: Cosmos SDK Chain Audit
+- Technologies: Golang, Cosmos Hub, Cosmos SDK, Interchain Security, IBC
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 23 June 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/0cea9f4e6b9a1eaf55b413765aae1e413e44de5f/Cosmos/2023-06-23%20Audit%20Report%20-%20Cosmos%20Interchain%20Security%20v1.0.pdf
+- Project website: https://interchainsecurity.dev/
+- Page: https://www.codezen.tech/audits/cosmos-interchain-security/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 2 |
+| Major | 2 |
+| Minor | 7 |
+| Info | 5 |
+| Total | 16 |
+
+
+---
+
+### Membrane Finance security audit
+
+Audit of the Membrane Finance's cosmwasm smart contracts audit.
+
+Codezen audited Membrane Finance together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 39 findings: 8 critical, 6 major, 17 minor and 8 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm, Osmosis
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 15 June 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/dec29099a4e58b8adebe2dc3fe55714b21178a4c/Membrane/2023-06-15%20Audit%20Report%20-%20Membrane%20v1.0.pdf
+- Project website: https://membrane-finance.gitbook.io/membrane-docs-1/
+- Page: https://www.codezen.tech/audits/membrane-finance/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 8 |
+| Major | 6 |
+| Minor | 17 |
+| Info | 8 |
+| Total | 39 |
+
+
+---
+
+### Astoport Maker and Vesting Contracts security audit
+
+Audit of the Astoport Maker and Vesting Contracts's cosmwasm smart contracts audit.
+
+Codezen audited Astoport Maker and Vesting Contracts together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 9 findings: 4 minor and 5 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 4 April 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/38174f733ed2ba6530f206056c7ca441d1fd7cf0/Astroport/2023-04-04%20Audit%20Report%20-%20Astroport%20Maker%20and%20Vesting%20Contract%20Updates%20v1.0.pdf
+- Project website: https://astroport.fi
+- Page: https://www.codezen.tech/audits/astoport-maker-and-vesting-contracts/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 4 |
+| Info | 5 |
+| Total | 9 |
+
+
+---
+
+### IBCX Interchain Index Token security audit
+
+Audit of the IBCX Interchain Index Token's cosmwasm smart contracts audit.
+
+Codezen audited IBCX Interchain Index Token together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 26 findings: 11 critical, 6 major, 5 minor and 4 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm, Osmosis
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 29 April 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/8d44b527d56648a1dcaed694daad6078b85e75a2/IBCX/2023-04-29%20Audit%20Report%20-%20IBCX%20v1.0.pdf
+- Project website: https://index.ion.wtf/
+- Page: https://www.codezen.tech/audits/ibcx-interchain-index-token/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 11 |
+| Major | 6 |
+| Minor | 5 |
+| Info | 4 |
+| Total | 26 |
+
+
+---
+
+### Astoport Concentrated Liquidity Pair security audit
+
+Audit of the Astoport Concentrated Liquidity Pair's cosmwasm smart contracts audit.
+
+Codezen audited Astoport Concentrated Liquidity Pair together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 11 findings: 2 minor and 9 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 16 March 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/0d7516d512b97e0a708de3c85eb41832c90da584/Astroport/2023-03-16%20Audit%20Report%20-%20Astroport%20Concentrated%20Liquidity%20Pool%20v1.0.pdf
+- Project website: https://astroport.fi
+- Page: https://www.codezen.tech/audits/astoport-concentrated-liquidity-pair/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 0 |
+| Minor | 2 |
+| Info | 9 |
+| Total | 11 |
+
+
+---
+
+### Neptune Protocol security audit
+
+Audit of the Neptune Protocol's cosmwasm smart contracts audit.
+
+Codezen audited Neptune Protocol together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 26 findings: 1 critical, 4 major, 16 minor and 5 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 9 April 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/32aefa7b4c05dca3a8f15a5a66f859920cfcbb12/Neptune/2023-04-09%20Audit%20Report%20-%20Neptune%20Protocol%20v1.0.pdf
+- Project website: https://nept.finance/
+- Page: https://www.codezen.tech/audits/neptune-protocol/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 4 |
+| Minor | 16 |
+| Info | 5 |
+| Total | 26 |
+
+
+---
+
+### Fuzion Plasma OTC security audit
+
+Audit of the Fuzion Plasma OTC's cosmwasm smart contracts audit.
+
+Codezen audited Fuzion Plasma OTC together with Oak Security. Technologies in scope: Rust, Kujira and CosmWasm. We reported 18 findings: 3 critical, 1 major, 6 minor and 8 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Kujira, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 20 February 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/c92cbd12b5724c53cd625a1a98e30ec853ff188e/Fuzion/2023-02-20%20Audit%20Report%20-%20Fuzion%20Plasma%20OTC%20v1.0.pdf
+- Project website: https://fuzion.app
+- Page: https://www.codezen.tech/audits/fuzion-plasma-otc/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 3 |
+| Major | 1 |
+| Minor | 6 |
+| Info | 8 |
+| Total | 18 |
+
+
+---
+
+### Noble security audit
+
+Audit of the Noble's cosmos sdk audit.
+
+Codezen audited Noble together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Interchain Security and Circle. We reported 21 findings: 5 major, 10 minor and 6 informational.
+
+- Audit type: Cosmos SDK Chain Audit
+- Technologies: Golang, Cosmos SDK, Interchain Security, Circle
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 13 March 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/2a4614dce4c7a4041e289a6eb960467dd77f0647/Noble/2023-03-13%20Audit%20Report%20-%20Noble%20v1.0.pdf
+- Project website: https://www.noble.xyz
+- Page: https://www.codezen.tech/audits/noble/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 5 |
+| Minor | 10 |
+| Info | 6 |
+| Total | 21 |
+
+
+---
+
+### Mars Protocol Rover Updates security audit
+
+Audit of the Mars Protocol Rover Updates's cosmwasm smart contracts audit.
+
+Codezen audited Mars Protocol Rover Updates together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 9 findings: 2 major, 1 minor and 6 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Osmosis, Mars, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 3 February 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/99a0399ad6449e7e0968da38ba197d47d09632af/Mars/2023-02-03%20Audit%20Report%20-%20Mars%20Rover%20Updates%20v1.0.pdf
+- Project website: https://marsprotocol.io/
+- Page: https://www.codezen.tech/audits/mars-protocol-rover-updates/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 2 |
+| Minor | 1 |
+| Info | 6 |
+| Total | 9 |
+
+
+---
+
+### Filecoin FEVM Solidity Library security audit
+
+Audit of the Filecoin FEVM Solidity Library's solidity library audit.
+
+Codezen audited Filecoin FEVM Solidity Library together with Oak Security. Technologies in scope: Filecoin, EVM, Solidity and Ethereum. We reported 7 findings: 3 major, 2 minor and 2 informational.
+
+- Audit type: Solidity Library Audit
+- Technologies: Filecoin, EVM, Solidity, Ethereum
+- Ecosystem: Ethereum, Filecoin
+- Delivered with: Oak Security
+- Report date: 9 March 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/429d51de1f390c56951db08c51e10e5adf75e8a8/Filecoin%20Foundation/2023-03-09%20Audit%20Report%20-%20Filecoin%20FEVM%20Solidity%20Library%20v1.1.pdf
+- Project website: https://github.com/Zondax/filecoin-solidity
+- Page: https://www.codezen.tech/audits/filecoin-fevm-solidity-library/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 3 |
+| Minor | 2 |
+| Info | 2 |
+| Total | 7 |
+
+
+---
+
+### Filecoin FEVM security audit
+
+Audit of the Filecoin FEVM's evm implementation audit.
+
+Codezen audited Filecoin FEVM together with Oak Security. Technologies in scope: Filecoin, Rust, Golang, EVM, Solidity and Ethereum. We reported 34 findings: 3 critical, 15 major, 8 minor and 8 informational.
+
+- Audit type: EVM Implementation Audit
+- Technologies: Filecoin, Rust, Golang, EVM, Solidity, Ethereum
+- Ecosystem: Ethereum, Filecoin
+- Delivered with: Oak Security
+- Report date: 9 March 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/429d51de1f390c56951db08c51e10e5adf75e8a8/Filecoin%20Foundation/2023-03-09%20Audit%20Report%20-%20Filecoin%20EVM%20(FEVM)%20v1.1.pdf
+- Project website: https://filecoin.io/
+- Page: https://www.codezen.tech/audits/filecoin-fevm/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 3 |
+| Major | 15 |
+| Minor | 8 |
+| Info | 8 |
+| Total | 34 |
+
+
+---
+
+### Nym Mixnet and Vesting Contracts security audit
+
+Audit of the Nym Mixnet and Vesting Contracts's cosmwasm smart contracts audit.
+
+Codezen audited Nym Mixnet and Vesting Contracts together with Oak Security. Technologies in scope: Rust, Nym, CosmWasm, Mixnet and Privacy. We reported 19 findings: 7 critical, 2 major, 7 minor and 3 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Nym, CosmWasm, Mixnet, Privacy
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 27 March 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Nym/2023-03-27%20Audit%20Report%20-%20Nym%20Mixnet%20and%20Vesting%20Contracts%20v1.0.pdf
+- Project website: https://nymtech.net/
+- Page: https://www.codezen.tech/audits/nym-mixnet-and-vesting-contracts/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 7 |
+| Major | 2 |
+| Minor | 7 |
+| Info | 3 |
+| Total | 19 |
+
+
+---
+
+### Autonomy Network Osmosis security audit
+
+Audit of the Autonomy Network Osmosis's cosmwasm smart contracts audit.
+
+Codezen audited Autonomy Network Osmosis together with Oak Security. Technologies in scope: Rust, Osmosis and CosmWasm.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Osmosis, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 18 January 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Autonomy/2023-01-18%20Audit%20Report%20-%20Autonomy%20Osmosis%20v1.0.pdf
+- Project website: https://www.autonomynetwork.io/
+- Page: https://www.codezen.tech/audits/autonomy-network-osmosis/
+
+
+---
+
+### Mars Protocol Rover security audit
+
+Audit of the Mars Protocol Rover's cosmwasm smart contracts audit.
+
+Codezen audited Mars Protocol Rover together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 21 findings: 1 critical, 3 major, 10 minor and 7 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Osmosis, Mars, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 13 January 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/99a0399ad6449e7e0968da38ba197d47d09632af/Mars/2023-01-13%20Audit%20Report%20-%20Mars%20Outposts%20v1.0.pdf
+- Project website: https://marsprotocol.io/
+- Page: https://www.codezen.tech/audits/mars-protocol-rover/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 3 |
+| Minor | 10 |
+| Info | 7 |
+| Total | 21 |
+
+
+---
+
+### Persistence Cosmos Liquid Staking security audit
+
+Audit of the Persistence Cosmos Liquid Staking's cosmos sdk audit.
+
+Codezen audited Persistence Cosmos Liquid Staking together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub. We reported 15 findings: 1 critical, 3 major, 5 minor and 6 informational.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK, Persistence, Cosmos Hub
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 17 February 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/1828e98d6cebcfc02b2c7c172893b8cc1a3b1c2e/Persistence/2023-02-17%20Audit%20Report%20-%20pSTAKE%20Native%20v1.0.pdf
+- Project website: https://persistence.one/
+- Page: https://www.codezen.tech/audits/persistence-cosmos-liquid-staking/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 3 |
+| Minor | 5 |
+| Info | 6 |
+| Total | 15 |
+
+
+---
+
+### Nolus Money Market security audit
+
+Audit of the Nolus Money Market's cosmwasm smart contracts audit.
+
+Codezen audited Nolus Money Market together with Oak Security. Technologies in scope: Rust, CosmWasm and Nolus. We reported 21 findings: 4 critical, 1 major, 9 minor and 7 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, CosmWasm, Nolus
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 20 January 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/57eab9d85f36a2b6b78295db936f4c4cff4e0d9c/Nolus/2023-01-20%20Audit%20Report%20-%20Nolus%20Money%20Market%20v1.0.pdf
+- Project website: https://nolus.io/
+- Page: https://www.codezen.tech/audits/nolus-money-market/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 4 |
+| Major | 1 |
+| Minor | 9 |
+| Info | 7 |
+| Total | 21 |
+
+
+---
+
+### Nolus Core security audit
+
+Audit of the Nolus Core's cosmos sdk audit.
+
+Codezen audited Nolus Core together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Nolus. We reported 11 findings: 1 major, 5 minor and 5 informational.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK, Nolus
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 12 December 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Nolus/2022-12-12%20Audit%20Report%20-%20Nolus%20Core%20v1.1.pdf
+- Project website: https://nolus.io/
+- Page: https://www.codezen.tech/audits/nolus-core/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 1 |
+| Minor | 5 |
+| Info | 5 |
+| Total | 11 |
+
+
+---
+
+### Comdex Lend and Liquidation modules security audit
+
+Audit of the Comdex Lend and Liquidation modules's cosmos sdk audit.
+
+Codezen audited Comdex Lend and Liquidation modules together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Comdex. We reported 21 findings: 4 critical, 3 major, 6 minor and 8 informational.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK, Comdex
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 23 November 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Comdex/2022-11-23%20Audit%20Report%20-%20Comdex%20Lend%20and%20Liquidation%20Modules%20v1.0.pdf
+- Project website: https://comdex.one/
+- Page: https://www.codezen.tech/audits/comdex-lend-and-liquidation-modules/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 4 |
+| Major | 3 |
+| Minor | 6 |
+| Info | 8 |
+| Total | 21 |
+
+
+---
+
+### Injective wasmx module and CosmWasm bindings security audit
+
+Audit of the Injective wasmx module and CosmWasm bindings's cosmos sdk audit.
+
+Codezen audited Injective wasmx module and CosmWasm bindings together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Injective. We reported 12 findings: 1 critical, 3 major, 4 minor and 4 informational.
+
+- Audit type: Cosmos SDK Audit
+- Technologies: Golang, Cosmos SDK, Injective
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 20 January 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/17583d3002966bda085376e7250b917ff7b3355c/Injective/2023-01-20%20Audit%20Report%20-%20Injective%20v1.0.pdf
+- Project website: https://injective.com/
+- Page: https://www.codezen.tech/audits/injective-wasmx-module-and-cosmwasm-bindings/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 3 |
+| Minor | 4 |
+| Info | 4 |
+| Total | 12 |
+
+
+---
+
+### Neutron security audit
+
+Audit of the Neutron's cosmos sdk audit.
+
+Codezen audited Neutron together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Cosmos Hub, Interchain Security, IBC and Interchain. We reported 23 findings: 3 critical, 6 major, 9 minor and 5 informational.
+
+- Audit type: Cosmos SDK Chain Audit
+- Technologies: Golang, Cosmos SDK, Cosmos Hub, Interchain Security, IBC, Interchain
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 7 December 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Neutron/2022-12-07%20Audit%20Report%20-%20Neutron%20v1.0.pdf
+- Project website: https://neutron.org/
+- Page: https://www.codezen.tech/audits/neutron/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 3 |
+| Major | 6 |
+| Minor | 9 |
+| Info | 5 |
+| Total | 23 |
+
+
+---
+
+### Mars Protocol Outposts security audit
+
+Audit of the Mars Protocol Outposts's cosmwasm smart contracts audit.
+
+Codezen audited Mars Protocol Outposts together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 21 findings: 1 critical, 3 major, 10 minor and 7 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Osmosis, Mars, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 13 January 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/99a0399ad6449e7e0968da38ba197d47d09632af/Mars/2023-01-13%20Audit%20Report%20-%20Mars%20Outposts%20v1.0.pdf
+- Project website: https://marsprotocol.io/
+- Page: https://www.codezen.tech/audits/mars-protocol-outposts/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 3 |
+| Minor | 10 |
+| Info | 7 |
+| Total | 21 |
+
+
+---
+
+### Mars Protocol Periphery security audit
+
+Audit of the Mars Protocol Periphery's cosmwasm smart contracts audit.
+
+Codezen audited Mars Protocol Periphery together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 13 findings: 1 critical, 2 major, 3 minor and 7 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Osmosis, Mars, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 3 February 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/99a0399ad6449e7e0968da38ba197d47d09632af/Mars/2023-02-03%20Audit%20Report%20-%20Mars%20Periphery%20v1.0.pdf
+- Project website: https://marsprotocol.io/
+- Page: https://www.codezen.tech/audits/mars-protocol-periphery/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 2 |
+| Minor | 3 |
+| Info | 7 |
+| Total | 13 |
+
+
+---
+
+### Comdex Vesting & Locking Contracts security audit
+
+Audit of the Comdex Vesting & Locking Contracts's cosmwasm smart contracts audit.
+
+Codezen audited Comdex Vesting & Locking Contracts together with Oak Security. Technologies in scope: Rust, Comdex and CosmWasm. We reported 27 findings: 3 critical, 6 major, 7 minor and 11 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Comdex, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 28 October 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Comdex/2022-10-28%20Audit%20Report%20-%20Comdex%20Locking%20and%20Vesting%20Contracts%20v1.0.pdf
+- Project website: https://comdex.one/
+- Page: https://www.codezen.tech/audits/comdex-vesting-locking-contracts/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 3 |
+| Major | 6 |
+| Minor | 7 |
+| Info | 11 |
+| Total | 27 |
+
+
+---
+
+### Prism Auto Compounding Staking security audit
+
+Audit of the Prism Auto Compounding Staking's cosmwasm smart contracts audit.
+
+Codezen audited Prism Auto Compounding Staking together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 19 findings: 1 major, 7 minor and 11 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Terra, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 4 November 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Prism/2022-11-04%20Audit%20Report%20-%20Prism%20Auto%20Compounding%20cAsset%20v1.0.pdf
+- Project website: https://home.prismprotocol.app/
+- Page: https://www.codezen.tech/audits/prism-auto-compounding-staking/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 1 |
+| Minor | 7 |
+| Info | 11 |
+| Total | 19 |
+
+
+---
+
+### Elesto Mint Module security audit
+
+Audit of the Elesto Mint Module's cosmos sdk module audit.
+
+Codezen audited Elesto Mint Module. Technologies in scope: Golang and Cosmos SDK.
+
+- Audit type: Cosmos SDK Module Audit
+- Technologies: Golang, Cosmos SDK
+- Ecosystem: Cosmos
+- Page: https://www.codezen.tech/audits/elesto-mint-module/
+
+
+---
+
+### Margined Protocol Perpetuals security audit
+
+Audit of the Margined Protocol Perpetuals's cosmwasm smart contracts audit.
+
+Codezen audited Margined Protocol Perpetuals together with Oak Security. Technologies in scope: Rust, Cross-Chain, CosmWasm and Juno. We reported 27 findings: 1 critical, 4 major, 12 minor and 10 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Cross-Chain, CosmWasm, Juno
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 28 October 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/fbcf47f5398a0d7bf53e38fd9076a0ee6cfa4250/Margined%20Protocol/2022-10-28%20Audit%20Report%20-%20Margined%20Protocol%20Perpetuals%20v1.0.pdf
+- Project website: https://www.margined.io/
+- Page: https://www.codezen.tech/audits/margined-protocol-perpetuals/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 4 |
+| Minor | 12 |
+| Info | 10 |
+| Total | 27 |
+
+
+---
+
+### Comdex Chain & Comdex Governance Contract security audit
+
+Audit of the Comdex Chain & Comdex Governance Contract's cosmos sdk and cosmwasm contracts audit.
+
+Codezen audited Comdex Chain & Comdex Governance Contract together with Oak Security. Technologies in scope: Golang, Cosmos SDK, CosmWasm and Wasm. We reported 43 findings: 15 critical, 9 major, 7 minor and 12 informational.
+
+- Audit type: Cosmos SDK and CosmWasm Contract Audit
+- Technologies: Golang, Cosmos SDK, CosmWasm, Wasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 7 December 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Comdex/2022-12-07%20Audit%20Report%20-%20Comdex%20v1.0.pdf
+- Project website: https://comdex.one/
+- Page: https://www.codezen.tech/audits/comdex-chain-comdex-governance-contract/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 15 |
+| Major | 9 |
+| Minor | 7 |
+| Info | 12 |
+| Total | 43 |
+
+
+---
+
+### CosmWasm Wasmd Module security audit
+
+Audit of the CosmWasm Wasmd Module's cosmos sdk module audit.
+
+Codezen audited CosmWasm Wasmd Module together with Oak Security. Technologies in scope: Golang, Cosmos SDK, CosmWasm and Wasm. We reported 15 findings: 1 critical, 2 major, 5 minor and 7 informational.
+
+- Audit type: Cosmos SDK Module Audit
+- Technologies: Golang, Cosmos SDK, CosmWasm, Wasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 17 October 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/9c225a9d179968a877565d7c9fa46c626e201a17/CosmWasm/2023-10-17%20Audit%20Report%20-%20wasmd%20v1.0.pdf
+- Project website: https://cosmwasm.com/
+- Page: https://www.codezen.tech/audits/cosmwasm-wasmd-module/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 1 |
+| Major | 2 |
+| Minor | 5 |
+| Info | 7 |
+| Total | 15 |
+
+
+---
+
+### Stargaze Marketplace security audit
+
+Audit of the Stargaze Marketplace's cosmwasm smart contracts audit.
+
+Codezen audited Stargaze Marketplace together with Oak Security. Technologies in scope: Rust, Stargaze, CosmWasm and NFT. We reported 13 findings: 3 major, 6 minor and 4 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Stargaze, CosmWasm, NFT
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 1 August 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Stargaze/2022-08-01%20Audit%20Report%20-%20Stargaze%20Marketplace%20v1.0.pdf
+- Project website: https://app.stargaze.zone/marketplace
+- Page: https://www.codezen.tech/audits/stargaze-marketplace/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 3 |
+| Minor | 6 |
+| Info | 4 |
+| Total | 13 |
+
+
+---
+
+### Risk Harbor Ozone v2 security audit
+
+Audit of the Risk Harbor Ozone v2's cosmwasm smart contracts audit.
+
+Codezen audited Risk Harbor Ozone v2 together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 15 findings: 3 major, 6 minor and 6 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Terra, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 22 March 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Risk%20Harbor/2022-03-22%20Audit%20Report%20-%20Risk%20Harbor%20v1.0.pdf
+- Project website: https://ozone.riskharbor.com/
+- Page: https://www.codezen.tech/audits/risk-harbor-ozone-v2/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 3 |
+| Minor | 6 |
+| Info | 6 |
+| Total | 15 |
+
+
+---
+
+### Aperture Finance 2 security audit
+
+Audit of the Aperture Finance 2's cosmwasm smart contracts audit.
+
+Codezen audited Aperture Finance 2 together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 11 findings: 1 major, 6 minor and 4 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Terra, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 27 June 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Aperture/2022-06-27%20Audit%20Report%20-%20Aperture%202%20v1.0.pdf
+- Project website: https://aperture.finance/
+- Page: https://www.codezen.tech/audits/aperture-finance-2/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 1 |
+| Minor | 6 |
+| Info | 4 |
+| Total | 11 |
+
+
+---
+
+### Levana Perpetual Swap security audit
+
+Audit of the Levana Perpetual Swap's cosmwasm smart contracts audit.
+
+Codezen audited Levana Perpetual Swap together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 28 findings: 3 critical, 7 major, 9 minor and 9 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Terra, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 3 May 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Levana/2022-05-03%20Audit%20Report%20-%20Levana%20Perpetual%20Swaps%20v1.0.pdf
+- Project website: https://www.levana.finance/
+- Page: https://www.codezen.tech/audits/levana-perpetual-swap/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 3 |
+| Major | 7 |
+| Minor | 9 |
+| Info | 9 |
+| Total | 28 |
+
+
+---
+
+### C2X Com2Us security audit
+
+Audit of the C2X Com2Us's cosmwasm smart contracts audit.
+
+Codezen audited C2X Com2Us together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 15 findings: 4 major, 5 minor and 6 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Terra, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 9 May 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/C2X/2022-05-09%20Audit%20Report%20-%20C2X%20v1.0.pdf
+- Project website: https://c2x.world/
+- Page: https://www.codezen.tech/audits/c2x-com2us/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 4 |
+| Minor | 5 |
+| Info | 6 |
+| Total | 15 |
+
+
+---
+
+### Kinetic Money security audit
+
+Audit of the Kinetic Money's cosmwasm smart contracts audit.
+
+Codezen audited Kinetic Money together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 26 findings: 7 critical, 4 major, 5 minor and 10 informational.
+
+- Audit type: CosmWasm Contract Audit
+- Technologies: Rust, Terra, CosmWasm
+- Ecosystem: Cosmos
+- Delivered with: Oak Security
+- Report date: 7 April 2022
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Kinetic/2022-04-07%20Audit%20Report%20-%20Kinetic%20v1.0.pdf
+- Project website: https://kinetic.money/
+- Page: https://www.codezen.tech/audits/kinetic-money/
+
+#### Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 7 |
+| Major | 4 |
+| Minor | 5 |
+| Info | 10 |
+| Total | 26 |
+
+
+---
+
+### IBM / HCL AI Data Advisor for Workload Automation security audit
+
+Audit of the IBM / HCL AI Data Advisor for Workload Automation's ai module for ibm / hcl workload automation.
+
+Codezen audited IBM / HCL AI Data Advisor for Workload Automation. Technologies in scope: AI, Observability, Python, React, Nodejs and Microservices.
+
+- Audit type: AI module for IBM / HCL Workload Automation
+- Technologies: AI, Observability, Python, React, Nodejs, Microservices
+- Project website: https://www.ibm.com/products/workload-automation
+- Page: https://www.codezen.tech/audits/ibm-hcl-ai-data-advisor-for-workload-automation/
+
+
+---
+
+### HCL Clara 2 security audit
+
+Audit of the HCL Clara 2's automation chatbot for ibm / hcl workload automation.
+
+Codezen audited HCL Clara 2. Technologies in scope: AI, Chatbot, NLP, Rasa, React, Python and Microservices.
+
+- Audit type: Automation Chatbot for IBM / HCL Workload Automation
+- Technologies: AI, Chatbot, NLP, Rasa, React, Python, Microservices
+- Project website: https://www.hcltechsw.com/clara
+- Page: https://www.codezen.tech/audits/hcl-clara-2/
+
+
+---
+
+### HCL Clara security audit
+
+Audit of the HCL Clara's automation chatbot for ibm / hcl workload automation.
+
+Codezen audited HCL Clara. Technologies in scope: AI, Chatbot, NLP, Rasa, React, Python and Microservices.
+
+- Audit type: Automation Chatbot for IBM / HCL Workload Automation
+- Technologies: AI, Chatbot, NLP, Rasa, React, Python, Microservices
+- Project website: https://www.hcltechsw.com/clara
+- Page: https://www.codezen.tech/audits/hcl-clara/
+
+
+---
+
+### HCL T-VREX security audit
+
+Audit of the HCL T-VREX's a vr experience for hcl workload automation.
+
+Codezen audited HCL T-VREX. Technologies in scope: VR, React, Oculus and Real-time.
+
+- Audit type: A VR experience for HCL Workload Automation
+- Technologies: VR, React, Oculus, Real-time
+- Project website: https://www.workloadautomation-community.com/blogs/are-you-ready-for-an-exciting-immersive-experience-in-workload-automation
+- Page: https://www.codezen.tech/audits/hcl-t-vrex/
+
