@@ -8,6 +8,7 @@ interface Member {
   role: string;
   description: string;
   website?: string;
+  sameAs?: string[];
 }
 interface Props {
   members: Member[];
@@ -44,7 +45,7 @@ const max = Math.max(...expertise.map((e) => e.count), 1);
           <p class="team__desc">{m.description}</p>
           {m.website && (
             <a class="team__link" href={m.website} target="_blank" rel="noopener">
-              {m.website.replace(/^https?:\/\//, "")} →
+              {m.website.replace(/^https?:\/\/(www\.)?|\/$/g, "")} →
             </a>
           )}
         </div>

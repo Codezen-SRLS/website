@@ -90,7 +90,14 @@
           "role": "CEO & Lead Security Researcher",
           "description": "Christian Vari is a blockchain security researcher and smart contract auditor specializing in DeFi, Layer 1 protocols, and decentralized systems. With 100+ audits across Substrate, Cosmos SDK, CosmWasm, Solana, and EVM chains, he helps Web3 teams launch secure, scalable, and resilient products.",
           "image": "./images/christianvari.png",
-          "website": "https://christianvari.dev"
+          "website": "https://www.christianvari.dev/",
+          "sameAs": [
+            "https://www.christianvari.dev/#person",
+            "https://www.linkedin.com/in/christianvari/",
+            "https://x.com/christianvari_",
+            "https://github.com/christianvari",
+            "https://www.altairith.capital/#christian-vari"
+          ]
         }
       ]
     },

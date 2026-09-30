@@ -90,6 +90,8 @@ export const abs = (path: string) => new URL(path, SITE_URL).href;
 
 const ORG_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
+// Referenced by other sites (christianvari.dev, altairith.capital): keep stable
+export const FOUNDER_ID = `${SITE_URL}/#christian-vari`;
 
 export const organization = () => ({
   "@type": ["Organization", "ProfessionalService"],
@@ -106,6 +108,7 @@ export const organization = () => ({
   areaServed: "Worldwide",
   knowsAbout: KNOWS_ABOUT,
   parentOrganization: { "@type": "Organization", name: LEGAL.parent, url: SOCIAL.parent },
+  founder: { "@id": FOUNDER_ID },
   sameAs: [SOCIAL.x, SOCIAL.github, SOCIAL.linkedin],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -126,7 +129,15 @@ export const website = () => ({
   inLanguage: "en",
 });
 
-export const person = (m: { name: string; role: string; description: string; website?: string; image?: string }) => ({
+export const person = (m: {
+  name: string;
+  role: string;
+  description: string;
+  website?: string;
+  /** Other profiles of the same person, incl. their @id on their own site */
+  sameAs?: string[];
+  image?: string;
+}) => ({
   "@type": "Person",
   "@id": `${SITE_URL}/#${m.name.toLowerCase().replace(/\s+/g, "-")}`,
   name: m.name,
@@ -134,7 +145,8 @@ export const person = (m: { name: string; role: string; description: string; web
   description: m.description,
   worksFor: { "@id": ORG_ID },
   ...(m.image ? { image: m.image } : {}),
-  ...(m.website ? { url: m.website, sameAs: [m.website] } : {}),
+  ...(m.website ? { url: m.website } : {}),
+  ...(m.sameAs?.length ? { sameAs: m.sameAs } : m.website ? { sameAs: [m.website] } : {}),
   knowsAbout: KNOWS_ABOUT.slice(1),
 });
 
