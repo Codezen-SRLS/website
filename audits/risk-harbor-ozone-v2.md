@@ -1,8 +1,8 @@
-# Risk Harbor Ozone v2 security audit
+# Subsea (Risk Harbor) Ozone v2 security audit
 
-Audit of the Risk Harbor Ozone v2 CosmWasm smart contracts.
+Audit of Subsea (Risk Harbor) Ozone v2.
 
-Codezen audited Risk Harbor Ozone v2 together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 15 findings: 3 major, 6 minor and 6 informational.
+Codezen audited Subsea (Risk Harbor) Ozone v2 together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 15 findings: 3 major, 6 minor and 6 informational.
 
 - Audit type: CosmWasm Contract Audit
 - Technologies: Rust, Terra, CosmWasm
@@ -10,7 +10,7 @@ Codezen audited Risk Harbor Ozone v2 together with Oak Security. Technologies in
 - Delivered with: Oak Security
 - Report date: 22 March 2022
 - Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Risk%20Harbor/2022-03-22%20Audit%20Report%20-%20Risk%20Harbor%20v1.0.pdf
-- Project website: https://ozone.riskharbor.com/
+- Project website: https://subseaprotocol.com
 - Page: https://www.codezen.tech/audits/risk-harbor-ozone-v2/
 
 ## Findings by severity

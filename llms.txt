@@ -212,7 +212,7 @@ To request an audit, email info@codezen.tech with the project name, repository/s
 - [Margined Protocol Perpetuals security audit](https://www.codezen.tech/audits/margined-protocol-perpetuals.md): CosmWasm Contract Audit
 - [Comdex Chain & Comdex Governance Contract security audit](https://www.codezen.tech/audits/comdex-chain-comdex-governance-contract.md): Cosmos SDK and CosmWasm Contract Audit
 - [Stargaze Marketplace security audit](https://www.codezen.tech/audits/stargaze-marketplace.md): CosmWasm Contract Audit
-- [Risk Harbor Ozone v2 security audit](https://www.codezen.tech/audits/risk-harbor-ozone-v2.md): CosmWasm Contract Audit
+- [Subsea (Risk Harbor) Ozone v2 security audit](https://www.codezen.tech/audits/risk-harbor-ozone-v2.md): CosmWasm Contract Audit
 - [Aperture Finance 2 security audit](https://www.codezen.tech/audits/aperture-finance-2.md): CosmWasm Contract Audit
 - [Levana Perpetual Swap security audit](https://www.codezen.tech/audits/levana-perpetual-swap.md): CosmWasm Contract Audit
 - [C2X Com2Us security audit](https://www.codezen.tech/audits/c2x-com2us.md): CosmWasm Contract Audit

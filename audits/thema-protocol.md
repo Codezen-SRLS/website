@@ -10,6 +10,7 @@ Codezen audited Thema Protocol together with Oak Security. Technologies in scope
 - Delivered with: Oak Security
 - Report date: 27 December 2025
 - Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Thema/2025-12-27%20Audit%20Report%20-%20Thema%20Protocol.pdf
+- Project website: https://www.thema.financial
 - Page: https://www.codezen.tech/audits/thema-protocol/
 
 ## Findings by severity
