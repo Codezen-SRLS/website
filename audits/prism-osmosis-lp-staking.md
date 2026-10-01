@@ -1,6 +1,6 @@
 # Prism Osmosis LP Staking security audit
 
-Audit of the Prism Osmosis LP Staking CosmWasm smart contracts.
+Audit of the Prism Osmosis LP staking CosmWasm smart contracts written in Rust.
 
 Codezen audited Prism Osmosis LP Staking. Technologies in scope: Rust, Osmosis, Prism and CosmWasm.
 

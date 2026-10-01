@@ -1,6 +1,6 @@
 # Zodiac Protocol security audit
 
-Audit of the Zodiac Protocol CosmWasm smart contracts.
+Audit of Zodiac Protocol's core CosmWasm smart contracts written in Rust. Zodiac is an open-source protocol on Osmosis for deconstructing LP positions into principal and yield tokens.
 
 Codezen audited Zodiac Protocol together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 30 findings: 3 critical, 8 major, 11 minor and 8 informational.
 

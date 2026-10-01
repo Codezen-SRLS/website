@@ -1,6 +1,6 @@
 # Anyflo Move Contracts and Workers security audit
 
-Audit of the Anyflo Move Contracts and Workers.
+Audit of Anyflo's Move smart contracts and associated workers. Anyflo is a neutral orchestration layer for stablecoin payments, offering institutions one integration to send, receive and settle across stablecoins and chains.
 
 Codezen audited Anyflo Move Contracts and Workers together with Oak Security. Technologies in scope: Move and Smart Contract.
 

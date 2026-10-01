@@ -1,6 +1,6 @@
 # XCVM Cosmwasm Contracts security audit
 
-Peer review of the XCVM Cosmwasm Contracts.
+Peer review of Composable Finance's XCVM CosmWasm smart contracts written in Rust. Composable Finance builds cross-chain DeFi infrastructure, with trustless interoperability powered by IBC.
 
 Codezen audited XCVM Cosmwasm Contracts. Technologies in scope: Rust, Peer Review, Osmosis and CosmWasm.
 

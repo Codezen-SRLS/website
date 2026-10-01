@@ -1,6 +1,6 @@
 # Zama security audit
 
-Audit of the Zama.
+Cryptography audit for Zama, focused on fully homomorphic encryption (FHE). Zama builds a confidential blockchain protocol.
 
 Codezen audited Zama together with Monethic. Technologies in scope: Cryptography and FHE.
 

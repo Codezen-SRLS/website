@@ -1,6 +1,6 @@
 # Dymension Phase 2 Stream 4 security audit
 
-Audit of the Dymension Phase 2 Stream 4.
+Audit of stream 4 of the second phase of the Dymension chain, a Cosmos SDK chain written in Go. Dymension L1 is a decentralized chain launchpad that helps creators turn ideas into their own blockchains.
 
 Codezen audited Dymension Phase 2 Stream 4 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Rollup.
 

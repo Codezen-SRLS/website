@@ -1,11 +1,11 @@
 # Router Voyager Forwarder Extension security audit
 
-Audit of the Router Voyager Forwarder Extension off-chain relayer and orchestrator.
+Audit of the Router Voyager asset forwarder contracts (excluding DexSpan), the asset forwarder middleware and the CosmWasm gateway contract. Router Protocol provides cross-chain liquidity and interoperability with chain abstraction.
 
-Codezen audited Router Voyager Forwarder Extension together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Off chain. We reported 69 findings: 19 critical, 20 major, 14 minor and 16 informational.
+Codezen audited Router Voyager Forwarder Extension together with Oak Security. Technologies in scope: Solidity, Ethereum, CosmWasm and Rust. We reported 69 findings: 19 critical, 20 major, 14 minor and 16 informational.
 
-- Audit type: Relayer And Orchestrator Audit
-- Technologies: Golang, Cosmos SDK, Ethereum, Off chain
+- Audit type: Solidity and CosmWasm Contract Audit
+- Technologies: Solidity, Ethereum, CosmWasm, Rust
 - Ecosystem: Ethereum, Cosmos
 - Delivered with: Oak Security
 - Report date: 30 April 2024

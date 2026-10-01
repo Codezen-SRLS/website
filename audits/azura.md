@@ -1,6 +1,6 @@
 # Azura security audit
 
-Audit of Azura.
+Audit of the smart contracts behind Azura, an onchain trading platform.
 
 Codezen audited Azura together with Zenith Security.
 

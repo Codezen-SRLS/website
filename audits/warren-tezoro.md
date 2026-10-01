@@ -1,6 +1,6 @@
 # Warren (Tezoro) security audit
 
-Audit of Warren (Tezoro).
+Audit of the v1.1 Solidity contracts of Warren (formerly Tezoro). Tezoro is an ERC-4626 vault that allocates deposits across lending protocols such as Aave V3, Compound V3, Spark, Morpho Blue and Fluid, with keeper-driven rebalancing and a performance fee charged on yield above a high water mark.
 
 Codezen audited Warren (Tezoro) together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 32 findings: 5 major, 18 minor and 9 informational.
 

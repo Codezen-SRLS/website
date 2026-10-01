@@ -1,6 +1,6 @@
 # Fuel Sequencer Updates 9 and The Rig security audit
 
-Audit of the Fuel Sequencer Updates 9 and The Rig.
+Audit of a round of updates to the Fuel Sequencer, a Cosmos SDK chain written in Go, together with The Rig. Fuel Ignition is an Ethereum layer-2 rollup powered by the FuelVM.
 
 Codezen audited Fuel Sequencer Updates 9 and The Rig together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 

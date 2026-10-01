@@ -1,6 +1,6 @@
 # Impossible Cloud Network Fairdrop security audit
 
-Audit of the Impossible Cloud Network Fairdrop.
+Audit of the Impossible Cloud Network Fairdrop Solidity contract, which distributes ICN tokens across three allocation tiers with a default 7-step or fast 2-step vesting schedule, role-based administration and time-windowed claims.
 
 Codezen audited Impossible Cloud Network Fairdrop together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 9 findings: 4 minor and 5 informational.
 

@@ -1,6 +1,6 @@
 # Composable Staking and Vesting Contracts security audit
 
-Audit of the Composable Staking and Vesting Contracts.
+Audit of the Composable Finance staking and vesting smart contracts. Composable Finance builds cross-chain DeFi infrastructure, providing trustless interoperability based on IBC across blockchain ecosystems.
 
 Codezen audited Composable Staking and Vesting Contracts. Technologies in scope: Smart Contract.
 

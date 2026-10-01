@@ -1,6 +1,6 @@
 # Bifrost Finance security audit
 
-Audit of the Bifrost Finance's substrate pallet.
+Audit of Bifrost Finance Leveraged Staking, covering the lend-market, leverage-staking and prices Substrate pallets in Rust. Bifrost is a staking yield layer that provides multi-chain liquid staking rewards infrastructure.
 
 Codezen audited Bifrost Finance together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot. We reported 19 findings: 1 major, 9 minor and 9 informational.
 

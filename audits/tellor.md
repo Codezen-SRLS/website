@@ -1,6 +1,6 @@
 # Tellor security audit
 
-Audit of the Tellor Cosmos chain.
+Audit of Layer, the Tellor Cosmos chain written in Go with the Cosmos SDK. Tellor is an oracle layer for censorship-resistant data creation and distribution.
 
 Codezen audited Tellor together with Torii Security. Technologies in scope: Cosmos SDK and Golang. We reported 63 findings: 21 critical, 16 major, 24 minor and 2 informational.
 

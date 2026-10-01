@@ -1,6 +1,6 @@
 # DATA Network (Story Protocol) 1.2 security audit
 
-Audit of the DATA Network (Story Protocol) 1.2.
+Audit of version 1.2 of the DATA Network (formerly Story Protocol) blockchain, written in Go with the Cosmos SDK. The DATA Network is an open protocol where human data is sourced, proven and processed to train AI models.
 
 Codezen audited DATA Network (Story Protocol) 1.2 together with Trust Security. Technologies in scope: Cosmos SDK, Golang and Ethereum.
 

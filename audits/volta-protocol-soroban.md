@@ -1,6 +1,6 @@
 # Volta Protocol Soroban security audit
 
-Audit of the Volta Protocol Soroban.
+Audit of Volta's Soroban smart contract in Rust, which implements threshold-governed multisig control with rule-based call authorization. Owners propose configuration changes, upgrades and per-user rules, and users whose rules match can execute permitted cross-contract calls.
 
 Codezen audited Volta Protocol Soroban together with Oak Security. Technologies in scope: Rust, Soroban and Stellar. We reported 10 findings: 1 major, 3 minor and 6 informational.
 

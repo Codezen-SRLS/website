@@ -1,6 +1,6 @@
 # SolvBTC Stellar security audit
 
-Audit of the SolvBTC fungible token, oracle and vault Soroban contracts on Stellar.
+Audit of the SolvBTC fungible token, oracle and vault Soroban contracts on Stellar, written in Rust. Solv Protocol offers financial services for Bitcoin holders, including lending, liquid staking, yield generation and fund management.
 
 Codezen audited SolvBTC Stellar together with Zenith Security. Technologies in scope: Stellar, Soroban, Rust, Bitcoin and Smart Contract. We reported 16 findings: 4 critical, 5 major, 5 minor and 2 informational.
 

@@ -1,6 +1,6 @@
 # Neptune Protocol Update security audit
 
-Audit of the Neptune Protocol Update CosmWasm smart contracts.
+Audit of changes to the Neptune Protocol CosmWasm contracts since a previous audit, including the market contract and the neptune-auth repository, excluding leverage trading and swap features. Neptune Finance is a lending and borrowing protocol.
 
 Codezen audited Neptune Protocol Update together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 11 findings: 1 major, 4 minor and 6 informational.
 

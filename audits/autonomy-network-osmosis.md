@@ -1,6 +1,6 @@
 # Autonomy Network Osmosis security audit
 
-Audit of the Autonomy Network Osmosis CosmWasm smart contracts.
+Audit of the Autonomy Network registry-stake and wrapper-osmosis CosmWasm contracts. Autonomy Network is a decentralized automation protocol that lets users have on-chain transactions executed automatically in the future under arbitrary conditions.
 
 Codezen audited Autonomy Network Osmosis together with Oak Security. Technologies in scope: Rust, Osmosis and CosmWasm. We reported 15 findings: 3 major, 7 minor and 5 informational.
 

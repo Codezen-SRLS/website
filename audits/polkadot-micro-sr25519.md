@@ -1,6 +1,6 @@
 # Polkadot micro-sr25519 security audit
 
-Audit of the Polkadot micro-sr25519.
+Audit of micro-sr25519, a TypeScript implementation of the sr25519 signature scheme used in the Polkadot ecosystem, covering Schnorr signatures over Ristretto, hierarchical deterministic key derivation (hard and soft) and VRF outputs with proofs.
 
 Codezen audited Polkadot micro-sr25519 together with Oak Security. Technologies in scope: Cryptography, TypeScript and Polkadot. We reported 11 findings: 7 minor and 4 informational.
 

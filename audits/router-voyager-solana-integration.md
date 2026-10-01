@@ -1,6 +1,6 @@
 # Router Voyager Solana Integration security audit
 
-Audit of the Router Voyager Solana integration.
+Audit of the off-chain components that integrate Solana into Router Voyager, written in Go and Rust. Router Protocol provides cross-chain liquidity and interoperability with chain abstraction.
 
 Codezen audited Router Voyager Solana Integration together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Solana, Rust and Off chain.
 

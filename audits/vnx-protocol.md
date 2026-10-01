@@ -1,6 +1,6 @@
 # VNX Protocol security audit
 
-Audit of the VNX Protocol Solana program.
+Audit of the VNX Protocol Solana program, written in Rust. VNX provides B2B tokenization infrastructure for real-world assets, including token generation, smart contract configuration, blockchain connectivity and technical reporting.
 
 Codezen audited VNX Protocol together with Zenith Security. Technologies in scope: Solana, Rust and Smart Contract.
 

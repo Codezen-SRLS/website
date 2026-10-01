@@ -1,6 +1,6 @@
 # Snowfork Snowbridge Updates 3 security audit
 
-Audit of the Snowfork Snowbridge Updates 3 to the Substrate bridge pallet.
+Audit of the third round of Snowbridge updates in the polkadot-sdk bridges/snowbridge code, covering changes since the previous audit. Snowbridge is a trustless bridge between Polkadot and Ethereum, using a BEEFY light client in Solidity and an Ethereum Beacon Chain light client in a Substrate pallet.
 
 Codezen audited Snowfork Snowbridge Updates 3 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 8 findings: 1 major, 2 minor and 5 informational.
 

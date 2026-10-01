@@ -1,6 +1,6 @@
 # Fuzion Plasma OTC security audit
 
-Audit of the Fuzion Plasma OTC CosmWasm smart contracts.
+Audit of the Fuzion Plasma OTC CosmWasm contracts. Fuzion Plasma OTC is a protocol on the Kujira chain for public and private over-the-counter coin swaps, with options such as an arbiter, vesting accounts and partial swaps.
 
 Codezen audited Fuzion Plasma OTC together with Oak Security. Technologies in scope: Rust, Kujira and CosmWasm. We reported 18 findings: 3 critical, 1 major, 6 minor and 8 informational.
 

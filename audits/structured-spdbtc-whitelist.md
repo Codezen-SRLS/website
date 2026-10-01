@@ -1,6 +1,6 @@
 # Structured spdBTC Whitelist security audit
 
-Audit of the Structured spdBTC Whitelist.
+Audit of the whitelist changes to Structured's spdBTC Solidity contract. Structured Private Deposit is an ERC-4626 vault that accepts WBTC and issues spdBTC 1:1, transfers deposits to a designated custodian, and includes deposit limits, address blacklisting and a pause mechanism.
 
 Codezen audited Structured spdBTC Whitelist together with Oak Security. Technologies in scope: Solidity, Ethereum, EVM and Bitcoin. We reported 3 findings: 1 minor and 2 informational.
 

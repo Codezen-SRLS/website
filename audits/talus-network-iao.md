@@ -1,6 +1,6 @@
 # Talus Network IAO security audit
 
-Audit of the Talus Network IAO Move contract.
+Audit of the Talus IAO Move contracts on Sui and their bonding curve, oracle, fixed-point math and governance utilities. Talus is an onchain platform for AI agents, with Nexus as its developer framework for building them.
 
 Codezen audited Talus Network IAO together with Zenith Security. Technologies in scope: Move, Sui and Smart Contract. We reported 37 findings: 10 critical, 13 major, 10 minor and 4 informational.
 

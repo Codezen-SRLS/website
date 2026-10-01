@@ -1,6 +1,6 @@
 # Polkadot GrandPa IBC Light Client security audit
 
-Audit of the Polkadot GrandPa IBC Light Client.
+Audit of Composable Finance's Polkadot GrandPa IBC light client, a WASM light client written in Rust and Go that connects Polkadot and Cosmos chains over IBC.
 
 Codezen audited Polkadot GrandPa IBC Light Client together with Oak Security. Technologies in scope: Rust, Golang, Tendermint, IBC, Cosmos and Polkadot.
 

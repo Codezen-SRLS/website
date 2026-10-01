@@ -1,6 +1,6 @@
 # CoinList TokenSwap security audit
 
-Audit of the CoinList TokenSwap.
+Audit of CoinList's TokenSwap Solidity contracts and their Superstate integration. TokenSwap is a shared base for token swap integrations that handles fees and per-user swap totals, and Superstate.sol implements it for a Superstate "buy the dip" market, checking eligibility and forwarding the minted tokens to the caller.
 
 Codezen audited CoinList TokenSwap together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 14 findings: 1 critical, 2 major, 6 minor and 5 informational.
 

@@ -1,6 +1,6 @@
 # Stellar Core Protocol 24 security audit
 
-Audit of the Stellar Core Protocol 24.
+Audit of the Protocol 24 changes to stellar-core, the C++ node behind the Stellar network. Stellar is an open network for fast, low-cost payments and asset issuance, secured by the Stellar Consensus Protocol and extended with Soroban smart contracts in Rust and Wasm.
 
 Codezen audited Stellar Core Protocol 24 together with Oak Security. Technologies in scope: C++, C, Soroban, Rust and Stellar. We reported 2 findings: 1 minor and 1 informational.
 

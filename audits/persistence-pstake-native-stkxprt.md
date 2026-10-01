@@ -1,6 +1,6 @@
 # Persistence pSTAKE Native stkXPRT security audit
 
-Audit of the Persistence pSTAKE Native stkXPRT feature.
+Audit of the native stkXPRT feature of pSTAKE, built on the Persistence Cosmos SDK chain in Go and involving the Cosmos Hub.
 
 Codezen audited Persistence pSTAKE Native stkXPRT together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
 

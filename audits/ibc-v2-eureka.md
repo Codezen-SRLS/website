@@ -1,6 +1,6 @@
 # IBC v2 Eureka security audit
 
-Audit of the IBC v2 Eureka.
+Audit of IBC v2 (Eureka), spanning Go code for Cosmos SDK chains and Solidity contracts for Ethereum. IBC is a blockchain interoperability protocol used by more than 115 chains for cross-chain communication.
 
 Codezen audited IBC v2 Eureka together with Zenith Security. Technologies in scope: Golang, Solidity, IBC, Cosmos SDK and Ethereum.
 

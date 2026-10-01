@@ -1,6 +1,6 @@
 # Drop Protocol Updates 3 security audit
 
-Audit of the Drop Protocol Updates 3.
+Audit of the third round of updates to Drop's CosmWasm contracts in Rust. Drop is a liquid staking protocol on Neutron that uses IBC, Interchain Accounts and Interchain Queries to stake across the Cosmos ecosystem, with auto-compounding of rewards.
 
 Codezen audited Drop Protocol Updates 3 together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 12 findings: 1 major, 4 minor and 7 informational.
 

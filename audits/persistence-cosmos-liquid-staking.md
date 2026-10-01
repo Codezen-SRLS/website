@@ -1,6 +1,6 @@
 # Persistence Cosmos Liquid Staking security audit
 
-Audit of the Persistence Cosmos Liquid Staking Cosmos SDK modules.
+Audit of the x/lscosmos Cosmos SDK module in Persistence's pstake-native codebase, written in Go. The module powers stkATOM, a non-custodial ATOM liquid staking solution on the Persistence Core-1 chain.
 
 Codezen audited Persistence Cosmos Liquid Staking together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub. We reported 15 findings: 1 critical, 3 major, 5 minor and 6 informational.
 

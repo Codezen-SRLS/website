@@ -1,6 +1,6 @@
 # C2X Com2Us security audit
 
-Audit of the C2X Com2Us CosmWasm smart contracts.
+Audit of C2X CosmWasm contracts in the Terra ecosystem: a legacy cw20 token implementation, an NFT lock system and a beta game launcher that lets users support sales of newly launched games. C2X is a blockchain gaming platform.
 
 Codezen audited C2X Com2Us together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 15 findings: 4 major, 5 minor and 6 informational.
 

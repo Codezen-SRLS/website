@@ -1,6 +1,6 @@
 # Stargaze Marketplace security audit
 
-Audit of the Stargaze Marketplace CosmWasm smart contracts.
+Audit of the Stargaze marketplace CosmWasm contracts. Stargaze is a Cosmos zone dedicated to NFTs, and its marketplace, owned by chain governance, lets users buy and sell NFTs through auctions and direct offers.
 
 Codezen audited Stargaze Marketplace together with Oak Security. Technologies in scope: Rust, Stargaze, CosmWasm and NFT. We reported 13 findings: 3 major, 6 minor and 4 informational.
 

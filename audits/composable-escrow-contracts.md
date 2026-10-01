@@ -1,6 +1,6 @@
 # Composable Escrow Contracts security audit
 
-Audit of the Composable Escrow Contracts.
+Audit of the Composable Finance escrow smart contracts. Composable Finance builds cross-chain DeFi infrastructure, providing trustless interoperability based on IBC across blockchain ecosystems.
 
 Codezen audited Composable Escrow Contracts. Technologies in scope: Smart Contract.
 

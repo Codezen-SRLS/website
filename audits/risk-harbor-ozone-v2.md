@@ -1,6 +1,6 @@
 # Subsea (Risk Harbor) Ozone v2 security audit
 
-Audit of Subsea (Risk Harbor) Ozone v2.
+Audit of the Ozone v2 CosmWasm contracts of Subsea (formerly Risk Harbor) on Terra. Risk Harbor is a DeFi risk management marketplace that protects liquidity providers and stakers against smart contract risks, hacks and attacks through an automated, impartial claims process.
 
 Codezen audited Subsea (Risk Harbor) Ozone v2 together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 15 findings: 3 major, 6 minor and 6 informational.
 

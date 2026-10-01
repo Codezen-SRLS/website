@@ -1,6 +1,6 @@
 # Holo security audit
 
-Audit of the Holo.
+Audit of the Holo smart contracts.
 
 Codezen audited Holo together with Zenith Security.
 

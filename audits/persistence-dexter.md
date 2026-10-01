@@ -1,6 +1,6 @@
 # Persistence Dexter security audit
 
-Audit of the Persistence Dexter CosmWasm smart contracts.
+Audit of Dexter Core, the multi-staking and router contracts, and an emergency pause feature, in CosmWasm. Dexter is a DEX on Persistence built as a generalized state transition executor that queries swap math from its pool contracts for aggregated, non-custodial liquidity.
 
 Codezen audited Persistence Dexter together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 64 findings: 7 critical, 8 major, 23 minor and 26 informational.
 

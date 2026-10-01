@@ -1,6 +1,6 @@
 # Structured Jupiter security audit
 
-Audit of the Structured Jupiter.
+Audit of the Structured Jupiter smart contracts.
 
 Codezen audited Structured Jupiter together with Oak Security.
 

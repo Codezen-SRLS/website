@@ -1,6 +1,6 @@
 # Nibiru Chain security audit
 
-Audit of the Nibiru Chain.
+Audit of the Nibiru chain, a Cosmos SDK blockchain written in Go. Nibiru is a smart contract ecosystem with a high-performance, EVM-equivalent execution layer for Web3 applications.
 
 Codezen audited Nibiru Chain together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus.
 

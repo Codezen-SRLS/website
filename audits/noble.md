@@ -1,6 +1,6 @@
 # Noble security audit
 
-Audit of the Noble Cosmos SDK chain.
+Security review of the Noble chain, built with the Cosmos SDK and Tendermint in Go, centered on its TokenFactory module, which lets privileged accounts mint and control generic assets. Noble is designed to run on Interchain Security provided by the Cosmos Hub.
 
 Codezen audited Noble together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Interchain Security and Circle. We reported 21 findings: 5 major, 10 minor and 6 informational.
 

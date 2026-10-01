@@ -1,6 +1,6 @@
 # Mars Protocol Periphery security audit
 
-Audit of the Mars Protocol Periphery CosmWasm smart contracts.
+Audit of the Mars Protocol periphery smart contracts, written in Rust with CosmWasm and intended for deployment on Mars Hub, part of the Mars ecosystem.
 
 Codezen audited Mars Protocol Periphery together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 13 findings: 1 critical, 2 major, 3 minor and 7 informational.
 

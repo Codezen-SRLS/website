@@ -1,6 +1,6 @@
 # Persistence yBTC security audit
 
-Audit of the Persistence yBTC.
+Audit of the Persistence yBTC smart contracts.
 
 Codezen audited Persistence yBTC together with Oak Security. Technologies in scope: Bitcoin and Persistence.
 

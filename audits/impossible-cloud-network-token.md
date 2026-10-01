@@ -1,6 +1,6 @@
 # Impossible Cloud Network Token security audit
 
-Audit of the Impossible Cloud Network Token.
+Audit of the ICN Link Solidity smart contracts of the Impossible Cloud Network. ICN Link is an NFT contract used to join the network either as a HyperNode or for staking. The Impossible Cloud Network combines blockchain technology with traditional cloud services to build an open cloud platform.
 
 Codezen audited Impossible Cloud Network Token together with Oak Security. Technologies in scope: Solidity. We reported 9 findings: 4 minor and 5 informational.
 

@@ -1,6 +1,6 @@
 # Acurast Chain security audit
 
-Audit of the Acurast Chain.
+Audit of the Acurast Substrate chain in Rust, covering the compute, marketplace, processor manager, rewards treasury and Hyperdrive pallets, P-256 crypto and the mainnet runtime. Acurast is a decentralized compute network powered by phones.
 
 Codezen audited Acurast Chain together with Monethic. Technologies in scope: Substrate, Rust and Consensus. We reported 26 findings: 6 critical, 9 major, 9 minor and 2 informational.
 

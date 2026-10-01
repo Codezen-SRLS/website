@@ -1,6 +1,6 @@
 # Swap.io CLMM security audit
 
-Audit of the Swap.io CLMM Solana program.
+Audit of the Swap.io changes to its fork of Raydium's CLMM, a concentrated liquidity market maker program for Solana written in Rust. Swap.io routes trades across multiple DEX aggregators to find the best price.
 
 Codezen audited Swap.io CLMM together with Zenith Security. Technologies in scope: Solana, Rust and CLMM. We reported 5 findings: 2 major, 1 minor and 2 informational.
 

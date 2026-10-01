@@ -1,6 +1,6 @@
 # Snowfork Snowbridge Extension security audit
 
-Audit of the Snowfork Snowbridge Extension.
+Audit of changes to Snowbridge's Solidity contracts and Substrate parachain code since a previous audit. Snowbridge is a trustless bridge between Polkadot and Ethereum, using a Solidity BEEFY light client and an Altair-compliant Ethereum light client pallet.
 
 Codezen audited Snowfork Snowbridge Extension together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 12 findings: 1 critical, 2 major, 6 minor and 3 informational.
 

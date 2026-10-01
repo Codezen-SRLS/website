@@ -1,10 +1,10 @@
 # Persistence pSTAKE BTC Yield security audit
 
-Audit of the Persistence pSTAKE BTC Yield feature.
+Audit of the pSTAKE BTC Yield feature from Persistence, a Bitcoin yield product that includes Solidity smart contracts on Ethereum.
 
 Codezen audited Persistence pSTAKE BTC Yield together with Oak Security. Technologies in scope: Bitcoin, Solidity, Ethereum and Persistence.
 
-- Audit type: Cosmos SDK Audit
+- Audit type: Solidity smart contracts audit
 - Technologies: Bitcoin, Solidity, Ethereum, Persistence
 - Ecosystem: Ethereum, Bitcoin
 - Delivered with: Oak Security

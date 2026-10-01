@@ -1,6 +1,6 @@
 # Fuel Sequencer Watchtower security audit
 
-Audit of the Fuel Sequencer Watchtower.
+Audit of the Fuel Sequencer Watchtower, an off-chain monitoring component written in Go. The Fuel Sequencer is part of Fuel Ignition, an Ethereum layer-2 rollup powered by the FuelVM.
 
 Codezen audited Fuel Sequencer Watchtower together with Oak Security. Technologies in scope: Golang and Off chain.
 

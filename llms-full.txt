@@ -30,7 +30,7 @@ Guarantee business continuity with a robust Disaster Recovery plan that protects
 
 ### CoinList Token Sale Fund Updates security audit
 
-Audit of the CoinList Token Sale Fund Updates.
+Audit of the changes to CoinList's TokenSaleFund Solidity contract. TokenSaleFund is a custodial contract that holds users' contributions during a token sale, with backend-controlled flows to commit and lock funds, remit refunds, and finally distribute the remaining balances to a recipient such as the sale partner.
 
 Codezen audited CoinList Token Sale Fund Updates together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 2 findings: 1 minor and 1 informational.
 
@@ -58,7 +58,7 @@ Codezen audited CoinList Token Sale Fund Updates together with Oak Security. Tec
 
 ### ZIGChain security audit
 
-Audit of the ZIGChain.
+Audit of the ZIGChain Cosmos SDK application, covering the app, wasmbinding and custom x/ modules. ZIGChain is a Cosmos SDK–based blockchain with a native ZIG token, a factory module for namespaced token issuance, an AMM dex module, and a tokenwrapper module bridging to Axelar and EVM chains.
 
 Codezen audited ZIGChain together with Oak Security. Technologies in scope: Golang, Cosmos SDK and CosmWasm. We reported 45 findings: 1 critical, 8 major, 21 minor and 15 informational.
 
@@ -86,7 +86,7 @@ Codezen audited ZIGChain together with Oak Security. Technologies in scope: Gola
 
 ### Neutron Auction and Undelegations Phase 1 security audit
 
-Audit of the Neutron Auction and Undelegations Phase 1.
+Audit of the Neutron auction CosmWasm contract. It runs a time-bounded deposit auction, then lets the owner settle in batches, allocating a fixed USDC budget pro rata to each participant's share of deposits and burning the deposited claim tokens, after which users claim their USDC.
 
 Codezen audited Neutron Auction and Undelegations Phase 1 together with Oak Security. Technologies in scope: Rust, CosmWasm and Neutron. We reported 15 findings: 6 minor and 9 informational.
 
@@ -114,7 +114,7 @@ Codezen audited Neutron Auction and Undelegations Phase 1 together with Oak Secu
 
 ### Neutron Auction and Undelegations Phase 2 security audit
 
-Audit of the Neutron Auction and Undelegations Phase 2.
+Audit of the Neutron v11 chain upgrade. It moves Neutron to the native Cosmos SDK governance module, replaces x/revenue, x/feeburner and adminmodule with gov, mint and distribution, migrates the puppeteer contract to auth-proxy, and schedules x/cron tasks for the undelegations manager contract.
 
 Codezen audited Neutron Auction and Undelegations Phase 2 together with Oak Security. Technologies in scope: Golang, Rust, Cosmos SDK, CosmWasm and Neutron. We reported 21 findings: 1 critical, 6 major, 6 minor and 8 informational.
 
@@ -142,7 +142,7 @@ Codezen audited Neutron Auction and Undelegations Phase 2 together with Oak Secu
 
 ### Warren (Tezoro) security audit
 
-Audit of Warren (Tezoro).
+Audit of the v1.1 Solidity contracts of Warren (formerly Tezoro). Tezoro is an ERC-4626 vault that allocates deposits across lending protocols such as Aave V3, Compound V3, Spark, Morpho Blue and Fluid, with keeper-driven rebalancing and a performance fee charged on yield above a high water mark.
 
 Codezen audited Warren (Tezoro) together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 32 findings: 5 major, 18 minor and 9 informational.
 
@@ -170,7 +170,7 @@ Codezen audited Warren (Tezoro) together with Oak Security. Technologies in scop
 
 ### CoinList TokenSwap security audit
 
-Audit of the CoinList TokenSwap.
+Audit of CoinList's TokenSwap Solidity contracts and their Superstate integration. TokenSwap is a shared base for token swap integrations that handles fees and per-user swap totals, and Superstate.sol implements it for a Superstate "buy the dip" market, checking eligibility and forwarding the minted tokens to the caller.
 
 Codezen audited CoinList TokenSwap together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 14 findings: 1 critical, 2 major, 6 minor and 5 informational.
 
@@ -198,7 +198,7 @@ Codezen audited CoinList TokenSwap together with Oak Security. Technologies in s
 
 ### CoinList Pull 12 security audit
 
-Audit of the CoinList Pull 12.
+Audit of the changes in pull request 12 of CoinList's onchain repository, which holds Ethereum contracts supporting token sale and swap operations. The in-scope Solidity code covers a general swap module (Soms) and an Ondo-specific swap module that interfaces with external manager and RWA contracts.
 
 Codezen audited CoinList Pull 12 together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 11 findings: 6 minor and 5 informational.
 
@@ -226,7 +226,7 @@ Codezen audited CoinList Pull 12 together with Oak Security. Technologies in sco
 
 ### Zama security audit
 
-Audit of the Zama.
+Cryptography audit for Zama, focused on fully homomorphic encryption (FHE). Zama builds a confidential blockchain protocol.
 
 Codezen audited Zama together with Monethic. Technologies in scope: Cryptography and FHE.
 
@@ -242,7 +242,7 @@ Codezen audited Zama together with Monethic. Technologies in scope: Cryptography
 
 ### Anyflo Move Contracts and Workers security audit
 
-Audit of the Anyflo Move Contracts and Workers.
+Audit of Anyflo's Move smart contracts and associated workers. Anyflo is a neutral orchestration layer for stablecoin payments, offering institutions one integration to send, receive and settle across stablecoins and chains.
 
 Codezen audited Anyflo Move Contracts and Workers together with Oak Security. Technologies in scope: Move and Smart Contract.
 
@@ -258,7 +258,7 @@ Codezen audited Anyflo Move Contracts and Workers together with Oak Security. Te
 
 ### Injective Audit Updates security audit
 
-Audit of the Injective Audit Updates.
+Audit of updates to Injective's Cosmos SDK codebase, written in Go. Injective is a layer 1 blockchain infrastructure for finance, built for tokenization, perpetuals, stablecoins and institutional onchain markets.
 
 Codezen audited Injective Audit Updates together with Zenith Security. Technologies in scope: Golang, Cosmos SDK and Injective.
 
@@ -275,7 +275,7 @@ Codezen audited Injective Audit Updates together with Zenith Security. Technolog
 
 ### Anyflo EVM Contracts security audit
 
-Audit of the Anyflo EVM Contracts.
+Audit of Anyflo's Solidity smart contracts for EVM chains. Anyflo is a neutral orchestration layer for stablecoin payments: a single integration to send, receive and settle across any stablecoin and chain, built for institutions.
 
 Codezen audited Anyflo EVM Contracts together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM.
 
@@ -292,7 +292,7 @@ Codezen audited Anyflo EVM Contracts together with Oak Security. Technologies in
 
 ### Monaco security audit
 
-Audit of Monaco.
+Audit of the Monaco smart contracts. Monaco is a trading platform that brings spot, perpetuals and prediction markets across asset classes together in one place.
 
 Codezen audited Monaco together with Zenith Security.
 
@@ -307,7 +307,7 @@ Codezen audited Monaco together with Zenith Security.
 
 ### Injective security audit
 
-Audit of the Injective.
+Security review of the Injective chain, a Cosmos SDK codebase written in Go. Injective is a layer 1 blockchain built as infrastructure for finance, supporting tokenization, perpetuals, stablecoins and institutional onchain markets.
 
 Codezen audited Injective together with Zenith Security. Technologies in scope: Golang, Cosmos SDK and Injective.
 
@@ -324,7 +324,7 @@ Codezen audited Injective together with Zenith Security. Technologies in scope: 
 
 ### ZIGChain Pull 14 security audit
 
-Audit of the ZIGChain Pull 14.
+Audit of the changes in ZIGChain pull request 14, written in Go. ZIGChain is a Cosmos SDK–based blockchain with a native ZIG token and application modules for asset issuance, trading and external bridging.
 
 Codezen audited ZIGChain Pull 14 together with Oak Security. Technologies in scope: Golang and Cosmos SDK.
 
@@ -341,7 +341,7 @@ Codezen audited ZIGChain Pull 14 together with Oak Security. Technologies in sco
 
 ### Divigent MCP SDK security audit
 
-Audit of the Divigent MCP SDK.
+Audit of the Divigent MCP SDK for AI agents. Divigent is the treasury layer for x402 agent wallets on Base, providing adaptive reserves, just-in-time recall, venue monitoring and yield on idle USDC.
 
 Codezen audited Divigent MCP SDK together with Oak Security. Technologies in scope: AI and MCP.
 
@@ -357,7 +357,7 @@ Codezen audited Divigent MCP SDK together with Oak Security. Technologies in sco
 
 ### IBC security audit
 
-Audit of the IBC.
+Audit of the Inter-Blockchain Communication (IBC) protocol. IBC is a blockchain interoperability protocol used by more than 115 chains for cross-chain communication.
 
 Codezen audited IBC together with Zenith Security. Technologies in scope: IBC.
 
@@ -374,7 +374,7 @@ Codezen audited IBC together with Zenith Security. Technologies in scope: IBC.
 
 ### Divigent security audit
 
-Audit of Divigent.
+Audit of the Divigent smart contracts. Divigent provides a treasury layer for x402 agent wallets on Base, with adaptive reserves, just-in-time recall, venue monitoring and yield on idle USDC.
 
 Codezen audited Divigent together with Oak Security.
 
@@ -389,7 +389,7 @@ Codezen audited Divigent together with Oak Security.
 
 ### Totalis security audit
 
-Audit of Totalis.
+Audit of the Totalis smart contracts. Totalis is a multi-outcome prediction market trading platform that lets traders express multiple worldviews in a single leveraged position.
 
 Codezen audited Totalis together with Zenith Security.
 
@@ -404,7 +404,7 @@ Codezen audited Totalis together with Zenith Security.
 
 ### Azura security audit
 
-Audit of Azura.
+Audit of the smart contracts behind Azura, an onchain trading platform.
 
 Codezen audited Azura together with Zenith Security.
 
@@ -419,7 +419,7 @@ Codezen audited Azura together with Zenith Security.
 
 ### MANTRA Chain security audit
 
-Audit of the MANTRA Chain.
+Audit of MANTRA Chain, a Cosmos SDK chain written in Go. MANTRA is an EVM-compatible layer 1 blockchain for real world assets, designed to be capable of adhering to real-world regulatory requirements.
 
 Codezen audited MANTRA Chain together with Oak Security. Technologies in scope: Golang and Cosmos SDK.
 
@@ -436,7 +436,7 @@ Codezen audited MANTRA Chain together with Oak Security. Technologies in scope: 
 
 ### IBC v2 Eureka security audit
 
-Audit of the IBC v2 Eureka.
+Audit of IBC v2 (Eureka), spanning Go code for Cosmos SDK chains and Solidity contracts for Ethereum. IBC is a blockchain interoperability protocol used by more than 115 chains for cross-chain communication.
 
 Codezen audited IBC v2 Eureka together with Zenith Security. Technologies in scope: Golang, Solidity, IBC, Cosmos SDK and Ethereum.
 
@@ -451,23 +451,24 @@ Codezen audited IBC v2 Eureka together with Zenith Security. Technologies in sco
 
 ---
 
-### Bezee security audit
+### BeeZee security audit
 
-Audit of the Bezee.
+Smart contracts audit for BeeZee. BeeZee Network is a Cosmos SDK-based DeFi blockchain with IBC support, powered by the BZE coin, where users can create tokens, trade on a DEX and stake for rewards.
 
-Codezen audited Bezee together with Oak Security.
+Codezen audited BeeZee together with Oak Security.
 
 - Audit type: Smart contracts audit
 - Delivered with: Oak Security
 - Report date: 20 February 2026
-- Page: https://www.codezen.tech/audits/bezee/
+- Project website: https://getbze.com
+- Page: https://www.codezen.tech/audits/beezee/
 
 
 ---
 
 ### Injective Updates security audit
 
-Audit of the Injective Updates.
+Review of a further set of updates to Injective's Go-based Cosmos SDK chain. Injective is a layer 1 blockchain for finance, used for tokenization, perpetuals, stablecoins, AI finance and institutional onchain markets.
 
 Codezen audited Injective Updates together with Zenith Security. Technologies in scope: Golang, Cosmos SDK and Injective.
 
@@ -484,7 +485,7 @@ Codezen audited Injective Updates together with Zenith Security. Technologies in
 
 ### Structured maxBTC EVM Oracle Contracts security audit
 
-Audit of the Structured maxBTC EVM Oracle Contracts.
+Audit of Structured's maxBTC oracle contracts for EVM chains, written in Solidity. maxBTC is a cross-chain yield strategy and tokenization system for Bitcoin.
 
 Codezen audited Structured maxBTC EVM Oracle Contracts together with Oak Security. Technologies in scope: Solidity, Ethereum, EVM, Bitcoin and Oracle.
 
@@ -501,7 +502,7 @@ Codezen audited Structured maxBTC EVM Oracle Contracts together with Oak Securit
 
 ### SolvBTC Stellar Bridge security audit
 
-Audit of the SolvBTC Stellar bridge changes.
+Audit of changes to the SolvBTC Stellar bridge contracts, Soroban smart contracts written in Rust. Solv Protocol offers BTC holders a suite of financial services, including lending, liquid staking, yield generation and fund management.
 
 Codezen audited SolvBTC Stellar Bridge together with Zenith Security. Technologies in scope: Stellar, Soroban, Rust, Bitcoin, Bridge and Smart Contract. We reported 8 findings: 1 critical, 4 minor and 3 informational.
 
@@ -529,7 +530,7 @@ Codezen audited SolvBTC Stellar Bridge together with Zenith Security. Technologi
 
 ### Structured maxBTC CosmWasm and Solana Updates security audit
 
-Audit of the Structured maxBTC CosmWasm and Solana Updates.
+Audit of updates to Structured's maxBTC Solana programs (jupiter-helper, wormhole-helper, waitosaur) and CosmWasm contracts. maxBTC is a cross-chain yield and tokenization system in which Neutron mints and burns the token while strategy legs on Binance and Solana deploy and hedge assets.
 
 Codezen audited Structured maxBTC CosmWasm and Solana Updates together with Oak Security. Technologies in scope: Rust, CosmWasm, Solana and Bitcoin. We reported 55 findings: 16 major, 27 minor and 12 informational.
 
@@ -557,7 +558,7 @@ Codezen audited Structured maxBTC CosmWasm and Solana Updates together with Oak 
 
 ### Structured spdBTC Whitelist security audit
 
-Audit of the Structured spdBTC Whitelist.
+Audit of the whitelist changes to Structured's spdBTC Solidity contract. Structured Private Deposit is an ERC-4626 vault that accepts WBTC and issues spdBTC 1:1, transfers deposits to a designated custodian, and includes deposit limits, address blacklisting and a pause mechanism.
 
 Codezen audited Structured spdBTC Whitelist together with Oak Security. Technologies in scope: Solidity, Ethereum, EVM and Bitcoin. We reported 3 findings: 1 minor and 2 informational.
 
@@ -585,7 +586,7 @@ Codezen audited Structured spdBTC Whitelist together with Oak Security. Technolo
 
 ### CoinList Token Sale Fund security audit
 
-Audit of the CoinList Token Sale Fund.
+Audit of CoinList's TokenSaleFund Solidity contract, which custodies user contributions for a token sale. Backend-controlled accounts commit and lock funds, designated accounts can remit refunds, and the owner finally transfers the remaining balances to a recipient such as the sale partner.
 
 Codezen audited CoinList Token Sale Fund together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 11 findings: 6 minor and 5 informational.
 
@@ -613,7 +614,7 @@ Codezen audited CoinList Token Sale Fund together with Oak Security. Technologie
 
 ### The Graph security audit
 
-Audit of the The Graph.
+Audit of smart contracts for The Graph. The Graph is an indexing protocol for organizing blockchain data and making it easily accessible to applications through GraphQL.
 
 Codezen audited The Graph together with Trust Security.
 
@@ -628,7 +629,7 @@ Codezen audited The Graph together with Trust Security.
 
 ### Snowfork Snowbridge Fiat-Shamir BEEFY Changes security audit
 
-Audit of the Snowfork Snowbridge Fiat-Shamir BEEFY Changes.
+Audit of the Snowbridge change adding a non-interactive, Fiat-Shamir based BEEFY verification path to the Solidity BeefyClient alongside the RANDAO-based two-phase protocol. Snowbridge is a trustless bridge between Polkadot and Ethereum built on light clients.
 
 Codezen audited Snowfork Snowbridge Fiat-Shamir BEEFY Changes together with Oak Security. Technologies in scope: Solidity, Polkadot, Ethereum, Bridge and Cryptography. We reported 10 findings: 1 critical, 1 minor and 8 informational.
 
@@ -656,7 +657,7 @@ Codezen audited Snowfork Snowbridge Fiat-Shamir BEEFY Changes together with Oak 
 
 ### Structured maxBTC EVM security audit
 
-Audit of the Structured maxBTC EVM.
+Audit of Structured's maxBTC Solidity contracts for EVM chains. maxBTC is a cross-chain yield strategy and tokenization system for Bitcoin, with the token minted and burned on Neutron.
 
 Codezen audited Structured maxBTC EVM together with Oak Security. Technologies in scope: Solidity, Ethereum, EVM and Bitcoin.
 
@@ -673,7 +674,7 @@ Codezen audited Structured maxBTC EVM together with Oak Security. Technologies i
 
 ### Acurast Compute Pallet security audit
 
-Audit of the Acurast Compute Pallet.
+Audit of the Acurast compute pallet, a Substrate pallet written in Rust. Acurast is a decentralized compute network powered by phones, designed to run workloads without reliance on centralized servers.
 
 Codezen audited Acurast Compute Pallet together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot.
 
@@ -690,7 +691,7 @@ Codezen audited Acurast Compute Pallet together with Oak Security. Technologies 
 
 ### Stellar Core Protocol 24 security audit
 
-Audit of the Stellar Core Protocol 24.
+Audit of the Protocol 24 changes to stellar-core, the C++ node behind the Stellar network. Stellar is an open network for fast, low-cost payments and asset issuance, secured by the Stellar Consensus Protocol and extended with Soroban smart contracts in Rust and Wasm.
 
 Codezen audited Stellar Core Protocol 24 together with Oak Security. Technologies in scope: C++, C, Soroban, Rust and Stellar. We reported 2 findings: 1 minor and 1 informational.
 
@@ -718,7 +719,7 @@ Codezen audited Stellar Core Protocol 24 together with Oak Security. Technologie
 
 ### Volta Protocol Soroban security audit
 
-Audit of the Volta Protocol Soroban.
+Audit of Volta's Soroban smart contract in Rust, which implements threshold-governed multisig control with rule-based call authorization. Owners propose configuration changes, upgrades and per-user rules, and users whose rules match can execute permitted cross-contract calls.
 
 Codezen audited Volta Protocol Soroban together with Oak Security. Technologies in scope: Rust, Soroban and Stellar. We reported 10 findings: 1 major, 3 minor and 6 informational.
 
@@ -746,7 +747,7 @@ Codezen audited Volta Protocol Soroban together with Oak Security. Technologies 
 
 ### Structured maxBTC ERC20 for Eureka Bridge security audit
 
-Audit of the Structured maxBTC ERC20 for Eureka Bridge.
+Audit of three Solidity contracts for Structured's maxBTC: an upgradable ERC20 whose minting and burning are controlled by the Eureka bridge to represent maxBTC across Neutron and Cosmos, a WETH-like ETH wrapper for automated bridging, and a fixed-rate token converter.
 
 Codezen audited Structured maxBTC ERC20 for Eureka Bridge together with Oak Security. Technologies in scope: Solidity, Ethereum, EVM, Bitcoin and Bridge. We reported 13 findings: 5 minor and 8 informational.
 
@@ -774,7 +775,7 @@ Codezen audited Structured maxBTC ERC20 for Eureka Bridge together with Oak Secu
 
 ### Stellar Core Protocol 23 security audit
 
-Audit of the Stellar Core Protocol 23.
+Audit of the Protocol 23 changes to stellar-core and the Soroban host environment, including the overlay, crypto, SCP and transactions modules. Stellar is an open network for fast, low-cost payments and asset issuance, with Soroban smart contracts written in Rust.
 
 Codezen audited Stellar Core Protocol 23 together with Oak Security. Technologies in scope: C++, C, Soroban, Rust and Stellar. We reported 81 findings: 2 critical, 1 major, 35 minor and 43 informational.
 
@@ -802,7 +803,7 @@ Codezen audited Stellar Core Protocol 23 together with Oak Security. Technologie
 
 ### Acurast Chain security audit
 
-Audit of the Acurast Chain.
+Audit of the Acurast Substrate chain in Rust, covering the compute, marketplace, processor manager, rewards treasury and Hyperdrive pallets, P-256 crypto and the mainnet runtime. Acurast is a decentralized compute network powered by phones.
 
 Codezen audited Acurast Chain together with Monethic. Technologies in scope: Substrate, Rust and Consensus. We reported 26 findings: 6 critical, 9 major, 9 minor and 2 informational.
 
@@ -830,7 +831,7 @@ Codezen audited Acurast Chain together with Monethic. Technologies in scope: Sub
 
 ### VNX Protocol security audit
 
-Audit of the VNX Protocol Solana program.
+Audit of the VNX Protocol Solana program, written in Rust. VNX provides B2B tokenization infrastructure for real-world assets, including token generation, smart contract configuration, blockchain connectivity and technical reporting.
 
 Codezen audited VNX Protocol together with Zenith Security. Technologies in scope: Solana, Rust and Smart Contract.
 
@@ -847,7 +848,7 @@ Codezen audited VNX Protocol together with Zenith Security. Technologies in scop
 
 ### Dora Factory's Vota Sponsor Module security audit
 
-Audit of the Dora Factory's Vota Sponsor Module.
+Audit of the x/sponsor-contract-tx module of Dora Factory's Vota chain, written in Go. It lets CosmWasm contracts sponsor transaction fees for their users, with per-user grant limits, an optional check_policy eligibility query and admin-managed sponsor funds.
 
 Codezen audited Dora Factory's Vota Sponsor Module together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 15 findings: 1 critical, 1 major, 7 minor and 6 informational.
 
@@ -875,7 +876,7 @@ Codezen audited Dora Factory's Vota Sponsor Module together with Oak Security. T
 
 ### StylusPort security audit
 
-Audit of the StylusPort.
+Review of the StylusPort handbook, code examples and MCP server, written in Rust. StylusPort is a framework and toolkit that streamlines the migration of SVM and Solana programs to Arbitrum Stylus smart contracts.
 
 Codezen audited StylusPort together with Oak Security. Technologies in scope: Rust, Arbitrum, Stylus and Solana. We reported 20 findings: 3 critical, 2 major, 8 minor and 7 informational.
 
@@ -903,7 +904,7 @@ Codezen audited StylusPort together with Oak Security. Technologies in scope: Ru
 
 ### Thema Protocol security audit
 
-Audit of the Thema Protocol.
+Audit of the Thema core Solidity contracts. Thema is a DeFi protocol for issuing asset-backed tokens (OMTs) that are minted and redeemed atomically against configured asset baskets, with NAV tracked via oracle inputs and modular fee, oracle and token set interfaces.
 
 Codezen audited Thema Protocol together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 26 findings: 1 critical, 10 major, 9 minor and 6 informational.
 
@@ -931,7 +932,7 @@ Codezen audited Thema Protocol together with Oak Security. Technologies in scope
 
 ### Meteora DAMM v2 security audit
 
-Audit of the Meteora DAMM v2 Solana program.
+Audit of the Meteora DAMM v2 program, a Rust smart contract on Solana. Meteora is a Solana DeFi project offering dynamic vaults for stable assets.
 
 Codezen audited Meteora DAMM v2 together with Zenith Security. Technologies in scope: Solana, Rust and Smart Contract.
 
@@ -948,7 +949,7 @@ Codezen audited Meteora DAMM v2 together with Zenith Security. Technologies in s
 
 ### Impossible Cloud Network Fairdrop security audit
 
-Audit of the Impossible Cloud Network Fairdrop.
+Audit of the Impossible Cloud Network Fairdrop Solidity contract, which distributes ICN tokens across three allocation tiers with a default 7-step or fast 2-step vesting schedule, role-based administration and time-windowed claims.
 
 Codezen audited Impossible Cloud Network Fairdrop together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 9 findings: 4 minor and 5 informational.
 
@@ -976,7 +977,7 @@ Codezen audited Impossible Cloud Network Fairdrop together with Oak Security. Te
 
 ### AllUnity security audit
 
-Audit of the AllUnity.
+Audit of the AllUnity Solidity contracts: an ERC-20 token with ERC-1363 and permit support, a blacklist manager and an ERC-1967 proxy, governed by admin, pauser, minter, burner and blacklister roles. AllUnity issues regulated, 1:1 fiat-backed stablecoins.
 
 Codezen audited AllUnity together with Oak Security. Technologies in scope: Solidity, Ethereum, EVM and Stablecoin. We reported 4 findings: 3 minor and 1 informational.
 
@@ -1004,7 +1005,7 @@ Codezen audited AllUnity together with Oak Security. Technologies in scope: Soli
 
 ### MetaMask Card Baanx Withdraw Program security audit
 
-Audit of the MetaMask Card Baanx Withdraw Program.
+Audit of the MetaMask Card Baanx Withdraw program, an Anchor program on Solana that lets an authorized operator withdraw tokens to a beneficiary and distribute treasury funds via signed multi-send, supporting SPL Token and Token-2022.
 
 Codezen audited MetaMask Card Baanx Withdraw Program together with Oak Security. Technologies in scope: Solana, Rust and Anchor. We reported 17 findings: 1 major, 9 minor and 7 informational.
 
@@ -1031,7 +1032,7 @@ Codezen audited MetaMask Card Baanx Withdraw Program together with Oak Security.
 
 ### Polkadot micro-sr25519 security audit
 
-Audit of the Polkadot micro-sr25519.
+Audit of micro-sr25519, a TypeScript implementation of the sr25519 signature scheme used in the Polkadot ecosystem, covering Schnorr signatures over Ristretto, hierarchical deterministic key derivation (hard and soft) and VRF outputs with proofs.
 
 Codezen audited Polkadot micro-sr25519 together with Oak Security. Technologies in scope: Cryptography, TypeScript and Polkadot. We reported 11 findings: 7 minor and 4 informational.
 
@@ -1059,7 +1060,7 @@ Codezen audited Polkadot micro-sr25519 together with Oak Security. Technologies 
 
 ### Babylon security audit
 
-Audit of the Babylon.
+Audit of Babylon Genesis, a Cosmos SDK chain written in Go, together with its finality provider and Vigilante relayer. Babylon provides Bitcoin timestamping and Bitcoin staking, letting BTC holders secure Proof-of-Stake networks with slashing enforced through EOTS.
 
 Codezen audited Babylon together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Bitcoin. We reported 44 findings: 3 major, 26 minor and 15 informational.
 
@@ -1087,7 +1088,7 @@ Codezen audited Babylon together with Oak Security. Technologies in scope: Golan
 
 ### NodeOps Network security audit
 
-Audit of the NodeOps Network.
+Audit of the NodeOps Network Solidity contracts built around the NODE token, including multi-pool staking, revenue management with a burn pool, a revenue vault, cliff and linear vesting, and an airdrop, all upgradeable via UUPS proxies.
 
 Codezen audited NodeOps Network together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 36 findings: 2 critical, 5 major, 12 minor and 17 informational.
 
@@ -1115,7 +1116,7 @@ Codezen audited NodeOps Network together with Oak Security. Technologies in scop
 
 ### Gno.land Chain Updates security audit
 
-Audit of the Gno.land Chain Updates.
+Audit of updates to GnoVM, focused on allocation, preprocessing and value handling in the gnolang package. Gno is a deterministic, interpreted implementation of Go for smart contracts, and gno.land is the Proof of Contribution chain built on it.
 
 Codezen audited Gno.land Chain Updates together with Oak Security. Technologies in scope: Golang and Consensus. We reported 25 findings: 3 critical, 6 major, 8 minor and 8 informational.
 
@@ -1142,7 +1143,7 @@ Codezen audited Gno.land Chain Updates together with Oak Security. Technologies 
 
 ### Capricorn (aPriori) APR Token and Staked APR Token security audit
 
-Audit of the Capricorn (aPriori) APR Token and Staked APR Token.
+Audit of the APR Token and Staked APR Solidity contracts by Capricorn (aPriori): an upgradeable ERC20 token and an upgradeable tokenized vault with cooldown-based redemptions and linearly vesting rewards.
 
 Codezen audited Capricorn (aPriori) APR Token and Staked APR Token together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 3 findings: 2 minor and 1 informational.
 
@@ -1168,11 +1169,11 @@ Codezen audited Capricorn (aPriori) APR Token and Staked APR Token together with
 
 ---
 
-### Fuel Sequencer Updates 10 security audit
+### Fuel Sequencer Updates (September 2025) security audit
 
-Audit of the Fuel Sequencer Updates 10.
+Audit of a round of updates to the Fuel Sequencer, a Cosmos SDK chain written in Go. Fuel Ignition is an Ethereum layer-2 rollup powered by the FuelVM.
 
-Codezen audited Fuel Sequencer Updates 10 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
+Codezen audited Fuel Sequencer Updates (September 2025) together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 
 - Audit type: Cosmos SDK chain Audit
 - Technologies: Golang, Cosmos SDK, Ethereum, Consensus
@@ -1180,14 +1181,14 @@ Codezen audited Fuel Sequencer Updates 10 together with Oak Security. Technologi
 - Delivered with: Oak Security
 - Report date: 10 September 2025
 - Project website: https://fuel.network
-- Page: https://www.codezen.tech/audits/fuel-sequencer-updates-10/
+- Page: https://www.codezen.tech/audits/fuel-sequencer-updates-september-2025/
 
 
 ---
 
 ### Holo security audit
 
-Audit of the Holo.
+Audit of the Holo smart contracts.
 
 Codezen audited Holo together with Zenith Security.
 
@@ -1201,7 +1202,7 @@ Codezen audited Holo together with Zenith Security.
 
 ### Structured Jupiter security audit
 
-Audit of the Structured Jupiter.
+Audit of the Structured Jupiter smart contracts.
 
 Codezen audited Structured Jupiter together with Oak Security.
 
@@ -1216,7 +1217,7 @@ Codezen audited Structured Jupiter together with Oak Security.
 
 ### Fuel Sequencer Updates 9 and The Rig security audit
 
-Audit of the Fuel Sequencer Updates 9 and The Rig.
+Audit of a round of updates to the Fuel Sequencer, a Cosmos SDK chain written in Go, together with The Rig. Fuel Ignition is an Ethereum layer-2 rollup powered by the FuelVM.
 
 Codezen audited Fuel Sequencer Updates 9 and The Rig together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 
@@ -1233,7 +1234,7 @@ Codezen audited Fuel Sequencer Updates 9 and The Rig together with Oak Security.
 
 ### DATA Network (Story Protocol) 1.2 security audit
 
-Audit of the DATA Network (Story Protocol) 1.2.
+Audit of version 1.2 of the DATA Network (formerly Story Protocol) blockchain, written in Go with the Cosmos SDK. The DATA Network is an open protocol where human data is sourced, proven and processed to train AI models.
 
 Codezen audited DATA Network (Story Protocol) 1.2 together with Trust Security. Technologies in scope: Cosmos SDK, Golang and Ethereum.
 
@@ -1250,7 +1251,7 @@ Codezen audited DATA Network (Story Protocol) 1.2 together with Trust Security. 
 
 ### Talus Network IAO security audit
 
-Audit of the Talus Network IAO Move contract.
+Audit of the Talus IAO Move contracts on Sui and their bonding curve, oracle, fixed-point math and governance utilities. Talus is an onchain platform for AI agents, with Nexus as its developer framework for building them.
 
 Codezen audited Talus Network IAO together with Zenith Security. Technologies in scope: Move, Sui and Smart Contract. We reported 37 findings: 10 critical, 13 major, 10 minor and 4 informational.
 
@@ -1278,7 +1279,7 @@ Codezen audited Talus Network IAO together with Zenith Security. Technologies in
 
 ### SolvBTC Stellar security audit
 
-Audit of the SolvBTC fungible token, oracle and vault Soroban contracts on Stellar.
+Audit of the SolvBTC fungible token, oracle and vault Soroban contracts on Stellar, written in Rust. Solv Protocol offers financial services for Bitcoin holders, including lending, liquid staking, yield generation and fund management.
 
 Codezen audited SolvBTC Stellar together with Zenith Security. Technologies in scope: Stellar, Soroban, Rust, Bitcoin and Smart Contract. We reported 16 findings: 4 critical, 5 major, 5 minor and 2 informational.
 
@@ -1306,7 +1307,7 @@ Codezen audited SolvBTC Stellar together with Zenith Security. Technologies in s
 
 ### Plasma Consensus security audit
 
-Audit of the Plasma Consensus.
+Audit of the Plasma consensus implementation in Rust, covering the consensus, node, networking, block builder and execution proxy components. Plasma is a layer 1 blockchain for stablecoin payments, secured by PlasmaBFT, an implementation of Fast HotStuff.
 
 Codezen audited Plasma Consensus together with Zenith Security. Technologies in scope: Rust, Plasma and Consensus. We reported 22 findings: 2 major, 11 minor and 9 informational.
 
@@ -1333,7 +1334,7 @@ Codezen audited Plasma Consensus together with Zenith Security. Technologies in 
 
 ### Magicblock ephemeral VRF security audit
 
-Audit of the Magicblock ephemeral VRF.
+Audit of Magicblock's ephemeral VRF program and API, written in Rust for Solana. Magicblock builds blockchain infrastructure, including ephemeral rollups, that scales applications on Solana for gaming, DeFi and other Web3 use cases.
 
 Codezen audited Magicblock ephemeral VRF together with Zenith Security. Technologies in scope: Solana, Rust and Magicblock. We reported 18 findings: 4 major, 4 minor and 10 informational.
 
@@ -1361,7 +1362,7 @@ Codezen audited Magicblock ephemeral VRF together with Zenith Security. Technolo
 
 ### Silo MEV for SEI chain security audit
 
-Audit of the Silo MEV bot for SEI chain.
+Audit of Silo's MEV bot for the SEI chain, a Cosmos SDK chain, written in Go. Silo Finance is a DeFi project focused on isolated lending.
 
 Codezen audited Silo MEV for SEI chain together with Zenith Security. Technologies in scope: Golang, MEV, SEI and Cosmos SDK.
 
@@ -1378,7 +1379,7 @@ Codezen audited Silo MEV for SEI chain together with Zenith Security. Technologi
 
 ### Injective EVM precompile security audit
 
-Audit of the Injective EVM precompile.
+Audit of an EVM precompile for Injective, written in Go on the Cosmos SDK with a Solidity interface. Injective is a layer 1 blockchain for finance, supporting tokenization, perpetuals, stablecoins and onchain markets.
 
 Codezen audited Injective EVM precompile together with Zenith Security. Technologies in scope: Golang, Cosmos SDK, Injective and Solidity.
 
@@ -1395,7 +1396,7 @@ Codezen audited Injective EVM precompile together with Zenith Security. Technolo
 
 ### peaq EVM Precompile security audit
 
-Audit of the peaq EVM Precompile.
+Audit of an EVM precompile for peaq, written in Rust on Substrate. peaq is an omnichain economic system that enables robots and machines to do business on every chain.
 
 Codezen audited peaq EVM Precompile together with Oak Security. Technologies in scope: Rust, Substrate and EVM.
 
@@ -1412,7 +1413,7 @@ Codezen audited peaq EVM Precompile together with Oak Security. Technologies in 
 
 ### Swap.io CLMM security audit
 
-Audit of the Swap.io CLMM Solana program.
+Audit of the Swap.io changes to its fork of Raydium's CLMM, a concentrated liquidity market maker program for Solana written in Rust. Swap.io routes trades across multiple DEX aggregators to find the best price.
 
 Codezen audited Swap.io CLMM together with Zenith Security. Technologies in scope: Solana, Rust and CLMM. We reported 5 findings: 2 major, 1 minor and 2 informational.
 
@@ -1440,7 +1441,7 @@ Codezen audited Swap.io CLMM together with Zenith Security. Technologies in scop
 
 ### Talus Network security audit
 
-Audit of the Talus Network Move contract.
+Audit of the Talus token deposit pool and reward pool Move contracts on Sui. Talus is an onchain platform for AI agents, with Nexus as its developer framework for building them.
 
 Codezen audited Talus Network together with Zenith Security. Technologies in scope: Move, Sui and Smart Contract. We reported 7 findings: 1 major, 3 minor and 3 informational.
 
@@ -1468,7 +1469,7 @@ Codezen audited Talus Network together with Zenith Security. Technologies in sco
 
 ### DATA Network (Story Protocol) Guardians security audit
 
-Audit of the DATA Network (Story Protocol) Guardians.
+Audit of the Guardians module of the DATA Network (formerly Story Protocol) Geth client, written in Go. The DATA Network is an open protocol where human data is sourced, proven and processed to train AI models.
 
 Codezen audited DATA Network (Story Protocol) Guardians together with Trust Security. Technologies in scope: Golang and Ethereum.
 
@@ -1484,7 +1485,7 @@ Codezen audited DATA Network (Story Protocol) Guardians together with Trust Secu
 
 ### Snowfork Snowbridge Updates 4 security audit
 
-Audit of the Snowfork Snowbridge Updates 4.
+Audit of updates to Snowbridge's Solidity contracts and related Polkadot SDK pull requests. Snowbridge is a trustless bridge between Polkadot and Ethereum, using a BEEFY light client in Solidity and an Altair-compliant Beacon Chain light client in a Substrate pallet.
 
 Codezen audited Snowfork Snowbridge Updates 4 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 7 findings: 3 minor and 4 informational.
 
@@ -1512,7 +1513,7 @@ Codezen audited Snowfork Snowbridge Updates 4 together with Oak Security. Techno
 
 ### KILT Bonding Curve Pallet security audit
 
-Audit of the KILT Bonding Curve Pallet.
+Audit of the KILT Bonding Curve Pallet, a Rust Substrate pallet in kilt-node that mints and burns tokens along a predefined bonding curve so prices adjust with supply and demand, with support for different curve formulas.
 
 Codezen audited KILT Bonding Curve Pallet together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot. We reported 18 findings: 1 major, 5 minor and 12 informational.
 
@@ -1540,7 +1541,7 @@ Codezen audited KILT Bonding Curve Pallet together with Oak Security. Technologi
 
 ### Hippo Protocol (Hippocrat) security audit
 
-Audit of Hippo Protocol (Hippocrat).
+Audit of the Hippo Protocol chain, an application-specific blockchain built in Go with the Cosmos SDK for decentralized management of healthcare data, including its custom token minting logic.
 
 Codezen audited Hippo Protocol (Hippocrat) together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 11 findings: 1 critical, 4 major, 2 minor and 4 informational.
 
@@ -1568,7 +1569,7 @@ Codezen audited Hippo Protocol (Hippocrat) together with Oak Security. Technolog
 
 ### Drop Protocol Updates 3 security audit
 
-Audit of the Drop Protocol Updates 3.
+Audit of the third round of updates to Drop's CosmWasm contracts in Rust. Drop is a liquid staking protocol on Neutron that uses IBC, Interchain Accounts and Interchain Queries to stake across the Cosmos ecosystem, with auto-compounding of rewards.
 
 Codezen audited Drop Protocol Updates 3 together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 12 findings: 1 major, 4 minor and 7 informational.
 
@@ -1596,7 +1597,7 @@ Codezen audited Drop Protocol Updates 3 together with Oak Security. Technologies
 
 ### Astroport PCL Neutron Duality Orderbook Integration security audit
 
-Audit of the Astroport PCL Neutron Duality Orderbook Integration.
+Audit of Astroport's concentrated liquidity pair contract integrating with Neutron's Duality DEX orderbook, written in Rust with CosmWasm. Astroport is an automated, decentralized exchange in the Cosmos ecosystem.
 
 Codezen audited Astroport PCL Neutron Duality Orderbook Integration together with Oak Security. Technologies in scope: Rust, CosmWasm and Neutron. We reported 13 findings: 3 critical, 2 major, 5 minor and 3 informational.
 
@@ -1624,7 +1625,7 @@ Codezen audited Astroport PCL Neutron Duality Orderbook Integration together wit
 
 ### Impossible Cloud Network Protocol security audit
 
-Audit of the Impossible Cloud Network Protocol.
+Audit of the Impossible Cloud Network protocol's Solidity contracts, a diamond proxy system for Hyper Node registration, staking of non-transferable ICNL NFTs and time-based ICNT rewards on a fixed emission curve.
 
 Codezen audited Impossible Cloud Network Protocol together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 24 findings: 1 major, 13 minor and 10 informational.
 
@@ -1652,7 +1653,7 @@ Codezen audited Impossible Cloud Network Protocol together with Oak Security. Te
 
 ### Structured maxBTC security audit
 
-Audit of the Structured maxBTC.
+Audit of Structured's maxBTC smart contracts. maxBTC is a cross-chain yield strategy and tokenization system for Bitcoin.
 
 Codezen audited Structured maxBTC together with Oak Security. Technologies in scope: Bitcoin.
 
@@ -1669,7 +1670,7 @@ Codezen audited Structured maxBTC together with Oak Security. Technologies in sc
 
 ### Fuel Sequencer Updates 7 security audit
 
-Audit of the Fuel Sequencer Updates 7.
+Audit of a round of updates to the Fuel Sequencer, a Cosmos SDK chain written in Go. Fuel Ignition is an Ethereum layer-2 rollup powered by the FuelVM.
 
 Codezen audited Fuel Sequencer Updates 7 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 
@@ -1686,7 +1687,7 @@ Codezen audited Fuel Sequencer Updates 7 together with Oak Security. Technologie
 
 ### Fuel Sequencer Updates 6 security audit
 
-Audit of the Fuel Sequencer Updates 6.
+Audit of a round of updates to the Fuel Sequencer, a Cosmos SDK chain written in Go. Fuel Ignition is an Ethereum layer-2 rollup powered by the FuelVM.
 
 Codezen audited Fuel Sequencer Updates 6 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 
@@ -1701,15 +1702,16 @@ Codezen audited Fuel Sequencer Updates 6 together with Oak Security. Technologie
 
 ---
 
-### Manta security audit
+### Manta Network security audit
 
-Audit of the Manta.
+Security audit for Manta Network, whose products include Manta Pacific, a modular Ethereum L2 for ZK applications.
 
-Codezen audited Manta together with Oak Security.
+Codezen audited Manta Network together with Oak Security.
 
 - Audit type: Blockchain audit
 - Delivered with: Oak Security
 - Report date: 20 December 2024
+- Project website: https://manta.network
 - Page: https://www.codezen.tech/audits/manta/
 
 
@@ -1717,7 +1719,7 @@ Codezen audited Manta together with Oak Security.
 
 ### DATA Network (Story Protocol) L1 security audit
 
-Audit of the DATA Network (Story Protocol) L1.
+Audit of the DATA Network (formerly Story Protocol) L1, spanning its Cosmos SDK consensus layer, Geth-based execution client with IP Graph precompiles and the related Solidity contracts. The DATA Network is an open protocol for sourcing and processing human data for AI.
 
 Codezen audited DATA Network (Story Protocol) L1 together with Trust Security. Technologies in scope: Cosmos SDK, Golang, Ethereum and Solidity. We reported 23 findings: 5 critical, 6 major, 7 minor and 5 informational.
 
@@ -1745,7 +1747,7 @@ Codezen audited DATA Network (Story Protocol) L1 together with Trust Security. T
 
 ### Tellor security audit
 
-Audit of the Tellor Cosmos chain.
+Audit of Layer, the Tellor Cosmos chain written in Go with the Cosmos SDK. Tellor is an oracle layer for censorship-resistant data creation and distribution.
 
 Codezen audited Tellor together with Torii Security. Technologies in scope: Cosmos SDK and Golang. We reported 63 findings: 21 critical, 16 major, 24 minor and 2 informational.
 
@@ -1773,7 +1775,7 @@ Codezen audited Tellor together with Torii Security. Technologies in scope: Cosm
 
 ### Gno.land Chain Sprint 2 security audit
 
-Audit of the Gno.land Chain Sprint 2.
+Audit of GnoVM realm storage, sources of non-determinism and VM validity in the gno repository. Gno is a deterministic, interpreted implementation of Go for smart contracts, and gno.land is the Proof of Contribution chain built on it.
 
 Codezen audited Gno.land Chain Sprint 2 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus. We reported 16 findings: 3 critical, 4 major, 1 minor and 8 informational.
 
@@ -1801,7 +1803,7 @@ Codezen audited Gno.land Chain Sprint 2 together with Oak Security. Technologies
 
 ### Gno.land Chain Sprint 3 security audit
 
-Audit of the Gno.land Chain Sprint 3.
+Audit of a gno.land chain change set in Go covering on-chain parameters, the VM keeper and the Tendermint2 auth, bank, params and std packages, plus a review of the tm2 bank module. Gno is a deterministic, interpreted implementation of Go for smart contracts, and gno.land is the first chain to use it.
 
 Codezen audited Gno.land Chain Sprint 3 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus. We reported 17 findings: 9 minor and 8 informational.
 
@@ -1829,7 +1831,7 @@ Codezen audited Gno.land Chain Sprint 3 together with Oak Security. Technologies
 
 ### Gno.land Chain Sprint 1 security audit
 
-Audit of the Gno.land Chain Sprint 1.
+Audit of the gno.land chain in Go, covering how realms interact with the GnoVM through the VM keeper, end-block operations, validator state updates, the MsgAddPkg, MsgCall and MsgRun handlers, and example realms. gno.land is a Proof of Contribution chain running Gno, a deterministic implementation of Go for smart contracts.
 
 Codezen audited Gno.land Chain Sprint 1 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus. We reported 33 findings: 3 critical, 6 major, 7 minor and 17 informational.
 
@@ -1857,13 +1859,12 @@ Codezen audited Gno.land Chain Sprint 1 together with Oak Security. Technologies
 
 ### Drop Protocol Liquidity Provider security audit
 
-Audit of the Drop Protocol Liquidity Provider.
+Audit of the Drop Liquidity Provider, a Move contract for the Initia chain, and its integration with the Drop codebase. Drop is a liquid staking protocol on Neutron that uses IBC, Interchain Accounts and Interchain Queries to stake and unstake across the Cosmos ecosystem, with auto-compounding of rewards.
 
-Codezen audited Drop Protocol Liquidity Provider together with Oak Security. Technologies in scope: Move and Sui. We reported 9 findings: 3 critical, 2 minor and 4 informational.
+Codezen audited Drop Protocol Liquidity Provider together with Oak Security. Technologies in scope: Move and Initia. We reported 9 findings: 3 critical, 2 minor and 4 informational.
 
 - Audit type: Move smart contracts audit
-- Technologies: Move, Sui
-- Ecosystem: Sui
+- Technologies: Move, Initia
 - Delivered with: Oak Security
 - Report date: 17 April 2025
 - Full report (PDF): https://github.com/oak-security/audit-reports/blob/8a29e1d31c20fdc68bc732b1db73c4660d3fa507/Drop/2025-04-17%20Audit%20Report%20-%20Drop%20Initia%20Liquidity%20Provider%20v1.0.pdf
@@ -1885,7 +1886,7 @@ Codezen audited Drop Protocol Liquidity Provider together with Oak Security. Tec
 
 ### Impossible Cloud Network Token security audit
 
-Audit of the Impossible Cloud Network Token.
+Audit of the ICN Link Solidity smart contracts of the Impossible Cloud Network. ICN Link is an NFT contract used to join the network either as a HyperNode or for staking. The Impossible Cloud Network combines blockchain technology with traditional cloud services to build an open cloud platform.
 
 Codezen audited Impossible Cloud Network Token together with Oak Security. Technologies in scope: Solidity. We reported 9 findings: 4 minor and 5 informational.
 
@@ -1913,7 +1914,7 @@ Codezen audited Impossible Cloud Network Token together with Oak Security. Techn
 
 ### Drop Protocol Updates 2 security audit
 
-Audit of the Drop Protocol Updates 2.
+Audit of the second round of updates to the Drop CosmWasm smart contracts in Rust, covering all changes made since the previous audit of the drop-contracts repository. Drop is a liquid staking protocol built for the Neutron chain in the Cosmos ecosystem.
 
 Codezen audited Drop Protocol Updates 2 together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 22 findings: 1 major, 12 minor and 9 informational.
 
@@ -1941,7 +1942,7 @@ Codezen audited Drop Protocol Updates 2 together with Oak Security. Technologies
 
 ### Fuel Sequencer Updates 5 security audit
 
-Audit of the Fuel Sequencer Updates 5.
+Audit of a round of updates to the Fuel Sequencer, a Cosmos SDK chain written in Go. Fuel Ignition is an Ethereum layer-2 rollup powered by the FuelVM.
 
 Codezen audited Fuel Sequencer Updates 5 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 
@@ -1957,7 +1958,7 @@ Codezen audited Fuel Sequencer Updates 5 together with Oak Security. Technologie
 
 ### Mythical Games Collator security audit
 
-Audit of the Mythical Games' collator.
+Audit of a collator built in Rust with the Polkadot SDK (Substrate) for Mythical Games. Mythical Games is a game technology company working at the intersection of video games and economics.
 
 Codezen audited Mythical Games Collator together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot.
 
@@ -1974,7 +1975,7 @@ Codezen audited Mythical Games Collator together with Oak Security. Technologies
 
 ### Dymension Phase 2 Stream 4 security audit
 
-Audit of the Dymension Phase 2 Stream 4.
+Audit of stream 4 of the second phase of the Dymension chain, a Cosmos SDK chain written in Go. Dymension L1 is a decentralized chain launchpad that helps creators turn ideas into their own blockchains.
 
 Codezen audited Dymension Phase 2 Stream 4 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Rollup.
 
@@ -1991,7 +1992,7 @@ Codezen audited Dymension Phase 2 Stream 4 together with Oak Security. Technolog
 
 ### Composable Staking and Vesting Contracts security audit
 
-Audit of the Composable Staking and Vesting Contracts.
+Audit of the Composable Finance staking and vesting smart contracts. Composable Finance builds cross-chain DeFi infrastructure, providing trustless interoperability based on IBC across blockchain ecosystems.
 
 Codezen audited Composable Staking and Vesting Contracts. Technologies in scope: Smart Contract.
 
@@ -2006,7 +2007,7 @@ Codezen audited Composable Staking and Vesting Contracts. Technologies in scope:
 
 ### Fuel Sequencer Updates 4 security audit
 
-Audit of the Fuel Sequencer Updates 4.
+Audit of a round of updates to the Fuel Sequencer, a Cosmos SDK chain written in Go. Fuel Ignition is an Ethereum layer-2 rollup powered by the FuelVM.
 
 Codezen audited Fuel Sequencer Updates 4 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 
@@ -2023,7 +2024,7 @@ Codezen audited Fuel Sequencer Updates 4 together with Oak Security. Technologie
 
 ### Dymension Phase 3 security audit
 
-Audit of the Dymension Phase 3.
+Audit of the third phase of the Dymension chain, a Cosmos SDK chain written in Go. Dymension L1 is a decentralized chain launchpad that helps creators turn ideas into their own blockchains.
 
 Codezen audited Dymension Phase 3 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Rollup.
 
@@ -2040,7 +2041,7 @@ Codezen audited Dymension Phase 3 together with Oak Security. Technologies in sc
 
 ### Nibiru Chain security audit
 
-Audit of the Nibiru Chain.
+Audit of the Nibiru chain, a Cosmos SDK blockchain written in Go. Nibiru is a smart contract ecosystem with a high-performance, EVM-equivalent execution layer for Web3 applications.
 
 Codezen audited Nibiru Chain together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus.
 
@@ -2057,7 +2058,7 @@ Codezen audited Nibiru Chain together with Oak Security. Technologies in scope: 
 
 ### Snowfork Snowbridge Updates 3 security audit
 
-Audit of the Snowfork Snowbridge Updates 3 to the Substrate bridge pallet.
+Audit of the third round of Snowbridge updates in the polkadot-sdk bridges/snowbridge code, covering changes since the previous audit. Snowbridge is a trustless bridge between Polkadot and Ethereum, using a BEEFY light client in Solidity and an Ethereum Beacon Chain light client in a Substrate pallet.
 
 Codezen audited Snowfork Snowbridge Updates 3 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 8 findings: 1 major, 2 minor and 5 informational.
 
@@ -2085,7 +2086,7 @@ Codezen audited Snowfork Snowbridge Updates 3 together with Oak Security. Techno
 
 ### Persistence yBTC security audit
 
-Audit of the Persistence yBTC.
+Audit of the Persistence yBTC smart contracts.
 
 Codezen audited Persistence yBTC together with Oak Security. Technologies in scope: Bitcoin and Persistence.
 
@@ -2102,7 +2103,7 @@ Codezen audited Persistence yBTC together with Oak Security. Technologies in sco
 
 ### Composable Escrow Contracts security audit
 
-Audit of the Composable Escrow Contracts.
+Audit of the Composable Finance escrow smart contracts. Composable Finance builds cross-chain DeFi infrastructure, providing trustless interoperability based on IBC across blockchain ecosystems.
 
 Codezen audited Composable Escrow Contracts. Technologies in scope: Smart Contract.
 
@@ -2117,7 +2118,7 @@ Codezen audited Composable Escrow Contracts. Technologies in scope: Smart Contra
 
 ### Dymension Stream 2 security audit
 
-Audit of the Dymension Stream 2.
+Audit of stream 2 of the Dymension chain, a Cosmos SDK chain written in Go. Dymension L1 is a decentralized chain launchpad that helps creators turn ideas into their own blockchains.
 
 Codezen audited Dymension Stream 2 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Rollup.
 
@@ -2134,7 +2135,7 @@ Codezen audited Dymension Stream 2 together with Oak Security. Technologies in s
 
 ### Dymension Phase 2 security audit
 
-Audit of the Dymension Phase 2.
+Audit of the second phase of the Dymension chain, a Cosmos SDK chain written in Go, including consensus-related code. Dymension L1 is a decentralized chain launchpad that helps creators turn ideas into their own blockchains.
 
 Codezen audited Dymension Phase 2 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus.
 
@@ -2151,13 +2152,13 @@ Codezen audited Dymension Phase 2 together with Oak Security. Technologies in sc
 
 ### Dora Factory's Vota migration security audit
 
-Audit of the Dora Factory's Vota migration.
+Audit of the Dora Vota migration contract, the DoraBridge.sol contract in Dora Factory's bridge contract repository. Dora Vota is the Cosmos SDK chain built by Dora Factory.
 
-Codezen audited Dora Factory's Vota migration together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 10 findings: 1 major, 3 minor and 6 informational.
+Codezen audited Dora Factory's Vota migration together with Oak Security. Technologies in scope: Solidity and Bridge. We reported 10 findings: 1 major, 3 minor and 6 informational.
 
-- Audit type: Cosmos SDK Audit
-- Technologies: Golang, Cosmos SDK
-- Ecosystem: Cosmos
+- Audit type: Solidity Contract Audit
+- Technologies: Solidity, Bridge
+- Ecosystem: Ethereum
 - Delivered with: Oak Security
 - Report date: 23 September 2024
 - Full report (PDF): https://github.com/oak-security/audit-reports/blob/6094ad74b33fe30ab52544b50b1e45dc31b20a49/DoraFactory/2024-09-23%20Audit%20Report%20-%20Dora%20Vota%20Migration%20Contract%20v1.0.pdf
@@ -2179,7 +2180,7 @@ Codezen audited Dora Factory's Vota migration together with Oak Security. Techno
 
 ### Fuel Sequencer Watchtower security audit
 
-Audit of the Fuel Sequencer Watchtower.
+Audit of the Fuel Sequencer Watchtower, an off-chain monitoring component written in Go. The Fuel Sequencer is part of Fuel Ignition, an Ethereum layer-2 rollup powered by the FuelVM.
 
 Codezen audited Fuel Sequencer Watchtower together with Oak Security. Technologies in scope: Golang and Off chain.
 
@@ -2195,7 +2196,7 @@ Codezen audited Fuel Sequencer Watchtower together with Oak Security. Technologi
 
 ### Fuel Sequencer Updates 2 security audit
 
-Audit of the Fuel Sequencer Updates 2.
+Audit of a round of updates to the Fuel Sequencer, a Cosmos SDK chain written in Go. Fuel Ignition is an Ethereum layer-2 rollup powered by the FuelVM.
 
 Codezen audited Fuel Sequencer Updates 2 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 
@@ -2212,7 +2213,7 @@ Codezen audited Fuel Sequencer Updates 2 together with Oak Security. Technologie
 
 ### Drop Protocol Updates security audit
 
-Audit of the Drop Protocol Updates.
+Audit of an update to the Drop CosmWasm smart contracts in Rust, restricted to the changes introduced in a set of pull requests to the drop-contracts repository. Drop is a liquid staking protocol built for the Neutron chain in the Cosmos ecosystem.
 
 Codezen audited Drop Protocol Updates together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 8 findings: 6 minor and 2 informational.
 
@@ -2240,7 +2241,7 @@ Codezen audited Drop Protocol Updates together with Oak Security. Technologies i
 
 ### Fuel Sequencer Updates security audit
 
-Audit of the Fuel Sequencer Updates.
+Audit of a round of updates to the Fuel Sequencer, a Cosmos SDK chain written in Go. Fuel Ignition is an Ethereum layer-2 rollup powered by the FuelVM.
 
 Codezen audited Fuel Sequencer Updates together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 
@@ -2257,7 +2258,7 @@ Codezen audited Fuel Sequencer Updates together with Oak Security. Technologies 
 
 ### Out Protocol security audit
 
-Audit of the Out Protocol Solana program.
+Audit of the Out Protocol GCC program, a Solana program written in Rust with the Anchor framework. All contracts in the project's gcc repository were in scope.
 
 Codezen audited Out Protocol together with Oak Security. Technologies in scope: Solana, Rust and Anchor. We reported 17 findings: 5 critical, 5 major, 5 minor and 2 informational.
 
@@ -2285,11 +2286,11 @@ Codezen audited Out Protocol together with Oak Security. Technologies in scope: 
 
 ### Persistence pSTAKE BTC Yield security audit
 
-Audit of the Persistence pSTAKE BTC Yield feature.
+Audit of the pSTAKE BTC Yield feature from Persistence, a Bitcoin yield product that includes Solidity smart contracts on Ethereum.
 
 Codezen audited Persistence pSTAKE BTC Yield together with Oak Security. Technologies in scope: Bitcoin, Solidity, Ethereum and Persistence.
 
-- Audit type: Cosmos SDK Audit
+- Audit type: Solidity smart contracts audit
 - Technologies: Bitcoin, Solidity, Ethereum, Persistence
 - Ecosystem: Ethereum, Bitcoin
 - Delivered with: Oak Security
@@ -2302,7 +2303,7 @@ Codezen audited Persistence pSTAKE BTC Yield together with Oak Security. Technol
 
 ### Volta Protocol security audit
 
-Audit of the Volta Protocol CosmWasm smart contracts.
+Audit of the Volta CosmWasm smart contracts in Rust, with all contracts of the smart-contract-cosmwasm repository in scope. Volta provides security and controls for managing digital asset operations, built around a smart contract multi-sig wallet.
 
 Codezen audited Volta Protocol together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 13 findings: 3 major, 3 minor and 7 informational.
 
@@ -2330,7 +2331,7 @@ Codezen audited Volta Protocol together with Oak Security. Technologies in scope
 
 ### Snowfork Snowbridge Updates 2 security audit
 
-Audit of the Snowfork Snowbridge Updates 2 to the Substrate bridge pallet.
+Audit of a Snowbridge update in polkadot-sdk that lets Ethereum execution headers be sent along with each message instead of being imported into the pallet first, made possible by the Deneb upgrade. Snowbridge is a trustless bridge between Polkadot and Ethereum.
 
 Codezen audited Snowfork Snowbridge Updates 2 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 3 findings: 3 informational.
 
@@ -2358,7 +2359,7 @@ Codezen audited Snowfork Snowbridge Updates 2 together with Oak Security. Techno
 
 ### Dymension Phase 1 security audit
 
-Audit of the Dymension Phase 1.
+Audit of the first phase of the Dymension chain, a Cosmos SDK chain written in Go, including consensus-related code. Dymension L1 is a decentralized chain launchpad that helps creators turn ideas into their own blockchains.
 
 Codezen audited Dymension Phase 1 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus.
 
@@ -2374,7 +2375,7 @@ Codezen audited Dymension Phase 1 together with Oak Security. Technologies in sc
 
 ### Router Voyager Solana Integration security audit
 
-Audit of the Router Voyager Solana integration.
+Audit of the off-chain components that integrate Solana into Router Voyager, written in Go and Rust. Router Protocol provides cross-chain liquidity and interoperability with chain abstraction.
 
 Codezen audited Router Voyager Solana Integration together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Solana, Rust and Off chain.
 
@@ -2390,7 +2391,7 @@ Codezen audited Router Voyager Solana Integration together with Oak Security. Te
 
 ### Fuel Sequencer and Sidecar security audit
 
-Audit of the Fuel Sequencer and Sidecar.
+Audit of the Fuel Sequencer, a Cosmos SDK chain written in Go, and its sidecar component. Fuel Ignition is an Ethereum layer-2 rollup powered by the FuelVM.
 
 Codezen audited Fuel Sequencer and Sidecar together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 
@@ -2406,7 +2407,7 @@ Codezen audited Fuel Sequencer and Sidecar together with Oak Security. Technolog
 
 ### Drop Protocol Architectural Changes Extension security audit
 
-Audit of the Drop Protocol Architectural Changes Extension.
+Audit of an extension to the architectural changes in the Drop CosmWasm smart contracts, written in Rust. Drop is a liquid staking protocol in the Cosmos ecosystem.
 
 Codezen audited Drop Protocol Architectural Changes Extension together with Oak Security. Technologies in scope: Rust and CosmWasm.
 
@@ -2422,7 +2423,7 @@ Codezen audited Drop Protocol Architectural Changes Extension together with Oak 
 
 ### Slide SDK security audit
 
-Audit of the Slide SDK's Cosmos SDK integration in Avalanche consensus.
+Audit of the Slide SDK in Go, which integrates the Cosmos SDK with Avalanche consensus, with all packages of the slide-sdk repository in scope. The Slide SDK is developed by Landslide Network.
 
 Codezen audited Slide SDK together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Avalanche and Consensus. We reported 15 findings: 2 critical, 2 major, 7 minor and 4 informational.
 
@@ -2450,7 +2451,7 @@ Codezen audited Slide SDK together with Oak Security. Technologies in scope: Gol
 
 ### Dora Factory's Vota chain security audit
 
-Audit of the Dora Factory's Vota chain.
+Audit of the Dora Vota Cosmos SDK chain in Go, with the scope restricted to the code of its base app. Dora Vota is the blockchain built by Dora Factory.
 
 Codezen audited Dora Factory's Vota chain together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 7 findings: 1 critical, 4 major, 1 minor and 1 informational.
 
@@ -2478,7 +2479,7 @@ Codezen audited Dora Factory's Vota chain together with Oak Security. Technologi
 
 ### Astroport's Asteroid Bridge security audit
 
-Audit of Astroport's Asteroid Bridge.
+Audit of the Asteroid Bridge CosmWasm smart contracts in Rust, including the Neutron bridge contract, with all contracts of the bridge repository in scope. Astroport is an AMM and DEX for swapping and providing liquidity.
 
 Codezen audited Astroport's Asteroid Bridge together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 13 findings: 8 minor and 5 informational.
 
@@ -2506,7 +2507,7 @@ Codezen audited Astroport's Asteroid Bridge together with Oak Security. Technolo
 
 ### Persistence pSTAKE Native stkXPRT security audit
 
-Audit of the Persistence pSTAKE Native stkXPRT feature.
+Audit of the native stkXPRT feature of pSTAKE, built on the Persistence Cosmos SDK chain in Go and involving the Cosmos Hub.
 
 Codezen audited Persistence pSTAKE Native stkXPRT together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
 
@@ -2522,7 +2523,7 @@ Codezen audited Persistence pSTAKE Native stkXPRT together with Oak Security. Te
 
 ### Drop Protocol Extension security audit
 
-Audit of the Drop Protocol CosmWasm smart contracts.
+Audit of an extension to the Drop CosmWasm smart contracts in Rust, restricted to the new staker contract. Drop is a liquid staking protocol built for the Neutron chain in the Cosmos ecosystem.
 
 Codezen audited Drop Protocol Extension together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 8 findings: 1 critical, 1 major, 4 minor and 2 informational.
 
@@ -2550,7 +2551,7 @@ Codezen audited Drop Protocol Extension together with Oak Security. Technologies
 
 ### Composable ibctransfermiddleware security audit
 
-Audit of the Composable ibctransfermiddleware.
+Audit of the ibctransfermiddleware Cosmos SDK module written in Go. Composable Finance builds cross-chain DeFi infrastructure, providing trustless interoperability based on IBC across blockchain ecosystems.
 
 Codezen audited Composable ibctransfermiddleware. Technologies in scope: Golang and Cosmos SDK.
 
@@ -2565,7 +2566,7 @@ Codezen audited Composable ibctransfermiddleware. Technologies in scope: Golang 
 
 ### Mythical Games security audit
 
-Audit of the Mythical Games' substrate pallet.
+Audit of a Substrate pallet built in Rust with the Polkadot SDK for Mythical Games. Mythical Games is a game technology company working at the intersection of video games and economics.
 
 Codezen audited Mythical Games together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot.
 
@@ -2581,7 +2582,7 @@ Codezen audited Mythical Games together with Oak Security. Technologies in scope
 
 ### Snowfork Snowbridge Updates 1 security audit
 
-Audit of the Snowfork Snowbridge Updates 1.
+Audit of updates to Snowbridge across its Solidity contracts, the Substrate pallets, primitives and runtime in polkadot-sdk, and the related asset hub and bridge hub runtimes for Kusama and Polkadot. Snowbridge is a trustless bridge between Polkadot and Ethereum.
 
 Codezen audited Snowfork Snowbridge Updates 1 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 4 findings: 2 minor and 2 informational.
 
@@ -2609,7 +2610,7 @@ Codezen audited Snowfork Snowbridge Updates 1 together with Oak Security. Techno
 
 ### Drop Protocol security audit
 
-Audit of the Drop Protocol CosmWasm smart contracts.
+Audit of the Drop CosmWasm smart contracts in Rust, including the factory contract. Drop is a liquid staking protocol for the Neutron chain whose liquid staking token is backed by stake delegated to a set of whitelisted validators.
 
 Codezen audited Drop Protocol together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 63 findings: 6 critical, 20 major, 28 minor and 9 informational.
 
@@ -2637,7 +2638,7 @@ Codezen audited Drop Protocol together with Oak Security. Technologies in scope:
 
 ### Dymension Virtual Frontier security audit
 
-Audit of the Dymension Virtual Frontier contract.
+Audit of the Virtual Frontier Contract changes to Dymension's dymension and ethermint Go codebases. The Virtual Frontier Bank Contract mimics an ERC-20 token in front of the EVM, letting Ethereum wallets such as MetaMask import and transfer assets from the Cosmos bank module.
 
 Codezen audited Dymension Virtual Frontier together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus. We reported 4 findings: 4 minor.
 
@@ -2665,7 +2666,7 @@ Codezen audited Dymension Virtual Frontier together with Oak Security. Technolog
 
 ### Dymension Dymint security audit
 
-Audit of the Dymension Dymint's consensus algorithm.
+Audit of Dymint, the Go ABCI client implementation for Dymension's autonomous RollApps, which can replace CometBFT or Tendermint in any ABCI-compatible blockchain application. Dymension L1 is a decentralized chain launchpad.
 
 Codezen audited Dymension Dymint together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus. We reported 19 findings: 1 critical, 7 major, 8 minor and 3 informational.
 
@@ -2693,7 +2694,7 @@ Codezen audited Dymension Dymint together with Oak Security. Technologies in sco
 
 ### Composable Finance Solidity IBC Implementation security audit
 
-Audit of the Composable Finance Solidity IBC implementation.
+Audit of Composable Finance's implementation of IBC as a Solidity library. Composable Finance builds cross-chain DeFi infrastructure, with trustless interoperability powered by IBC.
 
 Codezen audited Composable Finance Solidity IBC Implementation. Technologies in scope: Solidity and IBC.
 
@@ -2708,7 +2709,7 @@ Codezen audited Composable Finance Solidity IBC Implementation. Technologies in 
 
 ### Composable Finance Solana Light Client security audit
 
-Audit of the Composable Finance Solana Light Client.
+Audit of the Composable Finance Solana light client, a WASM light client written in Rust for IBC connectivity with Solana. Composable Finance builds cross-chain DeFi infrastructure, with trustless interoperability powered by IBC.
 
 Codezen audited Composable Finance Solana Light Client. Technologies in scope: Rust, IBC, Solana, CosmWasm and Anchor.
 
@@ -2723,7 +2724,7 @@ Codezen audited Composable Finance Solana Light Client. Technologies in scope: R
 
 ### Persistence Cosmos Liquid Staking Updates security audit
 
-Audit of the Persistence Cosmos Liquid Staking Updates Cosmos SDK modules.
+Audit of updates to Persistence's Cosmos liquid staking functionality, implemented as Cosmos SDK modules written in Go.
 
 Codezen audited Persistence Cosmos Liquid Staking Updates together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
 
@@ -2739,7 +2740,7 @@ Codezen audited Persistence Cosmos Liquid Staking Updates together with Oak Secu
 
 ### Persistence Dexter Updates security audit
 
-Audit of the Persistence Dexter Updates CosmWasm smart contracts.
+Audit of updates to the Persistence Dexter CosmWasm smart contracts written in Rust.
 
 Codezen audited Persistence Dexter Updates together with Oak Security. Technologies in scope: Rust and CosmWasm.
 
@@ -2755,12 +2756,12 @@ Codezen audited Persistence Dexter Updates together with Oak Security. Technolog
 
 ### Router Voyager Forwarder Extension security audit
 
-Audit of the Router Voyager Forwarder Extension off-chain relayer and orchestrator.
+Audit of the Router Voyager asset forwarder contracts (excluding DexSpan), the asset forwarder middleware and the CosmWasm gateway contract. Router Protocol provides cross-chain liquidity and interoperability with chain abstraction.
 
-Codezen audited Router Voyager Forwarder Extension together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Off chain. We reported 69 findings: 19 critical, 20 major, 14 minor and 16 informational.
+Codezen audited Router Voyager Forwarder Extension together with Oak Security. Technologies in scope: Solidity, Ethereum, CosmWasm and Rust. We reported 69 findings: 19 critical, 20 major, 14 minor and 16 informational.
 
-- Audit type: Relayer And Orchestrator Audit
-- Technologies: Golang, Cosmos SDK, Ethereum, Off chain
+- Audit type: Solidity and CosmWasm Contract Audit
+- Technologies: Solidity, Ethereum, CosmWasm, Rust
 - Ecosystem: Ethereum, Cosmos
 - Delivered with: Oak Security
 - Report date: 30 April 2024
@@ -2783,7 +2784,7 @@ Codezen audited Router Voyager Forwarder Extension together with Oak Security. T
 
 ### Timewave Covenants security audit
 
-Audit of the Timewave Covenants CosmWasm smart contracts.
+Audit of the Timewave Covenants CosmWasm contracts, including single- and two-party POL covenants and holders, swap covenants, liquid poolers for Astroport and Osmosis, IBC forwarders, routers, splitters and a Stride liquid staker. Timewave builds tools for long-term permissionless cooperation.
 
 Codezen audited Timewave Covenants together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 46 findings: 1 critical, 12 major, 16 minor and 17 informational.
 
@@ -2811,7 +2812,7 @@ Codezen audited Timewave Covenants together with Oak Security. Technologies in s
 
 ### Yieldmos Outposts Osmosis security audit
 
-Audit of the Yieldmos Outposts Osmosis CosmWasm smart contracts.
+Audit of the Yieldmos osmodca and osmostake outpost CosmWasm contracts on Osmosis. The Osmodca Outpost lets users set how much liquid OSMO each execution uses and how often it runs, authorizing it via the authz module so Yieldmos can manage delegators' rewards.
 
 Codezen audited Yieldmos Outposts Osmosis together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 13 findings: 3 critical, 4 major, 2 minor and 4 informational.
 
@@ -2839,7 +2840,7 @@ Codezen audited Yieldmos Outposts Osmosis together with Oak Security. Technologi
 
 ### Bifrost Finance security audit
 
-Audit of the Bifrost Finance's substrate pallet.
+Audit of Bifrost Finance Leveraged Staking, covering the lend-market, leverage-staking and prices Substrate pallets in Rust. Bifrost is a staking yield layer that provides multi-chain liquid staking rewards infrastructure.
 
 Codezen audited Bifrost Finance together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot. We reported 19 findings: 1 major, 9 minor and 9 informational.
 
@@ -2867,7 +2868,7 @@ Codezen audited Bifrost Finance together with Oak Security. Technologies in scop
 
 ### Persistence Dexter security audit
 
-Audit of the Persistence Dexter CosmWasm smart contracts.
+Audit of Dexter Core, the multi-staking and router contracts, and an emergency pause feature, in CosmWasm. Dexter is a DEX on Persistence built as a generalized state transition executor that queries swap math from its pool contracts for aggregated, non-custodial liquidity.
 
 Codezen audited Persistence Dexter together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 64 findings: 7 critical, 8 major, 23 minor and 26 informational.
 
@@ -2895,7 +2896,7 @@ Codezen audited Persistence Dexter together with Oak Security. Technologies in s
 
 ### Astroport Transmuter Pool security audit
 
-Audit of the Astroport Transmuter Pool CosmWasm smart contracts.
+Audit of the Astroport Transmuter Pool CosmWasm contract and related factory changes. The transmuter implements a constant sum pair that swaps assets at a 1:1 ratio without spread or fees. Astroport is an AMM/DEX for swapping and providing liquidity.
 
 Codezen audited Astroport Transmuter Pool together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 7 findings: 1 critical, 1 minor and 5 informational.
 
@@ -2923,7 +2924,7 @@ Codezen audited Astroport Transmuter Pool together with Oak Security. Technologi
 
 ### Persistence IBC Liquid Staking module security audit
 
-Audit of the Persistence IBC Liquid Staking module.
+Audit of the Persistence IBC liquid staking module, a Cosmos SDK module written in Go.
 
 Codezen audited Persistence IBC Liquid Staking module together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
 
@@ -2939,7 +2940,7 @@ Codezen audited Persistence IBC Liquid Staking module together with Oak Security
 
 ### Zodiac Protocol Extension security audit
 
-Audit of the Zodiac Protocol Extension CosmWasm smart contracts.
+Audit of all changes to Zodiac Protocol's core CosmWasm contracts since the previous audit. Zodiac is an open-source protocol on Osmosis for deconstructing LP positions into principal and yield tokens.
 
 Codezen audited Zodiac Protocol Extension together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 5 findings: 2 minor and 3 informational.
 
@@ -2967,7 +2968,7 @@ Codezen audited Zodiac Protocol Extension together with Oak Security. Technologi
 
 ### Persistence Cosmos LSM security audit
 
-Audit of the Persistence Cosmos LSM functionality.
+Audit of the Persistence Cosmos LSM functionality, implemented as a Cosmos SDK module written in Go.
 
 Codezen audited Persistence Cosmos LSM together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
 
@@ -2983,7 +2984,7 @@ Codezen audited Persistence Cosmos LSM together with Oak Security. Technologies 
 
 ### Neptune Protocol Update security audit
 
-Audit of the Neptune Protocol Update CosmWasm smart contracts.
+Audit of changes to the Neptune Protocol CosmWasm contracts since a previous audit, including the market contract and the neptune-auth repository, excluding leverage trading and swap features. Neptune Finance is a lending and borrowing protocol.
 
 Codezen audited Neptune Protocol Update together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 11 findings: 1 major, 4 minor and 6 informational.
 
@@ -3011,7 +3012,7 @@ Codezen audited Neptune Protocol Update together with Oak Security. Technologies
 
 ### Snowfork Snowbridge Extension security audit
 
-Audit of the Snowfork Snowbridge Extension.
+Audit of changes to Snowbridge's Solidity contracts and Substrate parachain code since a previous audit. Snowbridge is a trustless bridge between Polkadot and Ethereum, using a Solidity BEEFY light client and an Altair-compliant Ethereum light client pallet.
 
 Codezen audited Snowfork Snowbridge Extension together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 12 findings: 1 critical, 2 major, 6 minor and 3 informational.
 
@@ -3039,7 +3040,7 @@ Codezen audited Snowfork Snowbridge Extension together with Oak Security. Techno
 
 ### Vectis security audit
 
-Audit of the Vectis CosmWasm smart contracts.
+Audit of the Vectis CosmWasm smart contracts across the vectis, vectis-contracts and vectis-authenticators repositories, including the factory contract that creates wallets. Vectis is developed by Nymlab.
 
 Codezen audited Vectis together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 21 findings: 4 major, 12 minor and 5 informational.
 
@@ -3067,7 +3068,7 @@ Codezen audited Vectis together with Oak Security. Technologies in scope: Rust a
 
 ### Timewave Computer Valence Services security audit
 
-Audit of the Timewave Computer Valence Services CosmWasm smart contracts.
+Audit of the Timewave Computer Valence Services CosmWasm smart contracts, including the auctions manager. Timewave builds tools for digital organizations to engage in long-term permissionless cooperation.
 
 Codezen audited Timewave Computer Valence Services together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 31 findings: 5 major, 12 minor and 14 informational.
 
@@ -3095,7 +3096,7 @@ Codezen audited Timewave Computer Valence Services together with Oak Security. T
 
 ### Noble TokenFactory and FiatTokenFactory modules security audit
 
-Audit of the Noble TokenFactory and FiatTokenFactory modules.
+Audit of the Noble fiattokenfactory module and recent changes to its tokenfactory module, which enable minting of generic assets controlled by asset issuers. Noble is an application-specific Cosmos SDK blockchain purpose-built for native asset issuance.
 
 Codezen audited Noble TokenFactory and FiatTokenFactory modules together with Oak Security. Technologies in scope: Golang, Noble and Cosmos SDK. We reported 2 findings: 2 informational.
 
@@ -3123,7 +3124,7 @@ Codezen audited Noble TokenFactory and FiatTokenFactory modules together with Oa
 
 ### Composable Finance Ethereum Light Client security audit
 
-Audit of the Composable Finance Ethereum Light Client.
+Audit of the Composable Finance Ethereum light client, a WASM light client written in Go for IBC on Cosmos SDK chains. Composable Finance builds cross-chain DeFi infrastructure, with trustless interoperability powered by IBC.
 
 Codezen audited Composable Finance Ethereum Light Client. Technologies in scope: Golang, IBC, Cosmos SDK and Ethereum.
 
@@ -3139,7 +3140,7 @@ Codezen audited Composable Finance Ethereum Light Client. Technologies in scope:
 
 ### Router Voyager DexSpan security audit
 
-Audit of the Router Voyager DexSpan Solidity smart contracts.
+Audit of the Router DexSpan Solidity smart contracts in the evm/src/dexspan directory of Router's asset forwarder contracts. Router Protocol provides cross-chain liquidity and interoperability with chain abstraction.
 
 Codezen audited Router Voyager DexSpan together with Oak Security. Technologies in scope: Solidity and Ethereum. We reported 31 findings: 1 critical, 5 major, 10 minor and 15 informational.
 
@@ -3167,7 +3168,7 @@ Codezen audited Router Voyager DexSpan together with Oak Security. Technologies 
 
 ### Router Voyager Forwarder security audit
 
-Audit of the Router Voyager Forwarder off-chain relayer and orchestrator.
+Audit of the Router Voyager Forwarder, the off-chain Go component of Router Protocol that relays messages between chains. Router is a layer one chain focused on blockchain interoperability, enabling cross-chain communication.
 
 Codezen audited Router Voyager Forwarder together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Off chain. We reported 49 findings: 6 critical, 11 major, 15 minor and 17 informational.
 
@@ -3195,7 +3196,7 @@ Codezen audited Router Voyager Forwarder together with Oak Security. Technologie
 
 ### Cosmos SDK v0.47 security audit
 
-Audit of the Cosmos SDK v0.47.
+Audit of selected Cosmos SDK changes between v0.45.16-ics-lsm and v0.47.4 used in Gaia, covering baseapp, post handlers, store, math and the gov, auth, authz, consensus and upgrade modules. Cosmos SDK is an open-source framework for building Proof-of-Stake blockchains.
 
 Codezen audited Cosmos SDK v0.47 together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 37 findings: 3 critical, 8 major, 13 minor and 13 informational.
 
@@ -3223,7 +3224,7 @@ Codezen audited Cosmos SDK v0.47 together with Oak Security. Technologies in sco
 
 ### XCVM Cosmwasm Contracts security audit
 
-Peer review of the XCVM Cosmwasm Contracts.
+Peer review of Composable Finance's XCVM CosmWasm smart contracts written in Rust. Composable Finance builds cross-chain DeFi infrastructure, with trustless interoperability powered by IBC.
 
 Codezen audited XCVM Cosmwasm Contracts. Technologies in scope: Rust, Peer Review, Osmosis and CosmWasm.
 
@@ -3238,7 +3239,7 @@ Codezen audited XCVM Cosmwasm Contracts. Technologies in scope: Rust, Peer Revie
 
 ### Noble Circle's CCTP security audit
 
-Audit of the Noble integration of Circle's CCTP.
+Audit of Noble's integration of Circle's CCTP for USDC, implemented as a Cosmos SDK module written in Go. Noble builds stablecoin infrastructure for the world.
 
 Codezen audited Noble Circle's CCTP together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Solidity, Circle and USDC.
 
@@ -3254,7 +3255,7 @@ Codezen audited Noble Circle's CCTP together with Oak Security. Technologies in 
 
 ### Prism Osmosis LP Staking security audit
 
-Audit of the Prism Osmosis LP Staking CosmWasm smart contracts.
+Audit of the Prism Osmosis LP staking CosmWasm smart contracts written in Rust.
 
 Codezen audited Prism Osmosis LP Staking. Technologies in scope: Rust, Osmosis, Prism and CosmWasm.
 
@@ -3269,7 +3270,7 @@ Codezen audited Prism Osmosis LP Staking. Technologies in scope: Rust, Osmosis, 
 
 ### Lido Neutron Satellite security audit
 
-Audit of the Lido Neutron Satellite CosmWasm smart contracts.
+Audit of the Lido Satellite CosmWasm smart contract on Neutron, which mints and burns tokens through the tokenfactory module. The contract is developed by Hadron Labs.
 
 Codezen audited Lido Neutron Satellite together with Oak Security. Technologies in scope: Rust, Neutron, Solidity and CosmWasm. We reported 7 findings: 2 minor and 5 informational.
 
@@ -3297,7 +3298,7 @@ Codezen audited Lido Neutron Satellite together with Oak Security. Technologies 
 
 ### Snowfork Snowbridge security audit
 
-Audit of the Snowfork Snowbridge Ethereum <-> Polkadot bridge.
+Audit of Snowbridge, Snowfork's bridge between Ethereum and Polkadot, covering the Solidity contracts, including the BEEFY light client that tracks the Polkadot relay chain, and the Substrate pallets that track Ethereum and carry bridge governance.
 
 Codezen audited Snowfork Snowbridge together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 33 findings: 3 critical, 8 major, 9 minor and 13 informational.
 
@@ -3325,7 +3326,7 @@ Codezen audited Snowfork Snowbridge together with Oak Security. Technologies in 
 
 ### Mars Red Bank Updates security audit
 
-Audit of the Mars Red Bank Updates CosmWasm smart contracts.
+Audit of updates to the Mars Red Bank CosmWasm smart contracts written in Rust, covering all changes and their integration since a previous audit of the Mars Outposts codebase.
 
 Codezen audited Mars Red Bank Updates together with Oak Security. Technologies in scope: Rust, Neutron, Mars and CosmWasm. We reported 14 findings: 3 critical, 4 major, 5 minor and 2 informational.
 
@@ -3353,7 +3354,7 @@ Codezen audited Mars Red Bank Updates together with Oak Security. Technologies i
 
 ### SSZ RS Library security audit
 
-Audit of the SSZ RS Library.
+Audit of ssz-rs, a Rust implementation of SimpleSerialize (SSZ), the serialization method used on the Ethereum Beacon Chain. SSZ combines a deterministic serialization scheme with a Merkleization scheme designed to work efficiently with the serialized data.
 
 Codezen audited SSZ RS Library together with Oak Security. Technologies in scope: Rust and Ethereum. We reported 11 findings: 4 minor and 7 informational.
 
@@ -3381,7 +3382,7 @@ Codezen audited SSZ RS Library together with Oak Security. Technologies in scope
 
 ### Composable Centauri security audit
 
-Peer review of the Composable Centauri Cosmos SDK modules.
+Security review of the Composable Centauri Cosmos SDK chain, covering the app and the mint and transfermiddleware modules in Go. Composable Finance builds cross-chain DeFi infrastructure, with trustless interoperability powered by IBC.
 
 Codezen audited Composable Centauri. Technologies in scope: Golang, Cosmos SDK and Polkadot.
 
@@ -3398,7 +3399,7 @@ Codezen audited Composable Centauri. Technologies in scope: Golang, Cosmos SDK a
 
 ### Fairblock FairyRing security audit
 
-Audit of the Fairblock FairyRing Cosmos SDK modules.
+Audit of the Fairblock FairyRing Cosmos SDK chain. FairyRing lets users submit transactions encrypted with a public key that are decrypted and executed at a specified height, using a unique private key per block to prevent front-running.
 
 Codezen audited Fairblock FairyRing together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Cryptography. We reported 26 findings: 12 critical, 7 minor and 7 informational.
 
@@ -3426,7 +3427,7 @@ Codezen audited Fairblock FairyRing together with Oak Security. Technologies in 
 
 ### Polkadot GrandPa IBC Light Client security audit
 
-Audit of the Polkadot GrandPa IBC Light Client.
+Audit of Composable Finance's Polkadot GrandPa IBC light client, a WASM light client written in Rust and Go that connects Polkadot and Cosmos chains over IBC.
 
 Codezen audited Polkadot GrandPa IBC Light Client together with Oak Security. Technologies in scope: Rust, Golang, Tendermint, IBC, Cosmos and Polkadot.
 
@@ -3442,7 +3443,7 @@ Codezen audited Polkadot GrandPa IBC Light Client together with Oak Security. Te
 
 ### Zodiac Protocol security audit
 
-Audit of the Zodiac Protocol CosmWasm smart contracts.
+Audit of Zodiac Protocol's core CosmWasm smart contracts written in Rust. Zodiac is an open-source protocol on Osmosis for deconstructing LP positions into principal and yield tokens.
 
 Codezen audited Zodiac Protocol together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 30 findings: 3 critical, 8 major, 11 minor and 8 informational.
 
@@ -3470,7 +3471,7 @@ Codezen audited Zodiac Protocol together with Oak Security. Technologies in scop
 
 ### Noble Tariff module security audit
 
-Audit of the Noble Tariff module.
+Audit of the Noble x/tariff Cosmos SDK module and its app integration. The module runs before the distribution module at the beginning of each block, collecting a percentage of newly minted inflation and distributing it among configured entities.
 
 Codezen audited Noble Tariff module together with Oak Security. Technologies in scope: Golang, Noble, Cosmos SDK and Interchain Security. We reported 10 findings: 2 critical, 1 minor and 7 informational.
 
@@ -3498,7 +3499,7 @@ Codezen audited Noble Tariff module together with Oak Security. Technologies in 
 
 ### Evmos Solidity Precompiles security audit
 
-Audit of the Evmos Solidity Precompiles.
+Audit of the Evmos precompiles and related changes to Evmos and its go-ethereum fork. These EVM extensions are custom precompiled contracts that, unlike go-ethereum's built-in precompiles, can read and modify state and access Cosmos SDK functionality.
 
 Codezen audited Evmos Solidity Precompiles together with Oak Security. Technologies in scope: Evmos, Rust, Golang, EVM, Solidity and Ethereum. We reported 14 findings: 1 critical, 9 minor and 4 informational.
 
@@ -3526,7 +3527,7 @@ Codezen audited Evmos Solidity Precompiles together with Oak Security. Technolog
 
 ### DAODAO's Polytone security audit
 
-Audit of the Polytone CosmWasm smart contracts.
+Audit of the Polytone CosmWasm smart contracts, which carry execute and query messages over IBC from a controller chain to a controlled chain. Polytone comes from DAO DAO, a platform for creating and managing DAOs across Cosmos.
 
 Codezen audited DAODAO's Polytone together with Oak Security. Technologies in scope: Rust, CosmWasm, IBC and DAO DAO. We reported 14 findings: 2 major, 4 minor and 8 informational.
 
@@ -3554,7 +3555,7 @@ Codezen audited DAODAO's Polytone together with Oak Security. Technologies in sc
 
 ### Cosmos Interchain Security security audit
 
-Audit of the Cosmos Interchain Security Cosmos SDK modules.
+Audit of the Cosmos Interchain Security repository. Interchain Security lets a provider chain such as the Cosmos Hub secure consumer chains by sharing its validator set, with validators running nodes on both chains and earning fees and rewards on each.
 
 Codezen audited Cosmos Interchain Security together with Oak Security. Technologies in scope: Golang, Cosmos Hub, Cosmos SDK, Interchain Security and IBC. We reported 16 findings: 2 critical, 2 major, 7 minor and 5 informational.
 
@@ -3582,7 +3583,7 @@ Codezen audited Cosmos Interchain Security together with Oak Security. Technolog
 
 ### Membrane Finance security audit
 
-Audit of the Membrane Finance CosmWasm smart contracts.
+Audit of the Membrane Finance CosmWasm contracts for auctions, collateralized debt positions, the liquidation queue, liquidity checks, the oracle and the stability pool. Membrane is a protocol that uses collateralized debt positions to issue the CDT debt token across the Cosmos.
 
 Codezen audited Membrane Finance together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 39 findings: 8 critical, 6 major, 17 minor and 8 informational.
 
@@ -3610,7 +3611,7 @@ Codezen audited Membrane Finance together with Oak Security. Technologies in sco
 
 ### Astroport Maker and Vesting Contracts security audit
 
-Audit of the Astroport Maker and Vesting Contracts.
+Audit of the changes to Astroport's Maker and Vesting tokenomics contracts, written in Rust with CosmWasm, since a previous review. Astroport is an automated market maker and decentralized exchange where users swap tokens and provide liquidity.
 
 Codezen audited Astroport Maker and Vesting Contracts together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 9 findings: 4 minor and 5 informational.
 
@@ -3638,7 +3639,7 @@ Codezen audited Astroport Maker and Vesting Contracts together with Oak Security
 
 ### IBCX Interchain Index Token security audit
 
-Audit of the IBCX Interchain Index Token CosmWasm smart contracts.
+Audit of the IBCX smart contracts, written in Rust with CosmWasm, with all contracts in the many-things/ibcx-contracts repository in scope. IBCX is an index token for the Cosmos ecosystem.
 
 Codezen audited IBCX Interchain Index Token together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 26 findings: 11 critical, 6 major, 5 minor and 4 informational.
 
@@ -3666,7 +3667,7 @@ Codezen audited IBCX Interchain Index Token together with Oak Security. Technolo
 
 ### Astroport Concentrated Liquidity Pair security audit
 
-Audit of the Astroport Concentrated Liquidity Pair CosmWasm smart contracts.
+Audit of Astroport's concentrated liquidity pool contract, written in Rust with CosmWasm. Astroport implements an automated, decentralized exchange protocol in the Cosmos ecosystem where users swap tokens and provide liquidity.
 
 Codezen audited Astroport Concentrated Liquidity Pair together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 11 findings: 2 minor and 9 informational.
 
@@ -3694,7 +3695,7 @@ Codezen audited Astroport Concentrated Liquidity Pair together with Oak Security
 
 ### Neptune Protocol security audit
 
-Audit of the Neptune Protocol CosmWasm smart contracts.
+Audit of the Neptune Protocol CosmWasm contracts, excluding the leverage trading feature, along with the neptune-auth and neptune-common Rust libraries. Neptune Finance is a lending and borrowing protocol that uses a PID controller to set its rates.
 
 Codezen audited Neptune Protocol together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 26 findings: 1 critical, 4 major, 16 minor and 5 informational.
 
@@ -3722,7 +3723,7 @@ Codezen audited Neptune Protocol together with Oak Security. Technologies in sco
 
 ### Fuzion Plasma OTC security audit
 
-Audit of the Fuzion Plasma OTC CosmWasm smart contracts.
+Audit of the Fuzion Plasma OTC CosmWasm contracts. Fuzion Plasma OTC is a protocol on the Kujira chain for public and private over-the-counter coin swaps, with options such as an arbiter, vesting accounts and partial swaps.
 
 Codezen audited Fuzion Plasma OTC together with Oak Security. Technologies in scope: Rust, Kujira and CosmWasm. We reported 18 findings: 3 critical, 1 major, 6 minor and 8 informational.
 
@@ -3750,7 +3751,7 @@ Codezen audited Fuzion Plasma OTC together with Oak Security. Technologies in sc
 
 ### Noble security audit
 
-Audit of the Noble Cosmos SDK chain.
+Security review of the Noble chain, built with the Cosmos SDK and Tendermint in Go, centered on its TokenFactory module, which lets privileged accounts mint and control generic assets. Noble is designed to run on Interchain Security provided by the Cosmos Hub.
 
 Codezen audited Noble together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Interchain Security and Circle. We reported 21 findings: 5 major, 10 minor and 6 informational.
 
@@ -3778,7 +3779,7 @@ Codezen audited Noble together with Oak Security. Technologies in scope: Golang,
 
 ### Mars Protocol Rover Updates security audit
 
-Audit of the Mars Protocol Rover Updates CosmWasm smart contracts.
+Audit of updates to Mars Rover, a generalized credit protocol built on the Mars lending market. The review covers new account-nft and credit-manager features such as delisting logic and vault pricing changes, plus a new zapper contract that provides Osmosis liquidity for auto-compounding vaults.
 
 Codezen audited Mars Protocol Rover Updates together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 9 findings: 2 major, 1 minor and 6 informational.
 
@@ -3806,7 +3807,7 @@ Codezen audited Mars Protocol Rover Updates together with Oak Security. Technolo
 
 ### Filecoin FEVM Solidity Library security audit
 
-Audit of the Filecoin FEVM Solidity Library.
+Audit of the Filecoin Solidity library, which gives Solidity smart contracts on the Filecoin EVM an API for calling methods on Filecoin built-in actors and accessing Filecoin-specific syscalls.
 
 Codezen audited Filecoin FEVM Solidity Library together with Oak Security. Technologies in scope: Filecoin, EVM, Solidity and Ethereum. We reported 7 findings: 3 major, 2 minor and 2 informational.
 
@@ -3834,7 +3835,7 @@ Codezen audited Filecoin FEVM Solidity Library together with Oak Security. Techn
 
 ### Filecoin FEVM security audit
 
-Audit of the Filecoin EVM (FEVM) implementation.
+Audit of the Filecoin EVM (FEVM), an Ethereum Virtual Machine compatible runtime virtualized on top of the Filecoin Virtual Machine (FVM), covering the builtin-actors and ref-fvm repositories. Filecoin is a decentralized storage network.
 
 Codezen audited Filecoin FEVM together with Oak Security. Technologies in scope: Filecoin, Rust, Golang, EVM, Solidity and Ethereum. We reported 34 findings: 3 critical, 15 major, 8 minor and 8 informational.
 
@@ -3862,7 +3863,7 @@ Codezen audited Filecoin FEVM together with Oak Security. Technologies in scope:
 
 ### Nym Mixnet and Vesting Contracts security audit
 
-Audit of the Nym Mixnet and Vesting Contracts.
+Audit of Nym's mixnet and vesting CosmWasm contracts, written in Rust, and their relevant imports. The mixnet contract handles epoch advancement, mixnode rewards and layer assignments for the mixnet. Nym builds privacy technology, including NymVPN, a decentralized VPN based on its mixnet.
 
 Codezen audited Nym Mixnet and Vesting Contracts together with Oak Security. Technologies in scope: Rust, Nym, CosmWasm, Mixnet and Privacy. We reported 19 findings: 7 critical, 2 major, 7 minor and 3 informational.
 
@@ -3890,7 +3891,7 @@ Codezen audited Nym Mixnet and Vesting Contracts together with Oak Security. Tec
 
 ### Autonomy Network Osmosis security audit
 
-Audit of the Autonomy Network Osmosis CosmWasm smart contracts.
+Audit of the Autonomy Network registry-stake and wrapper-osmosis CosmWasm contracts. Autonomy Network is a decentralized automation protocol that lets users have on-chain transactions executed automatically in the future under arbitrary conditions.
 
 Codezen audited Autonomy Network Osmosis together with Oak Security. Technologies in scope: Rust, Osmosis and CosmWasm. We reported 15 findings: 3 major, 7 minor and 5 informational.
 
@@ -3918,7 +3919,7 @@ Codezen audited Autonomy Network Osmosis together with Oak Security. Technologie
 
 ### Mars Protocol Rover security audit
 
-Audit of the Mars Protocol Rover CosmWasm smart contracts.
+Audit of the Mars Rover account-nft, credit-manager, oracle-adapter and swapper CosmWasm contracts. Mars Rovers are isolated credit accounts where users aggregate DeFi activity under a single liquidation LTV, represented by transferable NFTs.
 
 Codezen audited Mars Protocol Rover together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 16 findings: 1 critical, 1 major, 6 minor and 8 informational.
 
@@ -3946,7 +3947,7 @@ Codezen audited Mars Protocol Rover together with Oak Security. Technologies in 
 
 ### Persistence Cosmos Liquid Staking security audit
 
-Audit of the Persistence Cosmos Liquid Staking Cosmos SDK modules.
+Audit of the x/lscosmos Cosmos SDK module in Persistence's pstake-native codebase, written in Go. The module powers stkATOM, a non-custodial ATOM liquid staking solution on the Persistence Core-1 chain.
 
 Codezen audited Persistence Cosmos Liquid Staking together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub. We reported 15 findings: 1 critical, 3 major, 5 minor and 6 informational.
 
@@ -3974,7 +3975,7 @@ Codezen audited Persistence Cosmos Liquid Staking together with Oak Security. Te
 
 ### Nolus Money Market security audit
 
-Audit of the Nolus Money Market CosmWasm smart contracts.
+Audit of the Nolus Money Market CosmWasm contracts: treasury, dispatcher, timealarms, lpp, leaser, oracle, profit and lease. Nolus Money Market is a lending protocol on the Nolus chain that lets users lend and borrow assets and NLS token holders earn protocol fees.
 
 Codezen audited Nolus Money Market together with Oak Security. Technologies in scope: Rust, CosmWasm and Nolus. We reported 21 findings: 4 critical, 1 major, 9 minor and 7 informational.
 
@@ -4002,7 +4003,7 @@ Codezen audited Nolus Money Market together with Oak Security. Technologies in s
 
 ### Nolus Core security audit
 
-Audit of the Nolus Core Cosmos SDK modules.
+Audit of the mint and tax Cosmos SDK modules of the Nolus chain, written in Go. Nolus Protocol is a DeFi suite offering money markets with a lease solution for leveraged positions with fixed borrowing costs.
 
 Codezen audited Nolus Core together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Nolus. We reported 11 findings: 1 major, 5 minor and 5 informational.
 
@@ -4030,7 +4031,7 @@ Codezen audited Nolus Core together with Oak Security. Technologies in scope: Go
 
 ### Comdex Lend and Liquidation modules security audit
 
-Audit of the Comdex Lend and Liquidation modules.
+Audit of the x/lend and x/liquidation Cosmos SDK modules of the Comdex chain, written in Go. Comdex aims to provide an infrastructure layer for creating and deploying DeFi applications in the Cosmos ecosystem.
 
 Codezen audited Comdex Lend and Liquidation modules together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Comdex. We reported 21 findings: 4 critical, 3 major, 6 minor and 8 informational.
 
@@ -4058,7 +4059,7 @@ Codezen audited Comdex Lend and Liquidation modules together with Oak Security. 
 
 ### Injective wasmx module and CosmWasm bindings security audit
 
-Audit of the Injective wasmx module and CosmWasm bindings.
+Audit of Injective's wasmx Cosmos SDK module, the registry CosmWasm contract, the CosmWasm bindings and the MsgExec implementation in the exchange module. Injective is an open, interoperable smart contract platform for decentralized financial applications.
 
 Codezen audited Injective wasmx module and CosmWasm bindings together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Injective. We reported 12 findings: 1 critical, 3 major, 4 minor and 4 informational.
 
@@ -4086,7 +4087,7 @@ Codezen audited Injective wasmx module and CosmWasm bindings together with Oak S
 
 ### Neutron security audit
 
-Audit of the Neutron Cosmos SDK chain.
+Audit of the Neutron chain, built with the Cosmos SDK in Go, together with its CosmWasm bindings and example contracts. Neutron brings CosmWasm smart contracts to Cosmos, uses IBC Interchain Accounts for cross-chain queries and transactions, and is secured by the Cosmos Hub through Interchain Security.
 
 Codezen audited Neutron together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Cosmos Hub, Interchain Security, IBC and Interchain. We reported 23 findings: 3 critical, 6 major, 9 minor and 5 informational.
 
@@ -4114,7 +4115,7 @@ Codezen audited Neutron together with Oak Security. Technologies in scope: Golan
 
 ### Mars Protocol Outposts security audit
 
-Audit of the Mars Protocol Outposts CosmWasm smart contracts.
+Audit of the Mars Protocol outposts CosmWasm contracts, written in Rust. Mars is a money market protocol, and the audited contracts implement it on the Osmosis blockchain.
 
 Codezen audited Mars Protocol Outposts together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 21 findings: 1 critical, 3 major, 10 minor and 7 informational.
 
@@ -4142,7 +4143,7 @@ Codezen audited Mars Protocol Outposts together with Oak Security. Technologies 
 
 ### Mars Protocol Periphery security audit
 
-Audit of the Mars Protocol Periphery CosmWasm smart contracts.
+Audit of the Mars Protocol periphery smart contracts, written in Rust with CosmWasm and intended for deployment on Mars Hub, part of the Mars ecosystem.
 
 Codezen audited Mars Protocol Periphery together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 13 findings: 1 critical, 2 major, 3 minor and 7 informational.
 
@@ -4170,7 +4171,7 @@ Codezen audited Mars Protocol Periphery together with Oak Security. Technologies
 
 ### Comdex Vesting & Locking Contracts security audit
 
-Audit of the Comdex Vesting & Locking Contracts.
+Audit of the Comdex Locking and Vesting CosmWasm contracts. The Locking contract powers the Comdex chain's ve governance model, with locked tokens represented as NFTs, and handles token emission and distribution, while the Vesting contract provides periodic and linear token vesting.
 
 Codezen audited Comdex Vesting & Locking Contracts together with Oak Security. Technologies in scope: Rust, Comdex and CosmWasm. We reported 27 findings: 3 critical, 6 major, 7 minor and 11 informational.
 
@@ -4198,7 +4199,7 @@ Codezen audited Comdex Vesting & Locking Contracts together with Oak Security. T
 
 ### Prism Auto Compounding Staking security audit
 
-Audit of the Prism Auto Compounding Staking CosmWasm smart contracts.
+Audit of the Prism Hub CosmWasm contract of Prism Auto Compounding cAsset, which handles protocol operations for users and administrators. The protocol lets users delegate coins to validators with liquid staking and automatic compounding of rewards.
 
 Codezen audited Prism Auto Compounding Staking together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 19 findings: 1 major, 7 minor and 11 informational.
 
@@ -4226,7 +4227,7 @@ Codezen audited Prism Auto Compounding Staking together with Oak Security. Techn
 
 ### Elesto Mint Module security audit
 
-Audit of the Elesto Mint Module.
+Audit of the Elesto mint module, a Cosmos SDK module written in Go.
 
 Codezen audited Elesto Mint Module. Technologies in scope: Golang and Cosmos SDK.
 
@@ -4240,7 +4241,7 @@ Codezen audited Elesto Mint Module. Technologies in scope: Golang and Cosmos SDK
 
 ### Margined Protocol Perpetuals security audit
 
-Audit of the Margined Protocol Perpetuals CosmWasm smart contracts.
+Audit of the Margined Protocol Perpetuals CosmWasm contracts: the margin engine, fee pool, insurance fund, price feed and a virtual automated market maker (vAMM). Margined is a decentralized perpetuals protocol with multichain margin engines for CosmWasm-enabled blockchains.
 
 Codezen audited Margined Protocol Perpetuals together with Oak Security. Technologies in scope: Rust, Cross-Chain, CosmWasm and Juno. We reported 27 findings: 1 critical, 4 major, 12 minor and 10 informational.
 
@@ -4268,7 +4269,7 @@ Codezen audited Margined Protocol Perpetuals together with Oak Security. Technol
 
 ### Comdex Chain & Comdex Governance Contract security audit
 
-Audit of the Comdex chain and governance contract.
+Audit of the Comdex chain's Cosmos SDK modules, including asset, vault, locker, collector, rewards, auction, tokenmint, bandoracle, market, liquidity and esm, plus the Comdex CosmWasm governance contracts, reviewed in three stages. Comdex is an infrastructure layer for DeFi applications in Cosmos.
 
 Codezen audited Comdex Chain & Comdex Governance Contract together with Oak Security. Technologies in scope: Golang, Cosmos SDK, CosmWasm and Wasm. We reported 43 findings: 15 critical, 9 major, 7 minor and 12 informational.
 
@@ -4296,7 +4297,7 @@ Codezen audited Comdex Chain & Comdex Governance Contract together with Oak Secu
 
 ### CosmWasm Wasmd Module security audit
 
-Audit of the CosmWasm Wasmd Module.
+Audit of wasmd, the Cosmos SDK module written in Go that integrates the wasmvm virtual machine to run CosmWasm smart contracts. CosmWasm is a smart contract platform for Cosmos SDK blockchains focused on security, performance and interoperability.
 
 Codezen audited CosmWasm Wasmd Module together with Oak Security. Technologies in scope: Golang, Cosmos SDK, CosmWasm and Wasm. We reported 15 findings: 1 critical, 2 major, 5 minor and 7 informational.
 
@@ -4324,7 +4325,7 @@ Codezen audited CosmWasm Wasmd Module together with Oak Security. Technologies i
 
 ### Stargaze Marketplace security audit
 
-Audit of the Stargaze Marketplace CosmWasm smart contracts.
+Audit of the Stargaze marketplace CosmWasm contracts. Stargaze is a Cosmos zone dedicated to NFTs, and its marketplace, owned by chain governance, lets users buy and sell NFTs through auctions and direct offers.
 
 Codezen audited Stargaze Marketplace together with Oak Security. Technologies in scope: Rust, Stargaze, CosmWasm and NFT. We reported 13 findings: 3 major, 6 minor and 4 informational.
 
@@ -4352,7 +4353,7 @@ Codezen audited Stargaze Marketplace together with Oak Security. Technologies in
 
 ### Subsea (Risk Harbor) Ozone v2 security audit
 
-Audit of Subsea (Risk Harbor) Ozone v2.
+Audit of the Ozone v2 CosmWasm contracts of Subsea (formerly Risk Harbor) on Terra. Risk Harbor is a DeFi risk management marketplace that protects liquidity providers and stakers against smart contract risks, hacks and attacks through an automated, impartial claims process.
 
 Codezen audited Subsea (Risk Harbor) Ozone v2 together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 15 findings: 3 major, 6 minor and 6 informational.
 
@@ -4380,7 +4381,7 @@ Codezen audited Subsea (Risk Harbor) Ozone v2 together with Oak Security. Techno
 
 ### Aperture Finance 2 security audit
 
-Audit of the Aperture Finance 2 CosmWasm smart contracts.
+Audit of Aperture's contracts on Terra: an Anchor Protocol proxy, delta-neutral position and manager contracts, a Terra manager that uses Wormhole for cross-chain strategies, and an Ethereum-side Solidity contract. Aperture aggregates investment opportunities across blockchains.
 
 Codezen audited Aperture Finance 2 together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 11 findings: 1 major, 6 minor and 4 informational.
 
@@ -4408,7 +4409,7 @@ Codezen audited Aperture Finance 2 together with Oak Security. Technologies in s
 
 ### Levana Perpetual Swap security audit
 
-Audit of the Levana Perpetual Swap CosmWasm smart contracts.
+Audit of the Levana Perpetual Swaps CosmWasm contracts and the shared levana-common code. Levana Perpetual Swaps enables leveraged trading of any asset without a counterparty, with trades that are always executable and have no expiration date.
 
 Codezen audited Levana Perpetual Swap together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 28 findings: 3 critical, 7 major, 9 minor and 9 informational.
 
@@ -4436,7 +4437,7 @@ Codezen audited Levana Perpetual Swap together with Oak Security. Technologies i
 
 ### C2X Com2Us security audit
 
-Audit of the C2X Com2Us CosmWasm smart contracts.
+Audit of C2X CosmWasm contracts in the Terra ecosystem: a legacy cw20 token implementation, an NFT lock system and a beta game launcher that lets users support sales of newly launched games. C2X is a blockchain gaming platform.
 
 Codezen audited C2X Com2Us together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 15 findings: 4 major, 5 minor and 6 informational.
 
@@ -4464,7 +4465,7 @@ Codezen audited C2X Com2Us together with Oak Security. Technologies in scope: Ru
 
 ### Kinetic Money security audit
 
-Audit of the Kinetic Money CosmWasm smart contracts.
+Audit of the Kinetic Money CosmWasm contracts for the vault, phaser, Anchor adapter, coordinator and protocol tokens. Kinetic Money is a protocol on Terra where users deposit funds in return for a self-repaying loan, with deposit yield used to reduce the debt.
 
 Codezen audited Kinetic Money together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 26 findings: 7 critical, 4 major, 5 minor and 10 informational.
 

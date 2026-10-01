@@ -1,6 +1,6 @@
 # Astroport PCL Neutron Duality Orderbook Integration security audit
 
-Audit of the Astroport PCL Neutron Duality Orderbook Integration.
+Audit of Astroport's concentrated liquidity pair contract integrating with Neutron's Duality DEX orderbook, written in Rust with CosmWasm. Astroport is an automated, decentralized exchange in the Cosmos ecosystem.
 
 Codezen audited Astroport PCL Neutron Duality Orderbook Integration together with Oak Security. Technologies in scope: Rust, CosmWasm and Neutron. We reported 13 findings: 3 critical, 2 major, 5 minor and 3 informational.
 

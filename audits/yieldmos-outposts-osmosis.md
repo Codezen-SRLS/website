@@ -1,6 +1,6 @@
 # Yieldmos Outposts Osmosis security audit
 
-Audit of the Yieldmos Outposts Osmosis CosmWasm smart contracts.
+Audit of the Yieldmos osmodca and osmostake outpost CosmWasm contracts on Osmosis. The Osmodca Outpost lets users set how much liquid OSMO each execution uses and how often it runs, authorizing it via the authz module so Yieldmos can manage delegators' rewards.
 
 Codezen audited Yieldmos Outposts Osmosis together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 13 findings: 3 critical, 4 major, 2 minor and 4 informational.
 

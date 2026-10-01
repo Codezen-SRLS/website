@@ -1,6 +1,6 @@
 # Cosmos Interchain Security security audit
 
-Audit of the Cosmos Interchain Security Cosmos SDK modules.
+Audit of the Cosmos Interchain Security repository. Interchain Security lets a provider chain such as the Cosmos Hub secure consumer chains by sharing its validator set, with validators running nodes on both chains and earning fees and rewards on each.
 
 Codezen audited Cosmos Interchain Security together with Oak Security. Technologies in scope: Golang, Cosmos Hub, Cosmos SDK, Interchain Security and IBC. We reported 16 findings: 2 critical, 2 major, 7 minor and 5 informational.
 

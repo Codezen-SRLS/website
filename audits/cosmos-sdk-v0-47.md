@@ -1,6 +1,6 @@
 # Cosmos SDK v0.47 security audit
 
-Audit of the Cosmos SDK v0.47.
+Audit of selected Cosmos SDK changes between v0.45.16-ics-lsm and v0.47.4 used in Gaia, covering baseapp, post handlers, store, math and the gov, auth, authz, consensus and upgrade modules. Cosmos SDK is an open-source framework for building Proof-of-Stake blockchains.
 
 Codezen audited Cosmos SDK v0.47 together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 37 findings: 3 critical, 8 major, 13 minor and 13 informational.
 

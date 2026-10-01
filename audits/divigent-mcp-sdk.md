@@ -1,6 +1,6 @@
 # Divigent MCP SDK security audit
 
-Audit of the Divigent MCP SDK.
+Audit of the Divigent MCP SDK for AI agents. Divigent is the treasury layer for x402 agent wallets on Base, providing adaptive reserves, just-in-time recall, venue monitoring and yield on idle USDC.
 
 Codezen audited Divigent MCP SDK together with Oak Security. Technologies in scope: AI and MCP.
 

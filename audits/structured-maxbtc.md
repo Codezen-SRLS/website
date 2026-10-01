@@ -1,6 +1,6 @@
 # Structured maxBTC security audit
 
-Audit of the Structured maxBTC.
+Audit of Structured's maxBTC smart contracts. maxBTC is a cross-chain yield strategy and tokenization system for Bitcoin.
 
 Codezen audited Structured maxBTC together with Oak Security. Technologies in scope: Bitcoin.
 

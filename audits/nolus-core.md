@@ -1,6 +1,6 @@
 # Nolus Core security audit
 
-Audit of the Nolus Core Cosmos SDK modules.
+Audit of the mint and tax Cosmos SDK modules of the Nolus chain, written in Go. Nolus Protocol is a DeFi suite offering money markets with a lease solution for leveraged positions with fixed borrowing costs.
 
 Codezen audited Nolus Core together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Nolus. We reported 11 findings: 1 major, 5 minor and 5 informational.
 

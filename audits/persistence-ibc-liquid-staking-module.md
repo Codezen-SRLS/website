@@ -1,6 +1,6 @@
 # Persistence IBC Liquid Staking module security audit
 
-Audit of the Persistence IBC Liquid Staking module.
+Audit of the Persistence IBC liquid staking module, a Cosmos SDK module written in Go.
 
 Codezen audited Persistence IBC Liquid Staking module together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
 

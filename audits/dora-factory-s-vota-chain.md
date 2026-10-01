@@ -1,6 +1,6 @@
 # Dora Factory's Vota chain security audit
 
-Audit of the Dora Factory's Vota chain.
+Audit of the Dora Vota Cosmos SDK chain in Go, with the scope restricted to the code of its base app. Dora Vota is the blockchain built by Dora Factory.
 
 Codezen audited Dora Factory's Vota chain together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 7 findings: 1 critical, 4 major, 1 minor and 1 informational.
 

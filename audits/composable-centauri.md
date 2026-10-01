@@ -1,6 +1,6 @@
 # Composable Centauri security audit
 
-Peer review of the Composable Centauri Cosmos SDK modules.
+Security review of the Composable Centauri Cosmos SDK chain, covering the app and the mint and transfermiddleware modules in Go. Composable Finance builds cross-chain DeFi infrastructure, with trustless interoperability powered by IBC.
 
 Codezen audited Composable Centauri. Technologies in scope: Golang, Cosmos SDK and Polkadot.
 

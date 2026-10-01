@@ -1,6 +1,6 @@
 # StylusPort security audit
 
-Audit of the StylusPort.
+Review of the StylusPort handbook, code examples and MCP server, written in Rust. StylusPort is a framework and toolkit that streamlines the migration of SVM and Solana programs to Arbitrum Stylus smart contracts.
 
 Codezen audited StylusPort together with Oak Security. Technologies in scope: Rust, Arbitrum, Stylus and Solana. We reported 20 findings: 3 critical, 2 major, 8 minor and 7 informational.
 

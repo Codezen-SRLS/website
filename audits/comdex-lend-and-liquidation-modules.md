@@ -1,6 +1,6 @@
 # Comdex Lend and Liquidation modules security audit
 
-Audit of the Comdex Lend and Liquidation modules.
+Audit of the x/lend and x/liquidation Cosmos SDK modules of the Comdex chain, written in Go. Comdex aims to provide an infrastructure layer for creating and deploying DeFi applications in the Cosmos ecosystem.
 
 Codezen audited Comdex Lend and Liquidation modules together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Comdex. We reported 21 findings: 4 critical, 3 major, 6 minor and 8 informational.
 

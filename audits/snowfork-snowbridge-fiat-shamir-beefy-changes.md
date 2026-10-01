@@ -1,6 +1,6 @@
 # Snowfork Snowbridge Fiat-Shamir BEEFY Changes security audit
 
-Audit of the Snowfork Snowbridge Fiat-Shamir BEEFY Changes.
+Audit of the Snowbridge change adding a non-interactive, Fiat-Shamir based BEEFY verification path to the Solidity BeefyClient alongside the RANDAO-based two-phase protocol. Snowbridge is a trustless bridge between Polkadot and Ethereum built on light clients.
 
 Codezen audited Snowfork Snowbridge Fiat-Shamir BEEFY Changes together with Oak Security. Technologies in scope: Solidity, Polkadot, Ethereum, Bridge and Cryptography. We reported 10 findings: 1 critical, 1 minor and 8 informational.
 

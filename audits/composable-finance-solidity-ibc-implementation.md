@@ -1,6 +1,6 @@
 # Composable Finance Solidity IBC Implementation security audit
 
-Audit of the Composable Finance Solidity IBC implementation.
+Audit of Composable Finance's implementation of IBC as a Solidity library. Composable Finance builds cross-chain DeFi infrastructure, with trustless interoperability powered by IBC.
 
 Codezen audited Composable Finance Solidity IBC Implementation. Technologies in scope: Solidity and IBC.
 

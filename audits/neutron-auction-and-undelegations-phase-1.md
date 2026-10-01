@@ -1,6 +1,6 @@
 # Neutron Auction and Undelegations Phase 1 security audit
 
-Audit of the Neutron Auction and Undelegations Phase 1.
+Audit of the Neutron auction CosmWasm contract. It runs a time-bounded deposit auction, then lets the owner settle in batches, allocating a fixed USDC budget pro rata to each participant's share of deposits and burning the deposited claim tokens, after which users claim their USDC.
 
 Codezen audited Neutron Auction and Undelegations Phase 1 together with Oak Security. Technologies in scope: Rust, CosmWasm and Neutron. We reported 15 findings: 6 minor and 9 informational.
 

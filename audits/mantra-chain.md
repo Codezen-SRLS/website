@@ -1,6 +1,6 @@
 # MANTRA Chain security audit
 
-Audit of the MANTRA Chain.
+Audit of MANTRA Chain, a Cosmos SDK chain written in Go. MANTRA is an EVM-compatible layer 1 blockchain for real world assets, designed to be capable of adhering to real-world regulatory requirements.
 
 Codezen audited MANTRA Chain together with Oak Security. Technologies in scope: Golang and Cosmos SDK.
 

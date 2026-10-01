@@ -1,6 +1,6 @@
 # Router Voyager Forwarder security audit
 
-Audit of the Router Voyager Forwarder off-chain relayer and orchestrator.
+Audit of the Router Voyager Forwarder, the off-chain Go component of Router Protocol that relays messages between chains. Router is a layer one chain focused on blockchain interoperability, enabling cross-chain communication.
 
 Codezen audited Router Voyager Forwarder together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Off chain. We reported 49 findings: 6 critical, 11 major, 15 minor and 17 informational.
 

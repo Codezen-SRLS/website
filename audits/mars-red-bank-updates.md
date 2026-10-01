@@ -1,6 +1,6 @@
 # Mars Red Bank Updates security audit
 
-Audit of the Mars Red Bank Updates CosmWasm smart contracts.
+Audit of updates to the Mars Red Bank CosmWasm smart contracts written in Rust, covering all changes and their integration since a previous audit of the Mars Outposts codebase.
 
 Codezen audited Mars Red Bank Updates together with Oak Security. Technologies in scope: Rust, Neutron, Mars and CosmWasm. We reported 14 findings: 3 critical, 4 major, 5 minor and 2 informational.
 

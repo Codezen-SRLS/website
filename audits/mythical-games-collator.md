@@ -1,6 +1,6 @@
 # Mythical Games Collator security audit
 
-Audit of the Mythical Games' collator.
+Audit of a collator built in Rust with the Polkadot SDK (Substrate) for Mythical Games. Mythical Games is a game technology company working at the intersection of video games and economics.
 
 Codezen audited Mythical Games Collator together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot.
 

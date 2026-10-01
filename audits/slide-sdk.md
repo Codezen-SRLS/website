@@ -1,6 +1,6 @@
 # Slide SDK security audit
 
-Audit of the Slide SDK's Cosmos SDK integration in Avalanche consensus.
+Audit of the Slide SDK in Go, which integrates the Cosmos SDK with Avalanche consensus, with all packages of the slide-sdk repository in scope. The Slide SDK is developed by Landslide Network.
 
 Codezen audited Slide SDK together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Avalanche and Consensus. We reported 15 findings: 2 critical, 2 major, 7 minor and 4 informational.
 

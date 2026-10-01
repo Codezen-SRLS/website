@@ -1,6 +1,6 @@
 # Silo MEV for SEI chain security audit
 
-Audit of the Silo MEV bot for SEI chain.
+Audit of Silo's MEV bot for the SEI chain, a Cosmos SDK chain, written in Go. Silo Finance is a DeFi project focused on isolated lending.
 
 Codezen audited Silo MEV for SEI chain together with Zenith Security. Technologies in scope: Golang, MEV, SEI and Cosmos SDK.
 

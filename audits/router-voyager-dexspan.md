@@ -1,6 +1,6 @@
 # Router Voyager DexSpan security audit
 
-Audit of the Router Voyager DexSpan Solidity smart contracts.
+Audit of the Router DexSpan Solidity smart contracts in the evm/src/dexspan directory of Router's asset forwarder contracts. Router Protocol provides cross-chain liquidity and interoperability with chain abstraction.
 
 Codezen audited Router Voyager DexSpan together with Oak Security. Technologies in scope: Solidity and Ethereum. We reported 31 findings: 1 critical, 5 major, 10 minor and 15 informational.
 

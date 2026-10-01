@@ -1,6 +1,6 @@
 # Nolus Money Market security audit
 
-Audit of the Nolus Money Market CosmWasm smart contracts.
+Audit of the Nolus Money Market CosmWasm contracts: treasury, dispatcher, timealarms, lpp, leaser, oracle, profit and lease. Nolus Money Market is a lending protocol on the Nolus chain that lets users lend and borrow assets and NLS token holders earn protocol fees.
 
 Codezen audited Nolus Money Market together with Oak Security. Technologies in scope: Rust, CosmWasm and Nolus. We reported 21 findings: 4 critical, 1 major, 9 minor and 7 informational.
 

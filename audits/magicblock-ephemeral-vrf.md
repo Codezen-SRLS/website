@@ -1,6 +1,6 @@
 # Magicblock ephemeral VRF security audit
 
-Audit of the Magicblock ephemeral VRF.
+Audit of Magicblock's ephemeral VRF program and API, written in Rust for Solana. Magicblock builds blockchain infrastructure, including ephemeral rollups, that scales applications on Solana for gaming, DeFi and other Web3 use cases.
 
 Codezen audited Magicblock ephemeral VRF together with Zenith Security. Technologies in scope: Solana, Rust and Magicblock. We reported 18 findings: 4 major, 4 minor and 10 informational.
 

@@ -1,6 +1,6 @@
 # Structured maxBTC EVM Oracle Contracts security audit
 
-Audit of the Structured maxBTC EVM Oracle Contracts.
+Audit of Structured's maxBTC oracle contracts for EVM chains, written in Solidity. maxBTC is a cross-chain yield strategy and tokenization system for Bitcoin.
 
 Codezen audited Structured maxBTC EVM Oracle Contracts together with Oak Security. Technologies in scope: Solidity, Ethereum, EVM, Bitcoin and Oracle.
 

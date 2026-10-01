@@ -1,6 +1,6 @@
 # Stellar Core Protocol 23 security audit
 
-Audit of the Stellar Core Protocol 23.
+Audit of the Protocol 23 changes to stellar-core and the Soroban host environment, including the overlay, crypto, SCP and transactions modules. Stellar is an open network for fast, low-cost payments and asset issuance, with Soroban smart contracts written in Rust.
 
 Codezen audited Stellar Core Protocol 23 together with Oak Security. Technologies in scope: C++, C, Soroban, Rust and Stellar. We reported 81 findings: 2 critical, 1 major, 35 minor and 43 informational.
 

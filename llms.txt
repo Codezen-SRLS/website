@@ -67,7 +67,7 @@ To request an audit, email info@codezen.tech with the project name, repository/s
 - [Azura security audit](https://www.codezen.tech/audits/azura.md): Smart contracts audit
 - [MANTRA Chain security audit](https://www.codezen.tech/audits/mantra-chain.md): Cosmos SDK chain audit
 - [IBC v2 Eureka security audit](https://www.codezen.tech/audits/ibc-v2-eureka.md): IBC protocol audit
-- [Bezee security audit](https://www.codezen.tech/audits/bezee.md): Smart contracts audit
+- [BeeZee security audit](https://www.codezen.tech/audits/beezee.md): Smart contracts audit
 - [Injective Updates security audit](https://www.codezen.tech/audits/injective-updates.md): Cosmos SDK Audit
 - [Structured maxBTC EVM Oracle Contracts security audit](https://www.codezen.tech/audits/structured-maxbtc-evm-oracle-contracts.md): Solidity smart contracts audit
 - [SolvBTC Stellar Bridge security audit](https://www.codezen.tech/audits/solvbtc-stellar-bridge.md): Soroban smart contracts audit
@@ -95,7 +95,7 @@ To request an audit, email info@codezen.tech with the project name, repository/s
 - [NodeOps Network security audit](https://www.codezen.tech/audits/nodeops-network.md): Solidity smart contracts audit
 - [Gno.land Chain Updates security audit](https://www.codezen.tech/audits/gno-land-chain-updates.md): Blockchain audit
 - [Capricorn (aPriori) APR Token and Staked APR Token security audit](https://www.codezen.tech/audits/capricorn-apriori-apr-token-and-staked-apr-token.md): Solidity smart contracts audit
-- [Fuel Sequencer Updates 10 security audit](https://www.codezen.tech/audits/fuel-sequencer-updates-10.md): Cosmos SDK chain Audit
+- [Fuel Sequencer Updates (September 2025) security audit](https://www.codezen.tech/audits/fuel-sequencer-updates-september-2025.md): Cosmos SDK chain Audit
 - [Holo security audit](https://www.codezen.tech/audits/holo.md): Smart contracts audit
 - [Structured Jupiter security audit](https://www.codezen.tech/audits/structured-jupiter.md): Smart contracts audit
 - [Fuel Sequencer Updates 9 and The Rig security audit](https://www.codezen.tech/audits/fuel-sequencer-updates-9-and-the-rig.md): Cosmos SDK chain Audit
@@ -119,7 +119,7 @@ To request an audit, email info@codezen.tech with the project name, repository/s
 - [Structured maxBTC security audit](https://www.codezen.tech/audits/structured-maxbtc.md): Smart contracts audit
 - [Fuel Sequencer Updates 7 security audit](https://www.codezen.tech/audits/fuel-sequencer-updates-7.md): Cosmos SDK chain Audit
 - [Fuel Sequencer Updates 6 security audit](https://www.codezen.tech/audits/fuel-sequencer-updates-6.md): Cosmos SDK chain Audit
-- [Manta security audit](https://www.codezen.tech/audits/manta.md): Blockchain audit
+- [Manta Network security audit](https://www.codezen.tech/audits/manta.md): Blockchain audit
 - [Gno.land Chain Sprint 2 security audit](https://www.codezen.tech/audits/gno-land-chain-sprint-2.md): Cosmos SDK chain audit
 - [Gno.land Chain Sprint 3 security audit](https://www.codezen.tech/audits/gno-land-chain-sprint-3.md): Cosmos SDK chain audit
 - [Gno.land Chain Sprint 1 security audit](https://www.codezen.tech/audits/gno-land-chain-sprint-1.md): Cosmos SDK chain audit
@@ -138,13 +138,13 @@ To request an audit, email info@codezen.tech with the project name, repository/s
 - [Composable Escrow Contracts security audit](https://www.codezen.tech/audits/composable-escrow-contracts.md): Smart contracts audit
 - [Dymension Stream 2 security audit](https://www.codezen.tech/audits/dymension-stream-2.md): Cosmos SDK chain Audit
 - [Dymension Phase 2 security audit](https://www.codezen.tech/audits/dymension-phase-2.md): Cosmos SDK chain Audit
-- [Dora Factory's Vota migration security audit](https://www.codezen.tech/audits/dora-factory-s-vota-migration.md): Cosmos SDK Audit
+- [Dora Factory's Vota migration security audit](https://www.codezen.tech/audits/dora-factory-s-vota-migration.md): Solidity Contract Audit
 - [Fuel Sequencer Watchtower security audit](https://www.codezen.tech/audits/fuel-sequencer-watchtower.md): Off chain monitor audit
 - [Fuel Sequencer Updates 2 security audit](https://www.codezen.tech/audits/fuel-sequencer-updates-2.md): Cosmos SDK chain Audit
 - [Drop Protocol Updates security audit](https://www.codezen.tech/audits/drop-protocol-updates.md): CosmWasm smart contracts audit
 - [Fuel Sequencer Updates security audit](https://www.codezen.tech/audits/fuel-sequencer-updates.md): Cosmos SDK chain Audit
 - [Out Protocol security audit](https://www.codezen.tech/audits/out-protocol.md): Solana program audit
-- [Persistence pSTAKE BTC Yield security audit](https://www.codezen.tech/audits/persistence-pstake-btc-yield.md): Cosmos SDK Audit
+- [Persistence pSTAKE BTC Yield security audit](https://www.codezen.tech/audits/persistence-pstake-btc-yield.md): Solidity smart contracts audit
 - [Volta Protocol security audit](https://www.codezen.tech/audits/volta-protocol.md): CosmWasm Contract Audit
 - [Snowfork Snowbridge Updates 2 security audit](https://www.codezen.tech/audits/snowfork-snowbridge-updates-2.md): Substrate Bridge Pallet Audit
 - [Dymension Phase 1 security audit](https://www.codezen.tech/audits/dymension-phase-1.md): Cosmos SDK chain Audit
@@ -164,7 +164,7 @@ To request an audit, email info@codezen.tech with the project name, repository/s
 - [Composable Finance Solana Light Client security audit](https://www.codezen.tech/audits/composable-finance-solana-light-client.md): WASM Light Client Audit
 - [Persistence Cosmos Liquid Staking Updates security audit](https://www.codezen.tech/audits/persistence-cosmos-liquid-staking-updates.md): Cosmos SDK Audit
 - [Persistence Dexter Updates security audit](https://www.codezen.tech/audits/persistence-dexter-updates.md): CosmWasm Contract Audit
-- [Router Voyager Forwarder Extension security audit](https://www.codezen.tech/audits/router-voyager-forwarder-extension.md): Relayer And Orchestrator Audit
+- [Router Voyager Forwarder Extension security audit](https://www.codezen.tech/audits/router-voyager-forwarder-extension.md): Solidity and CosmWasm Contract Audit
 - [Timewave Covenants security audit](https://www.codezen.tech/audits/timewave-covenants.md): CosmWasm Contract Audit
 - [Yieldmos Outposts Osmosis security audit](https://www.codezen.tech/audits/yieldmos-outposts-osmosis.md): CosmWasm Contract Audit
 - [Persistence Dexter security audit](https://www.codezen.tech/audits/persistence-dexter.md): CosmWasm Contract Audit

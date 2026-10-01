@@ -1,6 +1,6 @@
 # Thema Protocol security audit
 
-Audit of the Thema Protocol.
+Audit of the Thema core Solidity contracts. Thema is a DeFi protocol for issuing asset-backed tokens (OMTs) that are minted and redeemed atomically against configured asset baskets, with NAV tracked via oracle inputs and modular fee, oracle and token set interfaces.
 
 Codezen audited Thema Protocol together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 26 findings: 1 critical, 10 major, 9 minor and 6 informational.
 

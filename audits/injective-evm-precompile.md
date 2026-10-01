@@ -1,6 +1,6 @@
 # Injective EVM precompile security audit
 
-Audit of the Injective EVM precompile.
+Audit of an EVM precompile for Injective, written in Go on the Cosmos SDK with a Solidity interface. Injective is a layer 1 blockchain for finance, supporting tokenization, perpetuals, stablecoins and onchain markets.
 
 Codezen audited Injective EVM precompile together with Zenith Security. Technologies in scope: Golang, Cosmos SDK, Injective and Solidity.
 

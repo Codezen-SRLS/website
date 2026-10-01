@@ -1,6 +1,6 @@
 # Astroport Concentrated Liquidity Pair security audit
 
-Audit of the Astroport Concentrated Liquidity Pair CosmWasm smart contracts.
+Audit of Astroport's concentrated liquidity pool contract, written in Rust with CosmWasm. Astroport implements an automated, decentralized exchange protocol in the Cosmos ecosystem where users swap tokens and provide liquidity.
 
 Codezen audited Astroport Concentrated Liquidity Pair together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 11 findings: 2 minor and 9 informational.
 

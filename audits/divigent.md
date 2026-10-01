@@ -1,6 +1,6 @@
 # Divigent security audit
 
-Audit of Divigent.
+Audit of the Divigent smart contracts. Divigent provides a treasury layer for x402 agent wallets on Base, with adaptive reserves, just-in-time recall, venue monitoring and yield on idle USDC.
 
 Codezen audited Divigent together with Oak Security.
 

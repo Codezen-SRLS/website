@@ -1,6 +1,6 @@
 # Astroport's Asteroid Bridge security audit
 
-Audit of Astroport's Asteroid Bridge.
+Audit of the Asteroid Bridge CosmWasm smart contracts in Rust, including the Neutron bridge contract, with all contracts of the bridge repository in scope. Astroport is an AMM and DEX for swapping and providing liquidity.
 
 Codezen audited Astroport's Asteroid Bridge together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 13 findings: 8 minor and 5 informational.
 
