@@ -4,6 +4,7 @@ import path from "node:path";
 import satori from "satori";
 import sharp from "sharp";
 import { SEVERITIES, totalFindings, type Audit } from "./audits";
+import { clampWords } from "./seo";
 
 const root = process.cwd();
 const font = (pkg: string, file: string) => readFile(path.join(root, "node_modules/@fontsource", pkg, "files", file));
@@ -84,10 +85,21 @@ const logoDataUri = async (a: Audit) => {
   }
 };
 
+// One line of the mono kicker holds ~32 characters: "<label> · <firm>" when it fits,
+// else the label alone; never cut mid-word
+const KICKER_MAX = 32;
+const ogKicker = (a: Audit) => {
+  const label = a.description || "Security audit";
+  const full = `${label}${a.partner ? ` · ${a.partner}` : ""}`;
+  return full.length <= KICKER_MAX ? full : clampWords(label, KICKER_MAX);
+};
+
 export const auditOg = async (a: Audit) => {
   const total = totalFindings(a.issues);
   const logo = await logoDataUri(a);
-  const title = a.title.length > 34 ? `${a.title.slice(0, 32)}…` : a.title;
+  // Long names get a smaller size so they keep to two lines
+  const title = clampWords(a.title, 40);
+  const titleSize = title.length > 18 ? 56 : 72;
   return frame([
     h(
       "div",
@@ -95,8 +107,8 @@ export const auditOg = async (a: Audit) => {
       h(
         "div",
         { flexDirection: "column", gap: 20, flex: 1 },
-        kicker(`${a.description}${a.partner ? ` · ${a.partner}` : ""}`.slice(0, 48)),
-        h("div", { fontSize: 72, fontWeight: 600, lineHeight: 1.02, letterSpacing: -2 }, title),
+        kicker(ogKicker(a)),
+        h("div", { fontSize: titleSize, fontWeight: 600, lineHeight: 1.04, letterSpacing: -2 }, title),
         h("div", { fontSize: 34, fontWeight: 300, color: "rgba(232,238,255,0.7)" }, "Security audit by Codezen"),
         total > 0 &&
           h(

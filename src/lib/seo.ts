@@ -156,3 +156,86 @@ export const breadcrumbs = (items: { name: string; path: string }[]) => ({
 });
 
 export const graph = (...nodes: object[]) => ({ "@context": "https://schema.org", "@graph": nodes });
+
+// ---------------------------------------------------------------------------
+// Meta descriptions. Search engines show ~155–160 characters, so text is
+// shortened at natural boundaries and never mid-word.
+
+export const META_DESCRIPTION_MAX = 160;
+
+const ABBREVIATION = /(?:^|[\s(])(?:e\.g|i\.e|etc|vs|approx|inc|ltd|corp|co|no|st|dr|mr|ms|jr|sr|[A-Z])\.$/i;
+
+const squash = (text?: string) => (text || "").replace(/\s+/g, " ").trim();
+
+/** Shortens plain text to at most `max` characters at a word boundary, ending with "…". */
+export const clampWords = (text: string, max: number): string => {
+  const t = squash(text);
+  if (t.length <= max) return t;
+  const room = t.slice(0, max); // the "…" replaces the space we cut at
+  const space = room.lastIndexOf(" ");
+  const head = (space > 0 ? room.slice(0, space) : room.slice(0, max - 1)).replace(/[\s,;:(·|–—-]+$/, "");
+  return `${head}…`;
+};
+
+/**
+ * The longest opening of `text` that fits in `max` characters and still reads as a
+ * complete phrase: whole sentences, else the first clauses up to a ";" (closed with a
+ * full stop), else a word-boundary cut with "…".
+ */
+export const leadWithin = (text: string, max: number): string => {
+  const t = squash(text);
+  if (t.length <= max) return t;
+  let sentenceEnd = -1;
+  // A sentence ends at . ! ? followed by a capital or digit, unless the dot closes an
+  // abbreviation ("e.g. Osmosis", "Labs Inc. Acme")
+  for (const m of t.matchAll(/[.!?](?=\s+[A-Z0-9])/g)) {
+    if (m.index + 1 > max) break;
+    if (!ABBREVIATION.test(t.slice(0, m.index + 1))) sentenceEnd = m.index + 1;
+  }
+  if (sentenceEnd > 0) return t.slice(0, sentenceEnd);
+  let clauseEnd = -1;
+  for (const m of t.matchAll(/;(?=\s)/g)) if (m.index + 1 <= max) clauseEnd = m.index;
+  if (clauseEnd > 0) return `${t.slice(0, clauseEnd).replace(/[\s,]+$/, "")}.`;
+  return clampWords(t, max);
+};
+
+export interface AuditMetaInput {
+  title: string;
+  /** Audit-type label, e.g. "CosmWasm smart contract audit" */
+  label?: string;
+  /** Audit firm the work was delivered with, e.g. "Oak Security" */
+  partner?: string;
+  extendedDescription?: string;
+  findings: number;
+}
+
+/**
+ * Meta description for an audit page: the project's own description leads, then a short
+ * "<label> by Codezen with <firm>, <n> findings." suffix when it fits. Parts of the
+ * suffix are dropped (finding count first, then the firm) rather than shortening the lead.
+ */
+export const auditMetaDescription = (a: AuditMetaInput, max = META_DESCRIPTION_MAX): string => {
+  const label = squash(a.label);
+  const partner = squash(a.partner);
+  const ext = squash(a.extendedDescription);
+
+  if (!ext) {
+    return clampWords(
+      `${squash(a.title)} security audit by Codezen${label ? ` (${label})` : ""}${partner ? ` with ${partner}` : ""}${
+        a.findings > 0 ? `: ${a.findings} findings reported` : ""
+      }.`,
+      max
+    );
+  }
+
+  let lead = leadWithin(ext, max);
+  if (!/[.!?…]$/.test(lead)) lead = lead.length < max ? `${lead}.` : clampWords(ext, max);
+
+  const by = label ? `${label[0].toUpperCase()}${label.slice(1)} by Codezen` : "Audited by Codezen";
+  const firm = partner ? ` with ${partner}` : "";
+  const count = a.findings > 0 ? `, ${a.findings} finding${a.findings === 1 ? "" : "s"}` : "";
+  for (const suffix of [`${by}${firm}${count}.`, `${by}${firm}.`, `${by}.`]) {
+    if (lead.length + 1 + suffix.length <= max) return `${lead} ${suffix}`;
+  }
+  return lead;
+};

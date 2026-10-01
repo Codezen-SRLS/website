@@ -8,7 +8,7 @@ import Eyebrow from "../../components/ui/Eyebrow.astro";
 import Badge from "../../components/ui/Badge.astro";
 import { audits, auditSummary, formatDate, getRelated, techTags, totalFindings, type Audit } from "../../lib/audits";
 import { ecosystemsOf } from "../../lib/stats";
-import { abs, breadcrumbs } from "../../lib/seo";
+import { abs, auditMetaDescription, breadcrumbs } from "../../lib/seo";
 
 export function getStaticPaths() {
   return audits.map((audit) => ({ params: { slug: audit.slug }, props: { audit } }));
@@ -27,11 +27,14 @@ const ecosystems = ecosystemsOf(audit);
 const title =
   [`${audit.title} Security Audit`, `${audit.title} Audit`, audit.title].find((t) => t.length + 10 <= 60) ||
   audit.title;
-const description = `${audit.title} security audit by Codezen (${audit.description})${
-  audit.partner ? ` with ${audit.partner}` : ""
-}${total > 0 ? `: ${total} findings reported` : ""}. ${audit.extendedDescription || ""}`
-  .trim()
-  .slice(0, 160);
+// Also used as the Report's JSON-LD description below
+const description = auditMetaDescription({
+  title: audit.title,
+  label: audit.description,
+  partner: audit.partner,
+  extendedDescription: audit.extendedDescription,
+  findings: total,
+});
 const ogImage = `/og/audits/${audit.slug}.png`;
 
 const jsonLd = [
