@@ -1,6 +1,6 @@
 # Composable Finance Solana Light Client security audit
 
-Audit of the Composable Finance Solana Light Client's light client audit.
+Audit of the Composable Finance Solana Light Client.
 
 Codezen audited Composable Finance Solana Light Client. Technologies in scope: Rust, IBC, Solana, CosmWasm and Anchor.
 

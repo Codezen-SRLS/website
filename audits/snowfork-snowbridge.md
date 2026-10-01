@@ -1,6 +1,6 @@
 # Snowfork Snowbridge security audit
 
-Audit of the Snowfork Snowbridge's Ethereum <-> Polkadot bridge audit.
+Audit of the Snowfork Snowbridge Ethereum <-> Polkadot bridge.
 
 Codezen audited Snowfork Snowbridge together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 33 findings: 3 critical, 8 major, 9 minor and 13 informational.
 

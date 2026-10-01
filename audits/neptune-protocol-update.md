@@ -1,6 +1,6 @@
 # Neptune Protocol Update security audit
 
-Audit of the Neptune Protocol Update's cosmwasm smart contracts audit.
+Audit of the Neptune Protocol Update CosmWasm smart contracts.
 
 Codezen audited Neptune Protocol Update together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 11 findings: 1 major, 4 minor and 6 informational.
 

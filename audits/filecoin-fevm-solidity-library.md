@@ -1,6 +1,6 @@
 # Filecoin FEVM Solidity Library security audit
 
-Audit of the Filecoin FEVM Solidity Library's solidity library audit.
+Audit of the Filecoin FEVM Solidity Library.
 
 Codezen audited Filecoin FEVM Solidity Library together with Oak Security. Technologies in scope: Filecoin, EVM, Solidity and Ethereum. We reported 7 findings: 3 major, 2 minor and 2 informational.
 

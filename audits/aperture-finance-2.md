@@ -1,6 +1,6 @@
 # Aperture Finance 2 security audit
 
-Audit of the Aperture Finance 2's cosmwasm smart contracts audit.
+Audit of the Aperture Finance 2 CosmWasm smart contracts.
 
 Codezen audited Aperture Finance 2 together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 11 findings: 1 major, 6 minor and 4 informational.
 

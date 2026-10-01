@@ -1,6 +1,6 @@
 # Persistence Dexter security audit
 
-Audit of the Persistence Dexter's cosmwasm smart contracts audit.
+Audit of the Persistence Dexter CosmWasm smart contracts.
 
 Codezen audited Persistence Dexter together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 64 findings: 7 critical, 8 major, 23 minor and 26 informational.
 
@@ -10,7 +10,7 @@ Codezen audited Persistence Dexter together with Oak Security. Technologies in s
 - Delivered with: Oak Security
 - Report date: 15 March 2023
 - Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Dexter/2023-03-15%20Audit%20Report%20-%20Dexter%20v1.0.pdf
-- Project website: https://persistence.one/
+- Project website: https://github.com/persistenceOne
 - Page: https://www.codezen.tech/audits/persistence-dexter/
 
 ## Findings by severity

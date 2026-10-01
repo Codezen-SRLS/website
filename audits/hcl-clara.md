@@ -1,6 +1,6 @@
 # HCL Clara security audit
 
-Audit of the HCL Clara's automation chatbot for ibm / hcl workload automation.
+Development of an automation chatbot for IBM / HCL Workload Automation.
 
 Codezen audited HCL Clara. Technologies in scope: AI, Chatbot, NLP, Rasa, React, Python and Microservices.
 

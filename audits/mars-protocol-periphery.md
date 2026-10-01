@@ -1,6 +1,6 @@
 # Mars Protocol Periphery security audit
 
-Audit of the Mars Protocol Periphery's cosmwasm smart contracts audit.
+Audit of the Mars Protocol Periphery CosmWasm smart contracts.
 
 Codezen audited Mars Protocol Periphery together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 13 findings: 1 critical, 2 major, 3 minor and 7 informational.
 

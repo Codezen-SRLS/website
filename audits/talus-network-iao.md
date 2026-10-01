@@ -8,6 +8,7 @@ Codezen audited Talus Network IAO together with Zenith Security. Technologies in
 - Technologies: Move, Sui, Smart Contract
 - Ecosystem: Sui
 - Delivered with: Zenith Security
+- Report date: 29 April 2025
 - Full report (PDF): https://github.com/zenith-security/reports/blob/1bf7cdd4c37bea4ae2beecda430e4bddd4110312/reports/Talus%20IAO%20-%20Zenith%20Audit%20Report.pdf
 - Project website: https://talus.network
 - Page: https://www.codezen.tech/audits/talus-network-iao/

@@ -1,6 +1,6 @@
 # Snowfork Snowbridge Updates 2 security audit
 
-Audit of the Snowfork Snowbridge Update's substrate bridge pallet.
+Audit of the Snowfork Snowbridge Updates 2 to the Substrate bridge pallet.
 
 Codezen audited Snowfork Snowbridge Updates 2 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 3 findings: 3 informational.
 

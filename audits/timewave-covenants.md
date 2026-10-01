@@ -1,6 +1,6 @@
 # Timewave Covenants security audit
 
-Audit of the Timewave Covenants's cosmwasm smart contracts audit.
+Audit of the Timewave Covenants CosmWasm smart contracts.
 
 Codezen audited Timewave Covenants together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 46 findings: 1 critical, 12 major, 16 minor and 17 informational.
 

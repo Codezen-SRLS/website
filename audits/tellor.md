@@ -1,6 +1,6 @@
 # Tellor security audit
 
-Audit of the Tellor.
+Audit of the Tellor Cosmos chain.
 
 Codezen audited Tellor together with Torii Security. Technologies in scope: Cosmos SDK and Golang. We reported 63 findings: 21 critical, 16 major, 24 minor and 2 informational.
 
@@ -8,6 +8,7 @@ Codezen audited Tellor together with Torii Security. Technologies in scope: Cosm
 - Technologies: Cosmos SDK, Golang
 - Ecosystem: Cosmos
 - Delivered with: Torii Security
+- Report date: 20 February 2025
 - Full report (PDF): https://github.com/Torii-Security/audits/blob/04f29ea4cfbf393cc826308010ff16469bdd79a0/cosmos/torii-tellor-report-02-2025.pdf
 - Project website: https://tellor.io/
 - Page: https://www.codezen.tech/audits/tellor/

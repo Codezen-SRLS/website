@@ -1,6 +1,6 @@
 # Vectis security audit
 
-Audit of the Vectis's cosmwasm smart contracts audit.
+Audit of the Vectis CosmWasm smart contracts.
 
 Codezen audited Vectis together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 21 findings: 4 major, 12 minor and 5 informational.
 
@@ -10,7 +10,7 @@ Codezen audited Vectis together with Oak Security. Technologies in scope: Rust a
 - Delivered with: Oak Security
 - Report date: 14 March 2024
 - Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Vectis/2024-03-14%20Audit%20Report%20-%20Vectis%20v1.0.pdf
-- Project website: https://vectis.space/
+- Project website: https://www.nymlab.it
 - Page: https://www.codezen.tech/audits/vectis/
 
 ## Findings by severity

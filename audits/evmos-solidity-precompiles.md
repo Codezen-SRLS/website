@@ -1,6 +1,6 @@
 # Evmos Solidity Precompiles security audit
 
-Audit of the Evmos Solidity Precompiles's evm solidity precompiles audit.
+Audit of the Evmos Solidity Precompiles.
 
 Codezen audited Evmos Solidity Precompiles together with Oak Security. Technologies in scope: Evmos, Rust, Golang, EVM, Solidity and Ethereum. We reported 14 findings: 1 critical, 9 minor and 4 informational.
 

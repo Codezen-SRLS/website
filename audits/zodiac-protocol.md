@@ -1,6 +1,6 @@
 # Zodiac Protocol security audit
 
-Audit of the Zodiac Protocol's cosmwasm smart contracts audit.
+Audit of the Zodiac Protocol CosmWasm smart contracts.
 
 Codezen audited Zodiac Protocol together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 30 findings: 3 critical, 8 major, 11 minor and 8 informational.
 

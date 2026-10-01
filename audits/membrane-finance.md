@@ -1,6 +1,6 @@
 # Membrane Finance security audit
 
-Audit of the Membrane Finance's cosmwasm smart contracts audit.
+Audit of the Membrane Finance CosmWasm smart contracts.
 
 Codezen audited Membrane Finance together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 39 findings: 8 critical, 6 major, 17 minor and 8 informational.
 

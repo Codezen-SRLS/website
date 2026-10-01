@@ -8,6 +8,7 @@ Codezen audited Meteora DAMM v2 together with Zenith Security. Technologies in s
 - Technologies: Solana, Rust, Smart Contract
 - Ecosystem: Solana
 - Delivered with: Zenith Security
+- Report date: 2 October 2025
 - Project website: https://www.meteora.ag
 - Page: https://www.codezen.tech/audits/meteora-damm-v2/
 

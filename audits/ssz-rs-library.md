@@ -1,6 +1,6 @@
 # SSZ RS Library security audit
 
-Audit of the SSZ RS Library's rust library audit.
+Audit of the SSZ RS Library.
 
 Codezen audited SSZ RS Library together with Oak Security. Technologies in scope: Rust and Ethereum. We reported 11 findings: 4 minor and 7 informational.
 

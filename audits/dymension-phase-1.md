@@ -1,6 +1,6 @@
 # Dymension Phase 1 security audit
 
-Audit of the Dymension Dymint's consensus algorithm.
+Audit of the Dymension Phase 1.
 
 Codezen audited Dymension Phase 1 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus.
 

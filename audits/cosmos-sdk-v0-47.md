@@ -1,6 +1,6 @@
 # Cosmos SDK v0.47 security audit
 
-Audit of the Cosmos SDK v0.47's cosmos sdk audit.
+Audit of the Cosmos SDK v0.47.
 
 Codezen audited Cosmos SDK v0.47 together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 37 findings: 3 critical, 8 major, 13 minor and 13 informational.
 

@@ -1,6 +1,6 @@
 # Injective wasmx module and CosmWasm bindings security audit
 
-Audit of the Injective wasmx module and CosmWasm bindings's cosmos sdk audit.
+Audit of the Injective wasmx module and CosmWasm bindings.
 
 Codezen audited Injective wasmx module and CosmWasm bindings together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Injective. We reported 12 findings: 1 critical, 3 major, 4 minor and 4 informational.
 

@@ -1,6 +1,6 @@
 # Risk Harbor Ozone v2 security audit
 
-Audit of the Risk Harbor Ozone v2's cosmwasm smart contracts audit.
+Audit of the Risk Harbor Ozone v2 CosmWasm smart contracts.
 
 Codezen audited Risk Harbor Ozone v2 together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 15 findings: 3 major, 6 minor and 6 informational.
 

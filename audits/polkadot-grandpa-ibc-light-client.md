@@ -1,6 +1,6 @@
 # Polkadot GrandPa IBC Light Client security audit
 
-Audit of the Polkadot GrandPa IBC Light Client's light client audit.
+Audit of the Polkadot GrandPa IBC Light Client.
 
 Codezen audited Polkadot GrandPa IBC Light Client together with Oak Security. Technologies in scope: Rust, Golang, Tendermint, IBC, Cosmos and Polkadot.
 

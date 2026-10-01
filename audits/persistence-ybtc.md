@@ -1,0 +1,15 @@
+# Persistence yBTC security audit
+
+Audit of the Persistence yBTC.
+
+Codezen audited Persistence yBTC together with Oak Security. Technologies in scope: Bitcoin and Persistence.
+
+- Audit type: Smart contracts audit
+- Technologies: Bitcoin, Persistence
+- Ecosystem: Bitcoin
+- Delivered with: Oak Security
+- Report date: 18 October 2024
+- Project website: https://github.com/persistenceOne
+- Page: https://www.codezen.tech/audits/persistence-ybtc/
+
+Need a similar audit? Email info@codezen.tech or visit https://www.codezen.tech/.

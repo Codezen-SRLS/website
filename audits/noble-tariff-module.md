@@ -1,6 +1,6 @@
 # Noble Tariff module security audit
 
-Audit of the Noble Tariff module's cosmos sdk audit.
+Audit of the Noble Tariff module.
 
 Codezen audited Noble Tariff module together with Oak Security. Technologies in scope: Golang, Noble, Cosmos SDK and Interchain Security. We reported 10 findings: 2 critical, 1 minor and 7 informational.
 

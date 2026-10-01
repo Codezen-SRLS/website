@@ -1,6 +1,6 @@
 # Mars Protocol Rover Updates security audit
 
-Audit of the Mars Protocol Rover Updates's cosmwasm smart contracts audit.
+Audit of the Mars Protocol Rover Updates CosmWasm smart contracts.
 
 Codezen audited Mars Protocol Rover Updates together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 9 findings: 2 major, 1 minor and 6 informational.
 

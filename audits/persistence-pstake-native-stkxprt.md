@@ -8,7 +8,7 @@ Codezen audited Persistence pSTAKE Native stkXPRT together with Oak Security. Te
 - Technologies: Golang, Cosmos SDK, Persistence, Cosmos Hub
 - Ecosystem: Cosmos
 - Delivered with: Oak Security
-- Project website: https://persistence.one/
+- Project website: https://github.com/persistenceOne
 - Page: https://www.codezen.tech/audits/persistence-pstake-native-stkxprt/
 
 Need a similar audit? Email info@codezen.tech or visit https://www.codezen.tech/.

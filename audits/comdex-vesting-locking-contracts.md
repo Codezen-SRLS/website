@@ -1,6 +1,6 @@
 # Comdex Vesting & Locking Contracts security audit
 
-Audit of the Comdex Vesting & Locking Contracts's cosmwasm smart contracts audit.
+Audit of the Comdex Vesting & Locking Contracts.
 
 Codezen audited Comdex Vesting & Locking Contracts together with Oak Security. Technologies in scope: Rust, Comdex and CosmWasm. We reported 27 findings: 3 critical, 6 major, 7 minor and 11 informational.
 

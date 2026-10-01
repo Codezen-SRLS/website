@@ -1,6 +1,6 @@
 # Fuzion Plasma OTC security audit
 
-Audit of the Fuzion Plasma OTC's cosmwasm smart contracts audit.
+Audit of the Fuzion Plasma OTC CosmWasm smart contracts.
 
 Codezen audited Fuzion Plasma OTC together with Oak Security. Technologies in scope: Rust, Kujira and CosmWasm. We reported 18 findings: 3 critical, 1 major, 6 minor and 8 informational.
 

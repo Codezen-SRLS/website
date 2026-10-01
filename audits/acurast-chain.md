@@ -8,6 +8,7 @@ Codezen audited Acurast Chain together with Monethic. Technologies in scope: Sub
 - Technologies: Substrate, Rust, Consensus
 - Ecosystem: Polkadot
 - Delivered with: Monethic
+- Report date: 23 October 2025
 - Full report (PDF): https://github.com/Acurast/acurast-docs/blob/main/static/audits/20251023_Monoethic_Substrate.pdf
 - Project website: https://acurast.com
 - Page: https://www.codezen.tech/audits/acurast-chain/

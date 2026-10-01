@@ -1,6 +1,6 @@
 # Yieldmos Outposts Osmosis security audit
 
-Audit of the Yieldmos Outposts Osmosis's cosmwasm smart contracts audit.
+Audit of the Yieldmos Outposts Osmosis CosmWasm smart contracts.
 
 Codezen audited Yieldmos Outposts Osmosis together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 13 findings: 3 critical, 4 major, 2 minor and 4 informational.
 

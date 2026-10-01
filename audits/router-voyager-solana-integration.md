@@ -1,6 +1,6 @@
 # Router Voyager Solana Integration security audit
 
-Audit of the Router Voyager Solana Integration audit.
+Audit of the Router Voyager Solana integration.
 
 Codezen audited Router Voyager Solana Integration together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Solana, Rust and Off chain.
 

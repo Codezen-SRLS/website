@@ -1,6 +1,6 @@
 # Snowfork Snowbridge Extension security audit
 
-Audit of the Snowfork Snowbridge Extension's bridge audit.
+Audit of the Snowfork Snowbridge Extension.
 
 Codezen audited Snowfork Snowbridge Extension together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 12 findings: 1 critical, 2 major, 6 minor and 3 informational.
 

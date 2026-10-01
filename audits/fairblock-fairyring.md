@@ -1,6 +1,6 @@
 # Fairblock FairyRing security audit
 
-Audit of the Fairblock FairyRing's cosmos sdk audit.
+Audit of the Fairblock FairyRing Cosmos SDK modules.
 
 Codezen audited Fairblock FairyRing together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Cryptography. We reported 26 findings: 12 critical, 7 minor and 7 informational.
 

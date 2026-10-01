@@ -1,6 +1,6 @@
 # Mars Protocol Outposts security audit
 
-Audit of the Mars Protocol Outposts's cosmwasm smart contracts audit.
+Audit of the Mars Protocol Outposts CosmWasm smart contracts.
 
 Codezen audited Mars Protocol Outposts together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 21 findings: 1 critical, 3 major, 10 minor and 7 informational.
 

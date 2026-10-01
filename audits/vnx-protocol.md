@@ -8,6 +8,7 @@ Codezen audited VNX Protocol together with Zenith Security. Technologies in scop
 - Technologies: Solana, Rust, Smart Contract
 - Ecosystem: Solana
 - Delivered with: Zenith Security
+- Report date: 23 October 2025
 - Project website: https://vnx.li
 - Page: https://www.codezen.tech/audits/vnx-protocol/
 

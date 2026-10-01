@@ -1,6 +1,6 @@
 # Composable Finance Solidity IBC Implementation security audit
 
-Audit of the Composable Finance Solidity IBC Implementation's library audit.
+Audit of the Composable Finance Solidity IBC implementation.
 
 Codezen audited Composable Finance Solidity IBC Implementation. Technologies in scope: Solidity and IBC.
 

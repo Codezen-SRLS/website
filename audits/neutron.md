@@ -1,6 +1,6 @@
 # Neutron security audit
 
-Audit of the Neutron's cosmos sdk audit.
+Audit of the Neutron Cosmos SDK chain.
 
 Codezen audited Neutron together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Cosmos Hub, Interchain Security, IBC and Interchain. We reported 23 findings: 3 critical, 6 major, 9 minor and 5 informational.
 

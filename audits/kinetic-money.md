@@ -1,6 +1,6 @@
 # Kinetic Money security audit
 
-Audit of the Kinetic Money's cosmwasm smart contracts audit.
+Audit of the Kinetic Money CosmWasm smart contracts.
 
 Codezen audited Kinetic Money together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 26 findings: 7 critical, 4 major, 5 minor and 10 informational.
 

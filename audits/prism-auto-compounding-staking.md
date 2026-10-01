@@ -1,6 +1,6 @@
 # Prism Auto Compounding Staking security audit
 
-Audit of the Prism Auto Compounding Staking's cosmwasm smart contracts audit.
+Audit of the Prism Auto Compounding Staking CosmWasm smart contracts.
 
 Codezen audited Prism Auto Compounding Staking together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 19 findings: 1 major, 7 minor and 11 informational.
 

@@ -1,6 +1,6 @@
 # Filecoin FEVM security audit
 
-Audit of the Filecoin FEVM's evm implementation audit.
+Audit of the Filecoin EVM (FEVM) implementation.
 
 Codezen audited Filecoin FEVM together with Oak Security. Technologies in scope: Filecoin, Rust, Golang, EVM, Solidity and Ethereum. We reported 34 findings: 3 critical, 15 major, 8 minor and 8 informational.
 

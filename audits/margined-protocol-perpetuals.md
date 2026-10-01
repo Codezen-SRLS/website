@@ -1,6 +1,6 @@
 # Margined Protocol Perpetuals security audit
 
-Audit of the Margined Protocol Perpetuals's cosmwasm smart contracts audit.
+Audit of the Margined Protocol Perpetuals CosmWasm smart contracts.
 
 Codezen audited Margined Protocol Perpetuals together with Oak Security. Technologies in scope: Rust, Cross-Chain, CosmWasm and Juno. We reported 27 findings: 1 critical, 4 major, 12 minor and 10 informational.
 

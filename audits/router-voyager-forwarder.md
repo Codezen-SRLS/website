@@ -1,6 +1,6 @@
 # Router Voyager Forwarder security audit
 
-Audit of the Router Voyager Forwarder's off chain relayer and orchestrator audit.
+Audit of the Router Voyager Forwarder off-chain relayer and orchestrator.
 
 Codezen audited Router Voyager Forwarder together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Off chain. We reported 49 findings: 6 critical, 11 major, 15 minor and 17 informational.
 

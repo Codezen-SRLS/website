@@ -8,7 +8,8 @@ Codezen audited Persistence pSTAKE BTC Yield together with Oak Security. Technol
 - Technologies: Bitcoin, Solidity, Ethereum, Persistence
 - Ecosystem: Ethereum, Bitcoin
 - Delivered with: Oak Security
-- Project website: https://persistence.one/
+- Report date: 25 July 2024
+- Project website: https://github.com/persistenceOne
 - Page: https://www.codezen.tech/audits/persistence-pstake-btc-yield/
 
 Need a similar audit? Email info@codezen.tech or visit https://www.codezen.tech/.

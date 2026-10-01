@@ -1,6 +1,6 @@
 # IBCX Interchain Index Token security audit
 
-Audit of the IBCX Interchain Index Token's cosmwasm smart contracts audit.
+Audit of the IBCX Interchain Index Token CosmWasm smart contracts.
 
 Codezen audited IBCX Interchain Index Token together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 26 findings: 11 critical, 6 major, 5 minor and 4 informational.
 

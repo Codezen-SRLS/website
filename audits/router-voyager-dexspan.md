@@ -1,6 +1,6 @@
 # Router Voyager DexSpan security audit
 
-Audit of the Router Voyager DexSpan's solidity smart contracts audit.
+Audit of the Router Voyager DexSpan Solidity smart contracts.
 
 Codezen audited Router Voyager DexSpan together with Oak Security. Technologies in scope: Solidity and Ethereum. We reported 31 findings: 1 critical, 5 major, 10 minor and 15 informational.
 

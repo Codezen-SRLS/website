@@ -1,6 +1,6 @@
 # CosmWasm Wasmd Module security audit
 
-Audit of the CosmWasm Wasmd Module's cosmos sdk module audit.
+Audit of the CosmWasm Wasmd Module.
 
 Codezen audited CosmWasm Wasmd Module together with Oak Security. Technologies in scope: Golang, Cosmos SDK, CosmWasm and Wasm. We reported 15 findings: 1 critical, 2 major, 5 minor and 7 informational.
 

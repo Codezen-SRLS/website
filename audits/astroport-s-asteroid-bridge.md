@@ -1,6 +1,6 @@
 # Astroport's Asteroid Bridge security audit
 
-Audit of the Astroport's Asteroid Bridge audit.
+Audit of Astroport's Asteroid Bridge.
 
 Codezen audited Astroport's Asteroid Bridge together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 13 findings: 8 minor and 5 informational.
 

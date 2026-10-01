@@ -1,11 +1,11 @@
 # DAODAO's Polytone security audit
 
-Audit of the Polytone's cosmwasm smart contracts audit.
+Audit of the Polytone CosmWasm smart contracts.
 
-Codezen audited DAODAO's Polytone together with Oak Security. Technologies in scope: Rust, CosmWasm, IBC and DA0 DA0. We reported 14 findings: 2 major, 4 minor and 8 informational.
+Codezen audited DAODAO's Polytone together with Oak Security. Technologies in scope: Rust, CosmWasm, IBC and DAO DAO. We reported 14 findings: 2 major, 4 minor and 8 informational.
 
 - Audit type: CosmWasm Contract Audit
-- Technologies: Rust, CosmWasm, IBC, DA0 DA0
+- Technologies: Rust, CosmWasm, IBC, DAO DAO
 - Ecosystem: Cosmos
 - Delivered with: Oak Security
 - Report date: 5 June 2023

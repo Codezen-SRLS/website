@@ -1,6 +1,6 @@
 # Dymension Virtual Frontier security audit
 
-Audit of the Dymension Dymint's consensus algorithm.
+Audit of the Dymension Virtual Frontier contract.
 
 Codezen audited Dymension Virtual Frontier together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus. We reported 4 findings: 4 minor.
 

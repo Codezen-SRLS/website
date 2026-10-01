@@ -1,6 +1,6 @@
 # Stargaze Marketplace security audit
 
-Audit of the Stargaze Marketplace's cosmwasm smart contracts audit.
+Audit of the Stargaze Marketplace CosmWasm smart contracts.
 
 Codezen audited Stargaze Marketplace together with Oak Security. Technologies in scope: Rust, Stargaze, CosmWasm and NFT. We reported 13 findings: 3 major, 6 minor and 4 informational.
 

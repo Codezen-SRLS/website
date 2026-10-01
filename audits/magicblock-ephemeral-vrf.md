@@ -8,6 +8,7 @@ Codezen audited Magicblock ephemeral VRF together with Zenith Security. Technolo
 - Technologies: Solana, Rust, Magicblock
 - Ecosystem: Solana
 - Delivered with: Zenith Security
+- Report date: 14 August 2025
 - Full report (PDF): https://github.com/zenith-security/reports/blob/1bf7cdd4c37bea4ae2beecda430e4bddd4110312/reports/MagicBlock%20-%20Zenith%20Audit%20Report.pdf
 - Project website: https://www.magicblock.xyz
 - Page: https://www.codezen.tech/audits/magicblock-ephemeral-vrf/

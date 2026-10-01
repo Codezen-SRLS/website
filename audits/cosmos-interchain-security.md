@@ -1,6 +1,6 @@
 # Cosmos Interchain Security security audit
 
-Audit of the Cosmos Interchain Security's cosmos sdk audit.
+Audit of the Cosmos Interchain Security Cosmos SDK modules.
 
 Codezen audited Cosmos Interchain Security together with Oak Security. Technologies in scope: Golang, Cosmos Hub, Cosmos SDK, Interchain Security and IBC. We reported 16 findings: 2 critical, 2 major, 7 minor and 5 informational.
 

@@ -1,6 +1,6 @@
 # HCL T-VREX security audit
 
-Audit of the HCL T-VREX's a vr experience for hcl workload automation.
+Development of a VR experience for HCL Workload Automation.
 
 Codezen audited HCL T-VREX. Technologies in scope: VR, React, Oculus and Real-time.
 

@@ -1,16 +1,26 @@
 # Autonomy Network Osmosis security audit
 
-Audit of the Autonomy Network Osmosis's cosmwasm smart contracts audit.
+Audit of the Autonomy Network Osmosis CosmWasm smart contracts.
 
-Codezen audited Autonomy Network Osmosis together with Oak Security. Technologies in scope: Rust, Osmosis and CosmWasm.
+Codezen audited Autonomy Network Osmosis together with Oak Security. Technologies in scope: Rust, Osmosis and CosmWasm. We reported 15 findings: 3 major, 7 minor and 5 informational.
 
 - Audit type: CosmWasm Contract Audit
 - Technologies: Rust, Osmosis, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security
-- Report date: 18 January 2023
-- Full report (PDF): https://github.com/oak-security/audit-reports/blob/master/Autonomy/2023-01-18%20Audit%20Report%20-%20Autonomy%20Osmosis%20v1.0.pdf
+- Report date: 6 March 2023
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Autonomy/2023-03-06%20Audit%20Report%20-%20Autonomy%20Osmosis%20v1.1.pdf
 - Project website: https://www.autonomynetwork.io/
 - Page: https://www.codezen.tech/audits/autonomy-network-osmosis/
+
+## Findings by severity
+
+| Severity | Count |
+| --- | --- |
+| Critical | 0 |
+| Major | 3 |
+| Minor | 7 |
+| Info | 5 |
+| Total | 15 |
 
 Need a similar audit? Email info@codezen.tech or visit https://www.codezen.tech/.

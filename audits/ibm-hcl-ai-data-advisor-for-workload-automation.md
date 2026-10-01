@@ -1,6 +1,6 @@
 # IBM / HCL AI Data Advisor for Workload Automation security audit
 
-Audit of the IBM / HCL AI Data Advisor for Workload Automation's ai module for ibm / hcl workload automation.
+Development of an AI module for IBM / HCL Workload Automation.
 
 Codezen audited IBM / HCL AI Data Advisor for Workload Automation. Technologies in scope: AI, Observability, Python, React, Nodejs and Microservices.
 

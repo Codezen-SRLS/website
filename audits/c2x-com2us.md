@@ -1,6 +1,6 @@
 # C2X Com2Us security audit
 
-Audit of the C2X Com2Us's cosmwasm smart contracts audit.
+Audit of the C2X Com2Us CosmWasm smart contracts.
 
 Codezen audited C2X Com2Us together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 15 findings: 4 major, 5 minor and 6 informational.
 

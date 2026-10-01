@@ -1,6 +1,6 @@
 # Levana Perpetual Swap security audit
 
-Audit of the Levana Perpetual Swap's cosmwasm smart contracts audit.
+Audit of the Levana Perpetual Swap CosmWasm smart contracts.
 
 Codezen audited Levana Perpetual Swap together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 28 findings: 3 critical, 7 major, 9 minor and 9 informational.
 

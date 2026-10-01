@@ -1,6 +1,6 @@
 # Fuel Sequencer Updates 5 security audit
 
-Audit of the Fuel Sequencer and Sidecar.
+Audit of the Fuel Sequencer Updates 5.
 
 Codezen audited Fuel Sequencer Updates 5 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 

@@ -1,6 +1,6 @@
 # Nolus Money Market security audit
 
-Audit of the Nolus Money Market's cosmwasm smart contracts audit.
+Audit of the Nolus Money Market CosmWasm smart contracts.
 
 Codezen audited Nolus Money Market together with Oak Security. Technologies in scope: Rust, CosmWasm and Nolus. We reported 21 findings: 4 critical, 1 major, 9 minor and 7 informational.
 

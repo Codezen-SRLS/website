@@ -8,6 +8,7 @@ Codezen audited Silo MEV for SEI chain together with Zenith Security. Technologi
 - Technologies: Golang, MEV, SEI, Cosmos SDK
 - Ecosystem: Cosmos
 - Delivered with: Zenith Security
+- Report date: 29 April 2025
 - Project website: https://silo.finance
 - Page: https://www.codezen.tech/audits/silo-mev-for-sei-chain/
 

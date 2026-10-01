@@ -1,6 +1,6 @@
 # Elesto Mint Module security audit
 
-Audit of the Elesto Mint Module's cosmos sdk module audit.
+Audit of the Elesto Mint Module.
 
 Codezen audited Elesto Mint Module. Technologies in scope: Golang and Cosmos SDK.
 

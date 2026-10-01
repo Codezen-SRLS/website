@@ -1,15 +1,15 @@
 # Slide SDK security audit
 
-Audit of the Slide SDK's Cosmos SDK integration in Avalache consensus.
+Audit of the Slide SDK's Cosmos SDK integration in Avalanche consensus.
 
-Codezen audited Slide SDK together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Avalanche and Consensus. We reported 7 findings: 1 critical, 4 major, 1 minor and 1 informational.
+Codezen audited Slide SDK together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Avalanche and Consensus. We reported 15 findings: 2 critical, 2 major, 7 minor and 4 informational.
 
-- Audit type: Cosmos SDK integration in Avalache consensus Audit
+- Audit type: Cosmos SDK integration in Avalanche consensus Audit
 - Technologies: Golang, Cosmos SDK, Avalanche, Consensus
 - Ecosystem: Cosmos
 - Delivered with: Oak Security
-- Report date: 13 June 2024
-- Full report (PDF): https://github.com/oak-security/audit-reports/blob/c91568374a5057d7d622b636c9c25724b6a56e5c/DoraFactory/2024-06-13%20Audit%20Report%20-%20Dora%20Vota%20v1.0.pdf
+- Report date: 20 September 2024
+- Full report (PDF): https://github.com/oak-security/audit-reports/blob/main/Slide%20SDK/2024-09-20%20Audit%20Report%20-%20Slide%20SDK%20v1.1.pdf
 - Project website: https://www.landslide.network
 - Page: https://www.codezen.tech/audits/slide-sdk/
 
@@ -17,10 +17,10 @@ Codezen audited Slide SDK together with Oak Security. Technologies in scope: Gol
 
 | Severity | Count |
 | --- | --- |
-| Critical | 1 |
-| Major | 4 |
-| Minor | 1 |
-| Info | 1 |
-| Total | 7 |
+| Critical | 2 |
+| Major | 2 |
+| Minor | 7 |
+| Info | 4 |
+| Total | 15 |
 
 Need a similar audit? Email info@codezen.tech or visit https://www.codezen.tech/.

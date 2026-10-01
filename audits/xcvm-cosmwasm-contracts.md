@@ -1,6 +1,6 @@
 # XCVM Cosmwasm Contracts security audit
 
-Audit of the XCVM Cosmwasm Contracts's cosmwasm smart contracts peer review.
+Peer review of the XCVM Cosmwasm Contracts.
 
 Codezen audited XCVM Cosmwasm Contracts. Technologies in scope: Rust, Peer Review, Osmosis and CosmWasm.
 

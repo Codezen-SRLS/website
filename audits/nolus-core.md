@@ -1,6 +1,6 @@
 # Nolus Core security audit
 
-Audit of the Nolus Core's cosmos sdk audit.
+Audit of the Nolus Core Cosmos SDK modules.
 
 Codezen audited Nolus Core together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Nolus. We reported 11 findings: 1 major, 5 minor and 5 informational.
 

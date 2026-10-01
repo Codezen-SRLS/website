@@ -1,6 +1,6 @@
 # Noble security audit
 
-Audit of the Noble's cosmos sdk audit.
+Audit of the Noble Cosmos SDK chain.
 
 Codezen audited Noble together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Interchain Security and Circle. We reported 21 findings: 5 major, 10 minor and 6 informational.
 

@@ -1,6 +1,6 @@
 # Timewave Computer Valence Services security audit
 
-Audit of the Timewave Computer Valence Services's cosmwasm smart contracts audit.
+Audit of the Timewave Computer Valence Services CosmWasm smart contracts.
 
 Codezen audited Timewave Computer Valence Services together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 31 findings: 5 major, 12 minor and 14 informational.
 

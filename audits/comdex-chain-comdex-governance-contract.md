@@ -1,6 +1,6 @@
 # Comdex Chain & Comdex Governance Contract security audit
 
-Audit of the Comdex Chain & Comdex Governance Contract's cosmos sdk and cosmwasm contracts audit.
+Audit of the Comdex chain and governance contract.
 
 Codezen audited Comdex Chain & Comdex Governance Contract together with Oak Security. Technologies in scope: Golang, Cosmos SDK, CosmWasm and Wasm. We reported 43 findings: 15 critical, 9 major, 7 minor and 12 informational.
 

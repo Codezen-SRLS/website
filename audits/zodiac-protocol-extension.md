@@ -1,6 +1,6 @@
 # Zodiac Protocol Extension security audit
 
-Audit of the Zodiac Protocol Extension's cosmwasm smart contracts audit.
+Audit of the Zodiac Protocol Extension CosmWasm smart contracts.
 
 Codezen audited Zodiac Protocol Extension together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 5 findings: 2 minor and 3 informational.
 

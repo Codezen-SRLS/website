@@ -8,6 +8,7 @@ Codezen audited Injective EVM precompile together with Zenith Security. Technolo
 - Technologies: Golang, Cosmos SDK, Injective, Solidity
 - Ecosystem: Ethereum, Cosmos
 - Delivered with: Zenith Security
+- Report date: 26 May 2025
 - Project website: https://injective.com
 - Page: https://www.codezen.tech/audits/injective-evm-precompile/
 
