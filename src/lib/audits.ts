@@ -2,7 +2,7 @@
 // page paths, report dates and optimised logo images.
 import type { ImageMetadata } from "astro";
 import raw from "../sharedData/data/audit-history.json";
-import { relatedAudits, reportDate, resolveAuditPaths, type Issues, type RawAudit } from "./auditPaths";
+import { auditDate, relatedAudits, resolveAuditPaths, type Issues, type RawAudit } from "./auditPaths";
 
 export interface Audit extends RawAudit {
   index: number;
@@ -12,10 +12,20 @@ export interface Audit extends RawAudit {
   logo?: ImageMetadata;
 }
 
-const logos = import.meta.glob<{ default: ImageMetadata }>("../sharedData/images/*.{png,jpg,jpeg,webp,svg}", {
+// Logos keyed by their path inside the audit-history repo ("images/stellar.png"),
+// which is how audit-history.json refers to them
+const logos = import.meta.glob<{ default: ImageMetadata }>("../sharedData/images/**/*.{png,jpg,jpeg,webp,svg}", {
   eager: true,
 });
-const logoByName = new Map(Object.entries(logos).map(([file, mod]) => [file.split("/").pop()!, mod.default]));
+const logoByPath = new Map(Object.entries(logos).map(([file, mod]) => [file.replace(/^\.\.\/sharedData\//, ""), mod.default]));
+
+const resolveLogo = (a: RawAudit) => {
+  if (!a.image) return undefined;
+  const logo = logoByPath.get(a.image.replace(/^\.\//, ""));
+  // Fail the build rather than silently publish an audit without its logo
+  if (!logo) throw new Error(`audit-history.json: image "${a.image}" for "${a.title}" not found in src/sharedData`);
+  return logo;
+};
 
 const rawAudits = raw as RawAudit[];
 const paths = resolveAuditPaths(rawAudits);
@@ -25,8 +35,8 @@ export const audits: Audit[] = rawAudits.map((a, index) => ({
   index,
   path: paths[index],
   slug: paths[index].replace(/^\/audits\/|\/$/g, ""),
-  reportDate: reportDate(a.github),
-  logo: a.image ? logoByName.get(a.image.split("/").pop()!) : undefined,
+  reportDate: auditDate(a),
+  logo: resolveLogo(a),
 }));
 
 export const getRelated = (audit: Audit, limit = 3) => relatedAudits(rawAudits, audit.index, limit).map((i) => audits[i]);

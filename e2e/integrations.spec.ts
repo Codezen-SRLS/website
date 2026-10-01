@@ -24,12 +24,16 @@ test.describe("analytics consent (GA + Clarity)", () => {
     await expect(banner(page)).toBeHidden();
     await expect.poll(() => requests.some((u) => u.includes(`gtag/js?id=${TEST_ENV.GA_TRACKING_ID}`))).toBe(true);
     await expect.poll(() => requests.some((u) => u.includes(`clarity.ms/tag/${TEST_ENV.GATSBY_CLARITY_ID}`))).toBe(true);
-    expect(await pageViews(page)).toEqual(["/"]);
+    // The page view follows the (lazily loaded) analytics setup, so wait for it
+    await expect.poll(() => pageViews(page)).toEqual(["/"]);
     expect(await page.evaluate(() => localStorage.getItem("cz-analytics-consent"))).toBe("granted");
 
     // Next page: analytics load again without asking, exactly one page view
     await page.goto("/portfolio/");
     await expect(banner(page)).toBeHidden();
+    await expect.poll(() => pageViews(page)).toEqual(["/portfolio/"]);
+    // ...and no duplicate arrives later
+    await page.waitForTimeout(500);
     expect(await pageViews(page)).toEqual(["/portfolio/"]);
   });
 

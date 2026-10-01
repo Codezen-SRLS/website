@@ -20,7 +20,7 @@ Requires Node 22 (`.nvmrc`). Copy `.example.env` to `.env` for analytics and the
 - `src/scripts/`: page-wide client behaviour (menu, cookie banner, request form), bundled into one script by `src/layouts/Base.astro`
 - `src/styles/tokens.css`: design tokens from the Codezen Design System (claude.ai/design)
 
-Audit URLs are resolved exactly as on the previous Gatsby site: an explicit `slug` in `audit-history.json`, else the slugified title, with the report date appended on collisions. `e2e/fixtures/v1-urls.txt` lists every URL of the old site; the e2e suite fails if any stops resolving.
+Audit pages live at `/audits/<slug>/`, where `slug` is the permanent slug stored for each entry in `audit-history.json` (generated once by `npm run slugs` in `src/sharedData/tools/counter`; titles can change, slugs never do). The build fails on a missing, malformed or duplicated slug. If an audit URL ever has to change, add the old URL to `src/lib/redirects.ts`. `e2e/fixtures/published-urls.txt` lists every URL the site has published; the e2e suite fails if any of them stops resolving.
 
 ## Test
 

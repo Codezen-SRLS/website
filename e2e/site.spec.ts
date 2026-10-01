@@ -1,6 +1,7 @@
 import { expect, test } from "@playwright/test";
 import { readFileSync } from "node:fs";
 import { isMobile } from "./helpers";
+import { AUDIT_REDIRECTS } from "../src/lib/redirects";
 
 test.beforeEach(async ({ page }) => {
   // Hide the consent banner for layout tests
@@ -72,8 +73,10 @@ test("portfolio honours a shared ?q= link and the tag chips", async ({ page }) =
 
 test("every audit is linked from the portfolio HTML", async ({ request }) => {
   const html = await (await request.get("/portfolio/")).text();
-  const v1 = readFileSync("e2e/fixtures/v1-urls.txt", "utf8").split("\n").filter((u) => u.startsWith("/audits/"));
-  for (const url of v1) expect(html, url).toContain(`href="${url}"`);
+  const published = readFileSync("e2e/fixtures/published-urls.txt", "utf8")
+    .split("\n")
+    .filter((u) => u.startsWith("/audits/") && !AUDIT_REDIRECTS[u]);
+  for (const url of published) expect(html, url).toContain(`href="${url}"`);
 });
 
 test("audit page has report structured data and a markdown twin", async ({ page, request }) => {

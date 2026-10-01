@@ -1,49 +1,45 @@
 import { expect, test } from "vitest";
-import { relatedAudits, reportDate, resolveAuditPaths } from "../src/lib/auditPaths";
+import { auditDate, relatedAudits, reportDate, resolveAuditPaths } from "../src/lib/auditPaths";
 
 const report = (date: string) => `https://github.com/org/reports/blob/main/${date}%20Audit%20Report.pdf`;
 
-test("uses the slugified title", () => {
-  expect(resolveAuditPaths([{ title: "Story Protocol L1" }])).toEqual(["/audits/story-protocol-l1/"]);
-});
-
-test("strips accents and punctuation", () => {
-  expect(resolveAuditPaths([{ title: "DAODAO's Polytone" }, { title: "Café Protocol!" }])).toEqual([
-    "/audits/daodao-s-polytone/",
-    "/audits/cafe-protocol/",
-  ]);
-});
-
-test("an explicit slug wins over the title", () => {
-  expect(resolveAuditPaths([{ title: "Stellar Core", slug: "stellar-core-protocol-23" }])).toEqual([
-    "/audits/stellar-core-protocol-23/",
-  ]);
-});
-
-test("colliding titles get their report dates appended", () => {
+test("pages live at the stored slug, whatever the title says", () => {
   expect(
     resolveAuditPaths([
-      { title: "Stellar Core", github: report("2025-10-17") },
-      { title: "Stellar  Core!", github: report("2024-03-02") },
+      { title: "Stellar Core Protocol 23", slug: "stellar-core-protocol-23" },
+      { title: "A renamed title", slug: "astroport-transmuter-pool" },
     ])
-  ).toEqual(["/audits/stellar-core-2025-10-17/", "/audits/stellar-core-2024-03-02/"]);
+  ).toEqual(["/audits/stellar-core-protocol-23/", "/audits/astroport-transmuter-pool/"]);
 });
 
-test("collisions that dates cannot resolve fail loudly", () => {
+test("a missing slug fails the build instead of falling back to the title", () => {
+  expect(() => resolveAuditPaths([{ title: "Stellar Core" }])).toThrow(/"Stellar Core" has no slug/);
+});
+
+test("malformed slugs fail", () => {
+  for (const slug of ["Stellar-Core", "stellar core", "-stellar", "stellar--core", "stellar/core"]) {
+    expect(() => resolveAuditPaths([{ title: "Stellar Core", slug }]), slug).toThrow(/malformed slug/);
+  }
+});
+
+test("duplicate slugs fail and name both audits", () => {
   expect(() =>
-    resolveAuditPaths([{ title: "Stellar Core", github: report("2025-10-17") }, { title: "Stellar Core" }])
-  ).toThrow(/Add a unique "slug"[\s\S]*Stellar Core, Stellar Core/);
-});
-
-test("an explicit slug that collides also fails", () => {
-  expect(() => resolveAuditPaths([{ title: "Stellar Core" }, { title: "Other", slug: "stellar-core" }])).toThrow(
-    /collide/
-  );
+    resolveAuditPaths([
+      { title: "Stellar Core", slug: "stellar-core" },
+      { title: "Stellar Core again", slug: "stellar-core" },
+    ])
+  ).toThrow(/"stellar-core" is used by both "Stellar Core" and "Stellar Core again"/);
 });
 
 test("reads the report date from the PDF name", () => {
   expect(reportDate(report("2025-10-17"))).toBe("2025-10-17");
   expect(reportDate("https://example.com/report.pdf")).toBeNull();
+});
+
+test("the explicit date wins over the report file name", () => {
+  expect(auditDate({ title: "A", date: "2026-02-27", github: report("2025-10-17") })).toBe("2026-02-27");
+  expect(auditDate({ title: "A", github: report("2025-10-17") })).toBe("2025-10-17");
+  expect(auditDate({ title: "A", date: "soon" })).toBeNull();
 });
 
 test("related audits share technology tags, ignoring generic ones", () => {

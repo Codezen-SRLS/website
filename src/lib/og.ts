@@ -76,7 +76,7 @@ export const defaultOg = () =>
 const logoDataUri = async (a: Audit) => {
   if (!a.image) return null;
   try {
-    const file = path.join(root, "src/sharedData/images", path.basename(a.image));
+    const file = path.join(root, "src/sharedData", a.image);
     const png = await sharp(file).resize(420, 236, { fit: "cover" }).png().toBuffer();
     return `data:image/png;base64,${png.toString("base64")}`;
   } catch {

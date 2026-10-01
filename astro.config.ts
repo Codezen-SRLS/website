@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { auditLastmod } from "./src/lib/sitemapDates";
+import { AUDIT_REDIRECTS } from "./src/lib/redirects";
 
 const site = "https://www.codezen.tech";
 
@@ -11,6 +12,8 @@ export default defineConfig({
   trailingSlash: "always",
   build: { format: "directory", inlineStylesheets: "always" },
   compressHTML: true,
+  // Old audit URLs keep working after renames in audit-history.json
+  redirects: AUDIT_REDIRECTS,
   integrations: [
     sitemap({
       filter: (page) => !page.includes("/404"),

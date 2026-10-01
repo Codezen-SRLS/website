@@ -1,5 +1,5 @@
-// Audit page URLs, ported unchanged from the Gatsby site's gatsby-node.js so every
-// /audits/<slug>/ URL stays the same.
+// Audit page URLs (/audits/<slug>/ from the permanent slug in audit-history.json),
+// report dates and related audits.
 
 export interface Issues {
   critical?: number;
@@ -16,20 +16,16 @@ export interface RawAudit {
   partner?: string;
   github?: string;
   website?: string;
+  /** Logo path relative to the audit-history repo root, e.g. "images/stellar.png" */
   image?: string;
+  /** Publication date of the report (YYYY-MM-DD), when known */
+  date?: string;
   featured?: boolean;
   issues?: Issues;
   tvlUsd?: number;
+  /** Permanent URL slug: /audits/<slug>/ */
   slug?: string;
 }
-
-export const slugify = (text: string) =>
-  text
-    .toLowerCase()
-    .normalize("NFKD")
-    .replace(/[̀-ͯ]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
 
 // Report file names usually start with the publication date, e.g. "2025-10-17 Audit Report ..."
 export const reportDate = (url?: string): string | null => {
@@ -37,40 +33,27 @@ export const reportDate = (url?: string): string | null => {
   return match ? `${match[1]}-${match[2]}-${match[3]}` : null;
 };
 
-// Page paths for every audit (by index), resolved together so collisions can be handled:
-// 1. an explicit `slug` in audit-history.json always wins;
-// 2. otherwise the slugified title;
-// 3. titles that collide get their report date appended (stable, unlike "-2");
-// 4. anything still ambiguous fails the build instead of overwriting a page.
+// Date shown for an audit and used as sitemap lastmod: the explicit `date`, else the
+// one in the report's file name
+export const auditDate = (a: RawAudit): string | null =>
+  (a.date && /^\d{4}-\d{2}-\d{2}$/.test(a.date) ? a.date : null) ?? reportDate(a.github);
+
+const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+
+// Page path for every audit (by index): /audits/<slug>/. The slug is stored in
+// audit-history.json and is permanent, so titles can change without moving pages.
+// Anything missing, malformed or duplicated fails the build instead of guessing.
 export const resolveAuditPaths = (audits: RawAudit[]): string[] => {
-  const base = audits.map((a) => (a.slug ? slugify(a.slug) : slugify(a.title)));
-
-  const groups = new Map<string, number[]>();
-  base.forEach((key, i) => groups.set(key, [...(groups.get(key) || []), i]));
-
-  const paths: string[] = new Array(audits.length);
-  const conflicts: string[] = [];
-  groups.forEach((group, key) => {
-    if (group.length === 1) {
-      paths[group[0]] = `/audits/${key}/`;
-      return;
-    }
-    const dates = group.map((i) => reportDate(audits[i].github));
-    const canUseDates =
-      group.every((i) => !audits[i].slug) && dates.every(Boolean) && new Set(dates).size === dates.length;
-    if (!canUseDates) {
-      conflicts.push(`"${key}": ${group.map((i) => audits[i].title).join(", ")}`);
-      return;
-    }
-    group.forEach((i, j) => (paths[i] = `/audits/${key}-${dates[j]}/`));
+  const problems: string[] = [];
+  const seen = new Map<string, string>();
+  audits.forEach((a) => {
+    if (!a.slug) problems.push(`"${a.title}" has no slug (run \`npm run slugs\` in src/sharedData/tools/counter)`);
+    else if (!SLUG.test(a.slug)) problems.push(`"${a.title}" has a malformed slug "${a.slug}"`);
+    else if (seen.has(a.slug)) problems.push(`slug "${a.slug}" is used by both "${seen.get(a.slug)}" and "${a.title}"`);
+    else seen.set(a.slug, a.title);
   });
-
-  if (conflicts.length) {
-    throw new Error(
-      `Audit page URLs collide. Add a unique "slug" to these entries in audit-history.json:\n  ${conflicts.join("\n  ")}`
-    );
-  }
-  return paths;
+  if (problems.length) throw new Error(`Invalid audit slugs in audit-history.json:\n  ${problems.join("\n  ")}`);
+  return audits.map((a) => `/audits/${a.slug}/`);
 };
 
 // Tags too generic to say two audits are related
