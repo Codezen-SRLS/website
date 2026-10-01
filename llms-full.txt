@@ -292,13 +292,14 @@ Codezen audited Anyflo EVM Contracts together with Oak Security. Technologies in
 
 ### Monaco security audit
 
-Audit of the Monaco.
+Audit of Monaco.
 
 Codezen audited Monaco together with Zenith Security.
 
 - Audit type: Smart contracts audit
 - Delivered with: Zenith Security
 - Report date: 9 September 2026
+- Project website: https://0xmonaco.com
 - Page: https://www.codezen.tech/audits/monaco/
 
 
@@ -338,17 +339,18 @@ Codezen audited ZIGChain Pull 14 together with Oak Security. Technologies in sco
 
 ---
 
-### Divergent MCP SDK security audit
+### Divigent MCP SDK security audit
 
-Audit of the Divergent MCP SDK.
+Audit of the Divigent MCP SDK.
 
-Codezen audited Divergent MCP SDK together with Oak Security. Technologies in scope: AI and MCP.
+Codezen audited Divigent MCP SDK together with Oak Security. Technologies in scope: AI and MCP.
 
 - Audit type: SDK audit
 - Technologies: AI, MCP
 - Delivered with: Oak Security
 - Report date: 26 May 2026
-- Page: https://www.codezen.tech/audits/divergent-mcp-sdk/
+- Project website: https://divigent.ai
+- Page: https://www.codezen.tech/audits/divigent-mcp-sdk/
 
 
 ---
@@ -370,29 +372,31 @@ Codezen audited IBC together with Zenith Security. Technologies in scope: IBC.
 
 ---
 
-### Divergent security audit
+### Divigent security audit
 
-Audit of the Divergent.
+Audit of Divigent.
 
-Codezen audited Divergent together with Oak Security.
+Codezen audited Divigent together with Oak Security.
 
 - Audit type: Smart contracts audit
 - Delivered with: Oak Security
 - Report date: 28 April 2026
-- Page: https://www.codezen.tech/audits/divergent/
+- Project website: https://divigent.ai
+- Page: https://www.codezen.tech/audits/divigent/
 
 
 ---
 
 ### Totalis security audit
 
-Audit of the Totalis.
+Audit of Totalis.
 
 Codezen audited Totalis together with Zenith Security.
 
 - Audit type: Smart contracts audit
 - Delivered with: Zenith Security
 - Report date: 13 April 2026
+- Project website: https://www.totalis.trade
 - Page: https://www.codezen.tech/audits/totalis/
 
 
@@ -400,13 +404,14 @@ Codezen audited Totalis together with Zenith Security.
 
 ### Azura security audit
 
-Audit of the Azura.
+Audit of Azura.
 
 Codezen audited Azura together with Zenith Security.
 
 - Audit type: Smart contracts audit
 - Delivered with: Zenith Security
 - Report date: 6 April 2026
+- Project website: https://azura.xyz
 - Page: https://www.codezen.tech/audits/azura/
 
 

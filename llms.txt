@@ -60,9 +60,9 @@ To request an audit, email info@codezen.tech with the project name, repository/s
 - [Monaco security audit](https://www.codezen.tech/audits/monaco.md): Smart contracts audit
 - [Injective security audit](https://www.codezen.tech/audits/injective.md): Cosmos SDK Audit
 - [ZIGChain Pull 14 security audit](https://www.codezen.tech/audits/zigchain-pull-14.md): Cosmos SDK chain audit
-- [Divergent MCP SDK security audit](https://www.codezen.tech/audits/divergent-mcp-sdk.md): SDK audit
+- [Divigent MCP SDK security audit](https://www.codezen.tech/audits/divigent-mcp-sdk.md): SDK audit
 - [IBC security audit](https://www.codezen.tech/audits/ibc.md): IBC protocol audit
-- [Divergent security audit](https://www.codezen.tech/audits/divergent.md): Smart contracts audit
+- [Divigent security audit](https://www.codezen.tech/audits/divigent.md): Smart contracts audit
 - [Totalis security audit](https://www.codezen.tech/audits/totalis.md): Smart contracts audit
 - [Azura security audit](https://www.codezen.tech/audits/azura.md): Smart contracts audit
 - [MANTRA Chain security audit](https://www.codezen.tech/audits/mantra-chain.md): Cosmos SDK chain audit
