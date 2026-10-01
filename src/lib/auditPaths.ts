@@ -25,6 +25,8 @@ export interface RawAudit {
   tvlUsd?: number;
   /** Permanent URL slug: /audits/<slug>/ */
   slug?: string;
+  /** Old slugs of a deliberately renamed audit; each /audits/<old>/ redirects to /audits/<slug>/ */
+  previousSlugs?: string[];
 }
 
 // Report file names usually start with the publication date, e.g. "2025-10-17 Audit Report ..."
