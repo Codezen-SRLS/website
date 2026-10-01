@@ -1,10 +1,10 @@
-# Dora Factory's Vota migration security audit
+# Dora Vota Migration Contract security audit
 
-Audit of the Dora Vota migration contract, the DoraBridge.sol contract in Dora Factory's bridge contract repository. Dora Vota is the Cosmos SDK chain built by Dora Factory.
+Dora Vota is the Cosmos SDK chain built by Dora Factory. This audit reviewed its Solidity migration contract, DoraBridge.sol, in Dora Factory's bridge contract repository.
 
-Codezen audited Dora Factory's Vota migration together with Oak Security. Technologies in scope: Solidity and Bridge. We reported 10 findings: 1 major, 3 minor and 6 informational.
+Codezen audited Dora Vota Migration Contract together with Oak Security. Technologies in scope: Solidity and Bridge. We reported 10 findings: 1 major, 3 minor and 6 informational.
 
-- Audit type: Solidity Contract Audit
+- Audit type: Solidity smart contract audit
 - Technologies: Solidity, Bridge
 - Ecosystem: Ethereum
 - Delivered with: Oak Security

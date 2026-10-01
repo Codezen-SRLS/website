@@ -1,10 +1,10 @@
 # Filecoin FEVM Solidity Library security audit
 
-Audit of the Filecoin Solidity library, which gives Solidity smart contracts on the Filecoin EVM an API for calling methods on Filecoin built-in actors and accessing Filecoin-specific syscalls.
+Filecoin's Solidity library for the FEVM gives smart contracts on the Filecoin EVM an API to call methods on Filecoin built-in actors and access Filecoin-specific syscalls.
 
 Codezen audited Filecoin FEVM Solidity Library together with Oak Security. Technologies in scope: Filecoin, EVM, Solidity and Ethereum. We reported 7 findings: 3 major, 2 minor and 2 informational.
 
-- Audit type: Solidity Library Audit
+- Audit type: Solidity library audit
 - Technologies: Filecoin, EVM, Solidity, Ethereum
 - Ecosystem: Ethereum, Filecoin
 - Delivered with: Oak Security

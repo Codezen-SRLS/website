@@ -1,10 +1,10 @@
 # Persistence yBTC security audit
 
-Audit of the Persistence yBTC smart contracts.
+Smart contract audit of Persistence yBTC, a Bitcoin product from Persistence.
 
 Codezen audited Persistence yBTC together with Oak Security. Technologies in scope: Bitcoin and Persistence.
 
-- Audit type: Smart contracts audit
+- Audit type: Smart contract audit
 - Technologies: Bitcoin, Persistence
 - Ecosystem: Bitcoin
 - Delivered with: Oak Security

@@ -1,10 +1,10 @@
-# SSZ RS Library security audit
+# ssz-rs security audit
 
-Audit of ssz-rs, a Rust implementation of SimpleSerialize (SSZ), the serialization method used on the Ethereum Beacon Chain. SSZ combines a deterministic serialization scheme with a Merkleization scheme designed to work efficiently with the serialized data.
+ssz-rs is a Rust implementation of SimpleSerialize (SSZ), the serialization method of the Ethereum Beacon Chain. SSZ combines a deterministic serialization scheme with a Merkleization scheme designed to work efficiently with the serialized data.
 
-Codezen audited SSZ RS Library together with Oak Security. Technologies in scope: Rust and Ethereum. We reported 11 findings: 4 minor and 7 informational.
+Codezen audited ssz-rs together with Oak Security. Technologies in scope: Rust and Ethereum. We reported 11 findings: 4 minor and 7 informational.
 
-- Audit type: Rust Library Audit
+- Audit type: Rust library audit
 - Technologies: Rust, Ethereum
 - Ecosystem: Ethereum
 - Delivered with: Oak Security

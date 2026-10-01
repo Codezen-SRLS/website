@@ -1,10 +1,10 @@
-# Prism Auto Compounding Staking security audit
+# Prism Auto Compounding cAsset security audit
 
-Audit of the Prism Hub CosmWasm contract of Prism Auto Compounding cAsset, which handles protocol operations for users and administrators. The protocol lets users delegate coins to validators with liquid staking and automatic compounding of rewards.
+Prism Auto Compounding cAsset is a liquid staking protocol on Terra with automatic reward compounding; this audit covered its Prism Hub CosmWasm contract, which handles protocol operations for users and administrators.
 
-Codezen audited Prism Auto Compounding Staking together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 19 findings: 1 major, 7 minor and 11 informational.
+Codezen audited Prism Auto Compounding cAsset together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 19 findings: 1 major, 7 minor and 11 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Terra, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

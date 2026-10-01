@@ -1,8 +1,8 @@
-# Gno.land Chain Sprint 1 security audit
+# Gno Sprint 1 security audit
 
-Audit of the gno.land chain in Go, covering how realms interact with the GnoVM through the VM keeper, end-block operations, validator state updates, the MsgAddPkg, MsgCall and MsgRun handlers, and example realms. gno.land is a Proof of Contribution chain running Gno, a deterministic implementation of Go for smart contracts.
+Gno.land is a Proof of Contribution chain running Gno, a deterministic implementation of Go for smart contracts. This sprint audit reviewed the VM keeper, end-block operations, validator updates and the MsgAddPkg, MsgCall and MsgRun handlers.
 
-Codezen audited Gno.land Chain Sprint 1 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus. We reported 33 findings: 3 critical, 6 major, 7 minor and 17 informational.
+Codezen audited Gno Sprint 1 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus. We reported 33 findings: 3 critical, 6 major, 7 minor and 17 informational.
 
 - Audit type: Cosmos SDK chain audit
 - Technologies: Golang, Cosmos SDK, Consensus

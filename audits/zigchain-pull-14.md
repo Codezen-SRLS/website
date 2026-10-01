@@ -1,6 +1,6 @@
 # ZIGChain Pull 14 security audit
 
-Audit of the changes in ZIGChain pull request 14, written in Go. ZIGChain is a Cosmos SDK–based blockchain with a native ZIG token and application modules for asset issuance, trading and external bridging.
+ZIGChain is a Cosmos SDK blockchain with a native ZIG token and application modules for asset issuance, trading and external bridging; this audit reviewed the Go changes in pull request 14.
 
 Codezen audited ZIGChain Pull 14 together with Oak Security. Technologies in scope: Golang and Cosmos SDK.
 

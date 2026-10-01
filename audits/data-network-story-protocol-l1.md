@@ -1,10 +1,10 @@
 # DATA Network (Story Protocol) L1 security audit
 
-Audit of the DATA Network (formerly Story Protocol) L1, spanning its Cosmos SDK consensus layer, Geth-based execution client with IP Graph precompiles and the related Solidity contracts. The DATA Network is an open protocol for sourcing and processing human data for AI.
+DATA Network (formerly Story Protocol) L1 combines a Cosmos SDK consensus layer and a Geth-based execution client with IP Graph precompiles; this audit also covered the related Solidity contracts of this open protocol for human data for AI.
 
 Codezen audited DATA Network (Story Protocol) L1 together with Trust Security. Technologies in scope: Cosmos SDK, Golang, Ethereum and Solidity. We reported 23 findings: 5 critical, 6 major, 7 minor and 5 informational.
 
-- Audit type: Cosmos SDK Audit
+- Audit type: Cosmos SDK chain audit
 - Technologies: Cosmos SDK, Golang, Ethereum, Solidity
 - Ecosystem: Ethereum, Cosmos
 - Delivered with: Trust Security

@@ -1,10 +1,10 @@
-# Mars Protocol Rover Updates security audit
+# Mars Rover Updates security audit
 
-Audit of updates to Mars Rover, a generalized credit protocol built on the Mars lending market. The review covers new account-nft and credit-manager features such as delisting logic and vault pricing changes, plus a new zapper contract that provides Osmosis liquidity for auto-compounding vaults.
+Mars Rover, from Mars Protocol, is a generalized credit protocol on the Mars lending market. This audit of its CosmWasm updates covered new account-nft and credit-manager features and a zapper contract providing Osmosis liquidity for auto-compounding vaults.
 
-Codezen audited Mars Protocol Rover Updates together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 9 findings: 2 major, 1 minor and 6 informational.
+Codezen audited Mars Rover Updates together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 9 findings: 2 major, 1 minor and 6 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Osmosis, Mars, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

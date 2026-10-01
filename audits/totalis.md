@@ -1,10 +1,10 @@
 # Totalis security audit
 
-Audit of the Totalis smart contracts. Totalis is a multi-outcome prediction market trading platform that lets traders express multiple worldviews in a single leveraged position.
+Totalis is a multi-outcome prediction market trading platform that lets traders express multiple worldviews in a single leveraged position; this audit covered its smart contracts.
 
 Codezen audited Totalis together with Zenith Security.
 
-- Audit type: Smart contracts audit
+- Audit type: Smart contract audit
 - Delivered with: Zenith Security
 - Report date: 13 April 2026
 - Project website: https://www.totalis.trade

@@ -1,10 +1,10 @@
-# Aperture Finance 2 security audit
+# Aperture 2 security audit
 
-Audit of Aperture's contracts on Terra: an Anchor Protocol proxy, delta-neutral position and manager contracts, a Terra manager that uses Wormhole for cross-chain strategies, and an Ethereum-side Solidity contract. Aperture aggregates investment opportunities across blockchains.
+Aperture Finance aggregates investment opportunities across blockchains; this audit covered its Terra contracts, including an Anchor Protocol proxy, delta-neutral position contracts and a Wormhole-based manager, plus an Ethereum Solidity contract.
 
-Codezen audited Aperture Finance 2 together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 11 findings: 1 major, 6 minor and 4 informational.
+Codezen audited Aperture 2 together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 11 findings: 1 major, 6 minor and 4 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Terra, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

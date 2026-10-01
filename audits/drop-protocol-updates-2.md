@@ -1,10 +1,10 @@
-# Drop Protocol Updates 2 security audit
+# Drop Updates 2 security audit
 
-Audit of the second round of updates to the Drop CosmWasm smart contracts in Rust, covering all changes made since the previous audit of the drop-contracts repository. Drop is a liquid staking protocol built for the Neutron chain in the Cosmos ecosystem.
+Drop Protocol is a liquid staking protocol built for the Neutron chain in the Cosmos ecosystem. This audit reviewed the second round of updates to its CosmWasm smart contracts in Rust, covering all changes since the previous audit.
 
-Codezen audited Drop Protocol Updates 2 together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 22 findings: 1 major, 12 minor and 9 informational.
+Codezen audited Drop Updates 2 together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 22 findings: 1 major, 12 minor and 9 informational.
 
-- Audit type: CosmWasm smart contracts audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

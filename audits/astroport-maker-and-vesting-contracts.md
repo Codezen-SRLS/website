@@ -1,10 +1,10 @@
-# Astroport Maker and Vesting Contracts security audit
+# Astroport Maker and Vesting Contract Updates security audit
 
-Audit of the changes to Astroport's Maker and Vesting tokenomics contracts, written in Rust with CosmWasm, since a previous review. Astroport is an automated market maker and decentralized exchange where users swap tokens and provide liquidity.
+Astroport is an AMM and decentralized exchange; this audit reviewed changes since a previous review to its Maker and Vesting tokenomics contracts, written in Rust with CosmWasm.
 
-Codezen audited Astroport Maker and Vesting Contracts together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 9 findings: 4 minor and 5 informational.
+Codezen audited Astroport Maker and Vesting Contract Updates together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 9 findings: 4 minor and 5 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

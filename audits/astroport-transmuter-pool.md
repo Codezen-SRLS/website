@@ -1,10 +1,10 @@
 # Astroport Transmuter Pool security audit
 
-Audit of the Astroport Transmuter Pool CosmWasm contract and related factory changes. The transmuter implements a constant sum pair that swaps assets at a 1:1 ratio without spread or fees. Astroport is an AMM/DEX for swapping and providing liquidity.
+Astroport's Transmuter Pool is a CosmWasm contract for the Astroport AMM/DEX that implements a constant sum pair swapping assets at a 1:1 ratio without spread or fees. This audit also covered related factory changes.
 
 Codezen audited Astroport Transmuter Pool together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 7 findings: 1 critical, 1 minor and 5 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

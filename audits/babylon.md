@@ -1,6 +1,6 @@
 # Babylon security audit
 
-Audit of Babylon Genesis, a Cosmos SDK chain written in Go, together with its finality provider and Vigilante relayer. Babylon provides Bitcoin timestamping and Bitcoin staking, letting BTC holders secure Proof-of-Stake networks with slashing enforced through EOTS.
+Babylon Genesis is a Cosmos SDK chain in Go for Bitcoin timestamping and Bitcoin staking, letting BTC holders secure Proof-of-Stake networks; this audit also covered its finality provider and Vigilante relayer.
 
 Codezen audited Babylon together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Bitcoin. We reported 44 findings: 3 major, 26 minor and 15 informational.
 

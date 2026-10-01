@@ -1,10 +1,10 @@
-# Neutron Auction and Undelegations Phase 1 security audit
+# Neutron Auction and Undelegations Contract, Chain Upgrade (Phase 1) security audit
 
-Audit of the Neutron auction CosmWasm contract. It runs a time-bounded deposit auction, then lets the owner settle in batches, allocating a fixed USDC budget pro rata to each participant's share of deposits and burning the deposited claim tokens, after which users claim their USDC.
+Neutron's auction CosmWasm contract in Rust runs a time-bounded deposit auction, then settles in batches, allocating a fixed USDC budget pro rata to deposits and burning the claim tokens before users claim their USDC.
 
-Codezen audited Neutron Auction and Undelegations Phase 1 together with Oak Security. Technologies in scope: Rust, CosmWasm and Neutron. We reported 15 findings: 6 minor and 9 informational.
+Codezen audited Neutron Auction and Undelegations Contract, Chain Upgrade (Phase 1) together with Oak Security. Technologies in scope: Rust, CosmWasm and Neutron. We reported 15 findings: 6 minor and 9 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm, Neutron
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

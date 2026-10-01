@@ -1,10 +1,10 @@
 # Neutron security audit
 
-Audit of the Neutron chain, built with the Cosmos SDK in Go, together with its CosmWasm bindings and example contracts. Neutron brings CosmWasm smart contracts to Cosmos, uses IBC Interchain Accounts for cross-chain queries and transactions, and is secured by the Cosmos Hub through Interchain Security.
+Neutron is a Cosmos SDK chain in Go that brings CosmWasm smart contracts to Cosmos; the audit covered the chain, its CosmWasm bindings and example contracts. Neutron uses IBC Interchain Accounts and is secured by the Cosmos Hub via Interchain Security.
 
 Codezen audited Neutron together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Cosmos Hub, Interchain Security, IBC and Interchain. We reported 23 findings: 3 critical, 6 major, 9 minor and 5 informational.
 
-- Audit type: Cosmos SDK Chain Audit
+- Audit type: Cosmos SDK chain audit
 - Technologies: Golang, Cosmos SDK, Cosmos Hub, Interchain Security, IBC, Interchain
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

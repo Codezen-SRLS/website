@@ -1,10 +1,10 @@
 # Structured maxBTC EVM security audit
 
-Audit of Structured's maxBTC Solidity contracts for EVM chains. maxBTC is a cross-chain yield strategy and tokenization system for Bitcoin, with the token minted and burned on Neutron.
+Structured's maxBTC is a cross-chain yield strategy and tokenization system for Bitcoin, with the token minted and burned on Neutron; this audit covered its Solidity contracts for EVM chains.
 
 Codezen audited Structured maxBTC EVM together with Oak Security. Technologies in scope: Solidity, Ethereum, EVM and Bitcoin.
 
-- Audit type: Solidity smart contracts audit
+- Audit type: Solidity smart contract audit
 - Technologies: Solidity, Ethereum, EVM, Bitcoin
 - Ecosystem: Ethereum, Bitcoin
 - Delivered with: Oak Security

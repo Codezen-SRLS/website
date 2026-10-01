@@ -1,10 +1,10 @@
-# Plasma Consensus security audit
+# Plasma security audit
 
-Audit of the Plasma consensus implementation in Rust, covering the consensus, node, networking, block builder and execution proxy components. Plasma is a layer 1 blockchain for stablecoin payments, secured by PlasmaBFT, an implementation of Fast HotStuff.
+Plasma is a layer 1 blockchain for stablecoin payments secured by PlasmaBFT. This audit reviewed its Rust consensus implementation of Fast HotStuff, covering consensus, node, networking, block builder and execution proxy.
 
-Codezen audited Plasma Consensus together with Zenith Security. Technologies in scope: Rust, Plasma and Consensus. We reported 22 findings: 2 major, 11 minor and 9 informational.
+Codezen audited Plasma together with Zenith Security. Technologies in scope: Rust, Plasma and Consensus. We reported 22 findings: 2 major, 11 minor and 9 informational.
 
-- Audit type: Chain consensus audit
+- Audit type: Consensus protocol audit
 - Technologies: Rust, Plasma, Consensus
 - Delivered with: Zenith Security
 - Report date: 24 October 2025

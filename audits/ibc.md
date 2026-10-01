@@ -1,6 +1,6 @@
 # IBC security audit
 
-Audit of the Inter-Blockchain Communication (IBC) protocol. IBC is a blockchain interoperability protocol used by more than 115 chains for cross-chain communication.
+Inter-Blockchain Communication (IBC) is a blockchain interoperability protocol used by more than 115 chains for cross-chain communication; this audit reviewed the IBC protocol itself.
 
 Codezen audited IBC together with Zenith Security. Technologies in scope: IBC.
 

@@ -1,10 +1,10 @@
-# Drop Protocol Liquidity Provider security audit
+# Drop Initia Liquidity Provider security audit
 
-Audit of the Drop Liquidity Provider, a Move contract for the Initia chain, and its integration with the Drop codebase. Drop is a liquid staking protocol on Neutron that uses IBC, Interchain Accounts and Interchain Queries to stake and unstake across the Cosmos ecosystem, with auto-compounding of rewards.
+Drop Protocol is a liquid staking protocol on Neutron in the Cosmos ecosystem. This audit reviewed the Drop Liquidity Provider, a Move contract for the Initia chain, and its integration with the Drop codebase.
 
-Codezen audited Drop Protocol Liquidity Provider together with Oak Security. Technologies in scope: Move and Initia. We reported 9 findings: 3 critical, 2 minor and 4 informational.
+Codezen audited Drop Initia Liquidity Provider together with Oak Security. Technologies in scope: Move and Initia. We reported 9 findings: 3 critical, 2 minor and 4 informational.
 
-- Audit type: Move smart contracts audit
+- Audit type: Move smart contract audit
 - Technologies: Move, Initia
 - Delivered with: Oak Security
 - Report date: 17 April 2025

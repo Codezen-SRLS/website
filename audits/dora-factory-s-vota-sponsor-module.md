@@ -1,10 +1,10 @@
-# Dora Factory's Vota Sponsor Module security audit
+# Dora Vota Sponsor Module security audit
 
-Audit of the x/sponsor-contract-tx module of Dora Factory's Vota chain, written in Go. It lets CosmWasm contracts sponsor transaction fees for their users, with per-user grant limits, an optional check_policy eligibility query and admin-managed sponsor funds.
+Dora Factory's Vota chain uses the x/sponsor-contract-tx Cosmos SDK module, audited here in Go, to let CosmWasm contracts sponsor users' transaction fees with per-user grant limits, an optional eligibility query and admin-managed funds.
 
-Codezen audited Dora Factory's Vota Sponsor Module together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 15 findings: 1 critical, 1 major, 7 minor and 6 informational.
+Codezen audited Dora Vota Sponsor Module together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 15 findings: 1 critical, 1 major, 7 minor and 6 informational.
 
-- Audit type: Cosmos SDK Audit
+- Audit type: Cosmos SDK module audit
 - Technologies: Golang, Cosmos SDK
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

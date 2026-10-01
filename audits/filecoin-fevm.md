@@ -1,10 +1,10 @@
-# Filecoin FEVM security audit
+# Filecoin EVM (FEVM) security audit
 
-Audit of the Filecoin EVM (FEVM), an Ethereum Virtual Machine compatible runtime virtualized on top of the Filecoin Virtual Machine (FVM), covering the builtin-actors and ref-fvm repositories. Filecoin is a decentralized storage network.
+Filecoin EVM (FEVM) is an Ethereum Virtual Machine compatible runtime on top of the Filecoin Virtual Machine (FVM). The audit covered the builtin-actors and ref-fvm repositories of Filecoin, a decentralized storage network.
 
-Codezen audited Filecoin FEVM together with Oak Security. Technologies in scope: Filecoin, Rust, Golang, EVM, Solidity and Ethereum. We reported 34 findings: 3 critical, 15 major, 8 minor and 8 informational.
+Codezen audited Filecoin EVM (FEVM) together with Oak Security. Technologies in scope: Filecoin, Rust, Golang, EVM, Solidity and Ethereum. We reported 34 findings: 3 critical, 15 major, 8 minor and 8 informational.
 
-- Audit type: EVM Implementation Audit
+- Audit type: EVM implementation audit
 - Technologies: Filecoin, Rust, Golang, EVM, Solidity, Ethereum
 - Ecosystem: Ethereum, Filecoin
 - Delivered with: Oak Security

@@ -1,10 +1,10 @@
-# SolvBTC Stellar Bridge security audit
+# Solv Stellar Bridge security audit
 
-Audit of changes to the SolvBTC Stellar bridge contracts, Soroban smart contracts written in Rust. Solv Protocol offers BTC holders a suite of financial services, including lending, liquid staking, yield generation and fund management.
+Solv Protocol's SolvBTC Stellar bridge consists of Soroban smart contracts in Rust, and this audit covered changes to them. Solv offers BTC holders lending, liquid staking, yield generation and fund management.
 
-Codezen audited SolvBTC Stellar Bridge together with Zenith Security. Technologies in scope: Stellar, Soroban, Rust, Bitcoin, Bridge and Smart Contract. We reported 8 findings: 1 critical, 4 minor and 3 informational.
+Codezen audited Solv Stellar Bridge together with Zenith Security. Technologies in scope: Stellar, Soroban, Rust, Bitcoin, Bridge and Smart Contract. We reported 8 findings: 1 critical, 4 minor and 3 informational.
 
-- Audit type: Soroban smart contracts audit
+- Audit type: Soroban smart contract audit
 - Technologies: Stellar, Soroban, Rust, Bitcoin, Bridge, Smart Contract
 - Ecosystem: Stellar, Bitcoin
 - Delivered with: Zenith Security

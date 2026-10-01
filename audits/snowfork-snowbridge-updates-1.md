@@ -1,10 +1,10 @@
-# Snowfork Snowbridge Updates 1 security audit
+# Snowbridge Updates security audit
 
-Audit of updates to Snowbridge across its Solidity contracts, the Substrate pallets, primitives and runtime in polkadot-sdk, and the related asset hub and bridge hub runtimes for Kusama and Polkadot. Snowbridge is a trustless bridge between Polkadot and Ethereum.
+Snowbridge is a trustless Polkadot–Ethereum bridge; this audit reviewed updates to its Solidity contracts, its Substrate pallets, primitives and runtime in polkadot-sdk, and Kusama and Polkadot asset hub and bridge hub runtimes.
 
-Codezen audited Snowfork Snowbridge Updates 1 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 4 findings: 2 minor and 2 informational.
+Codezen audited Snowbridge Updates together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 4 findings: 2 minor and 2 informational.
 
-- Audit type: Bridge Audit
+- Audit type: Cross-chain bridge audit
 - Technologies: Rust, Solidity, Substrate, Polkadot, Ethereum, Bridge
 - Ecosystem: Ethereum, Polkadot
 - Delivered with: Oak Security

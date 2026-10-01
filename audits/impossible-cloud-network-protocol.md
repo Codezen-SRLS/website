@@ -1,10 +1,10 @@
-# Impossible Cloud Network Protocol security audit
+# ICN Protocol security audit
 
-Audit of the Impossible Cloud Network protocol's Solidity contracts, a diamond proxy system for Hyper Node registration, staking of non-transferable ICNL NFTs and time-based ICNT rewards on a fixed emission curve.
+Impossible Cloud Network (ICN) Protocol is a Solidity diamond proxy system for Hyper Node registration, staking of non-transferable ICNL NFTs and time-based ICNT rewards on a fixed emission curve.
 
-Codezen audited Impossible Cloud Network Protocol together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 24 findings: 1 major, 13 minor and 10 informational.
+Codezen audited ICN Protocol together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 24 findings: 1 major, 13 minor and 10 informational.
 
-- Audit type: Solidity smart contracts audit
+- Audit type: Solidity smart contract audit
 - Technologies: Solidity, Ethereum, EVM
 - Ecosystem: Ethereum
 - Delivered with: Oak Security

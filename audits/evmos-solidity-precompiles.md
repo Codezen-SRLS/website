@@ -1,10 +1,10 @@
-# Evmos Solidity Precompiles security audit
+# Evmos EVM Extensions security audit
 
-Audit of the Evmos precompiles and related changes to Evmos and its go-ethereum fork. These EVM extensions are custom precompiled contracts that, unlike go-ethereum's built-in precompiles, can read and modify state and access Cosmos SDK functionality.
+Evmos EVM extensions are custom precompiled contracts that, unlike go-ethereum's built-in precompiles, can read and modify state and access Cosmos SDK functionality. The audit also covered related changes to Evmos and its go-ethereum fork.
 
-Codezen audited Evmos Solidity Precompiles together with Oak Security. Technologies in scope: Evmos, Rust, Golang, EVM, Solidity and Ethereum. We reported 14 findings: 1 critical, 9 minor and 4 informational.
+Codezen audited Evmos EVM Extensions together with Oak Security. Technologies in scope: Evmos, Rust, Golang, EVM, Solidity and Ethereum. We reported 14 findings: 1 critical, 9 minor and 4 informational.
 
-- Audit type: EVM Solidity Precompiles Audit
+- Audit type: EVM precompile audit
 - Technologies: Evmos, Rust, Golang, EVM, Solidity, Ethereum
 - Ecosystem: Ethereum
 - Delivered with: Oak Security

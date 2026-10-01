@@ -1,10 +1,10 @@
-# Lido Neutron Satellite security audit
+# Hadron Labs Lido Satellite security audit
 
-Audit of the Lido Satellite CosmWasm smart contract on Neutron, which mints and burns tokens through the tokenfactory module. The contract is developed by Hadron Labs.
+Hadron Labs' Lido Satellite is a CosmWasm smart contract on Neutron that mints and burns tokens through the tokenfactory module. The audit reviewed the contract's Rust code.
 
-Codezen audited Lido Neutron Satellite together with Oak Security. Technologies in scope: Rust, Neutron, Solidity and CosmWasm. We reported 7 findings: 2 minor and 5 informational.
+Codezen audited Hadron Labs Lido Satellite together with Oak Security. Technologies in scope: Rust, Neutron, Solidity and CosmWasm. We reported 7 findings: 2 minor and 5 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Neutron, Solidity, CosmWasm
 - Ecosystem: Ethereum, Cosmos
 - Delivered with: Oak Security

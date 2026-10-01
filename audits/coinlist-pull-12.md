@@ -1,10 +1,10 @@
 # CoinList Pull 12 security audit
 
-Audit of the changes in pull request 12 of CoinList's onchain repository, which holds Ethereum contracts supporting token sale and swap operations. The in-scope Solidity code covers a general swap module (Soms) and an Ondo-specific swap module that interfaces with external manager and RWA contracts.
+CoinList's onchain repository holds Ethereum contracts for token sales and swaps; this audit of pull request 12 covered the Solidity Soms general swap module and an Ondo swap module interfacing with manager and RWA contracts.
 
 Codezen audited CoinList Pull 12 together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 11 findings: 6 minor and 5 informational.
 
-- Audit type: Solidity smart contracts audit
+- Audit type: Solidity smart contract audit
 - Technologies: Solidity, Ethereum, EVM
 - Ecosystem: Ethereum
 - Delivered with: Oak Security

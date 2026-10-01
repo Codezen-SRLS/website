@@ -1,10 +1,10 @@
-# Levana Perpetual Swap security audit
+# Levana Perpetual Swaps security audit
 
-Audit of the Levana Perpetual Swaps CosmWasm contracts and the shared levana-common code. Levana Perpetual Swaps enables leveraged trading of any asset without a counterparty, with trades that are always executable and have no expiration date.
+Levana Perpetual Swaps enables leveraged trading of any asset without a counterparty; this audit covered its CosmWasm contracts and shared levana-common code. Trades are always executable and have no expiration date.
 
-Codezen audited Levana Perpetual Swap together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 28 findings: 3 critical, 7 major, 9 minor and 9 informational.
+Codezen audited Levana Perpetual Swaps together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 28 findings: 3 critical, 7 major, 9 minor and 9 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Terra, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

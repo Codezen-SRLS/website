@@ -1,10 +1,10 @@
 # Neptune Protocol security audit
 
-Audit of the Neptune Protocol CosmWasm contracts, excluding the leverage trading feature, along with the neptune-auth and neptune-common Rust libraries. Neptune Finance is a lending and borrowing protocol that uses a PID controller to set its rates.
+Neptune Finance is a lending and borrowing protocol; the audit covered its CosmWasm contracts, excluding leverage trading, and the neptune-auth and neptune-common Rust libraries. Its rates are set by a PID controller.
 
 Codezen audited Neptune Protocol together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 26 findings: 1 critical, 4 major, 16 minor and 5 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

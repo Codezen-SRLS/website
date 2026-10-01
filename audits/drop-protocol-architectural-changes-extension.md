@@ -1,10 +1,10 @@
 # Drop Protocol Architectural Changes Extension security audit
 
-Audit of an extension to the architectural changes in the Drop CosmWasm smart contracts, written in Rust. Drop is a liquid staking protocol in the Cosmos ecosystem.
+Drop Protocol's CosmWasm smart contracts in Rust power liquid staking in the Cosmos ecosystem; this audit covered an extension to the architectural changes in those contracts.
 
 Codezen audited Drop Protocol Architectural Changes Extension together with Oak Security. Technologies in scope: Rust and CosmWasm.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

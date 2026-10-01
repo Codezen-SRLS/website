@@ -1,10 +1,10 @@
 # Dymension Phase 2 security audit
 
-Audit of the second phase of the Dymension chain, a Cosmos SDK chain written in Go, including consensus-related code. Dymension L1 is a decentralized chain launchpad that helps creators turn ideas into their own blockchains.
+Dymension L1 is a decentralized chain launchpad for turning ideas into blockchains. This audit reviewed the second phase of the Dymension Cosmos SDK chain in Go, including consensus-related code.
 
 Codezen audited Dymension Phase 2 together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus.
 
-- Audit type: Cosmos SDK chain Audit
+- Audit type: Cosmos SDK chain audit
 - Technologies: Golang, Cosmos SDK, Rollup, Consensus
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

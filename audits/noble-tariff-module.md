@@ -1,10 +1,10 @@
 # Noble Tariff module security audit
 
-Audit of the Noble x/tariff Cosmos SDK module and its app integration. The module runs before the distribution module at the beginning of each block, collecting a percentage of newly minted inflation and distributing it among configured entities.
+Noble is a stablecoin infrastructure chain; this audit covered its x/tariff Cosmos SDK module in Go and app integration. The module runs before distribution each block, sharing a percentage of newly minted inflation among configured entities.
 
 Codezen audited Noble Tariff module together with Oak Security. Technologies in scope: Golang, Noble, Cosmos SDK and Interchain Security. We reported 10 findings: 2 critical, 1 minor and 7 informational.
 
-- Audit type: Cosmos SDK Audit
+- Audit type: Cosmos SDK module audit
 - Technologies: Golang, Noble, Cosmos SDK, Interchain Security
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

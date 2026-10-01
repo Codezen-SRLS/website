@@ -1,10 +1,10 @@
 # Timewave Covenants security audit
 
-Audit of the Timewave Covenants CosmWasm contracts, including single- and two-party POL covenants and holders, swap covenants, liquid poolers for Astroport and Osmosis, IBC forwarders, routers, splitters and a Stride liquid staker. Timewave builds tools for long-term permissionless cooperation.
+Timewave builds tools for long-term permissionless cooperation; this audit covered its Covenants CosmWasm contracts, including POL and swap covenants, Astroport and Osmosis liquid poolers, IBC forwarders and a Stride liquid staker.
 
 Codezen audited Timewave Covenants together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 46 findings: 1 critical, 12 major, 16 minor and 17 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

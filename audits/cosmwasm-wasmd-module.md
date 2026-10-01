@@ -1,10 +1,10 @@
-# CosmWasm Wasmd Module security audit
+# wasmd security audit
 
-Audit of wasmd, the Cosmos SDK module written in Go that integrates the wasmvm virtual machine to run CosmWasm smart contracts. CosmWasm is a smart contract platform for Cosmos SDK blockchains focused on security, performance and interoperability.
+CosmWasm's wasmd is the Cosmos SDK module, written in Go, that integrates the wasmvm virtual machine to run CosmWasm smart contracts. CosmWasm is a smart contract platform focused on security, performance and interoperability.
 
-Codezen audited CosmWasm Wasmd Module together with Oak Security. Technologies in scope: Golang, Cosmos SDK, CosmWasm and Wasm. We reported 15 findings: 1 critical, 2 major, 5 minor and 7 informational.
+Codezen audited wasmd together with Oak Security. Technologies in scope: Golang, Cosmos SDK, CosmWasm and Wasm. We reported 15 findings: 1 critical, 2 major, 5 minor and 7 informational.
 
-- Audit type: Cosmos SDK Module Audit
+- Audit type: Cosmos SDK module audit
 - Technologies: Golang, Cosmos SDK, CosmWasm, Wasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

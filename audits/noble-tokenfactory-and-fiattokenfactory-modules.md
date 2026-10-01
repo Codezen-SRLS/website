@@ -1,10 +1,10 @@
-# Noble TokenFactory and FiatTokenFactory modules security audit
+# Noble tokenfactory Changes and fiattokenfactory security audit
 
-Audit of the Noble fiattokenfactory module and recent changes to its tokenfactory module, which enable minting of generic assets controlled by asset issuers. Noble is an application-specific Cosmos SDK blockchain purpose-built for native asset issuance.
+Noble is an application-specific Cosmos SDK blockchain for native asset issuance; this audit covered its fiattokenfactory module and tokenfactory changes enabling minting of generic assets controlled by asset issuers.
 
-Codezen audited Noble TokenFactory and FiatTokenFactory modules together with Oak Security. Technologies in scope: Golang, Noble and Cosmos SDK. We reported 2 findings: 2 informational.
+Codezen audited Noble tokenfactory Changes and fiattokenfactory together with Oak Security. Technologies in scope: Golang, Noble and Cosmos SDK. We reported 2 findings: 2 informational.
 
-- Audit type: Cosmos SDK Module Audit
+- Audit type: Cosmos SDK module audit
 - Technologies: Golang, Noble, Cosmos SDK
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

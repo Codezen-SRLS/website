@@ -1,6 +1,6 @@
 # Acurast Compute Pallet security audit
 
-Audit of the Acurast compute pallet, a Substrate pallet written in Rust. Acurast is a decentralized compute network powered by phones, designed to run workloads without reliance on centralized servers.
+Acurast is a decentralized compute network powered by phones, built to run workloads without reliance on centralized servers; this audit covered its compute pallet, a Substrate pallet written in Rust.
 
 Codezen audited Acurast Compute Pallet together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot.
 

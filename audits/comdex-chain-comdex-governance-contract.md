@@ -1,10 +1,10 @@
-# Comdex Chain & Comdex Governance Contract security audit
+# Comdex security audit
 
-Audit of the Comdex chain's Cosmos SDK modules, including asset, vault, locker, collector, rewards, auction, tokenmint, bandoracle, market, liquidity and esm, plus the Comdex CosmWasm governance contracts, reviewed in three stages. Comdex is an infrastructure layer for DeFi applications in Cosmos.
+Comdex is a DeFi infrastructure layer for Cosmos; this audit covered the Comdex chain's Cosmos SDK modules, such as asset, vault, locker, auction and liquidity, plus its CosmWasm governance contracts, in three stages.
 
-Codezen audited Comdex Chain & Comdex Governance Contract together with Oak Security. Technologies in scope: Golang, Cosmos SDK, CosmWasm and Wasm. We reported 43 findings: 15 critical, 9 major, 7 minor and 12 informational.
+Codezen audited Comdex together with Oak Security. Technologies in scope: Golang, Cosmos SDK, CosmWasm and Wasm. We reported 43 findings: 15 critical, 9 major, 7 minor and 12 informational.
 
-- Audit type: Cosmos SDK and CosmWasm Contract Audit
+- Audit type: Cosmos SDK chain and CosmWasm audit
 - Technologies: Golang, Cosmos SDK, CosmWasm, Wasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

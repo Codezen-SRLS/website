@@ -1,10 +1,10 @@
 # Composable ibctransfermiddleware security audit
 
-Audit of the ibctransfermiddleware Cosmos SDK module written in Go. Composable Finance builds cross-chain DeFi infrastructure, providing trustless interoperability based on IBC across blockchain ecosystems.
+Composable Finance's ibctransfermiddleware is a Cosmos SDK module written in Go. Composable Finance builds cross-chain DeFi infrastructure, providing trustless interoperability based on IBC.
 
 Codezen audited Composable ibctransfermiddleware. Technologies in scope: Golang and Cosmos SDK.
 
-- Audit type: Cosmos SDK Module Audit
+- Audit type: Cosmos SDK module audit
 - Technologies: Golang, Cosmos SDK
 - Ecosystem: Cosmos
 - Project website: https://www.composable.finance/

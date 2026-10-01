@@ -1,10 +1,10 @@
 # Composable Finance Ethereum Light Client security audit
 
-Audit of the Composable Finance Ethereum light client, a WASM light client written in Go for IBC on Cosmos SDK chains. Composable Finance builds cross-chain DeFi infrastructure, with trustless interoperability powered by IBC.
+Composable Finance's Ethereum light client is a WASM light client written in Go for IBC on Cosmos SDK chains. Composable Finance builds cross-chain DeFi infrastructure with trustless interoperability powered by IBC.
 
 Codezen audited Composable Finance Ethereum Light Client. Technologies in scope: Golang, IBC, Cosmos SDK and Ethereum.
 
-- Audit type: WASM Light Client Audit
+- Audit type: IBC light client audit
 - Technologies: Golang, IBC, Cosmos SDK, Ethereum
 - Ecosystem: Ethereum, Cosmos
 - Report date: 9 November 2023

@@ -1,10 +1,10 @@
-# Snowfork Snowbridge security audit
+# Snowbridge security audit
 
-Audit of Snowbridge, Snowfork's bridge between Ethereum and Polkadot, covering the Solidity contracts, including the BEEFY light client that tracks the Polkadot relay chain, and the Substrate pallets that track Ethereum and carry bridge governance.
+Snowbridge is Snowfork's bridge between Ethereum and Polkadot. The audit covered its Solidity contracts, including the BEEFY light client tracking the Polkadot relay chain, and the Substrate pallets that track Ethereum and carry bridge governance.
 
-Codezen audited Snowfork Snowbridge together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 33 findings: 3 critical, 8 major, 9 minor and 13 informational.
+Codezen audited Snowbridge together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 33 findings: 3 critical, 8 major, 9 minor and 13 informational.
 
-- Audit type: Bridge Audit
+- Audit type: Cross-chain bridge audit
 - Technologies: Rust, Solidity, Substrate, Polkadot, Ethereum, Bridge
 - Ecosystem: Ethereum, Polkadot
 - Delivered with: Oak Security

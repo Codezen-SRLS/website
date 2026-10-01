@@ -1,10 +1,10 @@
 # Persistence Cosmos LSM security audit
 
-Audit of the Persistence Cosmos LSM functionality, implemented as a Cosmos SDK module written in Go.
+Persistence's Cosmos LSM functionality is implemented as a Cosmos SDK module written in Go, which this audit reviewed.
 
 Codezen audited Persistence Cosmos LSM together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
 
-- Audit type: Cosmos SDK Module Audit
+- Audit type: Cosmos SDK module audit
 - Technologies: Golang, Cosmos SDK, Persistence, Cosmos Hub
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

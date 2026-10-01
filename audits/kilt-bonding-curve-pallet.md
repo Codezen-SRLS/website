@@ -1,6 +1,6 @@
 # KILT Bonding Curve Pallet security audit
 
-Audit of the KILT Bonding Curve Pallet, a Rust Substrate pallet in kilt-node that mints and burns tokens along a predefined bonding curve so prices adjust with supply and demand, with support for different curve formulas.
+KILT Protocol's Bonding Curve Pallet is a Rust Substrate pallet in kilt-node that mints and burns tokens along a predefined bonding curve, so prices adjust with supply and demand, supporting different curve formulas.
 
 Codezen audited KILT Bonding Curve Pallet together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot. We reported 18 findings: 1 major, 5 minor and 12 informational.
 

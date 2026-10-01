@@ -1,6 +1,6 @@
 # MetaMask Card Baanx Withdraw Program security audit
 
-Audit of the MetaMask Card Baanx Withdraw program, an Anchor program on Solana that lets an authorized operator withdraw tokens to a beneficiary and distribute treasury funds via signed multi-send, supporting SPL Token and Token-2022.
+MetaMask Card's Baanx Withdraw program is an Anchor program on Solana that lets an authorized operator withdraw tokens to a beneficiary and distribute treasury funds via signed multi-send, supporting SPL Token and Token-2022.
 
 Codezen audited MetaMask Card Baanx Withdraw Program together with Oak Security. Technologies in scope: Solana, Rust and Anchor. We reported 17 findings: 1 major, 9 minor and 7 informational.
 

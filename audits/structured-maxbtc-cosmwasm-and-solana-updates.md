@@ -1,10 +1,10 @@
-# Structured maxBTC CosmWasm and Solana Updates security audit
+# Structured CosmWasm and Solana Updates security audit
 
-Audit of updates to Structured's maxBTC Solana programs (jupiter-helper, wormhole-helper, waitosaur) and CosmWasm contracts. maxBTC is a cross-chain yield and tokenization system in which Neutron mints and burns the token while strategy legs on Binance and Solana deploy and hedge assets.
+Structured's maxBTC is a cross-chain yield and tokenization system; this audit covered updates to its Solana programs (jupiter-helper, wormhole-helper, waitosaur) and CosmWasm contracts. Neutron mints and burns the token.
 
-Codezen audited Structured maxBTC CosmWasm and Solana Updates together with Oak Security. Technologies in scope: Rust, CosmWasm, Solana and Bitcoin. We reported 55 findings: 16 major, 27 minor and 12 informational.
+Codezen audited Structured CosmWasm and Solana Updates together with Oak Security. Technologies in scope: Rust, CosmWasm, Solana and Bitcoin. We reported 55 findings: 16 major, 27 minor and 12 informational.
 
-- Audit type: CosmWasm and Solana audit
+- Audit type: CosmWasm and Solana program audit
 - Technologies: Rust, CosmWasm, Solana, Bitcoin
 - Ecosystem: Cosmos, Solana, Bitcoin
 - Delivered with: Oak Security

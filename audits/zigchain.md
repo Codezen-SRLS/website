@@ -1,6 +1,6 @@
 # ZIGChain security audit
 
-Audit of the ZIGChain Cosmos SDK application, covering the app, wasmbinding and custom x/ modules. ZIGChain is a Cosmos SDK–based blockchain with a native ZIG token, a factory module for namespaced token issuance, an AMM dex module, and a tokenwrapper module bridging to Axelar and EVM chains.
+ZIGChain is a Cosmos SDK blockchain with a native ZIG token; the audit covered its Go app, wasmbinding and custom x/ modules, including a token factory, an AMM dex and a tokenwrapper bridging to Axelar and EVM chains.
 
 Codezen audited ZIGChain together with Oak Security. Technologies in scope: Golang, Cosmos SDK and CosmWasm. We reported 45 findings: 1 critical, 8 major, 21 minor and 15 informational.
 

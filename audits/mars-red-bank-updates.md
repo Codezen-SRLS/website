@@ -1,10 +1,10 @@
 # Mars Red Bank Updates security audit
 
-Audit of updates to the Mars Red Bank CosmWasm smart contracts written in Rust, covering all changes and their integration since a previous audit of the Mars Outposts codebase.
+Mars Protocol is a money market protocol; this audit reviewed updates to its Red Bank CosmWasm smart contracts in Rust, covering all changes and their integration since a previous audit of the Mars Outposts codebase.
 
 Codezen audited Mars Red Bank Updates together with Oak Security. Technologies in scope: Rust, Neutron, Mars and CosmWasm. We reported 14 findings: 3 critical, 4 major, 5 minor and 2 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Neutron, Mars, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

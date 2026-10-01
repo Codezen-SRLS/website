@@ -1,10 +1,10 @@
 # Nym Mixnet and Vesting Contracts security audit
 
-Audit of Nym's mixnet and vesting CosmWasm contracts, written in Rust, and their relevant imports. The mixnet contract handles epoch advancement, mixnode rewards and layer assignments for the mixnet. Nym builds privacy technology, including NymVPN, a decentralized VPN based on its mixnet.
+Nym builds privacy technology such as NymVPN; this audit covered its mixnet and vesting CosmWasm contracts in Rust. The mixnet contract handles epoch advancement, mixnode rewards and layer assignments for the mixnet.
 
 Codezen audited Nym Mixnet and Vesting Contracts together with Oak Security. Technologies in scope: Rust, Nym, CosmWasm, Mixnet and Privacy. We reported 19 findings: 7 critical, 2 major, 7 minor and 3 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Nym, CosmWasm, Mixnet, Privacy
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

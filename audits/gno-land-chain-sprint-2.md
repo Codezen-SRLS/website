@@ -1,8 +1,8 @@
-# Gno.land Chain Sprint 2 security audit
+# Gno Sprint 2 security audit
 
-Audit of GnoVM realm storage, sources of non-determinism and VM validity in the gno repository. Gno is a deterministic, interpreted implementation of Go for smart contracts, and gno.land is the Proof of Contribution chain built on it.
+Gno.land is a Proof of Contribution chain built on Gno, a deterministic, interpreted implementation of Go for smart contracts. This sprint audit reviewed GnoVM realm storage, sources of non-determinism and VM validity.
 
-Codezen audited Gno.land Chain Sprint 2 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus. We reported 16 findings: 3 critical, 4 major, 1 minor and 8 informational.
+Codezen audited Gno Sprint 2 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus. We reported 16 findings: 3 critical, 4 major, 1 minor and 8 informational.
 
 - Audit type: Cosmos SDK chain audit
 - Technologies: Golang, Cosmos SDK, Consensus

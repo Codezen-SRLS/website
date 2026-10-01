@@ -1,10 +1,10 @@
-# Zodiac Protocol Extension security audit
+# Zodiac Protocol Core Extension security audit
 
-Audit of all changes to Zodiac Protocol's core CosmWasm contracts since the previous audit. Zodiac is an open-source protocol on Osmosis for deconstructing LP positions into principal and yield tokens.
+Zodiac Protocol is an open-source protocol on Osmosis for deconstructing LP positions into principal and yield tokens; this audit covered all changes to its core CosmWasm contracts since the previous audit.
 
-Codezen audited Zodiac Protocol Extension together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 5 findings: 2 minor and 3 informational.
+Codezen audited Zodiac Protocol Core Extension together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 5 findings: 2 minor and 3 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm, Osmosis
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

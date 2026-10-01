@@ -1,10 +1,10 @@
-# Bifrost Finance security audit
+# Bifrost Finance Leveraged Staking security audit
 
-Audit of Bifrost Finance Leveraged Staking, covering the lend-market, leverage-staking and prices Substrate pallets in Rust. Bifrost is a staking yield layer that provides multi-chain liquid staking rewards infrastructure.
+Bifrost Finance is a staking yield layer providing multi-chain liquid staking rewards infrastructure; this audit covered its Leveraged Staking lend-market, leverage-staking and prices Substrate pallets in Rust.
 
-Codezen audited Bifrost Finance together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot. We reported 19 findings: 1 major, 9 minor and 9 informational.
+Codezen audited Bifrost Finance Leveraged Staking together with Oak Security. Technologies in scope: Rust, Substrate and Polkadot. We reported 19 findings: 1 major, 9 minor and 9 informational.
 
-- Audit type: Polkadot SDK Pallet Audit
+- Audit type: Substrate pallet audit
 - Technologies: Rust, Substrate, Polkadot
 - Ecosystem: Polkadot
 - Delivered with: Oak Security

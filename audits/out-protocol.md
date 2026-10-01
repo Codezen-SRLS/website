@@ -1,8 +1,8 @@
-# Out Protocol security audit
+# Out GCC security audit
 
-Audit of the Out Protocol GCC program, a Solana program written in Rust with the Anchor framework. All contracts in the project's gcc repository were in scope.
+Out Protocol's GCC program is a Solana program written in Rust with the Anchor framework. This audit covered all contracts in the project's gcc repository.
 
-Codezen audited Out Protocol together with Oak Security. Technologies in scope: Solana, Rust and Anchor. We reported 17 findings: 5 critical, 5 major, 5 minor and 2 informational.
+Codezen audited Out GCC together with Oak Security. Technologies in scope: Solana, Rust and Anchor. We reported 17 findings: 5 critical, 5 major, 5 minor and 2 informational.
 
 - Audit type: Solana program audit
 - Technologies: Solana, Rust, Anchor

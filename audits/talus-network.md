@@ -1,10 +1,10 @@
-# Talus Network security audit
+# Talus security audit
 
-Audit of the Talus token deposit pool and reward pool Move contracts on Sui. Talus is an onchain platform for AI agents, with Nexus as its developer framework for building them.
+Talus Network is an onchain platform for AI agents on Sui, with Nexus as its developer framework. This audit reviewed the Talus token deposit pool and reward pool Move smart contracts.
 
-Codezen audited Talus Network together with Zenith Security. Technologies in scope: Move, Sui and Smart Contract. We reported 7 findings: 1 major, 3 minor and 3 informational.
+Codezen audited Talus together with Zenith Security. Technologies in scope: Move, Sui and Smart Contract. We reported 7 findings: 1 major, 3 minor and 3 informational.
 
-- Audit type: Move contract audit
+- Audit type: Move smart contract audit
 - Technologies: Move, Sui, Smart Contract
 - Ecosystem: Sui
 - Delivered with: Zenith Security

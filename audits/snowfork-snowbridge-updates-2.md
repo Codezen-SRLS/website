@@ -1,10 +1,10 @@
-# Snowfork Snowbridge Updates 2 security audit
+# Snowbridge Updates 2 security audit
 
-Audit of a Snowbridge update in polkadot-sdk that lets Ethereum execution headers be sent along with each message instead of being imported into the pallet first, made possible by the Deneb upgrade. Snowbridge is a trustless bridge between Polkadot and Ethereum.
+Snowbridge is a trustless Polkadot–Ethereum bridge; this audit reviewed a polkadot-sdk update that lets Ethereum execution headers be sent with each message instead of first being imported into the pallet, enabled by Deneb.
 
-Codezen audited Snowfork Snowbridge Updates 2 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 3 findings: 3 informational.
+Codezen audited Snowbridge Updates 2 together with Oak Security. Technologies in scope: Rust, Solidity, Substrate, Polkadot, Ethereum and Bridge. We reported 3 findings: 3 informational.
 
-- Audit type: Substrate Bridge Pallet Audit
+- Audit type: Substrate bridge pallet audit
 - Technologies: Rust, Solidity, Substrate, Polkadot, Ethereum, Bridge
 - Ecosystem: Ethereum, Polkadot
 - Delivered with: Oak Security

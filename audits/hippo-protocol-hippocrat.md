@@ -1,6 +1,6 @@
 # Hippo Protocol (Hippocrat) security audit
 
-Audit of the Hippo Protocol chain, an application-specific blockchain built in Go with the Cosmos SDK for decentralized management of healthcare data, including its custom token minting logic.
+Hippo Protocol (formerly Hippocrat) is an application-specific blockchain for healthcare data; this audit reviewed its Cosmos SDK chain in Go, including the custom token minting logic.
 
 Codezen audited Hippo Protocol (Hippocrat) together with Oak Security. Technologies in scope: Golang and Cosmos SDK. We reported 11 findings: 1 critical, 4 major, 2 minor and 4 informational.
 

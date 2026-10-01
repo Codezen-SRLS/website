@@ -1,10 +1,10 @@
 # AllUnity security audit
 
-Audit of the AllUnity Solidity contracts: an ERC-20 token with ERC-1363 and permit support, a blacklist manager and an ERC-1967 proxy, governed by admin, pauser, minter, burner and blacklister roles. AllUnity issues regulated, 1:1 fiat-backed stablecoins.
+AllUnity issues regulated, 1:1 fiat-backed stablecoins; this audit covered its Solidity contracts: an ERC-20 token with ERC-1363 and permit support, a blacklist manager and an ERC-1967 proxy with role-based administration.
 
 Codezen audited AllUnity together with Oak Security. Technologies in scope: Solidity, Ethereum, EVM and Stablecoin. We reported 4 findings: 3 minor and 1 informational.
 
-- Audit type: Solidity smart contracts audit
+- Audit type: Solidity smart contract audit
 - Technologies: Solidity, Ethereum, EVM, Stablecoin
 - Ecosystem: Ethereum
 - Delivered with: Oak Security

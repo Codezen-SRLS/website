@@ -1,10 +1,10 @@
-# Gno.land Chain Updates security audit
+# Gno Updates security audit
 
-Audit of updates to GnoVM, focused on allocation, preprocessing and value handling in the gnolang package. Gno is a deterministic, interpreted implementation of Go for smart contracts, and gno.land is the Proof of Contribution chain built on it.
+Gno.land is a Proof of Contribution chain built on Gno, a deterministic, interpreted implementation of Go for smart contracts. This audit reviewed GnoVM updates to allocation, preprocessing and value handling in the gnolang package.
 
-Codezen audited Gno.land Chain Updates together with Oak Security. Technologies in scope: Golang and Consensus. We reported 25 findings: 3 critical, 6 major, 8 minor and 8 informational.
+Codezen audited Gno Updates together with Oak Security. Technologies in scope: Golang and Consensus. We reported 25 findings: 3 critical, 6 major, 8 minor and 8 informational.
 
-- Audit type: Blockchain audit
+- Audit type: Blockchain security audit
 - Technologies: Golang, Consensus
 - Delivered with: Oak Security
 - Report date: 9 January 2026

@@ -1,10 +1,10 @@
-# Dymension Virtual Frontier security audit
+# Dymension Point 1D Stream 2: Virtual Frontier Contract security audit
 
-Audit of the Virtual Frontier Contract changes to Dymension's dymension and ethermint Go codebases. The Virtual Frontier Bank Contract mimics an ERC-20 token in front of the EVM, letting Ethereum wallets such as MetaMask import and transfer assets from the Cosmos bank module.
+Dymension's Virtual Frontier Bank Contract mimics an ERC-20 token in front of the EVM, letting wallets like MetaMask import and transfer Cosmos bank module assets. This audit covered its changes to the dymension and ethermint Go code.
 
-Codezen audited Dymension Virtual Frontier together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus. We reported 4 findings: 4 minor.
+Codezen audited Dymension Point 1D Stream 2: Virtual Frontier Contract together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus. We reported 4 findings: 4 minor.
 
-- Audit type: Cosmos SDK Module Audit
+- Audit type: Cosmos SDK module audit
 - Technologies: Golang, Cosmos SDK, Rollup, Consensus
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

@@ -1,8 +1,8 @@
-# Gno.land Chain Sprint 3 security audit
+# Gno Sprint 3 security audit
 
-Audit of a gno.land chain change set in Go covering on-chain parameters, the VM keeper and the Tendermint2 auth, bank, params and std packages, plus a review of the tm2 bank module. Gno is a deterministic, interpreted implementation of Go for smart contracts, and gno.land is the first chain to use it.
+Gno.land is the first chain to run Gno, a deterministic implementation of Go for smart contracts. This sprint audit reviewed on-chain parameters, the VM keeper and the Tendermint2 auth, bank, params and std packages.
 
-Codezen audited Gno.land Chain Sprint 3 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus. We reported 17 findings: 9 minor and 8 informational.
+Codezen audited Gno Sprint 3 together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Consensus. We reported 17 findings: 9 minor and 8 informational.
 
 - Audit type: Cosmos SDK chain audit
 - Technologies: Golang, Cosmos SDK, Consensus

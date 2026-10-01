@@ -1,10 +1,10 @@
 # Persistence Cosmos Liquid Staking Updates security audit
 
-Audit of updates to Persistence's Cosmos liquid staking functionality, implemented as Cosmos SDK modules written in Go.
+Persistence's Cosmos liquid staking functionality is implemented as Cosmos SDK modules written in Go; this audit reviewed a set of updates to those modules.
 
 Codezen audited Persistence Cosmos Liquid Staking Updates together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Persistence and Cosmos Hub.
 
-- Audit type: Cosmos SDK Audit
+- Audit type: Cosmos SDK module audit
 - Technologies: Golang, Cosmos SDK, Persistence, Cosmos Hub
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

@@ -1,10 +1,10 @@
-# Comdex Vesting & Locking Contracts security audit
+# Comdex Locking and Vesting Contracts security audit
 
-Audit of the Comdex Locking and Vesting CosmWasm contracts. The Locking contract powers the Comdex chain's ve governance model, with locked tokens represented as NFTs, and handles token emission and distribution, while the Vesting contract provides periodic and linear token vesting.
+Comdex's Locking and Vesting CosmWasm contracts were audited. Locking powers the Comdex chain's ve governance model, with locked tokens as NFTs, and handles token emission and distribution; Vesting provides periodic and linear vesting.
 
-Codezen audited Comdex Vesting & Locking Contracts together with Oak Security. Technologies in scope: Rust, Comdex and CosmWasm. We reported 27 findings: 3 critical, 6 major, 7 minor and 11 informational.
+Codezen audited Comdex Locking and Vesting Contracts together with Oak Security. Technologies in scope: Rust, Comdex and CosmWasm. We reported 27 findings: 3 critical, 6 major, 7 minor and 11 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Comdex, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

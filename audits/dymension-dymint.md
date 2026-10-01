@@ -1,10 +1,10 @@
-# Dymension Dymint security audit
+# Dymension Point 1D Stream 3: Dymint security audit
 
-Audit of Dymint, the Go ABCI client implementation for Dymension's autonomous RollApps, which can replace CometBFT or Tendermint in any ABCI-compatible blockchain application. Dymension L1 is a decentralized chain launchpad.
+Dymension's Dymint is the Go ABCI client implementation for autonomous RollApps, able to replace CometBFT or Tendermint in any ABCI-compatible blockchain application. Dymension L1 is a decentralized chain launchpad.
 
-Codezen audited Dymension Dymint together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus. We reported 19 findings: 1 critical, 7 major, 8 minor and 3 informational.
+Codezen audited Dymension Point 1D Stream 3: Dymint together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Rollup and Consensus. We reported 19 findings: 1 critical, 7 major, 8 minor and 3 informational.
 
-- Audit type: Consensus Algorithm Audit
+- Audit type: Consensus protocol audit
 - Technologies: Golang, Cosmos SDK, Rollup, Consensus
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

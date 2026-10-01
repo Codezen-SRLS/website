@@ -1,10 +1,10 @@
-# Mars Protocol Rover security audit
+# Mars Rover security audit
 
-Audit of the Mars Rover account-nft, credit-manager, oracle-adapter and swapper CosmWasm contracts. Mars Rovers are isolated credit accounts where users aggregate DeFi activity under a single liquidation LTV, represented by transferable NFTs.
+Mars Rovers, from Mars Protocol, are isolated credit accounts, represented by transferable NFTs, that aggregate DeFi activity under a single liquidation LTV. The audit covered the account-nft, credit-manager, oracle-adapter and swapper CosmWasm contracts.
 
-Codezen audited Mars Protocol Rover together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 16 findings: 1 critical, 1 major, 6 minor and 8 informational.
+Codezen audited Mars Rover together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 16 findings: 1 critical, 1 major, 6 minor and 8 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Osmosis, Mars, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

@@ -1,10 +1,10 @@
-# IBCX Interchain Index Token security audit
+# IBCX security audit
 
-Audit of the IBCX smart contracts, written in Rust with CosmWasm, with all contracts in the many-things/ibcx-contracts repository in scope. IBCX is an index token for the Cosmos ecosystem.
+IBCX is an interchain index token for the Cosmos ecosystem. The audit covered all of its CosmWasm smart contracts in Rust in the many-things/ibcx-contracts repository.
 
-Codezen audited IBCX Interchain Index Token together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 26 findings: 11 critical, 6 major, 5 minor and 4 informational.
+Codezen audited IBCX together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 26 findings: 11 critical, 6 major, 5 minor and 4 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm, Osmosis
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

@@ -1,10 +1,10 @@
 # Fairblock FairyRing security audit
 
-Audit of the Fairblock FairyRing Cosmos SDK chain. FairyRing lets users submit transactions encrypted with a public key that are decrypted and executed at a specified height, using a unique private key per block to prevent front-running.
+Fairblock FairyRing is a Cosmos SDK chain in Go where users submit transactions encrypted with a public key, decrypted and executed at a specified height using a unique private key per block to prevent front-running.
 
 Codezen audited Fairblock FairyRing together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Cryptography. We reported 26 findings: 12 critical, 7 minor and 7 informational.
 
-- Audit type: Cosmos SDK Audit
+- Audit type: Cosmos SDK chain audit
 - Technologies: Golang, Cosmos SDK, Cryptography
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

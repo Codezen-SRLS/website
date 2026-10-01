@@ -1,10 +1,10 @@
-# Volta Protocol security audit
+# Volta CosmWasm security audit
 
-Audit of the Volta CosmWasm smart contracts in Rust, with all contracts of the smart-contract-cosmwasm repository in scope. Volta provides security and controls for managing digital asset operations, built around a smart contract multi-sig wallet.
+Volta Protocol is a smart contract multi-sig wallet for managing digital asset operations; this audit covered its CosmWasm contracts in Rust, with the whole smart-contract-cosmwasm repository in scope.
 
-Codezen audited Volta Protocol together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 13 findings: 3 major, 3 minor and 7 informational.
+Codezen audited Volta CosmWasm together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 13 findings: 3 major, 3 minor and 7 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

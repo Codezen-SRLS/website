@@ -1,6 +1,6 @@
 # Meteora DAMM v2 security audit
 
-Audit of the Meteora DAMM v2 program, a Rust smart contract on Solana. Meteora is a Solana DeFi project offering dynamic vaults for stable assets.
+Meteora is a Solana DeFi project offering dynamic vaults for stable assets; this audit covered its DAMM v2 program, a Rust smart contract on Solana.
 
 Codezen audited Meteora DAMM v2 together with Zenith Security. Technologies in scope: Solana, Rust and Smart Contract.
 

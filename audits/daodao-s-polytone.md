@@ -1,10 +1,10 @@
-# DAODAO's Polytone security audit
+# Polytone security audit
 
-Audit of the Polytone CosmWasm smart contracts, which carry execute and query messages over IBC from a controller chain to a controlled chain. Polytone comes from DAO DAO, a platform for creating and managing DAOs across Cosmos.
+Polytone, from DAO DAO, is a set of CosmWasm smart contracts that carry execute and query messages over IBC from a controller chain to a controlled chain. DAO DAO is a platform for creating and managing DAOs across Cosmos.
 
-Codezen audited DAODAO's Polytone together with Oak Security. Technologies in scope: Rust, CosmWasm, IBC and DAO DAO. We reported 14 findings: 2 major, 4 minor and 8 informational.
+Codezen audited Polytone together with Oak Security. Technologies in scope: Rust, CosmWasm, IBC and DAO DAO. We reported 14 findings: 2 major, 4 minor and 8 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm, IBC, DAO DAO
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

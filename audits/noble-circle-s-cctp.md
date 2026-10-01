@@ -1,10 +1,10 @@
 # Noble Circle's CCTP security audit
 
-Audit of Noble's integration of Circle's CCTP for USDC, implemented as a Cosmos SDK module written in Go. Noble builds stablecoin infrastructure for the world.
+Noble's integration of Circle's CCTP for USDC is implemented as a Cosmos SDK module written in Go, which this audit reviewed. Noble builds stablecoin infrastructure.
 
 Codezen audited Noble Circle's CCTP together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Solidity, Circle and USDC.
 
-- Audit type: Cosmos SDK Module Audit
+- Audit type: Cosmos SDK module audit
 - Technologies: Golang, Cosmos SDK, Solidity, Circle, USDC
 - Ecosystem: Ethereum, Cosmos
 - Delivered with: Oak Security

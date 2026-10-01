@@ -1,10 +1,10 @@
-# Mars Protocol Outposts security audit
+# Mars Outposts security audit
 
-Audit of the Mars Protocol outposts CosmWasm contracts, written in Rust. Mars is a money market protocol, and the audited contracts implement it on the Osmosis blockchain.
+Mars Protocol is a money market protocol; this audit covered its outposts CosmWasm smart contracts in Rust, which implement Mars on the Osmosis blockchain.
 
-Codezen audited Mars Protocol Outposts together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 21 findings: 1 critical, 3 major, 10 minor and 7 informational.
+Codezen audited Mars Outposts together with Oak Security. Technologies in scope: Rust, Osmosis, Mars and CosmWasm. We reported 21 findings: 1 critical, 3 major, 10 minor and 7 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Osmosis, Mars, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

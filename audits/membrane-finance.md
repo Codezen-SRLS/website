@@ -1,10 +1,10 @@
-# Membrane Finance security audit
+# Membrane security audit
 
-Audit of the Membrane Finance CosmWasm contracts for auctions, collateralized debt positions, the liquidation queue, liquidity checks, the oracle and the stability pool. Membrane is a protocol that uses collateralized debt positions to issue the CDT debt token across the Cosmos.
+Membrane Finance issues the CDT debt token across the Cosmos using collateralized debt positions. The audit covered its CosmWasm contracts for auctions, CDPs, the liquidation queue, liquidity checks, the oracle and the stability pool.
 
-Codezen audited Membrane Finance together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 39 findings: 8 critical, 6 major, 17 minor and 8 informational.
+Codezen audited Membrane together with Oak Security. Technologies in scope: Rust, CosmWasm and Osmosis. We reported 39 findings: 8 critical, 6 major, 17 minor and 8 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm, Osmosis
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

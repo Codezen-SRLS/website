@@ -1,10 +1,10 @@
 # Structured Jupiter security audit
 
-Audit of the Structured Jupiter smart contracts.
+Smart contract audit of Structured Jupiter, part of the Structured product suite.
 
 Codezen audited Structured Jupiter together with Oak Security.
 
-- Audit type: Smart contracts audit
+- Audit type: Smart contract audit
 - Delivered with: Oak Security
 - Report date: 18 June 2025
 - Project website: https://github.com/structured-org

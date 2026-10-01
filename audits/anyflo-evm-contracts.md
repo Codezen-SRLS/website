@@ -1,10 +1,10 @@
 # Anyflo EVM Contracts security audit
 
-Audit of Anyflo's Solidity smart contracts for EVM chains. Anyflo is a neutral orchestration layer for stablecoin payments: a single integration to send, receive and settle across any stablecoin and chain, built for institutions.
+Anyflo is a neutral orchestration layer for stablecoin payments, and this audit covered its Solidity smart contracts for EVM chains. It offers institutions a single integration to send, receive and settle across any stablecoin and chain.
 
 Codezen audited Anyflo EVM Contracts together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM.
 
-- Audit type: Solidity smart contracts audit
+- Audit type: Solidity smart contract audit
 - Technologies: Solidity, Ethereum, EVM
 - Ecosystem: Ethereum
 - Delivered with: Oak Security

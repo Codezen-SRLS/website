@@ -1,10 +1,10 @@
 # Fuel Sequencer and Sidecar security audit
 
-Audit of the Fuel Sequencer, a Cosmos SDK chain written in Go, and its sidecar component. Fuel Ignition is an Ethereum layer-2 rollup powered by the FuelVM.
+Fuel Sequencer is a Cosmos SDK chain written in Go and part of Fuel Ignition, an Ethereum layer-2 rollup powered by the FuelVM. This audit covered the chain and its sidecar component.
 
 Codezen audited Fuel Sequencer and Sidecar together with Oak Security. Technologies in scope: Golang, Cosmos SDK, Ethereum and Consensus.
 
-- Audit type: Cosmos SDK chain Audit
+- Audit type: Cosmos SDK chain audit
 - Technologies: Golang, Cosmos SDK, Ethereum, Consensus
 - Ecosystem: Ethereum, Cosmos
 - Delivered with: Oak Security

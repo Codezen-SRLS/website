@@ -1,10 +1,10 @@
-# Structured maxBTC ERC20 for Eureka Bridge security audit
+# Structured ERC20 Converter, ETH Wrapper, MaxBTC ERC20 for Eureka Bridge security audit
 
-Audit of three Solidity contracts for Structured's maxBTC: an upgradable ERC20 whose minting and burning are controlled by the Eureka bridge to represent maxBTC across Neutron and Cosmos, a WETH-like ETH wrapper for automated bridging, and a fixed-rate token converter.
+Structured's maxBTC Eureka bridge contracts in Solidity were audited here: an upgradable ERC20 with bridge-controlled minting and burning across Neutron and Cosmos, a WETH-like ETH wrapper for automated bridging and a fixed-rate converter.
 
-Codezen audited Structured maxBTC ERC20 for Eureka Bridge together with Oak Security. Technologies in scope: Solidity, Ethereum, EVM, Bitcoin and Bridge. We reported 13 findings: 5 minor and 8 informational.
+Codezen audited Structured ERC20 Converter, ETH Wrapper, MaxBTC ERC20 for Eureka Bridge together with Oak Security. Technologies in scope: Solidity, Ethereum, EVM, Bitcoin and Bridge. We reported 13 findings: 5 minor and 8 informational.
 
-- Audit type: Solidity smart contracts audit
+- Audit type: Solidity smart contract audit
 - Technologies: Solidity, Ethereum, EVM, Bitcoin, Bridge
 - Ecosystem: Ethereum, Bitcoin
 - Delivered with: Oak Security

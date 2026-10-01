@@ -1,10 +1,10 @@
 # Margined Protocol Perpetuals security audit
 
-Audit of the Margined Protocol Perpetuals CosmWasm contracts: the margin engine, fee pool, insurance fund, price feed and a virtual automated market maker (vAMM). Margined is a decentralized perpetuals protocol with multichain margin engines for CosmWasm-enabled blockchains.
+Margined Protocol is a decentralized perpetuals protocol; this audit covered its CosmWasm contracts for the margin engine, fee pool, insurance fund, price feed and a virtual automated market maker (vAMM).
 
 Codezen audited Margined Protocol Perpetuals together with Oak Security. Technologies in scope: Rust, Cross-Chain, CosmWasm and Juno. We reported 27 findings: 1 critical, 4 major, 12 minor and 10 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Cross-Chain, CosmWasm, Juno
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

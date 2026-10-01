@@ -1,10 +1,10 @@
-# Kinetic Money security audit
+# Kinetic security audit
 
-Audit of the Kinetic Money CosmWasm contracts for the vault, phaser, Anchor adapter, coordinator and protocol tokens. Kinetic Money is a protocol on Terra where users deposit funds in return for a self-repaying loan, with deposit yield used to reduce the debt.
+Kinetic Money is a Terra protocol offering self-repaying loans, using deposit yield to reduce debt; this audit covered its CosmWasm contracts for the vault, phaser, Anchor adapter, coordinator and protocol tokens.
 
-Codezen audited Kinetic Money together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 26 findings: 7 critical, 4 major, 5 minor and 10 informational.
+Codezen audited Kinetic together with Oak Security. Technologies in scope: Rust, Terra and CosmWasm. We reported 26 findings: 7 critical, 4 major, 5 minor and 10 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, Terra, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

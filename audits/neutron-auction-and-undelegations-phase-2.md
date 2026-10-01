@@ -1,8 +1,8 @@
-# Neutron Auction and Undelegations Phase 2 security audit
+# Neutron Auction and Undelegations Contract, Chain Upgrade (Phase 2, Report 2) security audit
 
-Audit of the Neutron v11 chain upgrade. It moves Neutron to the native Cosmos SDK governance module, replaces x/revenue, x/feeburner and adminmodule with gov, mint and distribution, migrates the puppeteer contract to auth-proxy, and schedules x/cron tasks for the undelegations manager contract.
+Neutron's v11 Cosmos SDK chain upgrade moves the chain to native governance, replaces x/revenue, x/feeburner and adminmodule with gov, mint and distribution, and migrates the puppeteer CosmWasm contract to auth-proxy.
 
-Codezen audited Neutron Auction and Undelegations Phase 2 together with Oak Security. Technologies in scope: Golang, Rust, Cosmos SDK, CosmWasm and Neutron. We reported 21 findings: 1 critical, 6 major, 6 minor and 8 informational.
+Codezen audited Neutron Auction and Undelegations Contract, Chain Upgrade (Phase 2, Report 2) together with Oak Security. Technologies in scope: Golang, Rust, Cosmos SDK, CosmWasm and Neutron. We reported 21 findings: 1 critical, 6 major, 6 minor and 8 informational.
 
 - Audit type: Cosmos SDK chain upgrade audit
 - Technologies: Golang, Rust, Cosmos SDK, CosmWasm, Neutron

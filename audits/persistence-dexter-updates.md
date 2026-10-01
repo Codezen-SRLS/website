@@ -1,10 +1,10 @@
 # Persistence Dexter Updates security audit
 
-Audit of updates to the Persistence Dexter CosmWasm smart contracts written in Rust.
+Persistence Dexter is built with CosmWasm smart contracts written in Rust; this audit reviewed updates to those contracts.
 
 Codezen audited Persistence Dexter Updates together with Oak Security. Technologies in scope: Rust and CosmWasm.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

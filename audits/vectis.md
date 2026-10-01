@@ -1,10 +1,10 @@
 # Vectis security audit
 
-Audit of the Vectis CosmWasm smart contracts across the vectis, vectis-contracts and vectis-authenticators repositories, including the factory contract that creates wallets. Vectis is developed by Nymlab.
+Vectis, developed by Nymlab, is a set of CosmWasm smart contracts in Rust, including a factory contract that creates wallets; this audit covered the vectis, vectis-contracts and vectis-authenticators repositories.
 
 Codezen audited Vectis together with Oak Security. Technologies in scope: Rust and CosmWasm. We reported 21 findings: 4 major, 12 minor and 5 informational.
 
-- Audit type: CosmWasm Contract Audit
+- Audit type: CosmWasm smart contract audit
 - Technologies: Rust, CosmWasm
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

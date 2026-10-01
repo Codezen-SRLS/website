@@ -1,10 +1,10 @@
 # The Graph security audit
 
-Audit of smart contracts for The Graph. The Graph is an indexing protocol for organizing blockchain data and making it easily accessible to applications through GraphQL.
+The Graph is an indexing protocol that organizes blockchain data and makes it easily accessible to applications through GraphQL; this audit covered its smart contracts.
 
 Codezen audited The Graph together with Trust Security.
 
-- Audit type: Smart contracts audit
+- Audit type: Smart contract audit
 - Delivered with: Trust Security
 - Report date: 17 December 2025
 - Project website: https://thegraph.com

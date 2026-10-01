@@ -1,10 +1,10 @@
 # NodeOps Network security audit
 
-Audit of the NodeOps Network Solidity contracts built around the NODE token, including multi-pool staking, revenue management with a burn pool, a revenue vault, cliff and linear vesting, and an airdrop, all upgradeable via UUPS proxies.
+NodeOps Network is built around the NODE token; this audit reviewed its Solidity contracts for multi-pool staking, revenue management with a burn pool, a revenue vault, cliff and linear vesting, and an airdrop, upgradeable via UUPS proxies.
 
 Codezen audited NodeOps Network together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 36 findings: 2 critical, 5 major, 12 minor and 17 informational.
 
-- Audit type: Solidity smart contracts audit
+- Audit type: Solidity smart contract audit
 - Technologies: Solidity, Ethereum, EVM
 - Ecosystem: Ethereum
 - Delivered with: Oak Security

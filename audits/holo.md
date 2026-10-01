@@ -1,10 +1,10 @@
 # Holochain security audit
 
-Security audit for Holochain, a lightweight framework with peer-to-peer networking for building everyday distributed apps.
+Holochain is a lightweight framework with peer-to-peer networking for building everyday distributed apps.
 
 Codezen audited Holochain together with Zenith Security.
 
-- Audit type: Security audit
+- Audit type: Blockchain security audit
 - Delivered with: Zenith Security
 - Report date: 7 July 2025
 - Project website: https://www.holochain.org

@@ -1,10 +1,10 @@
 # Injective wasmx module and CosmWasm bindings security audit
 
-Audit of Injective's wasmx Cosmos SDK module, the registry CosmWasm contract, the CosmWasm bindings and the MsgExec implementation in the exchange module. Injective is an open, interoperable smart contract platform for decentralized financial applications.
+Injective is an interoperable smart contract platform for DeFi; this audit covered its wasmx Cosmos SDK module, the registry CosmWasm contract, the CosmWasm bindings and the MsgExec implementation in the exchange module.
 
 Codezen audited Injective wasmx module and CosmWasm bindings together with Oak Security. Technologies in scope: Golang, Cosmos SDK and Injective. We reported 12 findings: 1 critical, 3 major, 4 minor and 4 informational.
 
-- Audit type: Cosmos SDK Audit
+- Audit type: Cosmos SDK module audit
 - Technologies: Golang, Cosmos SDK, Injective
 - Ecosystem: Cosmos
 - Delivered with: Oak Security

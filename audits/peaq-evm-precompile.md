@@ -1,10 +1,10 @@
 # peaq EVM Precompile security audit
 
-Audit of an EVM precompile for peaq, written in Rust on Substrate. peaq is an omnichain economic system that enables robots and machines to do business on every chain.
+peaq is an omnichain economic system for robots and machines; this audit reviewed an EVM precompile for peaq written in Rust on Substrate.
 
 Codezen audited peaq EVM Precompile together with Oak Security. Technologies in scope: Rust, Substrate and EVM.
 
-- Audit type: Substrate EVM precompile audit
+- Audit type: EVM precompile audit
 - Technologies: Rust, Substrate, EVM
 - Ecosystem: Ethereum, Polkadot
 - Delivered with: Oak Security

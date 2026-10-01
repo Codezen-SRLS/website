@@ -1,10 +1,10 @@
 # Injective security audit
 
-Security review of the Injective chain, a Cosmos SDK codebase written in Go. Injective is a layer 1 blockchain built as infrastructure for finance, supporting tokenization, perpetuals, stablecoins and institutional onchain markets.
+Injective is a layer 1 blockchain built as infrastructure for finance; this security review covered the chain's Cosmos SDK codebase in Go, which supports tokenization, perpetuals, stablecoins and institutional onchain markets.
 
 Codezen audited Injective together with Zenith Security. Technologies in scope: Golang, Cosmos SDK and Injective.
 
-- Audit type: Cosmos SDK Audit
+- Audit type: Cosmos SDK chain audit
 - Technologies: Golang, Cosmos SDK, Injective
 - Ecosystem: Cosmos
 - Delivered with: Zenith Security

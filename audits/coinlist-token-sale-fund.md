@@ -1,10 +1,10 @@
 # CoinList Token Sale Fund security audit
 
-Audit of CoinList's TokenSaleFund Solidity contract, which custodies user contributions for a token sale. Backend-controlled accounts commit and lock funds, designated accounts can remit refunds, and the owner finally transfers the remaining balances to a recipient such as the sale partner.
+CoinList's TokenSaleFund is a Solidity contract that custodies user contributions for a token sale; backend accounts commit and lock funds, designated accounts remit refunds, and the owner transfers remaining balances to a recipient.
 
 Codezen audited CoinList Token Sale Fund together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM. We reported 11 findings: 6 minor and 5 informational.
 
-- Audit type: Solidity smart contracts audit
+- Audit type: Solidity smart contract audit
 - Technologies: Solidity, Ethereum, EVM
 - Ecosystem: Ethereum
 - Delivered with: Oak Security
