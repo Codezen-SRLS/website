@@ -28,4 +28,15 @@ const FROM_PREVIOUS_SLUGS: Record<string, string> = Object.fromEntries(
   ),
 );
 
-export const AUDIT_REDIRECTS: Record<string, string> = { ...MANUAL_REDIRECTS, ...FROM_PREVIOUS_SLUGS };
+// Development projects ("dev": true) are not audits and are not published here; their old audit
+// URLs point to the development work on Christian Vari's portfolio
+export const DEV_PROJECTS_URL = "https://www.christianvari.dev/audits/#development";
+const FROM_DEV_PROJECTS: Record<string, string> = Object.fromEntries(
+  (raw as RawAudit[]).filter((a) => a.dev && a.slug).map((a) => [`/audits/${a.slug}/`, DEV_PROJECTS_URL]),
+);
+
+export const AUDIT_REDIRECTS: Record<string, string> = {
+  ...MANUAL_REDIRECTS,
+  ...FROM_PREVIOUS_SLUGS,
+  ...FROM_DEV_PROJECTS,
+};

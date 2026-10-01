@@ -2,7 +2,7 @@
 // page paths, report dates and optimised logo images.
 import type { ImageMetadata } from "astro";
 import raw from "../sharedData/data/audit-history.json";
-import { auditDate, relatedAudits, resolveAuditPaths, type Issues, type RawAudit } from "./auditPaths";
+import { auditDate, isAudit, relatedAudits, resolveAuditPaths, type Issues, type RawAudit } from "./auditPaths";
 
 export interface Audit extends RawAudit {
   index: number;
@@ -27,7 +27,7 @@ const resolveLogo = (a: RawAudit) => {
   return logo;
 };
 
-const rawAudits = raw as RawAudit[];
+const rawAudits = (raw as RawAudit[]).filter(isAudit);
 const paths = resolveAuditPaths(rawAudits);
 
 export const audits: Audit[] = rawAudits.map((a, index) => ({

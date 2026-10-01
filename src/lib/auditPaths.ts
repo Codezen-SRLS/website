@@ -27,7 +27,12 @@ export interface RawAudit {
   slug?: string;
   /** Old slugs of a deliberately renamed audit; each /audits/<old>/ redirects to /audits/<slug>/ */
   previousSlugs?: string[];
+  /** Software Christian Vari developed (not an audit): shown only on christianvari.dev */
+  dev?: boolean;
 }
+
+// codezen.tech publishes audits only; "dev" entries belong to the personal portfolio
+export const isAudit = (a: RawAudit): boolean => !a.dev;
 
 // Report file names usually start with the publication date, e.g. "2025-10-17 Audit Report ..."
 export const reportDate = (url?: string): string | null => {
