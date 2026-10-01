@@ -3,7 +3,7 @@
 Website: https://www.codezen.tech/
 Contact: info@codezen.tech
 
-Codezen is a cybersecurity firm specializing in blockchain and Web3 technologies. It has published 193 security audits and reported 2361 vulnerabilities (239 critical) across 8 ecosystems.
+Codezen is a cybersecurity firm specializing in blockchain and Web3 technologies. It has published 189 security audits and reported 2361 vulnerabilities (239 critical) across 8 ecosystems.
 
 ## Services
 
@@ -4486,60 +4486,4 @@ Codezen audited Kinetic Money together with Oak Security. Technologies in scope:
 | Minor | 5 |
 | Info | 10 |
 | Total | 26 |
-
-
----
-
-### IBM / HCL AI Data Advisor for Workload Automation security audit
-
-Development of an AI module for IBM / HCL Workload Automation.
-
-Codezen audited IBM / HCL AI Data Advisor for Workload Automation. Technologies in scope: AI, Observability, Python, React, Nodejs and Microservices.
-
-- Audit type: AI module for IBM / HCL Workload Automation
-- Technologies: AI, Observability, Python, React, Nodejs, Microservices
-- Project website: https://www.ibm.com/products/workload-automation
-- Page: https://www.codezen.tech/audits/ibm-hcl-ai-data-advisor-for-workload-automation/
-
-
----
-
-### HCL Clara 2 security audit
-
-Development of an automation chatbot for IBM / HCL Workload Automation.
-
-Codezen audited HCL Clara 2. Technologies in scope: AI, Chatbot, NLP, Rasa, React, Python and Microservices.
-
-- Audit type: Automation Chatbot for IBM / HCL Workload Automation
-- Technologies: AI, Chatbot, NLP, Rasa, React, Python, Microservices
-- Project website: https://www.hcltechsw.com/clara
-- Page: https://www.codezen.tech/audits/hcl-clara-2/
-
-
----
-
-### HCL Clara security audit
-
-Development of an automation chatbot for IBM / HCL Workload Automation.
-
-Codezen audited HCL Clara. Technologies in scope: AI, Chatbot, NLP, Rasa, React, Python and Microservices.
-
-- Audit type: Automation Chatbot for IBM / HCL Workload Automation
-- Technologies: AI, Chatbot, NLP, Rasa, React, Python, Microservices
-- Project website: https://www.hcltechsw.com/clara
-- Page: https://www.codezen.tech/audits/hcl-clara/
-
-
----
-
-### HCL T-VREX security audit
-
-Development of a VR experience for HCL Workload Automation.
-
-Codezen audited HCL T-VREX. Technologies in scope: VR, React, Oculus and Real-time.
-
-- Audit type: A VR experience for HCL Workload Automation
-- Technologies: VR, React, Oculus, Real-time
-- Project website: https://www.workloadautomation-community.com/blogs/are-you-ready-for-an-exciting-immersive-experience-in-workload-automation
-- Page: https://www.codezen.tech/audits/hcl-t-vrex/
 

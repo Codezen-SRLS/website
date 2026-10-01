@@ -2,7 +2,7 @@
 
 > Codezen (Codezen S.r.l., Italy) is a blockchain and Web3 security firm. It performs smart contract security audits and blockchain security consulting for EVM, Solana, Cosmos, Polkadot/Substrate and other ecosystems, reviewing Solidity, Rust, Anchor, CosmWasm, Cosmos SDK (Go), Substrate and Move code.
 
-Track record: 193 published audits, 2361 vulnerabilities reported (239 critical), $7.1B+ in assets protected, across 8 ecosystems.
+Track record: 189 published audits, 2361 vulnerabilities reported (239 critical), $7.1B+ in assets protected, across 8 ecosystems.
 
 To request an audit, email info@codezen.tech with the project name, repository/scope, technology stack and preferred timeline, or use the "Request an audit" form on https://www.codezen.tech/. Codezen replies within one business day.
 
@@ -217,7 +217,3 @@ To request an audit, email info@codezen.tech with the project name, repository/s
 - [Levana Perpetual Swap security audit](https://www.codezen.tech/audits/levana-perpetual-swap.md): CosmWasm Contract Audit
 - [C2X Com2Us security audit](https://www.codezen.tech/audits/c2x-com2us.md): CosmWasm Contract Audit
 - [Kinetic Money security audit](https://www.codezen.tech/audits/kinetic-money.md): CosmWasm Contract Audit
-- [IBM / HCL AI Data Advisor for Workload Automation security audit](https://www.codezen.tech/audits/ibm-hcl-ai-data-advisor-for-workload-automation.md): AI module for IBM / HCL Workload Automation
-- [HCL Clara 2 security audit](https://www.codezen.tech/audits/hcl-clara-2.md): Automation Chatbot for IBM / HCL Workload Automation
-- [HCL Clara security audit](https://www.codezen.tech/audits/hcl-clara.md): Automation Chatbot for IBM / HCL Workload Automation
-- [HCL T-VREX security audit](https://www.codezen.tech/audits/hcl-t-vrex.md): A VR experience for HCL Workload Automation
