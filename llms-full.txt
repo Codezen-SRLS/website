@@ -240,16 +240,17 @@ Codezen audited Zama together with Monethic. Technologies in scope: Cryptography
 
 ---
 
-### AnyFlo Move Contracts and Workers security audit
+### Anyflo Move Contracts and Workers security audit
 
-Audit of the AnyFlo Move Contracts and Workers.
+Audit of the Anyflo Move Contracts and Workers.
 
-Codezen audited AnyFlo Move Contracts and Workers together with Oak Security. Technologies in scope: Move and Smart Contract.
+Codezen audited Anyflo Move Contracts and Workers together with Oak Security. Technologies in scope: Move and Smart Contract.
 
 - Audit type: Move smart contracts audit
 - Technologies: Move, Smart Contract
 - Delivered with: Oak Security
 - Report date: 23 September 2026
+- Project website: https://www.anyflo.io
 - Page: https://www.codezen.tech/audits/anyflo-move-contracts-and-workers/
 
 
@@ -272,17 +273,18 @@ Codezen audited Injective Audit Updates together with Zenith Security. Technolog
 
 ---
 
-### AnyFlo EVM Contracts security audit
+### Anyflo EVM Contracts security audit
 
-Audit of the AnyFlo EVM Contracts.
+Audit of the Anyflo EVM Contracts.
 
-Codezen audited AnyFlo EVM Contracts together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM.
+Codezen audited Anyflo EVM Contracts together with Oak Security. Technologies in scope: Solidity, Ethereum and EVM.
 
 - Audit type: Solidity smart contracts audit
 - Technologies: Solidity, Ethereum, EVM
 - Ecosystem: Ethereum
 - Delivered with: Oak Security
 - Report date: 10 September 2026
+- Project website: https://www.anyflo.io
 - Page: https://www.codezen.tech/audits/anyflo-evm-contracts/
 
 

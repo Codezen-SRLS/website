@@ -54,9 +54,9 @@ To request an audit, email info@codezen.tech with the project name, repository/s
 - [CoinList TokenSwap security audit](https://www.codezen.tech/audits/coinlist-tokenswap.md): Solidity smart contracts audit
 - [CoinList Pull 12 security audit](https://www.codezen.tech/audits/coinlist-pull-12.md): Solidity smart contracts audit
 - [Zama security audit](https://www.codezen.tech/audits/zama.md): Cryptography audit
-- [AnyFlo Move Contracts and Workers security audit](https://www.codezen.tech/audits/anyflo-move-contracts-and-workers.md): Move smart contracts audit
+- [Anyflo Move Contracts and Workers security audit](https://www.codezen.tech/audits/anyflo-move-contracts-and-workers.md): Move smart contracts audit
 - [Injective Audit Updates security audit](https://www.codezen.tech/audits/injective-audit-updates.md): Cosmos SDK Audit
-- [AnyFlo EVM Contracts security audit](https://www.codezen.tech/audits/anyflo-evm-contracts.md): Solidity smart contracts audit
+- [Anyflo EVM Contracts security audit](https://www.codezen.tech/audits/anyflo-evm-contracts.md): Solidity smart contracts audit
 - [Monaco security audit](https://www.codezen.tech/audits/monaco.md): Smart contracts audit
 - [Injective security audit](https://www.codezen.tech/audits/injective.md): Cosmos SDK Audit
 - [ZIGChain Pull 14 security audit](https://www.codezen.tech/audits/zigchain-pull-14.md): Cosmos SDK chain audit
