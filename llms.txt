@@ -96,7 +96,7 @@ To request an audit, email info@codezen.tech with the project name, repository/s
 - [Gno.land Chain Updates security audit](https://www.codezen.tech/audits/gno-land-chain-updates.md): Blockchain audit
 - [Capricorn (aPriori) APR Token and Staked APR Token security audit](https://www.codezen.tech/audits/capricorn-apriori-apr-token-and-staked-apr-token.md): Solidity smart contracts audit
 - [Fuel Sequencer Updates (September 2025) security audit](https://www.codezen.tech/audits/fuel-sequencer-updates-september-2025.md): Cosmos SDK chain Audit
-- [Holo security audit](https://www.codezen.tech/audits/holo.md): Smart contracts audit
+- [Holochain security audit](https://www.codezen.tech/audits/holo.md): Security audit
 - [Structured Jupiter security audit](https://www.codezen.tech/audits/structured-jupiter.md): Smart contracts audit
 - [Fuel Sequencer Updates 9 and The Rig security audit](https://www.codezen.tech/audits/fuel-sequencer-updates-9-and-the-rig.md): Cosmos SDK chain Audit
 - [DATA Network (Story Protocol) 1.2 security audit](https://www.codezen.tech/audits/data-network-story-protocol-1-2.md): Blockchain audit
