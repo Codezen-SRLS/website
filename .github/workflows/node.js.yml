@@ -39,6 +39,8 @@ jobs:
         with:
           submodules: true
           token: ${{ secrets.PAT }}
+          # Full history (site and audit-history) dates each page's sitemap lastmod
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc

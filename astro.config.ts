@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-import { auditLastmod } from "./src/lib/sitemapDates";
+import { pageLastmod } from "./src/lib/sitemapDates";
 import { AUDIT_REDIRECTS } from "./src/lib/redirects";
 
 const site = "https://www.codezen.tech";
@@ -17,8 +17,10 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) => !page.includes("/404"),
+      // lastmod = when each page's content last changed (git history), see src/lib/sitemapDates.ts.
+      // The index's lastmod is the newest of these.
       serialize(item) {
-        const lastmod = auditLastmod(item.url.replace(site, ""));
+        const lastmod = pageLastmod(item.url.replace(site, ""));
         if (lastmod) item.lastmod = lastmod;
         return item;
       },
